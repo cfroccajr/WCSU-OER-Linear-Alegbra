@@ -28,18 +28,17 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="systems">
-	<title>Linear Systems</title>
+<chapter xml:id="spaces">
+	<title>Vector Spaces</title>
 
 <!-- Objectives -->
 	<objectives>
 			<ul>
-				<li> Solve basic systems of equations by hand using elimination and back substitution.</li>
-				<li> Solve systems of equations using Gaussian elimination and matrices.</li>
-				<li> Understand vectors graphically and algebraically.</li>
-				<li> Demonstrate familiarity with vector arithmetic. </li>
-				<li> Relate systems of equations to vectors and geometry.</li>
-				<li> See how to use a computer algebra system to help solve and visualize systems of equations.</li>
+				<li> Understand vector spaces both algebraically and graphically.</li>
+				<li> Understand bases, linear independence, and span.</li>
+				<li> Be able to connect the ideas of basis and solutions to systems of equations.</li>
+				<li> Be able to connect ideas about row and column spaces of a matris with bases.</li>
+				<li> See how to use a computer algebra system to help ...</li>
 			</ul>
 	</objectives>
 
@@ -48,36 +47,37 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<introduction>
 		<p>
-			In this Chapter we will focus on solving systems of linear equations and how we can interpret those systems and their solutions from multiple perspectives.
+			In this unit we will be exploring basic concepts surrounding vector spaces.  Particular emphasis will be placed on 
+			connecting vector spaces and subspaces with matrices and solutions to equations.
 		</p>
 	</introduction>
 
-<!-- Basic Linear Systems of Equations -->
+<!-- Vector spaces and subspaces -->
 
-	<section xml:id="section_basic_systems">
-		<title>Solving Linear Systems</title>
-		<idx><h>linear system</h></idx>
+	<section xml:id="section_space_definitions">
+		<title>What is a Vector Space</title>
+		<idx><h>vector space</h></idx>
 
 		<p>
 			Some Content!!!
 		</p>
 	</section>
 
-<!-- Introduction to Vectors -->
+<!-- Linear independence and bases -->
 
-	<section xml:id="section_intro_vectors">
-		<title>An Introduction to Vectors</title>
-		<idx><h>vectors</h></idx>
+	<section xml:id="section_bases">
+		<title>Linear Independence and Bases</title>
+		<idx><h>linear independence</h></idx><idx><h>basis</h></idx>
 
 		<p>
 			Some Content!!!<idx><h>vector</h></idx>
 		</p>
 	</section>
 
-<!-- Vectors and Equations -->
+<!-- Systems and Matrices -->
 
-	<section xml:id="section_vectors_equations">
-		<title>Relating Vectors and Systems of Equations</title>
+	<section xml:id="section_matrices_spaces">
+		<title>Spaces, Systems, Matrices</title>
 		<p>
 			Some Content!!!
 		</p>
@@ -85,8 +85,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- CAS and Systems -->
 
-	<section xml:id="section_CAS_systems">
-		<title>CAS - Systems of Equations</title>
+	<section xml:id="section_CAS_spaces">
+		<title>CAS - Visualizing Subspaces</title>
 		<p>
 			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
 		</p>
@@ -118,19 +118,18 @@ def _(m=input_box('sage', label="Enter your message", height=3,
 
 <!-- Exercises -->
 
-	<exercises xml:id="section_exercises_systems">
+	<exercises xml:id="section_exercises_spaces">
 		<title>Exercises and Practice Exam on Systems of Equations</title>
 		<introduction>
 			<p>
 				Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
 				<ul>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=64">Gauss-Jordan:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations:</url></li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Spaces:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=107">Subspaces and Spanning Set:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=119">Definitions and Examples of Independence:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=128">Basis:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=135">Dimension:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=143">Vector Spaces and Linear Systems:</url> </li>
 				</ul>
 			</p>
 		</introduction>
@@ -269,13 +268,18 @@ def _(m=input_box('sage', label="Enter your message", height=3,
 
 <!-- Supplementary Material -->
 
-	<section xml:id="section_supplement_systems">
+	<section xml:id="section_supplement_spaces">
 		<title>Supplementary Material</title>
 			<figure>
 		            <!-- <title>Modern Marvels: Codes</title> -->
 		            <caption>Gaussian Elimination</caption>
 		            <video youtube="qbWDZM4qgEk" />
 		    </figure>
+	</section>
+
+	<section xml:id="section_supplement_stractures">
+		<title>Preview of Algebraic Structures</title>
+		<p>In this section we preview algebraic structures as a generalization of the idea of a vector space.</p>
 	</section>
 
 </chapter>

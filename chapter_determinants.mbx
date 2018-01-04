@@ -28,18 +28,18 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="systems">
-	<title>Linear Systems</title>
+<chapter xml:id="determinants">
+	<title>Determinants, Eigenvalues, and Eigenvectors</title>
 
 <!-- Objectives -->
 	<objectives>
 			<ul>
-				<li> Solve basic systems of equations by hand using elimination and back substitution.</li>
-				<li> Solve systems of equations using Gaussian elimination and matrices.</li>
-				<li> Understand vectors graphically and algebraically.</li>
-				<li> Demonstrate familiarity with vector arithmetic. </li>
-				<li> Relate systems of equations to vectors and geometry.</li>
-				<li> See how to use a computer algebra system to help solve and visualize systems of equations.</li>
+				<li> Be able to compute determinants.</li>
+				<li> Be able to find eigenvalues and eigenvectors for small matrices.</li>
+				<li> Understand the relationship between determinants and transformations.</li>
+				<li> Use cofactors to find matrix inverses.</li>
+				<li> View eigenvectors graphically in relation to transformations.</li>
+				<li> See how to use a computer algebra system to help calculate and visualize eigenvectors.</li>
 			</ul>
 	</objectives>
 
@@ -48,45 +48,52 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<introduction>
 		<p>
-			In this Chapter we will focus on solving systems of linear equations and how we can interpret those systems and their solutions from multiple perspectives.
+			In this unit we learn about determinants.  Our goal is to understand not only how to calculate determinants but more importantly to understand what determinants tell us about transformations both directly and through the calculation of eigenvectors.
 		</p>
 	</introduction>
 
-<!-- Basic Linear Systems of Equations -->
+<!-- Determinants -->
 
-	<section xml:id="section_basic_systems">
-		<title>Solving Linear Systems</title>
-		<idx><h>linear system</h></idx>
+	<section xml:id="section_determinants">
+		<title>Determinants and their Geometry</title>
+		<idx><h>determinant</h></idx>
 
 		<p>
 			Some Content!!!
 		</p>
 	</section>
 
-<!-- Introduction to Vectors -->
+<!-- Similar Matrices -->
 
-	<section xml:id="section_intro_vectors">
-		<title>An Introduction to Vectors</title>
-		<idx><h>vectors</h></idx>
-
-		<p>
-			Some Content!!!<idx><h>vector</h></idx>
-		</p>
-	</section>
-
-<!-- Vectors and Equations -->
-
-	<section xml:id="section_vectors_equations">
-		<title>Relating Vectors and Systems of Equations</title>
+	<section xml:id="section_similarity">
+		<title>Matrix Equivalence and Similarity</title>
 		<p>
 			Some Content!!!
 		</p>
 	</section>
 
-<!-- CAS and Systems -->
+<!-- Eigenvalues and Vectors -->
 
-	<section xml:id="section_CAS_systems">
-		<title>CAS - Systems of Equations</title>
+	<section xml:id="section_eigen">
+		<title>Eigenvalues and Eigenvectors</title>
+		<p>
+			Some Content!!!
+		</p>
+	</section>
+
+<!-- Diagonalizable -->
+
+	<section xml:id="section_diagonal">
+		<title>Diagonalizable Matrices</title>
+		<p>
+			Some Content!!!
+		</p>
+	</section>
+
+<!-- CAS and Eigenvalues -->
+
+	<section xml:id="section_CAS_eigen">
+		<title>CAS - Visualizing Eigenvectors</title>
 		<p>
 			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
 		</p>
@@ -116,21 +123,35 @@ def _(m=input_box('sage', label="Enter your message", height=3,
 
 	</section>
 
+<!-- CAS and Models -->
+
+	<section xml:id="section_CAS_models">
+		<title>CAS - Modeling with Matrices</title>
+		<p>
+			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+		</p>
+    	<p>Hill Cipher Cell</p>
+    	<sage copy="sage_hill_cell" />
+
+
+	</section>
+
+
 <!-- Exercises -->
 
-	<exercises xml:id="section_exercises_systems">
-		<title>Exercises and Practice Exam on Systems of Equations</title>
+	<exercises xml:id="section_exercises_maps">
+		<title>Exercises and Practice Exam on Linear Transformations</title>
 		<introduction>
 			<p>
 				Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
 				<ul>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=64">Gauss-Jordan:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations:</url></li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=331">Definition of Determinants:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=367">Laplace's Expansion:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=336">Properties of Determinants:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=360">Determinants as Size Functions:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=401">Definition of Similarity:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=415">Eigenvalues and Eigenvectors:</url> </li>
+					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=406">Diagonalizability:</url> </li>
 				</ul>
 			</p>
 		</introduction>
@@ -264,12 +285,14 @@ def _(m=input_box('sage', label="Enter your message", height=3,
 					</p>
 				</hint>
 			</exercise>
+
+
 		</exercisegroup>
 	</exercises>
 
 <!-- Supplementary Material -->
 
-	<section xml:id="section_supplement_systems">
+	<section xml:id="section_supplement_determinants">
 		<title>Supplementary Material</title>
 			<figure>
 		            <!-- <title>Modern Marvels: Codes</title> -->

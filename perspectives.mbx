@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
 Copyright 2017 Charles F. Rocca Jr
@@ -30,39 +29,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-<mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-	
+	<!-- Matrix, Vector, Augmented Matrix, System of Equations, Vector Equation, Matrix Equation, Pivot Position, Consistent System, Inconsistent System, Linearly Independent, Linearly Dependent, Span of a set of Vectors, Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Column Space, Null Space, Basis, Change of Basis Matrix (also called change of coordinate matrix), Orthonormal Basis, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace -->
 
-	<!-- author, brand, latex macros, etc. -->
 
-		<xi:include href="Linear_bookinfo.mbx" />
+<appendix xml:id="perspectives">
+	<title>Perspectives</title>
 
-	<book xml:id="OER_Linear">
-		<title>OER - Western CT Linear Algebra</title>
 
-	<!-- Frontmatter Content -->
 
-		<xi:include href="Linear_frontmatter.mbx" />
 
-	<!-- Linear Systems -->
 
-		<xi:include href="chapter_systems.mbx" />
+	<p>
+		In this appendix we draw attention to the many ways in which a single idea can be viewed from multiple perspectives.
+	</p>
 
-	<!-- Vector Spaces -->
 
-		<xi:include href="chapter_vectorspaces.mbx" />
-		
-	<!-- Maps -->
 
-		<xi:include href="chapter_maps.mbx" />
 
-	<!-- Determinants -->
 
-		<xi:include href="chapter_determinants.mbx" />
 
-	<!-- Backmatter Content -->
 
-		<xi:include href="Linear_backmatter.mbx" />
 
-	</book>
-</mathbook>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</appendix>
