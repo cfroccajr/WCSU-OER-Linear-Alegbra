@@ -34,14 +34,67 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <appendix xml:id="perspectives">
 	<title>Perspectives</title>
-
-
-
-
-
 	<p>
 		In this appendix we draw attention to the many ways in which a single idea can be viewed from multiple perspectives.
 	</p>
+	<p>
+		Given an <m>m\times n</m> matrix <m>A</m>, with columns <m>A_j,\ j=1,\ldots,n</m>, and vectors 
+		<m>\vec{b}\in \mathbb{R^m}</m> and <m>\vec{x}\in \mathbb{R^n}</m> we get the following equivalences:
+	</p>
+		<table>
+			<caption>
+				True From a Certain Point of View
+			</caption>
+			<tabular bottom="minor" top="minor" left="minor" right="minor">
+				<col width="25%" />
+				<col width="25%" />
+				<col width="25%" />
+				<col width="25%" />
+				<row halign="left" bottom="none">
+					<cell><p>The Linear System</p></cell>
+					<cell><p>Given the Set of Vectors</p></cell>
+					<cell><p>The Matrix Equation</p></cell>
+					<cell><p>Given the Linear Transformation</p></cell>				
+				</row>
+				<row halign="center">
+					<cell><p><m>\left(\sum_{j=1}^{n} a_{ij}x_i\right)=b_i</m> is </p><p></p></cell>
+					<cell><p><m>\mathcal{B}_A=\left\{A_j\right\}_{j=1}^n</m></p></cell>
+					<cell><p><m>A\vec{x}=\vec{b}</m></p></cell>
+					<cell><p><m>T_A(\vec{x})=A\vec{x}</m></p></cell>				
+				</row>
+				<row halign="left">
+					<cell><p>Consistent for some <m>\vec{b}</m>, but the solution is not unique</p></cell>
+					<cell><p><m>\vec{b}\in span\left(\mathcal{B}_A\right)</m></p></cell>
+					<cell><p>Has infinitely many solutions</p></cell>
+					<cell><p><m>\vec{b}\in Image\left(T_A\right)</m></p></cell>				
+				</row>
+				<row halign="left">
+					<cell><p>Consistent for some <m>\vec{b}</m> and the solution is unique</p></cell>
+					<cell><p>They are linearly independent and <m>\vec{b}\in span\left(\mathcal{B}_A\right)</m></p></cell>
+					<cell><p>Has exactly one solution, <m>n \lt m</m>, <m>A</m> has a pivot in every column</p></cell>
+					<cell><p><m>\vec{b}\in Image\left(T_A\right)</m>, and <m>T_A</m> is 1-1</p></cell>				
+				</row>
+				<row halign="left">
+					<cell><p>Consistent for all <m>\vec{b}</m>, but the solution is not unique</p></cell>
+					<cell><p><m>span\left(\mathcal{B}_A\right)=\mathbb{R}^m</m></p></cell>
+					<cell><p>Has infinitely many solutions, <m>A</m> has a pivot in every row, <m>m \lt n</m></p></cell>
+					<cell><p><m>Image\left(T_A\right)=\mathbb{R}^m</m>, <m>T_A</m> is onto</p></cell>				
+				</row>
+				<row halign="left">
+					<cell><p>Consistent for all <m>\vec{b}</m> and the solution is unique</p></cell>
+					<cell><p><m>\mathcal{B}_A</m> is a basis for <m>\mathbb{R}^m</m></p></cell>
+					<cell><p>Has exactly one solution, <m>A</m> is invertible, <m>m=n</m></p></cell>
+					<cell><p><m>Image\left(T_A\right)=\mathbb{R}^m</m>, <m>T_A</m> is 1-1 and onto</p></cell>				
+				</row>
+				<row halign="left">
+					<cell><p>Inconsistent</p></cell>
+					<cell><p><m>\vec{b}\not\in span\left(\mathcal{B}_A\right)</m></p></cell>
+					<cell><p>Has no solution</p></cell>
+					<cell><p><m>\vec{b}\not\in Image\left(T_A\right)</m></p></cell>				
+				</row>
+			</tabular>
+		</table>
+
 
 
 
