@@ -29,11 +29,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<!-- Inverse Matrix, Column Space, Null Space, Basis, Change of Basis Matrix (also called change of coordinate matrix), Orthonormal Basis, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace -->
+	<!-- Identity matrix, Field, Ring, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Projection of a vector onto a subspace -->
 
 
 <appendix xml:id="glossary">
-	<title>Glossary</title>
+	<title>A Not So Formal Glossary of Essential Terms</title>
 
 
 
@@ -47,14 +47,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Augmented Matrix</title>
 			<p>
-				An <em>augmented matrix</em><idx><h>matrix</h><h>augmented</h></idx> is a matrix to which a vector or another matrix has been appended. E.g.
+				An <em>augmented matrix</em> is a matrix to which a vector or another matrix has been appended. E.g.
 				<me>
-					\left(
+					\left[
 						\begin{array}{rr|r} 
 							4 \amp 3 \amp 5\\
 							2 \amp 5 \amp 6
 						\end{array}
-					\right)
+					\right]
 				</me>
 			</p>
 		</li>
@@ -62,15 +62,43 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>B</alert></p>
-
+<p>
+	<dl>
+		<li>
+				<title>Basis</title>
+			<p>
+				A set of vectors <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is a <em>basis</em> for a vector space <m>V</m> if every vector in <m>V</m> can be written uniquely as a linear combination of the vectors in <m>\mathcal{B}</m>.  The basis is called <em>orthonormal</em> if each vector has unit length and each pair of distinct vectors are orthogonal.
+			</p>
+		</li>
+	</dl>
+</p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  C   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>C</alert></p>
 <p>
 	<dl>
 		<li>
+				<title>Change of Basis Matrix</title>
+			<p>
+				A <em>change of basis matrix</em> (also sometimes called a <em>change of coordinate matrix</em>) converts coordinates for a vector written in terms of one basis into coordinates in a different basis.  In particular if <m>\mathcal{E}</m> is the standard basis, and <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is any other basis then the matrix
+				<me>
+					\mathcal{P}_\mathcal{B}=
+					\left[
+						\vec{v}_1\, \vec{v}_2\, \cdots\ \vec{v}_n
+					\right]
+				</me>
+				converts vectors from <m>\mathcal{B}-coordinates</m> to <m>\mathcal{E}-coordinates</m>.
+			</p>
+		</li>
+		<li>
+				<title>Column Space</title>
+			<p>
+				The <em>column space</em> of a matrix is the span of the columns of the matrix when viewed as vectors.  If the matrix represents a transformation then the column space is equivalent to the <em>image</em> of the transformation.
+			</p>
+		</li>
+		<li>
 				<title>Consistent System</title>
 			<p>
-				A <em>consistent system</em><idx><h>system of equations</h><h>consistent</h></idx> is a ...
+				A <em>consistent system</em> is a system of equations, a vector equation, or matrix equation for which there is at least one solution.  If no solution exists we say the system is <em>inconsistent</em>.
 			</p>
 		</li>
 	</dl>
@@ -98,7 +126,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Inconsistent System</title>
 			<p>
-				An <em>inconsistent system</em><idx><h>system of equations</h><h>inconsistent</h></idx> is a ...
+				See definition of <em>consistent system</em>.
 			</p>
 		</li>
 		<li>
@@ -133,14 +161,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Linearly Independent Vectors</title>
 			<p>
-				<em>Linearly independent vectors</em><idx><h>vector</h><h>linearly independent</h></idx> is a ... are called <em>linearly dependent</em><idx><h>vector</h><h>linearly dependent</h></idx>.
+				<em>Linearly independent vectors</em> is a ... are called <em>linearly dependent</em>.
 			</p>
 		</li>
 
 		<li>
 				<title>Linear Transformation</title>
 			<p>
-				A <em>linear transformation</em><idx><h>linear transformation</h></idx> is a map, <m>T</m>, from a vector space <m>V</m>, called the domain, to a vector space <m>W</m>,called the codomain, with the following properties:
+				A <em>linear transformation</em> is a map, <m>T</m>, from a vector space <m>V</m>, called the domain, to a vector space <m>W</m>,called the codomain, with the following properties:
 				<ol>
 					<li><m>T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})</m> for all <m>\vec{u},\vec{v}\in V, and </m></li>
 					<li><m>T(c\vec{v})=cT(\vec{v})</m> for all scalars <m>c</m> and vectors <m>\vec{v}\in V</m>.</li>
@@ -157,22 +185,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Matrix</title>
 			<p>
-				A <em>matrix</em><idx><h>matrix</h></idx> is a two dimensional array of numbers.  If the dimensions are given as <m>m\times n</m> then there are <m>m</m> rows and <m>n</m> columns in the array.
+				A <em>matrix</em> is a two dimensional array of numbers.  If the dimensions are given as <m>m\times n</m> then there are <m>m</m> rows and <m>n</m> columns in the array.
 				E.g.
 				<me>
-					\left(
-						\begin{array}{rr} 
-							4 \amp 3\\
-							2 \amp 5
+					\left[
+						\begin{array}{rrr} 
+							4 \amp 3 \amp 0\\
+							2 \amp 5 \amp 2
 						\end{array}
-					\right)
+					\right]
 				</me>
+				is a <m>2\times 3</m> matrix.
 			</p>
 		</li>
 		<li>
 				<title>Matrix Equation</title>
 			<p>
-				A <em>matrix equation</em><idx><h>matrix</h><h>equation</h></idx> is a ...
+				Given a matrix <m>A</m> and a vector <m>\vec{b}</m>, a <em>matrix equation</em> is an equation of the form <me>A\vec{x}=\vec{b}</me> where <m>\vec{x}</m> is unknown.
 			</p>
 		</li>
 		<li>
@@ -186,6 +215,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>N</alert></p>
+<p>
+	<dl>
+		<li>
+				<title>Null Space</title>
+			<p>
+				The <em> null space</em> of a matrix <m>A</m> is the set of all vectors <m>\vec{x}</m> such that <me>A\vec{x}=\vec{0}.</me>  If the matrix is viewed as a transformation then this is the same as the <em>kernel</em> of the transformation.
+			</p>
+		</li>
+	</dl>
+</p>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	O   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>O</alert></p>
@@ -203,6 +242,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				A function or transformation <m>T:V\rightarrow W</m> is <em>onto</em>, if for all <m>y\in W</m> there exists <m>x\in V</m> such that <m>y=T(x)</m>.
 			</p>
 		</li>
+		<li>
+				<title>Orthogonal Complement</title>
+			<p>
+				The <em>orthogonal complement</em> of a set of vectors, <m>V</m> is the set of all vectors orthogonal to all the vectors in <m>V</m>, it is denoted by <m>V^\perp</m>.
+			</p>
+		</li>
+		<li>
+				<title>Orthogonal Vectors</title>
+			<p>
+				Two vectors are <em>orthogonal</em> if the angle between them is a right angle.
+			</p>
+		</li>
 	</dl>
 </p>
 
@@ -214,7 +265,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Pivot Position</title>
 			<p>
-				A <em>pivot position</em><idx><h>pivot position</h></idx> is a ...
+				A <em>pivot position</em> in a matrix <m>A</m> is a position in <m>A</m> which corresponds to a leading 1 in the reduced echelon form of <m>A</m>.  A column in which a pivot position occurs is called a <em>pivot column</em>.
 			</p>
 		</li>
 	</dl>
@@ -225,23 +276,46 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>R</alert></p>
-
+<p>
+	<dl>
+		<li>
+				<title>Row Space</title>
+			<p>
+				The <em>row space</em> of a matrix is the span of the rows of the matrix when viewed as vectors.
+			</p>
+		</li>
+	</dl>
+</p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>S</alert></p>
 <p>
 	<dl>
 		<li>
-				<title>System of Equations</title>
+				<title>Span of a set of Vectors</title>
 			<p>
-				A <em>system of equations</em><idx><h>system of equations</h></idx> is a ...
+				The <em>span of a set of vectors</em> <m>\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> over a field <m>\mathbb{F}</m> is the set of all linear combinations of the form
+				<me>a_1\vec{v}_1+a_2\vec{v}_2+a_3\vec{v}_3+\cdots+a_n\vec{v}_n</me>
+				where <m>a_i\in\mathbb{F}</m> for all <m>i</m>.
 			</p>
 		</li>
 		<li>
-				<title>Span of a set of Vectors</title>
+				<title>Standard Basis</title>
 			<p>
-				The <em>span of a set of vectors</em><idx><h>vector</h><h>span</h></idx> <m>\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> over a field <m>\mathbb{F}</m> is the set of all linear combinations of the form
-				<me>a_1\vec{v}_1+a_2\vec{v}_2+a_3\vec{v}_3+\cdots+a_n\vec{v}_n</me>
-				where <m>a_i\in\mathbb{F}</m> for all <m>i</m>.
+				The <em>standard basis</em> for <m>\mathbb{R}^n</m> consists of the <m>n</m>-columns of the <m>n\times n</m> identity matrix.
+			</p>
+		</li>
+		<li>
+				<title>System of Equations</title>
+			<p>
+				A <em>system of equations</em> is a collection of equations such as:
+				<me>
+					\begin{array}{ccccccc}
+						a_1 x_1 \amp + \amp a_2 x_2 \amp + \amp a_3 x_3 \amp = \amp d_1 \\
+						b_1 x_1 \amp + \amp b_2 x_2 \amp + \amp b_3 x_3 \amp = \amp d_2 \\
+						c_1 x_1 \amp + \amp c_2 x_2 \amp + \amp c_3 x_3 \amp = \amp d_3 \\
+					\end{array}
+				</me>
+				where the values <m>x_1,\, x_2,</m> and <m>x_3</m> are unknown.
 			</p>
 		</li>
 	</dl>
@@ -256,19 +330,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				The <em>transpose of a matrix</em> <m>A</m> is a matrix <m>A^T</m> in which each entry <m>a_{ij}</m> has been moved to position <m>ji</m>, in effect the entries have been reflected in main diagonal, e.g.
 				<me>
-					\left(
+					\left[
 						\begin{array}{cc}
 							1 \amp 3 \\
 							0 \amp 2
 						\end{array}
-					\right)^T
+					\right]^T
 					=
-					\left(
+					\left[
 						\begin{array}{cc}
 							1 \amp 0 \\
 							3 \amp 2
 						\end{array}
-					\right).
+					\right].
 				</me>
 			</p>
 		</li>
@@ -285,22 +359,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Vector</title>
 			<p>
-				A <em>vector</em><idx><h>vector</h></idx> is a one dimensional array of numbers.
+				A <em>vector</em> is a one dimensional array of numbers.
 				E.g.
 				<me>
-					\left(
+					\left[
 						\begin{array}{r} 
 							5\\
 							6
 						\end{array}
-					\right)
+					\right],
 				</me>
+				or written horizontally as <m>\left\lt 5,6\right\gt </m>.
 			</p>
 		</li>
 		<li>
 				<title>Vector Equation</title>
 			<p>
-				A <em>vector equation</em><idx><h>vector</h><h>equation</h></idx> is a ...
+				Given a set of vectors <m>\{\vec{v}_1,\, \vec{v}_2,\,\vec{v}_3,\,\ldots\, \vec{v}_n,\, \vec{x}\}</m> and a corresponding set of unknown scalar coefficients <m>\{a_1,\, a_2,\, a_3,\, \ldots\, a_n\}</m> a <em>vector equation</em> is an expression of the form  
+				<me>a_1\vec{v}_1+a_3\vec{v}_3+a_3\vec{v}_3+\cdots a_n\vec{v}_n=\vec{x}.</me>
 			</p>
 		</li>
 	</dl>
@@ -323,25 +399,25 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				In a ring <m>R</m> a <em>zero divisor</em> is a non-zero element <m>a</m> for witch there exists another non-zero element <m>b</m> such that <m>ab=0</m>. For example:
 				<me>
-					\left(
+					\left[
 						\begin{array}{rr} 
 							4 \amp 3\\
 							8 \amp 6
 						\end{array}
-					\right)
-					\left(
+					\right]
+					\left[
 						\begin{array}{rr} 
 							3 \amp -9\\
 							-4 \amp 12
 						\end{array}
-					\right)
+					\right]
 					=
-					\left(
+					\left[
 						\begin{array}{rr} 
 							0 \amp 0\\
 							0 \amp 0
 						\end{array}
-					\right)
+					\right]
 				</me>
 			</p>
 		</li>
