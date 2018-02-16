@@ -29,7 +29,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<!--  Span of a set of Vectors, Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Column Space, Null Space, Basis, Change of Basis Matrix (also called change of coordinate matrix), Orthonormal Basis, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace -->
+	<!-- Inverse Matrix, Column Space, Null Space, Basis, Change of Basis Matrix (also called change of coordinate matrix), Orthonormal Basis, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace -->
 
 
 <appendix xml:id="glossary">
@@ -101,6 +101,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				An <em>inconsistent system</em><idx><h>system of equations</h><h>inconsistent</h></idx> is a ...
 			</p>
 		</li>
+		<li>
+				<title>Inverse Matrix</title>
+			<p>
+				The <em>inverse</em> of a matrix <m>A</m>, denoted <m>A^{-1}</m>, is a matrix such that <me>AA^{-1}=I</me> which is called a <em>right inverse</em>, <me>A^{-1}A=I</me> which is called a <em>left inverse</em>, or <me>AA^{-1}=A^{-1}A=I</me> which is simply called <em>the inverse</em>.
+			</p>
+		</li>
 	</dl>
 </p>
 
@@ -109,6 +115,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	K   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>K</alert></p>
+<p>
+	<dl>
+		<li>
+				<title>Kernel</title>
+			<p>
+				The <em>kernel</em> of a linear transformation <m>T:V\rightarrow W</m> is the set of all <m>\vec{v}\in V</m> such that <m>T(\vec{v})=\vec{0}</m> in <m>W</m>. We abbreviate the kernel of <m>T</m> by <m>ker(T)</m>.  The kernel of a transformation is also known as the <em>null space</em>.
+			</p>
+		</li>
+	</dl>
+</p>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	L   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>L</alert></p>
@@ -118,6 +134,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>Linearly Independent Vectors</title>
 			<p>
 				<em>Linearly independent vectors</em><idx><h>vector</h><h>linearly independent</h></idx> is a ... are called <em>linearly dependent</em><idx><h>vector</h><h>linearly dependent</h></idx>.
+			</p>
+		</li>
+
+		<li>
+				<title>Linear Transformation</title>
+			<p>
+				A <em>linear transformation</em><idx><h>linear transformation</h></idx> is a map, <m>T</m>, from a vector space <m>V</m>, called the domain, to a vector space <m>W</m>,called the codomain, with the following properties:
+				<ol>
+					<li><m>T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})</m> for all <m>\vec{u},\vec{v}\in V, and </m></li>
+					<li><m>T(c\vec{v})=cT(\vec{v})</m> for all scalars <m>c</m> and vectors <m>\vec{v}\in V</m>.</li>
+				</ol>
 			</p>
 		</li>
 	</dl>
@@ -148,6 +175,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				A <em>matrix equation</em><idx><h>matrix</h><h>equation</h></idx> is a ...
 			</p>
 		</li>
+		<li>
+				<title>Matrix of a Transformation</title>
+			<p>
+				If <m>T:\mathbb{R}^n\rightarrow\mathbb{R}^m</m> is a linear transformation, then the <em>matrix of the transformation</em> is the unique matrix <m>A</m> of dimension <m>m\times n</m> such that <me>T(\vec{x})=A\vec{x}\ \mbox{for all}\ x\in\mathbb{R}^n.</me>  
+				If <m>\vec{e}_i</m> is the <m>i^{th}</m> column of the identity matrix over <m>\mathbb{R}^n</m>, then the <m>i^{th}</m> column of <m>A</m> equals <m>T(\vec{e}_i)</m>.
+			</p>
+		</li>
 	</dl>
 </p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -155,6 +189,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	O   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>O</alert></p>
+<p>
+	<dl>
+		<li>
+				<title>One-To-One (1-1)</title>
+			<p>
+				A function or transformation <m>T:V\rightarrow W</m> is <em>one-to-one</em> (also written 1-1), if <m>T(x)=T(y)</m> implies <m>x=y</m> for all <m>x,y\in V</m>.
+			</p>
+		</li>
+		<li>
+				<title>Onto</title>
+			<p>
+				A function or transformation <m>T:V\rightarrow W</m> is <em>onto</em>, if for all <m>y\in W</m> there exists <m>x\in V</m> such that <m>y=T(x)</m>.
+			</p>
+		</li>
+	</dl>
+</p>
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>P</alert></p>
@@ -188,7 +239,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<li>
 				<title>Span of a set of Vectors</title>
 			<p>
-				The <em>span of a set of vectors</em><idx><h>vector</h><h>span</h></idx> is a ...
+				The <em>span of a set of vectors</em><idx><h>vector</h><h>span</h></idx> <m>\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> over a field <m>\mathbb{F}</m> is the set of all linear combinations of the form
+				<me>a_1\vec{v}_1+a_2\vec{v}_2+a_3\vec{v}_3+\cdots+a_n\vec{v}_n</me>
+				where <m>a_i\in\mathbb{F}</m> for all <m>i</m>.
 			</p>
 		</li>
 	</dl>
@@ -196,6 +249,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>T</alert></p>
+<p>
+	<dl>
+		<li>
+				<title>Transpose of a Matrix</title>
+			<p>
+				The <em>transpose of a matrix</em> <m>A</m> is a matrix <m>A^T</m> in which each entry <m>a_{ij}</m> has been moved to position <m>ji</m>, in effect the entries have been reflected in main diagonal, e.g.
+				<me>
+					\left(
+						\begin{array}{cc}
+							1 \amp 3 \\
+							0 \amp 2
+						\end{array}
+					\right)^T
+					=
+					\left(
+						\begin{array}{cc}
+							1 \amp 0 \\
+							3 \amp 2
+						\end{array}
+					\right).
+				</me>
+			</p>
+		</li>
+	</dl>
+</p>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	U   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>U</alert></p>
@@ -238,6 +316,37 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Z   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>Z</alert></p>
+<p>
+	<dl>
+		<li>
+				<title>Zero Divisor</title>
+			<p>
+				In a ring <m>R</m> a <em>zero divisor</em> is a non-zero element <m>a</m> for witch there exists another non-zero element <m>b</m> such that <m>ab=0</m>. For example:
+				<me>
+					\left(
+						\begin{array}{rr} 
+							4 \amp 3\\
+							8 \amp 6
+						\end{array}
+					\right)
+					\left(
+						\begin{array}{rr} 
+							3 \amp -9\\
+							-4 \amp 12
+						\end{array}
+					\right)
+					=
+					\left(
+						\begin{array}{rr} 
+							0 \amp 0\\
+							0 \amp 0
+						\end{array}
+					\right)
+				</me>
+			</p>
+		</li>
+	</dl>
+</p>
 
 
 
