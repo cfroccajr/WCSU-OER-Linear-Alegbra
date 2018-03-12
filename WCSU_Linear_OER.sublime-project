@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/tmp"
+		},
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/html"
+		}
+	],
+	"settings":
+	[
+		{
+			"detect_indentation": false,
+			"draw_indent_guides": false,
+			"draw_white_space": "selection"
+
+		}
+	]
+}

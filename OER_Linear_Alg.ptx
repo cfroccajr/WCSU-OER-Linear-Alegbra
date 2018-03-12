@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 
 <!--********************************************************************
@@ -30,40 +30,38 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************-->
 
 
-
 <mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-	
 
-	<!-- author, brand, latex macros, etc. -->
+    <!-- author, brand, latex macros, etc. -->
 
-		<xi:include href="Linear_bookinfo.mbx" />
+        <xi:include href="Linear_bookinfo.ptx" />
 
-	<book xml:id="OER_Linear">
-		<title>OER - Western CT Linear Algebra</title>
+    <book xml:id="OER_Linear">
+        <title>OER - Western CT Linear Algebra</title>
 
-	<!-- Frontmatter Content -->
+    <!-- Frontmatter Content -->
 
-		<xi:include href="Linear_frontmatter.mbx" />
+        <xi:include href="Linear_frontmatter.ptx" />
 
-	<!-- Linear Systems -->
+    <!-- Linear Systems -->
 
-		<xi:include href="chapter_systems.mbx" />
+        <xi:include href="chapter_systems.ptx" />
 
-	<!-- Vector Spaces -->
+    <!-- Vector Spaces -->
 
-		<xi:include href="chapter_vectorspaces.mbx" />
-		
-	<!-- Maps -->
+        <xi:include href="chapter_vectorspaces.ptx" />
 
-		<xi:include href="chapter_maps.mbx" />
+    <!-- Maps -->
 
-	<!-- Determinants -->
+        <xi:include href="chapter_maps.ptx" />
 
-		<xi:include href="chapter_determinants.mbx" />
+    <!-- Determinants -->
 
-	<!-- Backmatter Content -->
+        <xi:include href="chapter_determinants.ptx" />
 
-		<xi:include href="Linear_backmatter.mbx" />
+    <!-- Backmatter Content -->
 
-	</book>
+        <xi:include href="Linear_backmatter.ptx" />
+
+    </book>
 </mathbook>

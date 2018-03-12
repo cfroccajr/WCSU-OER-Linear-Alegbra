@@ -32,7 +32,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
 -->
 
-
 <docinfo>
 
     <!-- the other option is "long" which will produce an -->
@@ -49,7 +48,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <cx>009171000619888925795:oupg1mw6ts0</cx>
         </google>
     </search> -->
-
 
     <macros>
 

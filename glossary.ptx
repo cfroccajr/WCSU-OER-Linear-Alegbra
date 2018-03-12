@@ -29,399 +29,464 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<!-- Identity matrix, Field, Ring, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Dot Product (Inner Product), Projection, Projection of a vector onto a subspace -->
+<!-- Field, Ring, Determinants, Cofactors, Classical Adjoint, Eigenvector, Eigenvalue, Characteristic Polynomial, Diagonalizable, Dot Product (Inner Product), Projection, Projection of a vector onto a subspace -->
 
 
 <appendix xml:id="glossary">
-	<title>A Not So Formal Glossary of Essential Terms</title>
+    <title>A Not So Formal Glossary of Essential Terms</title>
 
 
 
 
-
-	
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>A</alert></p>
 <p>
-	<dl>	
-		<li>
-				<title>Augmented Matrix</title>
-			<p>
-				An <em>augmented matrix</em> is a matrix to which a vector or another matrix has been appended. E.g.
-				<me>
-					\left[
-						\begin{array}{rr|r} 
-							4 \amp 3 \amp 5\\
-							2 \amp 5 \amp 6
-						\end{array}
-					\right]
-				</me>
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Augmented Matrix</title>
+            <p>
+                An <em>augmented matrix</em> is a matrix to which a vector or another matrix has been appended. E.g.
+                <me>
+                    \left[
+                        \begin{array}{rr|r} 
+                            4 \amp 3 \amp 5\\
+                            2 \amp 5 \amp 6
+                        \end{array}
+                    \right]
+                </me>
+            </p>
+        </li>
+    </dl>
 </p>
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>B</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Basis</title>
-			<p>
-				A set of vectors <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is a <em>basis</em> for a vector space <m>V</m> if every vector in <m>V</m> can be written uniquely as a linear combination of the vectors in <m>\mathcal{B}</m>.  The basis is called <em>orthonormal</em> if each vector has unit length and each pair of distinct vectors are orthogonal.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Basis</title>
+            <p>
+A set of vectors <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is a <em>basis</em> for a vector space <m>V</m> if every vector in <m>V</m> can be written uniquely as a linear combination of the vectors in <m>\mathcal{B}</m>.  The basis is called <em>orthonormal</em> if each vector has unit length and each pair of distinct vectors are orthogonal.
+            </p>
+        </li>
+    </dl>
 </p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  C   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>C</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Change of Basis Matrix</title>
-			<p>
-				A <em>change of basis matrix</em> (also sometimes called a <em>change of coordinate matrix</em>) converts coordinates for a vector written in terms of one basis into coordinates in a different basis.  In particular if <m>\mathcal{E}</m> is the standard basis, and <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is any other basis then the matrix
-				<me>
-					\mathcal{P}_\mathcal{B}=
-					\left[
-						\vec{v}_1\, \vec{v}_2\, \cdots\ \vec{v}_n
-					\right]
-				</me>
-				converts vectors from <m>\mathcal{B}-coordinates</m> to <m>\mathcal{E}-coordinates</m>.
-			</p>
-		</li>
-		<li>
-				<title>Column Space</title>
-			<p>
-				The <em>column space</em> of a matrix is the span of the columns of the matrix when viewed as vectors.  If the matrix represents a transformation then the column space is equivalent to the <em>image</em> of the transformation.
-			</p>
-		</li>
-		<li>
-				<title>Consistent System</title>
-			<p>
-				A <em>consistent system</em> is a system of equations, a vector equation, or matrix equation for which there is at least one solution.  If no solution exists we say the system is <em>inconsistent</em>.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Change of Basis Matrix</title>
+            <p>
+                A <em>change of basis matrix</em> (also sometimes called a <em>change of coordinate matrix</em>) converts coordinates for a vector written in terms of one basis into coordinates in a different basis.  In particular if <m>\mathcal{E}</m> is the standard basis, and <m>\mathcal{B}=\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> is any other basis then the matrix
+                <me>
+                    \mathcal{P}_\mathcal{B}=
+                    \left[
+                        \vec{v}_1\, \vec{v}_2\, \cdots\ \vec{v}_n
+                    \right]
+                </me>
+                converts vectors from <m>\mathcal{B}-coordinates</m> to <m>\mathcal{E}-coordinates</m>.
+            </p>
+        </li>
+        <li>
+                <title>Column Space</title>
+            <p>
+                The <em>column space</em> of a matrix is the span of the columns of the matrix when viewed as vectors.  If the matrix represents a transformation then the column space is equivalent to the <em>image</em> of the transformation.
+            </p>
+        </li>
+        <li>
+                <title>Consistent System</title>
+            <p>
+                A <em>consistent system</em> is a system of equations, a vector equation, or matrix equation for which there is at least one solution.  If no solution exists we say the system is <em>inconsistent</em>.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>D</alert></p>
+<p>
+    <dl>
+        <li>
+            <title>Diagonal Matrix</title>
+            <p>
+                A matrix <m>D</m> is a <em>diagonal matrix</em> if all the entries off the main diagonal are zero, i.e. 
+                <me>
+                    D=
+                        \left[
+                            \begin{array}{rrr}
+                                7 \amp 0 \amp 0\\
+                                0 \amp -1 \amp 0\\
+                                0 \amp 0 \amp 5
+                            \end{array}
+                        \right].
+                </me>
+            </p>
+        </li>
+        <li>
+            <title>Diagonalizable</title>
+            <p>
+                A matrix <m>A</m> is called <em>diagonalizable</em> if there exists an invertible matrix <m>P</m> and diagonal matrix <m>D</m> such that 
+                <me>A=PDP^{-1}.</me>
+            </p>
+        </li>
+    </dl>
+</p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>E</alert></p>
+<p>
+    <dl>
+        <li>
+            <title>Eigenvalue and Eigenvector</title>
+            <p>
+                Given a matrix <m>A</m>, an <em>eigenvector</em>, <m>\vec{x}</m>, is a vector such that
+                <me>A\vec{x}=\lambda\, \vec{x},</me>
+                for some constant <m>\lambda</m> called the <em>eigenvalue</em>.
+            </p>
+        </li>
+    </dl>
+</p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>F</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	G   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   G   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>G</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>H</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	I   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   I   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>I</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Inconsistent System</title>
-			<p>
-				See definition of <em>consistent system</em>.
-			</p>
-		</li>
-		<li>
-				<title>Inverse Matrix</title>
-			<p>
-				The <em>inverse</em> of a matrix <m>A</m>, denoted <m>A^{-1}</m>, is a matrix such that <me>AA^{-1}=I</me> which is called a <em>right inverse</em>, <me>A^{-1}A=I</me> which is called a <em>left inverse</em>, or <me>AA^{-1}=A^{-1}A=I</me> which is simply called <em>the inverse</em>.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+            <title>Identity Matrix</title>
+            <p>
+                A matrix <m>I</m> is the <em>identity matrix</em> if <m>IA=AI=A</m> for all matrices of appropriate size.  Typically we use:
+                <me>
+                    I_1=1,\ I_2 = 
+                    \left[
+                        \begin{array}{rr}
+                            1 \amp 0 \\
+                            0 \amp 1
+                        \end{array}
+                    \right],\ I_3 = 
+                    \left[
+                        \begin{array}{rrr}
+                            1 \amp 0 \amp 0\\
+                            0 \amp 1 \amp 0\\
+                            0 \amp 0 \amp 1
+                        \end{array}
+                    \right], \ldots
+                </me>
+            </p>
+        </li>
+        <li>
+                <title>Inconsistent System</title>
+            <p>
+                See definition of <em>consistent system</em>.
+            </p>
+        </li>
+        <li>
+                <title>Inverse Matrix</title>
+            <p>
+                The <em>inverse</em> of a matrix <m>A</m>, denoted <m>A^{-1}</m>, is a matrix such that <me>AA^{-1}=I</me> which is called a <em>right inverse</em>, <me>A^{-1}A=I</me> which is called a <em>left inverse</em>, or <me>AA^{-1}=A^{-1}A=I</me> which is simply called <em>the inverse</em>.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	J   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   J   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>J</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	K   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   K   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>K</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Kernel</title>
-			<p>
-				The <em>kernel</em> of a linear transformation <m>T:V\rightarrow W</m> is the set of all <m>\vec{v}\in V</m> such that <m>T(\vec{v})=\vec{0}</m> in <m>W</m>. We abbreviate the kernel of <m>T</m> by <m>ker(T)</m>.  The kernel of a transformation is also known as the <em>null space</em>.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Kernel</title>
+            <p>
+                The <em>kernel</em> of a linear transformation <m>T:V\rightarrow W</m> is the set of all <m>\vec{v}\in V</m> such that <m>T(\vec{v})=\vec{0}</m> in <m>W</m>. We abbreviate the kernel of <m>T</m> by <m>ker(T)</m>.  The kernel of a transformation is also known as the <em>null space</em>.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	L   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   L   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>L</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Linearly Independent Vectors</title>
-			<p>
-				<em>Linearly independent vectors</em> is a ... are called <em>linearly dependent</em>.
-			</p>
-		</li>
+    <dl>
+        <li>
+                <title>Linearly Independent Vectors</title>
+            <p>
+                <em>Linearly independent vectors</em> is a ... are called <em>linearly dependent</em>.
+            </p>
+        </li>
 
-		<li>
-				<title>Linear Transformation</title>
-			<p>
-				A <em>linear transformation</em> is a map, <m>T</m>, from a vector space <m>V</m>, called the domain, to a vector space <m>W</m>,called the codomain, with the following properties:
-				<ol>
-					<li><m>T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})</m> for all <m>\vec{u},\vec{v}\in V, and </m></li>
-					<li><m>T(c\vec{v})=cT(\vec{v})</m> for all scalars <m>c</m> and vectors <m>\vec{v}\in V</m>.</li>
-				</ol>
-			</p>
-		</li>
-	</dl>
+        <li>
+                <title>Linear Transformation</title>
+            <p>
+                A <em>linear transformation</em> is a map, <m>T</m>, from a vector space <m>V</m>, called the domain, to a vector space <m>W</m>,called the codomain, with the following properties:
+                <ol>
+                    <li><m>T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})</m> for all <m>\vec{u},\vec{v}\in V, and </m></li>
+                    <li><m>T(c\vec{v})=cT(\vec{v})</m> for all scalars <m>c</m> and vectors <m>\vec{v}\in V</m>.</li>
+                </ol>
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>M</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Matrix</title>
-			<p>
-				A <em>matrix</em> is a two dimensional array of numbers.  If the dimensions are given as <m>m\times n</m> then there are <m>m</m> rows and <m>n</m> columns in the array.
-				E.g.
-				<me>
-					\left[
-						\begin{array}{rrr} 
-							4 \amp 3 \amp 0\\
-							2 \amp 5 \amp 2
-						\end{array}
-					\right]
-				</me>
-				is a <m>2\times 3</m> matrix.
-			</p>
-		</li>
-		<li>
-				<title>Matrix Equation</title>
-			<p>
-				Given a matrix <m>A</m> and a vector <m>\vec{b}</m>, a <em>matrix equation</em> is an equation of the form <me>A\vec{x}=\vec{b}</me> where <m>\vec{x}</m> is unknown.
-			</p>
-		</li>
-		<li>
-				<title>Matrix of a Transformation</title>
-			<p>
-				If <m>T:\mathbb{R}^n\rightarrow\mathbb{R}^m</m> is a linear transformation, then the <em>matrix of the transformation</em> is the unique matrix <m>A</m> of dimension <m>m\times n</m> such that <me>T(\vec{x})=A\vec{x}\ \mbox{for all}\ x\in\mathbb{R}^n.</me>  
-				If <m>\vec{e}_i</m> is the <m>i^{th}</m> column of the identity matrix over <m>\mathbb{R}^n</m>, then the <m>i^{th}</m> column of <m>A</m> equals <m>T(\vec{e}_i)</m>.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Matrix</title>
+            <p>
+                A <em>matrix</em> is a two dimensional array of numbers.  If the dimensions are given as <m>m\times n</m> then there are <m>m</m> rows and <m>n</m> columns in the array.
+                E.g.
+                <me>
+                    \left[
+                        \begin{array}{rrr} 
+                            4 \amp 3 \amp 0\\
+                            2 \amp 5 \amp 2
+                        \end{array}
+                    \right]
+                </me>
+                is a <m>2\times 3</m> matrix.
+            </p>
+        </li>
+        <li>
+                <title>Matrix Equation</title>
+            <p>
+                Given a matrix <m>A</m> and a vector <m>\vec{b}</m>, a <em>matrix equation</em> is an equation of the form <me>A\vec{x}=\vec{b}</me> where <m>\vec{x}</m> is unknown.
+            </p>
+        </li>
+        <li>
+                <title>Matrix of a Transformation</title>
+            <p>
+                If <m>T:\mathbb{R}^n\rightarrow\mathbb{R}^m</m> is a linear transformation, then the <em>matrix of the transformation</em> is the unique matrix <m>A</m> of dimension <m>m\times n</m> such that <me>T(\vec{x})=A\vec{x}\ \mbox{for all}\ x\in\mathbb{R}^n.</me>  
+                If <m>\vec{e}_i</m> is the <m>i^{th}</m> column of the identity matrix over <m>\mathbb{R}^n</m>, then the <m>i^{th}</m> column of <m>A</m> equals <m>T(\vec{e}_i)</m>.
+            </p>
+        </li>
+    </dl>
 </p>
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>N</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Null Space</title>
-			<p>
-				The <em> null space</em> of a matrix <m>A</m> is the set of all vectors <m>\vec{x}</m> such that <me>A\vec{x}=\vec{0}.</me>  If the matrix is viewed as a transformation then this is the same as the <em>kernel</em> of the transformation.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Null Space</title>
+            <p>
+                The <em> null space</em> of a matrix <m>A</m> is the set of all vectors <m>\vec{x}</m> such that <me>A\vec{x}=\vec{0}.</me>  If the matrix is viewed as a transformation then this is the same as the <em>kernel</em> of the transformation.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	O   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   O   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>O</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>One-To-One (1-1)</title>
-			<p>
-				A function or transformation <m>T:V\rightarrow W</m> is <em>one-to-one</em> (also written 1-1), if <m>T(x)=T(y)</m> implies <m>x=y</m> for all <m>x,y\in V</m>.
-			</p>
-		</li>
-		<li>
-				<title>Onto</title>
-			<p>
-				A function or transformation <m>T:V\rightarrow W</m> is <em>onto</em>, if for all <m>y\in W</m> there exists <m>x\in V</m> such that <m>y=T(x)</m>.
-			</p>
-		</li>
-		<li>
-				<title>Orthogonal Complement</title>
-			<p>
-				The <em>orthogonal complement</em> of a set of vectors, <m>V</m> is the set of all vectors orthogonal to all the vectors in <m>V</m>, it is denoted by <m>V^\perp</m>.
-			</p>
-		</li>
-		<li>
-				<title>Orthogonal Vectors</title>
-			<p>
-				Two vectors are <em>orthogonal</em> if the angle between them is a right angle.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>One-To-One (1-1)</title>
+            <p>
+                A function or transformation <m>T:V\rightarrow W</m> is <em>one-to-one</em> (also written 1-1), if <m>T(x)=T(y)</m> implies <m>x=y</m> for all <m>x,y\in V</m>.
+            </p>
+        </li>
+        <li>
+                <title>Onto</title>
+            <p>
+                A function or transformation <m>T:V\rightarrow W</m> is <em>onto</em>, if for all <m>y\in W</m> there exists <m>x\in V</m> such that <m>y=T(x)</m>.
+            </p>
+        </li>
+        <li>
+                <title>Orthogonal Complement</title>
+            <p>
+                The <em>orthogonal complement</em> of a set of vectors, <m>V</m> is the set of all vectors orthogonal to all the vectors in <m>V</m>, it is denoted by <m>V^\perp</m>.
+            </p>
+        </li>
+        <li>
+                <title>Orthogonal Vectors</title>
+            <p>
+                Two vectors are <em>orthogonal</em> if the angle between them is a right angle.
+            </p>
+        </li>
+    </dl>
 </p>
 
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>P</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Pivot Position</title>
-			<p>
-				A <em>pivot position</em> in a matrix <m>A</m> is a position in <m>A</m> which corresponds to a leading 1 in the reduced echelon form of <m>A</m>.  A column in which a pivot position occurs is called a <em>pivot column</em>.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Pivot Position</title>
+            <p>
+                A <em>pivot position</em> in a matrix <m>A</m> is a position in <m>A</m> which corresponds to a leading 1 in the reduced echelon form of <m>A</m>.  A column in which a pivot position occurs is called a <em>pivot column</em>.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Q   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Q   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>Q</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>R</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Row Space</title>
-			<p>
-				The <em>row space</em> of a matrix is the span of the rows of the matrix when viewed as vectors.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Row Space</title>
+            <p>
+                The <em>row space</em> of a matrix is the span of the rows of the matrix when viewed as vectors.
+            </p>
+        </li>
+    </dl>
 </p>
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>S</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Span of a set of Vectors</title>
-			<p>
-				The <em>span of a set of vectors</em> <m>\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> over a field <m>\mathbb{F}</m> is the set of all linear combinations of the form
-				<me>a_1\vec{v}_1+a_2\vec{v}_2+a_3\vec{v}_3+\cdots+a_n\vec{v}_n</me>
-				where <m>a_i\in\mathbb{F}</m> for all <m>i</m>.
-			</p>
-		</li>
-		<li>
-				<title>Standard Basis</title>
-			<p>
-				The <em>standard basis</em> for <m>\mathbb{R}^n</m> consists of the <m>n</m>-columns of the <m>n\times n</m> identity matrix.
-			</p>
-		</li>
-		<li>
-				<title>System of Equations</title>
-			<p>
-				A <em>system of equations</em> is a collection of equations such as:
-				<me>
-					\begin{array}{ccccccc}
-						a_1 x_1 \amp + \amp a_2 x_2 \amp + \amp a_3 x_3 \amp = \amp d_1 \\
-						b_1 x_1 \amp + \amp b_2 x_2 \amp + \amp b_3 x_3 \amp = \amp d_2 \\
-						c_1 x_1 \amp + \amp c_2 x_2 \amp + \amp c_3 x_3 \amp = \amp d_3 \\
-					\end{array}
-				</me>
-				where the values <m>x_1,\, x_2,</m> and <m>x_3</m> are unknown.
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+            <title>Similar Matrices</title>
+            <p>
+                Two matrices <m>A</m> and <m>B</m> are called <em>similar matrices</em> if there exists and invertible matrix <m>P</m> such that <me>B=PAP^{-1}.</me>
+            </p>
+        </li>
+        <li>
+                <title>Span of a set of Vectors</title>
+            <p>
+                The <em>span of a set of vectors</em> <m>\left\{\vec{v}_1,\, \vec{v}_2,\, \ldots\, \vec{v}_n\right\}</m> over a field <m>\mathbb{F}</m> is the set of all linear combinations of the form
+                <me>a_1\vec{v}_1+a_2\vec{v}_2+a_3\vec{v}_3+\cdots+a_n\vec{v}_n</me>
+                where <m>a_i\in\mathbb{F}</m> for all <m>i</m>.
+            </p>
+        </li>
+        <li>
+                <title>Standard Basis</title>
+            <p>
+                The <em>standard basis</em> for <m>\mathbb{R}^n</m> consists of the <m>n</m>-columns of the <m>n\times n</m> identity matrix.
+            </p>
+        </li>
+        <li>
+                <title>System of Equations</title>
+            <p>
+                A <em>system of equations</em> is a collection of equations such as:
+                <me>
+                    \begin{array}{ccccccc}
+                        a_1 x_1 \amp + \amp a_2 x_2 \amp + \amp a_3 x_3 \amp = \amp d_1 \\
+                        b_1 x_1 \amp + \amp b_2 x_2 \amp + \amp b_3 x_3 \amp = \amp d_2 \\
+                        c_1 x_1 \amp + \amp c_2 x_2 \amp + \amp c_3 x_3 \amp = \amp d_3 \\
+                    \end{array}
+                </me>
+                where the values <m>x_1,\, x_2,</m> and <m>x_3</m> are unknown.
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>T</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Transpose of a Matrix</title>
-			<p>
-				The <em>transpose of a matrix</em> <m>A</m> is a matrix <m>A^T</m> in which each entry <m>a_{ij}</m> has been moved to position <m>ji</m>, in effect the entries have been reflected in main diagonal, e.g.
-				<me>
-					\left[
-						\begin{array}{cc}
-							1 \amp 3 \\
-							0 \amp 2
-						\end{array}
-					\right]^T
-					=
-					\left[
-						\begin{array}{cc}
-							1 \amp 0 \\
-							3 \amp 2
-						\end{array}
-					\right].
-				</me>
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Transpose of a Matrix</title>
+            <p>
+                The <em>transpose of a matrix</em> <m>A</m> is a matrix <m>A^T</m> in which each entry <m>a_{ij}</m> has been moved to position <m>ji</m>, in effect the entries have been reflected in main diagonal, e.g.
+                <me>
+                    \left[
+                        \begin{array}{cc}
+                            1 \amp 3 \\
+                            0 \amp 2
+                        \end{array}
+                    \right]^T
+                    =
+                    \left[
+                        \begin{array}{cc}
+                            1 \amp 0 \\
+                            3 \amp 2
+                        \end{array}
+                    \right].
+                </me>
+            </p>
+        </li>
+    </dl>
 </p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	U   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   U   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>U</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	V   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   V   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>V</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Vector</title>
-			<p>
-				A <em>vector</em> is a one dimensional array of numbers.
-				E.g.
-				<me>
-					\left[
-						\begin{array}{r} 
-							5\\
-							6
-						\end{array}
-					\right],
-				</me>
-				or written horizontally as <m>\left\lt 5,6\right\gt </m>.
-			</p>
-		</li>
-		<li>
-				<title>Vector Equation</title>
-			<p>
-				Given a set of vectors <m>\{\vec{v}_1,\, \vec{v}_2,\,\vec{v}_3,\,\ldots\, \vec{v}_n,\, \vec{x}\}</m> and a corresponding set of unknown scalar coefficients <m>\{a_1,\, a_2,\, a_3,\, \ldots\, a_n\}</m> a <em>vector equation</em> is an expression of the form  
-				<me>a_1\vec{v}_1+a_3\vec{v}_3+a_3\vec{v}_3+\cdots a_n\vec{v}_n=\vec{x}.</me>
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Vector</title>
+            <p>
+                A <em>vector</em> is a one dimensional array of numbers.
+                E.g.
+                <me>
+                    \left[
+                        \begin{array}{r} 
+                            5\\
+                            6
+                        \end{array}
+                    \right],
+                </me>
+                or written horizontally as <m>\left\lt 5,6\right\gt </m>.
+            </p>
+        </li>
+        <li>
+                <title>Vector Equation</title>
+            <p>
+                Given a set of vectors <m>\{\vec{v}_1,\, \vec{v}_2,\,\vec{v}_3,\,\ldots\, \vec{v}_n,\, \vec{x}\}</m> and a corresponding set of unknown scalar coefficients <m>\{a_1,\, a_2,\, a_3,\, \ldots\, a_n\}</m> a <em>vector equation</em> is an expression of the form  
+                <me>a_1\vec{v}_1+a_3\vec{v}_3+a_3\vec{v}_3+\cdots a_n\vec{v}_n=\vec{x}.</me>
+            </p>
+        </li>
+    </dl>
 </p>
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	W   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   W   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>W</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	X   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   X   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>X</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Y   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Y   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>Y</alert></p>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	Z   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Z   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <p><alert>Z</alert></p>
 <p>
-	<dl>
-		<li>
-				<title>Zero Divisor</title>
-			<p>
-				In a ring <m>R</m> a <em>zero divisor</em> is a non-zero element <m>a</m> for witch there exists another non-zero element <m>b</m> such that <m>ab=0</m>. For example:
-				<me>
-					\left[
-						\begin{array}{rr} 
-							4 \amp 3\\
-							8 \amp 6
-						\end{array}
-					\right]
-					\left[
-						\begin{array}{rr} 
-							3 \amp -9\\
-							-4 \amp 12
-						\end{array}
-					\right]
-					=
-					\left[
-						\begin{array}{rr} 
-							0 \amp 0\\
-							0 \amp 0
-						\end{array}
-					\right]
-				</me>
-			</p>
-		</li>
-	</dl>
+    <dl>
+        <li>
+                <title>Zero Divisor</title>
+            <p>
+                In a ring <m>R</m> a <em>zero divisor</em> is a non-zero element <m>a</m> for witch there exists another non-zero element <m>b</m> such that <m>ab=0</m>. For example:
+                <me>
+                    \left[
+                        \begin{array}{rr} 
+                            4 \amp 3\\
+                            8 \amp 6
+                        \end{array}
+                    \right]
+                    \left[
+                        \begin{array}{rr} 
+                            3 \amp -9\\
+                            -4 \amp 12
+                        \end{array}
+                    \right]
+                    =
+                    \left[
+                        \begin{array}{rr} 
+                            0 \amp 0\\
+                            0 \amp 0
+                        \end{array}
+                    \right]
+                </me>
+            </p>
+        </li>
+    </dl>
 </p>
 
 

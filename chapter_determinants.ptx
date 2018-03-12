@@ -29,262 +29,262 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <chapter xml:id="determinants"  xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title>Determinants, Eigenvalues, and Eigenvectors</title>
+    <title>Determinants, Eigenvalues, and Eigenvectors</title>
 
 <!-- Objectives -->
-	<objectives>
-			<ul>
-				<li> Be able to compute determinants.</li>
-				<li> Be able to find eigenvalues and eigenvectors for small matrices.</li>
-				<li> Understand the relationship between determinants and transformations.</li>
-				<li> Use cofactors to find matrix inverses.</li>
-				<li> View eigenvectors graphically in relation to transformations.</li>
-				<li> See how to use a computer algebra system to help calculate and visualize eigenvectors.</li>
-			</ul>
-	</objectives>
+    <objectives>
+            <ul>
+                <li> Be able to compute determinants.</li>
+                <li> Be able to find eigenvalues and eigenvectors for small matrices.</li>
+                <li> Understand the relationship between determinants and transformations.</li>
+                <li> Use cofactors to find matrix inverses.</li>
+                <li> View eigenvectors graphically in relation to transformations.</li>
+                <li> See how to use a computer algebra system to help calculate and visualize eigenvectors.</li>
+            </ul>
+    </objectives>
 
 
 <!-- Introduction -->
 
-	<introduction>
-		<p>
-			In this unit we learn about determinants.  Our goal is to understand not only how to calculate determinants but more importantly to understand what determinants tell us about transformations both directly and through the calculation of eigenvectors.
-		</p>
-	</introduction>
+    <introduction>
+        <p>
+            In this unit we learn about determinants.  Our goal is to understand not only how to calculate determinants but more importantly to understand what determinants tell us about transformations both directly and through the calculation of eigenvectors.
+        </p>
+    </introduction>
 
 <!-- Determinants -->
 
-	<section xml:id="section_determinants">
-		<title>Determinants and their Geometry</title>
-		<idx><h>determinant</h></idx>
+    <section xml:id="section_determinants">
+        <title>Determinants and their Geometry</title>
+        <idx><h>determinant</h></idx>
 
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Similar Matrices -->
 
-	<section xml:id="section_similarity">
-		<title>Matrix Equivalence and Similarity</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_similarity">
+        <title>Matrix Equivalence and Similarity</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Eigenvalues and Vectors -->
 
-	<section xml:id="section_eigen">
-		<title>Eigenvalues and Eigenvectors</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_eigen">
+        <title>Eigenvalues and Eigenvectors</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Diagonalizable -->
 
-	<section xml:id="section_diagonal">
-		<title>Diagonalizable Matrices</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_diagonal">
+        <title>Diagonalizable Matrices</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- CAS and Eigenvalues -->
 
-	<section xml:id="section_CAS_eigen">
-		<title>CAS - Visualizing Eigenvectors</title>
-		<p>
-			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
-		</p>
-    	<p>Hill Cipher Cell</p>
-    	<sage>
-    		<input><xi:include href="code/sample_sage.txt" parse="text" /></input>
-    		<output></output>
-    	</sage>
+    <section xml:id="section_CAS_eigen">
+        <title>CAS - Visualizing Eigenvectors</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Hill Cipher Cell</p>
+        <sage>
+            <input><xi:include href="code/sample_sage.txt" parse="text" /></input>
+            <output></output>
+        </sage>
 
-	</section>
+    </section>
 
 <!-- CAS and Models -->
 
-	<section xml:id="section_CAS_models">
-		<title>CAS - Modeling with Matrices</title>
-		<p>
-			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
-		</p>
-    	<p>Hill Cipher Cell</p>
-    	<sage>
-    		<input><xi:include href="code/sample_sage.txt" parse="text" /></input>
-    		<output></output>
-    	</sage>
+    <section xml:id="section_CAS_models">
+        <title>CAS - Modeling with Matrices</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Hill Cipher Cell</p>
+        <sage>
+            <input><xi:include href="code/sample_sage.txt" parse="text" /></input>
+            <output></output>
+        </sage>
 
 
-	</section>
+    </section>
 
 
 <!-- Exercises -->
 
-	<exercises xml:id="section_exercises_maps">
-		<title>Exercises and Practice Exam on Linear Transformations</title>
-		<introduction>
-			<p>
-				Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
-				<ul>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=331">Definition of Determinants:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=367">Laplace's Expansion:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=336">Properties of Determinants:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=360">Determinants as Size Functions:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=401">Definition of Similarity:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=415">Eigenvalues and Eigenvectors:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=406">Diagonalizability:</url> </li>
-				</ul>
-			</p>
-		</introduction>
-		<exercisegroup>
-			<introduction>
-				<p>
-					<alert>Practice Exam:</alert>
-				</p>
-				<p>
-					In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
-				</p>
-			</introduction>
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+    <exercises xml:id="section_exercises_maps">
+        <title>Exercises and Practice Exam on Linear Transformations</title>
+        <introduction>
+            <p>
+                Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=331">Definition of Determinants:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=367">Laplace's Expansion:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=336">Properties of Determinants:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=360">Determinants as Size Functions:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=401">Definition of Similarity:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=415">Eigenvalues and Eigenvectors:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=406">Diagonalizability:</url> </li>
+                </ul>
+            </p>
+        </introduction>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    <alert>Practice Exam:</alert>
+                </p>
+                <p>
+                    In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
+                </p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-		</exercisegroup>
-	</exercises>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+
+        </exercisegroup>
+    </exercises>
 
 <!-- Supplementary Material -->
 
-	<section xml:id="section_supplement_determinants">
-		<title>Supplementary Material</title>
-			<figure>
-		            <!-- <title>Modern Marvels: Codes</title> -->
-		            <caption>Gaussian Elimination</caption>
-		            <video youtube="qbWDZM4qgEk" />
-		    </figure>
-	</section>
+    <section xml:id="section_supplement_determinants">
+        <title>Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+    </section>
 
 </chapter>
 
