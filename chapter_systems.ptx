@@ -28,255 +28,237 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="systems">
-	<title>Linear Systems</title>
+<chapter xml:id="systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Linear Systems</title>
 
 <!-- Objectives -->
-	<objectives>
-			<ul>
-				<li> Solve basic systems of equations by hand using elimination and back substitution.</li>
-				<li> Solve systems of equations using Gaussian elimination and matrices.</li>
-				<li> Understand vectors graphically and algebraically.</li>
-				<li> Demonstrate familiarity with vector arithmetic. </li>
-				<li> Relate systems of equations to vectors and geometry.</li>
-				<li> See how to use a computer algebra system to help solve and visualize systems of equations.</li>
-			</ul>
-	</objectives>
+    <objectives>
+            <ul>
+                <li> Solve basic systems of equations by hand using elimination and back substitution.</li>
+                <li> Solve systems of equations using Gaussian elimination and matrices.</li>
+                <li> Understand vectors graphically and algebraically.</li>
+                <li> Demonstrate familiarity with vector arithmetic. </li>
+                <li> Relate systems of equations to vectors and geometry.</li>
+                <li> See how to use a computer algebra system to help solve and visualize systems of equations.</li>
+            </ul>
+    </objectives>
 
 
 <!-- Introduction -->
 
-	<introduction>
-		<p>
-			In this Chapter we will focus on solving systems of linear equations and how we can interpret those systems and their solutions from multiple perspectives.
-		</p>
-	</introduction>
+    <introduction>
+        <p>
+            In this Unit/Chapter we will focus on solving systems of linear equations and how we can interpret those systems and their solutions from multiple perspectives.  The notes here correspond with the material in <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=11">Hefferon Chapter 1: Linear Systems</url> and so they should be used together.
+        </p>
+    </introduction>
 
 <!-- Basic Linear Systems of Equations -->
 
-	<section xml:id="section_basic_systems">
-		<title>Solving Linear Systems</title>
-		<idx><h>linear system</h></idx>
+    <section xml:id="section_basic_systems">
+        <title>Solving Linear Systems</title>
+        <idx><h>linear system</h></idx>
 
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Introduction to Vectors -->
 
-	<section xml:id="section_intro_vectors">
-		<title>An Introduction to Vectors</title>
-		<idx><h>vectors</h></idx>
+    <section xml:id="section_intro_vectors">
+        <title>An Introduction to Vectors</title>
+        <idx><h>vectors</h></idx>
 
-		<p>
-			Some Content!!!<idx><h>vector</h></idx>
-		</p>
-	</section>
+        <p>
+            Some Content!!!<idx><h>vector</h></idx>
+        </p>
+    </section>
 
 <!-- Vectors and Equations -->
 
-	<section xml:id="section_vectors_equations">
-		<title>Relating Vectors and Systems of Equations</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_vectors_equations">
+        <title>Relating Vectors and Systems of Equations</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- CAS and Systems -->
 
-	<section xml:id="section_CAS_systems">
-		<title>CAS - Systems of Equations</title>
-		<p>
-			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
-		</p>
-    	<p>Hill Cipher Cell</p>
-    	<sage xml:id="sage_hill_cell">
-        	<input>
+    <section xml:id="section_CAS_systems">
+        <title>CAS - Systems of Equations</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Perspectives on Systems</p>
+        <sage>
+            <input><xi:include href="sage_code/systems_cell.sage" parse="text" /></input>
+            <output></output>
+        </sage>
 
-<!-- Python/Sage Function -->
-@interact
-def _(m=input_box('sage', label="Enter your message", height=3, 
-    width=50, type=str),
-    key=input_grid(2,2,default=[[7,12],[3,3]],type=int,width=2)):
-    S = HillCryptosystem(AlphabeticStrings(),2)
-    M = MatrixSpace(IntegerModRing(26),2,2)
-    e = S(M(key).transpose())
-    clean_text = S.encoding(str(m.encode('ascii','replace')))
-    if len(clean_text)%2 == 1:
-        clean_text = S.encoding(str(m)+"Z")
-    cipher_text = e(clean_text)
-    print str("Your Hill enciphering text is\n")
-    for i in xrange(0,len(cipher_text),5):
-        print cipher_text[i:i+5],
-        if (i+5)%50 == 0: print "\n"
-    		</input>
-    		<output></output>
-    	</sage>
-
-	</section>
+    </section>
 
 <!-- Exercises -->
 
-	<exercises xml:id="section_exercises_systems">
-		<title>Exercises and Practice Exam on Systems of Equations</title>
-		<introduction>
-			<p>
-				Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
-				<ul>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=64">Gauss-Jordan:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations:</url></li>
-				</ul>
-			</p>
-		</introduction>
-		<exercisegroup>
-			<introduction>
-				<p>
-					<alert>Practice Exam:</alert>
-				</p>
-				<p>
-					In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
-				</p>
-			</introduction>
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+    <exercises xml:id="section_exercises_systems">
+        <title>Exercises and Practice Exam on Systems of Equations</title>
+        <introduction>
+            <p>
+                Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=64">Gauss-Jordan:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations:</url></li>
+                </ul>
+            </p>
+        </introduction>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    <alert>Practice Exam:</alert>
+                </p>
+                <p>
+                    In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
+                </p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-		</exercisegroup>
-	</exercises>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+        </exercisegroup>
+    </exercises>
 
 <!-- Supplementary Material -->
 
-	<section xml:id="section_supplement_systems">
-		<title>Supplementary Material</title>
-			<figure>
-		            <!-- <title>Modern Marvels: Codes</title> -->
-		            <caption>Gaussian Elimination</caption>
-		            <video youtube="qbWDZM4qgEk" />
-		    </figure>
-	</section>
+    <section xml:id="section_supplement_systems">
+        <title>Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+    </section>
 
 </chapter>
 

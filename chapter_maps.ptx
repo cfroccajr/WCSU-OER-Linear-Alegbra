@@ -29,291 +29,291 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <chapter xml:id="transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title>Linear Transformations</title>
+    <title>Linear Transformations</title>
 
 <!-- Objectives -->
-	<objectives>
-			<ul>
-				<li> Understand linear transformations both algebraically and graphically.</li>
-				<li> Be able to perform basic matrix operations.</li>
-				<li> Be able to connect ideas about one-to-one and onto transformations with systems of equations.</li>
-				<li> Be able to connect ideas about kernels and images with null spaces and column spaces.</li>
-				<li> Be able to calculate orthogonal projections onto a subspace.</li>
-				<li> See how to use a computer algebra system to help perform basic operations and apply linear algebra to data analysis in a basic way.</li>
-			</ul>
-	</objectives>
+    <objectives>
+            <ul>
+                <li> Understand linear transformations both algebraically and graphically.</li>
+                <li> Be able to perform basic matrix operations.</li>
+                <li> Be able to connect ideas about one-to-one and onto transformations with systems of equations.</li>
+                <li> Be able to connect ideas about kernels and images with null spaces and column spaces.</li>
+                <li> Be able to calculate orthogonal projections onto a subspace.</li>
+                <li> See how to use a computer algebra system to help perform basic operations and apply linear algebra to data analysis in a basic way.</li>
+            </ul>
+    </objectives>
 
 
 <!-- Introduction -->
 
-	<introduction>
-		<p>
-			In this unit we will explore how we can transform one vector spaces into another.
-		</p>
-	</introduction>
+    <introduction>
+        <p>
+            In this unit we will explore how we can transform one vector spaces into another.
+        </p>
+    </introduction>
 
 <!-- Intro to Linear TRansformations -->
 
-	<section xml:id="section_morphisams">
-		<title>Isomorphisms and Homomorphisms of Vector Spaces</title>
-		<idx><h>isomorphism</h></idx><idx><h>homomorphism</h></idx>
+    <section xml:id="section_morphisams">
+        <title>Isomorphisms and Homomorphisms of Vector Spaces</title>
+        <idx><h>isomorphism</h></idx><idx><h>homomorphism</h></idx>
 
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Matrix operations and Maps -->
 
-	<section xml:id="section_matrix_operations">
-		<title>Linear Maps and Matrix Operations</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_matrix_operations">
+        <title>Linear Maps and Matrix Operations</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Change of Bases -->
 
-	<section xml:id="section_coordinates">
-		<title>Change of Bases/Coordinates</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_coordinates">
+        <title>Change of Bases/Coordinates</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- Orthogonal Projections and Curve Fitting -->
 
-	<section xml:id="section_projections">
-		<title>Orthogonal Projections and Curve Fitting</title>
-		<p>
-			Some Content!!!
-		</p>
-	</section>
+    <section xml:id="section_projections">
+        <title>Orthogonal Projections and Curve Fitting</title>
+        <p>
+            Some Content!!!
+        </p>
+    </section>
 
 <!-- CAS and Systems -->
 
-	<section xml:id="section_CAS_spaces">
-		<title>CAS - Fitting Data</title>
-		<p>
-			<url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
-		</p>
-    	<p>Hill Cipher Cell</p>
-    	<sage>
-    		<input><xi:include href="code/sample_sage.txt" parse="text" /></input>
-    		<output></output>
-    	</sage>
+    <section xml:id="section_CAS_spaces">
+        <title>CAS - Fitting Data</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Hill Cipher Cell</p>
+        <sage>
+            <input><xi:include href="sage_code/sample_sage.sage" parse="text" /></input>
+            <output></output>
+        </sage>
 
-	</section>
+    </section>
 
 <!-- Exercises -->
 
-	<exercises xml:id="section_exercises_maps">
-		<title>Exercises and Practice Exam on Linear Transformations</title>
-		<introduction>
-			<p>
-				Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
-				<ul>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Isomorphisms:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182">Dimension and Isomorphisms:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=198">Definition of Homomorphism:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">Range Space and Null Space:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=221">Linear Maps and Matrices:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230">Matrices and Linear Maps:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=236">Sums and Scalar Products:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243">Matrix Multiplication:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=255">Mechanics of Matrix Multiplication:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">Inverses:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267">Representations of Vectors:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=275">Map Representations:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280">Orthogonal Projections into a Line:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace:</url> </li>
-					<li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=300">Line of Best Fit:</url> </li>
-				</ul>
-			</p>
-		</introduction>
-		<exercisegroup>
-			<introduction>
-				<p>
-					<alert>Practice Exam:</alert>
-				</p>
-				<p>
-					In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
-				</p>
-			</introduction>
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+    <exercises xml:id="section_exercises_maps">
+        <title>Exercises and Practice Exam on Linear Transformations</title>
+        <introduction>
+            <p>
+                Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Isomorphisms:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182">Dimension and Isomorphisms:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=198">Definition of Homomorphism:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">Range Space and Null Space:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=221">Linear Maps and Matrices:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230">Matrices and Linear Maps:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=236">Sums and Scalar Products:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243">Matrix Multiplication:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=255">Mechanics of Matrix Multiplication:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">Inverses:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267">Representations of Vectors:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=275">Map Representations:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280">Orthogonal Projections into a Line:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=300">Line of Best Fit:</url> </li>
+                </ul>
+            </p>
+        </introduction>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    <alert>Practice Exam:</alert>
+                </p>
+                <p>
+                    In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
+                </p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
 
-			<exercise>
-				<statement>
-					<p>
-						Some Content!!!
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Some more Content!!!
-					</p>
-				</hint>
-			</exercise>
-		</exercisegroup>
-	</exercises>
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Some Content!!!
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Some more Content!!!
+                    </p>
+                </hint>
+            </exercise>
+        </exercisegroup>
+    </exercises>
 
 <!-- Supplementary Material -->
 
-	<section xml:id="section_supplement_spaces">
-		<title>Supplementary Material</title>
-			<figure>
-		            <!-- <title>Modern Marvels: Codes</title> -->
-		            <caption>Gaussian Elimination</caption>
-		            <video youtube="qbWDZM4qgEk" />
-		    </figure>
-	</section>
+    <section xml:id="section_supplement_spaces">
+        <title>Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+    </section>
 
 </chapter>
 

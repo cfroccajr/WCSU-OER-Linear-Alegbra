@@ -117,20 +117,19 @@
 			}
 		},
 		{
-			"file": "WCSU_Linear_OER.sublime-project",
-			"settings":
-			{
-				"buffer_size": 1881,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "chapter_systems.ptx",
 			"settings":
 			{
 				"buffer_size": 9684,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WCSU_Linear_OER.sublime-project",
+			"settings":
+			{
+				"buffer_size": 1881,
 				"line_ending": "Unix"
 			}
 		},
@@ -429,6 +428,8 @@
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_systems.ptx",
@@ -436,7 +437,6 @@
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-workspace",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_backmatter.ptx",
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
@@ -555,8 +555,7 @@
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MathbookXML_Build",
 		"/Users/cfroccajr/Documents/WCSU/CryptologyText/MWE.xml",
 		"/Users/cfroccajr/Documents/WCSU/CryptologyText/InquiryInHistoricalCryptology.tex",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Sublime_Test.tex",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/quickstart.xml"
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Sublime_Test.tex"
 	],
 	"find":
 	{
@@ -592,7 +591,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -627,35 +626,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "WCSU_Linear_OER.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1881,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 245.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "chapter_systems.ptx",
 					"semi_transient": false,
 					"settings":
@@ -682,6 +652,35 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "WCSU_Linear_OER.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 491.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -760,7 +759,7 @@
 		"height": 240.0
 	},
 	"pinned_build_system": "",
-	"project": "WCSU_Linear_OER.sublime-project",
+	"project": "OER_Linear_Alg.sublime-project",
 	"replace":
 	{
 		"height": 42.0

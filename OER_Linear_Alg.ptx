@@ -36,7 +36,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>
 
         <xi:include href="Linear_bookinfo.ptx" />
 
-    <book xml:id="OER_Linear">
+    <book xml:id="OER_Linear_Alg">
         <title>OER - Western CT Linear Algebra</title>
 
     <!-- Frontmatter Content -->

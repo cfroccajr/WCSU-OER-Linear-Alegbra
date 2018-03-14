@@ -39,3 +39,20 @@ xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook
 
 
 java -classpath /Users/cfroccajr/Applications/GIT/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar /Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng ../src/Intro_Crypto_Main.mbx
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% regex notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Find: <em>(.*?)</em> finds all the instances that start and end with the tags <em></em>
+Replace: <term>$1</term> replaces them with the tags changed
+
+Replace \L$& changes all upper to lower case
+Replace \U$& changes all lower to upper case
+
+(<em>)(.*?)(</em>)
+$& is the whole match
+$1 is first part of the match
+$2 is second part of match
+$3 is third part of match
+
+Good refernces: https://regexr.com/?328p7 ; 

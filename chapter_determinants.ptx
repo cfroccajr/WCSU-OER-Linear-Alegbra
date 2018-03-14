@@ -99,7 +99,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         <p>Hill Cipher Cell</p>
         <sage>
-            <input><xi:include href="code/sample_sage.txt" parse="text" /></input>
+            <input><xi:include href="sage_code/sample_sage.sage" parse="text" /></input>
             <output></output>
         </sage>
 
@@ -114,7 +114,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         <p>Hill Cipher Cell</p>
         <sage>
-            <input><xi:include href="code/sample_sage.txt" parse="text" /></input>
+            <input><xi:include href="sage_code/sample_sage.sage" parse="text" /></input>
             <output></output>
         </sage>
 
