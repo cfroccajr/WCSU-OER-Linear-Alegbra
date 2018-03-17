@@ -58,9 +58,120 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <title>Solving Linear Systems</title>
         <idx><h>linear system</h></idx>
 
-        <p>
-            Some Content!!!
-        </p>
+        <investigation>
+            <title>A 20% Solution (A First Simple Example)</title>
+                <p>Statement:</p>
+                <p>
+                    Given a solution which it 75% alcohol (call it <m>A</m>) and distilled water (call it <m>W</m>) mix one liter of solution with a concentration of 20% alcohol.
+                </p>
+                <p>Analysis:</p>
+                <p>
+                    Total solution 1 liter:
+                    <me>A+W=1</me>
+
+                    Total alcohol in solution 0.2 liters (20%):
+                    <me>0.75A=0.2</me>
+                </p>
+                <p>Solution 1:</p>
+                <p>
+                    From the second equation we derive:
+                    <me>A=20/75=4/15\approx 0.267</me>
+                    Substituted into the first equation this gives:
+                    <me>4/15+W=1</me>
+                    or
+                    <me>W=11/15\approx0.733</me>
+                    So, a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.
+                </p>
+                <p>Solution 2:</p>
+                <p>
+                    Consider the equations together:
+                    <md>
+                        <mrow>      \amp A +  W \amp \amp= \amp \amp 1</mrow>
+                        <mrow>0.75  \amp A      \amp \amp= \amp 0.\amp2</mrow>
+                    </md>
+                    When we do this we refer to the set of equations as a <term>system of equations</term> and the <m>A</m> and <m>W</m> as the <term>unknowns</term>. Subtracting 0.75 of the first from the second we get:
+                    <me>
+                        -0.75 W = -0.55
+                    </me>
+                    or
+                    <me>
+                        W = 55/75 \approx 0.733
+                    </me>
+                    As before, using the second equation or substitution, we get <m>A=20/75\approx 0.267</m> so that a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.
+                </p>
+                <p>
+                    Both of the above are examples of what can termed <term>elimination and back substitution</term>.  The goal being to isolate one variable to find its values, and then work back from there to find the values of the rest.  This is a quick easy way to find solutions when there are only two variables, but it becomes cumbersome as soon as there are three or more.
+                </p>
+        </investigation>
+        <investigation>
+            <title>Name the Parabola (A Not So Simple Example)</title>
+                <p>Statement:</p>
+                <sidebyside>
+                    <p>
+                        Given a parabola with a <m>y</m> intercept of -7, which passes through the point (1,6), and has a slope of 8 at <m>x=-1</m> find the coefficients <m>a,b,c</m> in <m>y=ax^2+bx+c</m>.
+                    </p>
+                    <figure>
+                        <caption>A Parabola?</caption>
+                        <image xml:id="perry_parabola">
+                            <sageplot>
+                                var("x,y")
+                                plot(-3*x^2+2*x+7,[x,-2,3],ymin=-5, color='blue', thickness=3)
+                            </sageplot>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>Analysis:</p>
+                <p>
+                    First if we let <m>f(x)=ax^2+bx+c</m>, so that its derivative is <m>f'(x)=2ax+b</m>, then from the information given we know:
+                    <md>
+                        <mrow>f(1) \amp = \amp a+b+c \amp = 6</mrow>
+                        <mrow>f'(-1) \amp = \amp -2a +b \amp = 8 </mrow>
+                        <mrow>f(0) \amp = \amp c \amp = 7 </mrow>
+                    </md>
+                    giving us a system of three equations and three unknowns.
+                </p>
+                <p>Solution 1:</p>
+                <p>
+                    Using elimination and back substitution we first see that <m>c=7</m>.  Then plugging that into the first equation above we can simplify the problem to solving:
+                    <md>
+                        <mrow>a+b \amp = -1</mrow>
+                        <mrow>-2a +b \amp = 8 </mrow>
+                    </md>
+                    We can now subtract the second equation from the first to find <m>3a=-9</m> or <m>a=-3</m>.  Finally, substituting this value of <m>a</m> into either of the previous equations we derive <m>b=2</m>.  Thus using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
+                </p>
+                <p>Solution 2:</p>
+                <p>
+                    Alternately, we can use mostly just elimination.  If we consider our original equations
+                    <md>
+                        <mrow>a+b+c \amp = 6</mrow>
+                        <mrow>-2a +b \amp = 8 </mrow>
+                        <mrow>c \amp = 7 </mrow>
+                    </md>
+                    then we might first subtract row three from one, eliminating the <m>c</m>.  This reduces our system to
+                    <md>
+                        <mrow>a+b \amp = -1</mrow>
+                        <mrow>-2a +b \amp = 8 </mrow>
+                        <mrow>c \amp = 7 </mrow>
+                    </md>
+                    which we can similarly reduce by subtracting the second row from the first
+                    <md>
+                        <mrow>3a  \amp = -9</mrow>
+                        <mrow>-2a +b \amp = 8 </mrow>
+                        <mrow>c \amp = 7 </mrow>
+                    </md>
+                    Finally, we simplify the first row by dividing by 3 and then add two copies of that to the second row to get
+                    <md>
+                        <mrow>a  \amp = -3</mrow>
+                        <mrow> b \amp = 2 </mrow>
+                        <mrow>c \amp = 7 </mrow>
+                    </md>
+                    Thus arriving at the same solution.  Again, using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
+                </p>
+                <p>Solution 3:</p>
+                <p>
+                    Notice that in the work above the variables <m>a,b,c</m>, the equal signs, and even the plus signs served no purpose, they just kept things neat.  All that really mattered were the coefficients and constant values to the right of the equals.  This hints at a better solution. ...
+                </p>
+        </investigation>
     </section>
 
 <!-- Introduction to Vectors -->

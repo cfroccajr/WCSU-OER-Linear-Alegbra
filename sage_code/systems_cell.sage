@@ -1,5 +1,5 @@
 @interact
-def _(coef=input_grid(2,2,default=[[1,2],[3,4]],type=int,width=2),
+def _(coef=input_grid(2,2,default=[[1,0],[2,-1]],type=int,width=2),
       values=input_grid(1,2,default=[2,1],type=int,width=2)):
     # Basic Information or Constants
     var('x,y')
@@ -21,7 +21,7 @@ def _(coef=input_grid(2,2,default=[[1,2],[3,4]],type=int,width=2),
     
     # Interpreted as Matrices and Vectors
     show("Matrix Equations:")
-    show(A,varvec,"=",b)
+    show(A,matrix(varvec).transpose(),"=",matrix(b).transpose())
     
     # Show Solutions
     show("Both have this solution:")
