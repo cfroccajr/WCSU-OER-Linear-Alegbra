@@ -58,7 +58,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <title>Solving Linear Systems</title>
         <idx><h>linear system</h></idx>
 
-        <investigation>
+        <investigation xml:id="system-example1">
             <title>A 20% Solution (A First Simple Example)</title>
                 <p>Statement:</p>
                 <p>
@@ -103,7 +103,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Both of the above are examples of what can termed <term>elimination and back substitution</term>.  The goal being to isolate one variable to find its values, and then work back from there to find the values of the rest.  This is a quick easy way to find solutions when there are only two variables, but it becomes cumbersome as soon as there are three or more.
                 </p>
         </investigation>
-        <investigation>
+        <investigation xml:id="system-example2">
             <title>Name the Parabola (A Not So Simple Example)</title>
                 <p>Statement:</p>
                 <sidebyside>
@@ -257,8 +257,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Following the same steps as before we get the same answer, that is using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
                 </p>
         </investigation>
-        <investigation>
-            <title>One More Plane but not so Simple Example</title>
+        <p>
+            Take a look at the next few examples to get a feel for what happens when you have different combinations of equations and unknowns.
+        </p>
+        <example xml:id="system-example3">
+            <title>Another Plane but not so Simple Example</title>
             <p>
                 Statement:
             </p>
@@ -284,7 +287,53 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </image>
                 </figure>
             </sidebyside>
-        </investigation>
+            <p>Solution 1:</p>
+            <p>
+                As before we have a system of three equations and three unknowns
+                <md>
+                    <mrow>2x + 3y - z \amp= 1 </mrow>
+                    <mrow>-2x + y + z \amp= 1 </mrow>
+                    <mrow> y - z \amp= 1 </mrow>
+                </md>
+                Now we can add row one to row two to get
+                <md>
+                    <mrow>2x + 3y - z \amp= 1 </mrow>
+                    <mrow>  4y \amp= 2 </mrow>
+                    <mrow> y - z \amp= 1 </mrow>
+                </md>
+                Multiplying the second row by <m>1/4^{th}</m> and subtracting this from row three we get
+                <md>
+                    <mrow>2x + 3y - z \amp= 1 </mrow>
+                    <mrow>  y \amp= 1/2 </mrow>
+                    <mrow> - z \amp= 1/2 </mrow>
+                </md>
+                or
+                <md>
+                    <mrow>2x + 3y - z \amp= 1 </mrow>
+                    <mrow>  y \amp= 1/2 </mrow>
+                    <mrow> z \amp= -1/2 </mrow>
+                </md>
+                If we then subtract three copies of row two and add one copy of row three from row one we are left with
+                <md>
+                    <mrow>2x   \amp= -1 </mrow>
+                    <mrow>  y \amp= 1/2 </mrow>
+                    <mrow> z \amp= -1/2 </mrow>
+                </md>
+                which gives the solution
+                <md>
+                    <mrow>x   \amp= -1/2 </mrow>
+                    <mrow>y \amp= 1/2 </mrow>
+                    <mrow>z \amp= -1/2 </mrow>
+                </md>
+                If we substitute these in to the original equations
+                <md>
+                    <mrow>2\left(-\frac{1}{2}\right) + 3\left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                    <mrow>-2\left(-\frac{1}{2}\right) + \left(\frac{1}{2}\right) + \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                    <mrow> \left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                </md>
+                we can verify that the solution is correct.  Therefore the answer to the original question is that the single point at which all three planes intersect is <me>(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).</me>
+            </p>
+        </example>
     </section>
 
 <!-- Introduction to Vectors -->
