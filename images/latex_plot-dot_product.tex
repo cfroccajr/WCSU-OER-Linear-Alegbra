@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
+    \ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+                            
+                            
+                                \tikz{
+                                    \draw[->] (0,0) -- (1,1);
+                                    \draw[->] (0,0) -- (2,0);
+                                    \node[anchor=west] at (0.1,0.15) {\tiny $\theta$};
+                                    \node[anchor=east] at (0.7,0.7) {\tiny $|\vec{v}|$};
+                                    \node[anchor=north] at (1,0) {\tiny $|\vec{w}|$};
+                                    \node[anchor=west] at (1.5,0.5) {\tiny$\vec{v}\cdot\vec{w}=|\vec{v}||\vec{w}|\cos(\theta)$};
+                                }
+                            
+                        \end{document}
