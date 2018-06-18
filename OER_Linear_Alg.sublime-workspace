@@ -514,6 +514,58 @@
 					"Build youtube to all Images"
 				],
 				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
 					"Packages/LaTeXTools/LaTeX.sublime-build",
 					""
 				],
@@ -804,7 +856,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -859,10 +911,10 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
 	],
 	"file_history":
 	[
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT467 Proposals",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
@@ -989,8 +1041,7 @@
 		"/Users/cfroccajr/Documents/WCSU/CryptologyText/quickstart.mbx",
 		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/Inquiry_History_Based_Crypto.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/sample-book.xml",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MathbookXML_Build.sublime-build",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MathbookXML_Build"
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MathbookXML_Build.sublime-build"
 	],
 	"find":
 	{
@@ -1061,7 +1112,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1077,8 +1128,8 @@
 						"selection":
 						[
 							[
-								1284,
-								1284
+								1285,
+								1285
 							]
 						],
 						"settings":
@@ -1091,7 +1142,7 @@
 						"translation.y": 350.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1122,7 +1173,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1149,10 +1200,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3245.0,
+						"translation.y": 689.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1182,7 +1233,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1208,10 +1259,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1219,7 +1270,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1248,6 +1299,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 217.0
