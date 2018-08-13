@@ -127,6 +127,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/H/ciphers.csv",
+			"settings":
+			{
+				"buffer_size": 2913,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -904,7 +912,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -964,14 +972,19 @@
 	],
 	"file_history":
 	[
+		"/H/cipher_file.csv",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/2018 Fall MAT 150 - Seminar I.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/Inspiring Your Teachers.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 272 - Linear Algebra/2018 Fall MAT 272 - Linear Syllabus.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.log",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Latex/Brookfield Pres.tex",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/2018 Fall MAT 467 - Group Theory Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/2018 Fall MAT 150 - Seminar I.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 272 - Linear Algebra/2018 Fall MAT 272 - Linear Syllabus.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467/2018 Fall MAT 457 - Group Theory Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467  - Group Theory/2018 Fall MAT 457 - Group Theory Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467  Group Theory/2018 Fall MAT 457 - Group Theory Syllabus.tex",
@@ -1086,16 +1099,11 @@
 		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample",
 		"/Users/cfroccajr/Documents/CryptoText/src/analysis_cell_appendix.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/cipher_cell_appendix.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_modern_cryptology.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/Refernce_File.txt",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/IntroToCrypto.tex",
-		"/Users/cfroccajr/Documents/CryptoText/latex_tmp/IntroToCrypto.tex",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-article/sample-article.xml",
-		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_modern_cryptology.mbx"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -1109,6 +1117,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\vfill",
+			" - ",
 			"0",
 			"\\\\",
 			"figure",
@@ -1133,11 +1143,13 @@
 			".txt"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			":\\par ",
 			"\\tabularnewline",
 			"<p>$1</p>",
 			"<p>&1</p>",
@@ -1165,8 +1177,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/H/ciphers.csv",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1217,7 +1258,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "OER_Linear_Alg.sublime-project",
 	"replace":
 	{
