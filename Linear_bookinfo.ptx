@@ -69,7 +69,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </latex-image-preamble>
 
     <images>
-        <archive from="charts_tables">svg png pdf</archive> 
+        <archive from="charts_tables">svg png pdf</archive>
     </images>
+
+
 
 </docinfo>

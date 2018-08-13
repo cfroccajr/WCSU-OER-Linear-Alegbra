@@ -475,7 +475,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <md>
                         <mrow>3x+2y \amp =7</mrow>
                         <mrow>x-y \amp = 2</mrow>
-                        <mrow> 4y \amp 16</mrow>
+                        <mrow> 4y \amp =16</mrow>
                     </md>
                     note that the equations are not set equal to 0, so this system is <term>non-homogeneous</term><idx><h>non-homogeneous</h></idx>. We could use the same technique of setting up an augmented matrix like so
                     <me>
@@ -531,14 +531,71 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <idx><h>vectors</h></idx>
         <subsection>
             <title>Vectors and their Properties</title>
+            <definition>
+                <statement>
+                    <p>
+                        A <term>vector</term><idx><h>vector</h></idx> is a,typically, a one dimensional array of numbers written as
+                        <me>
+                            \vec{v}=
+                            \left[
+                                \begin{array}{r}
+                                    2\\
+                                    -3
+                                \end{array}
+                            \right]
+                        </me>
+                        or horizontally as <m>\vec{v}=\left\lt 2,-3\right\gt</m>.
+                    </p>
+                </statement>
+            </definition>
             <p>
-                Definition
+                We say that a vector is typically thought of as an array of numbers because in this course that is mostly how we use it.  We will look in later units at a couple examples where it is not and array of numbers.
             </p>
             <p>
-                Length, Sums, and Scalar Multiples
+                In addition to the numerical definition/representation of vectors we can also view them graphically like so:
+            </p>
+            <sidebyside widths="25%,50%,25%">
+                <figure xml:id="my_first_vectors">
+                    <caption>My First Vectors</caption>
+                    <image>
+                        <sageplot>
+                            var("x,y,z")
+                            zero=vector([0,0])
+                            v=vector([2,-3])
+                            e1=vector([1,0])
+                            e2=vector([0,1])
+                            plot1=arrow(zero,e1,color="blue")
+                            plot2=arrow(zero,e2,color="blue")
+                            plot3=arrow(zero,v,color="green",aspect_ratio=1)
+                            final_plot=plot1+plot2+plot3
+                            final_plot.show(aspect_ratio=1)
+                            final_plot
+                        </sageplot>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                The vector that is at an angle in <xref ref="my_first_vectors"/> is the vector <m>\vec{v}=\left\lt 2,-3 \right\gt</m> from above, the horizontal and vertical vectors in are called <term>elementary vectors</term><idx><h>elementary vectors</h></idx> and are called <m>\vec{e_1}=\left\lt 1,0 \right\gt</m> and <m>\vec{e_2}=\left\lt 0,1 \right\gt</m> respectively. Elementary vectors will play an important roll later.
             </p>
             <p>
-                Dot Product and Angles
+                Vectors play an important and useful roll in mathematics.  They can be used to gather, organize, and track related information such as populations of animals, profits and costs, or the spread of disease across population.  Here, and in multi-variable calculus, they are most frequently used because they can indicate direction and magnitude and so accurately represent change.  For example the vector <m>\vec{v}=\left\lt 2,-3 \right\gt</m> has a magnitude of <m>|\vec{v}|=\sqrt{2^2+(-3)^2}=\sqrt{13}\approx 3.61</m>, which is found using the Pythagorean Theorem.  We describe its direction by using a <term>unit vector</term><idx><h>unit vector</h></idx><idx><h>vector</h><h>unit vector</h></idx>, that is a vector of length one pointing in the same direction.  In this case the unit vector will be <me>\vec{u}=\frac{1}{\sqrt{13}}\left\lt2,-3\right\gt=\left\lt\frac{2}{\sqrt{13}},-\frac{3}{\sqrt{13}}\right\gt.</me>  In general given a vector <m>\vec{v}=\left\lt v_1, v_2, v_3, \ldots, v_n\right\gt</m> the length of <m>\vec{v}</m> is given by <me>\left|\vec{v}\right|=\sqrt{v_1^2+v_2^2+v_3^2+\cdots+v_n^2},</me>
+                and the unit vector giving the direction of <m>\vec{v}</m> is given by 
+                <me>
+                    \frac{\vec{v}}{\left|\vec{v}\right|}=
+                    \left\lt
+                        \frac{\vec{v_1}}{\left|\vec{v}\right|}, 
+                        \frac{\vec{v_2}}{\left|\vec{v}\right|}, 
+                        \frac{\vec{v_3}}{\left|\vec{v}\right|}, 
+                        \ldots, \frac{\vec{v_n}}{\left|\vec{v}\right|}
+                    \right\gt
+                </me>
+            </p>
+            <sage>
+                <input><xi:include href="sage_code/magnitude_direction_cell.sage" parse="text" /></input>
+                <output></output>
+            </sage>
+            <p>
+                Sums, Scalar Multiple, Dot Product and Angles
             </p>
         </subsection>
         <subsection>
