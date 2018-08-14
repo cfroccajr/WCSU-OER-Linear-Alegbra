@@ -575,7 +575,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </figure>
             </sidebyside>
             <p>
-                The vector that is at an angle in <xref ref="my_first_vectors"/> is the vector <m>\vec{v}=\left\lt 2,-3 \right\gt</m> from above, the horizontal and vertical vectors in are called <term>elementary vectors</term><idx><h>elementary vectors</h></idx> and are called <m>\vec{e_1}=\left\lt 1,0 \right\gt</m> and <m>\vec{e_2}=\left\lt 0,1 \right\gt</m> respectively. Elementary vectors will play an important roll later.
+                The vector that is at an angle in <xref ref="my_first_vectors"/> is the vector <m>\vec{v}=\left\lt 2,-3 \right\gt</m> from above, the horizontal and vertical vectors in are called <term>elementary vectors</term><idx><h>elementary vectors</h></idx><idx><h>vector</h><h>elementary vectors</h></idx> and are called <m>\vec{e_1}=\left\lt 1,0 \right\gt</m> and <m>\vec{e_2}=\left\lt 0,1 \right\gt</m> respectively. Elementary vectors will play an important roll later.
             </p>
             <p>
                 Vectors play an important and useful roll in mathematics.  They can be used to gather, organize, and track related information such as populations of animals, profits and costs, or the spread of disease across population.  Here, and in multi-variable calculus, they are most frequently used because they can indicate direction and magnitude and so accurately represent change.  For example the vector <m>\vec{v}=\left\lt 2,-3 \right\gt</m> has a magnitude of <m>|\vec{v}|=\sqrt{2^2+(-3)^2}=\sqrt{13}\approx 3.61</m>, which is found using the Pythagorean Theorem.  We describe its direction by using a <term>unit vector</term><idx><h>unit vector</h></idx><idx><h>vector</h><h>unit vector</h></idx>, that is a vector of length one pointing in the same direction.  In this case the unit vector will be <me>\vec{u}=\frac{1}{\sqrt{13}}\left\lt2,-3\right\gt=\left\lt\frac{2}{\sqrt{13}},-\frac{3}{\sqrt{13}}\right\gt.</me>  In general given a vector <m>\vec{v}=\left\lt v_1, v_2, v_3, \ldots, v_n\right\gt</m> the length of <m>\vec{v}</m> is given by <me>\left|\vec{v}\right|=\sqrt{v_1^2+v_2^2+v_3^2+\cdots+v_n^2},</me>
@@ -590,24 +590,263 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     \right\gt
                 </me>
             </p>
+            <p>
+                To practice calculating magnitudes and unit vectors click <c>Evaluate (Sage)</c>.
+            </p>
             <sage>
                 <input><xi:include href="sage_code/magnitude_direction_cell.sage" parse="text" /></input>
                 <output></output>
             </sage>
+        </subsection>
+        <subsection>
+            <title>Combining Vectors</title>
             <p>
-                Sums, Scalar Multiple, Dot Product and Angles
+                <!-- Sums, Scalar Multiple, Dot Product and Angles -->
+                Thare are also a number of ways to combine vectors.  If <me>\vec{v}=\left\lt2,3,0\right\gt</me> and <me>\vec{u}=\left\lt-1,0,5\right\gt</me>, then we may add these to get
+            </p>
+            <sidebyside widths="30% 30%">
+                <p>
+                    <md>
+                        <mrow>\vec{v}+\vec{u}\amp=\left\lt2,3,0\right\gt+\left\lt-1,0,5\right\gt</mrow>
+                        <mrow>\amp= \left\lt2-1,3+0,0+5\right\gt</mrow>
+                        <mrow>\amp= \left\lt 1,3,5\right\gt</mrow>,
+                    </md>
+                </p>
+                <figure>
+                    <caption><m>\vec{v}+\vec{u}</m></caption>
+                    <image>
+                        <sageplot>
+                            zero=vector([0,0,0])
+                            v=vector([2,3,0])
+                            u=vector([-1,0,5])
+                            sum_vec=u+v
+                            plot1=arrow(zero,v,color="blue",arrowhead=20,width=4)
+                            plot2=arrow(zero,u,color="green",arrowhead=20,width=4)
+                            plot4=arrow(v,sum_vec,color="blue",arrowhead=20,width=4)
+                            plot5=arrow(u,sum_vec,color="green",arrowhead=20,width=4)
+                            plot3=arrow(zero,sum_vec,color="red",arrowhead=20,width=4)
+                            plot1+plot2+plot3+plot4+plot5
+                        </sageplot>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                or similarly subtract them
+            </p>
+            <sidebyside widths="30% 30%">
+                <p>
+                    <md>
+                        <mrow>\vec{v}-\vec{u}\amp=\left\lt2,3,0\right\gt-\left\lt-1,0,5\right\gt</mrow>
+                        <mrow>\amp= \left\lt2+1,3-0,0-5\right\gt</mrow>
+                        <mrow>\amp= \left\lt 3,3,-5\right\gt\, .</mrow>.
+                    </md>
+                </p>
+                <figure>
+                    <caption><m>\vec{v}-\vec{u}</m></caption>
+                    <image>
+                        <sageplot>
+                            zero=vector([0,0,0])
+                            v=vector([2,3,0])
+                            u=vector([-1,0,5])
+                            sum_vec=u+v
+                            dif_vec=v-u
+                            plot1=arrow(zero,v,color="blue",arrowhead=20,width=4)
+                            plot2=arrow(zero,u,color="green",arrowhead=20,width=4)
+                            plot3=arrow(zero,dif_vec,color="red",arrowhead=20,width=4)
+                            plot4=arrow(v,sum_vec,color="blue",arrowhead=20,width=4)
+                            plot5=arrow(u,sum_vec,color="green",arrowhead=20,width=4)
+                            plot6=arrow(u,v,color="red",arrowhead=20,width=4)
+                            plot1+plot2+plot3+plot4+plot5+plot6
+                        </sageplot>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                We may also multiply vectors by <term>scalars</term><idx><h>scalar</h></idx>, which here means a number, like this
+            </p>
+            <sidebyside widths="30% 30%">
+                <p>
+                    <md>
+                        <mrow>5\vec{u}\amp=5\left\lt -1,0,5\right\gt</mrow>
+                        <mrow> \amp= \left\lt -5,0,25\right\gt\, .</mrow>
+                    </md>
+                </p>
+                <figure>
+                    <caption><m>5\vec{u}</m></caption>
+                    <image>
+                        <sageplot>
+                            zero=vector([0,0,0])
+                            u=vector([-1,0,5])
+                            sum_vec=5*u
+                            plot2=arrow(zero,u,color="green",arrowhead=50,width=10)
+                            plot3=arrow(zero,sum_vec,color="red",arrowhead=50,width=10,aspect_ratio=[5,5,1])
+                            plot3+plot2
+                        </sageplot>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                If we do all of this at once like so
+            </p>
+            <sidebyside widths="30% 30%">
+                <p>
+                    <md>
+                        <mrow>-2\vec{v}+5\vec{u}\amp=\left\lt-4,-6,0\right\gt+\left\lt-5,0,25\right\gt</mrow>
+                        <mrow>\amp= \left\lt-4-5,-6+0,0+25\right\gt</mrow>
+                        <mrow>\amp= \left\lt -9,-6,25\right\gt</mrow>,
+                    </md>
+                </p>
+                <figure>
+                    <caption><m>-2\vec{v}+5\vec{u}</m></caption>
+                    <image>
+                        <sageplot>
+                            zero=vector([0,0,0])
+                            v=vector([2,3,0])
+                            u=vector([-1,0,5])
+                            sum_vec=-2*v+5*u
+                            plot1=arrow(zero,v,color="blue",arrowhead=50,width=10)
+                            plot2=arrow(zero,u,color="green",arrowhead=50,width=10)
+                            plot3=arrow(zero,sum_vec,color="red",arrowhead=50,width=10)
+                            plot1+plot2+plot3
+                        </sageplot>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                we say that we are taking a <term>linear combination</term><idx><h>linear combination</h></idx> of <m>\vec{v}</m> and <m>\vec{u}</m>.
+            </p>
+            <p>
+                While addition and subtraction of vectors works as expected, there is no single well defined multiplication of vectors.  Instead of a single multiplication we have two, the <term>dot product</term><idx><h>dot product</h></idx> and the <term>cross product</term><idx><h>cross product</h></idx>.  While both of these products are important here we will concern ourselves only with the dot product.
+                The dot product of two vectors is calculated by multiplying entries in the vectors together and then adding the results as follows
+                <md>
+                    <mrow>\vec{v}\cdot\vec{u}\amp=\left\lt2,3,0\right\gt\cdot\left\lt-1,0,5\right\gt</mrow>
+                    <mrow>\amp=2(-1)+3(0)+0(5)</mrow>
+                    <mrow>\amp=-2+0+0</mrow>
+                    <mrow>\amp=-2.</mrow>
+                </md>
+                Geometrically, the dot product is equivalent to
+                <me>\vec{v}\cdot\vec{u}=|\vec{v}||\vec{u}|\cos(\theta)</me>,
+                where <m>\theta</m> is the angle between the two vectors.
+            </p>
+            <p>
+                To practice your linear combinations and dot products click <c>Evaluate (Sage)</c>.
+            </p>
+            <sage>
+                <input><xi:include href="sage_code/combination_cell.sage" parse="text" /></input>
+                <output></output>
+            </sage>
+            <p>
+                As a final note drawing to connect this subsection with the last note that
+                <me>\vec{v}\cdot\vec{v}=|\vec{v}|^2</me>
+                so that the unit vector in the direction of <m>\vec{v}</m> is equal to
+                <me>\frac{\vec{v}}{|\vec{v}|}=\frac{\vec{v}}{\sqrt{\vec{v}\cdot\vec{v}}}.</me>
             </p>
         </subsection>
         <subsection>
             <title>Vector Equations</title>
             <p>
-                Linear combinations and systems of equations
+                <!-- Linear combinations and systems of equations -->
+                Linear combinations of vectors are important because they will let us relate vectors to systems of equations.  Consider the following system of equations:
+                <md>
+                    <mrow>7x+3y-9z\amp=2</mrow>
+                    <mrow>-x+2y+5z\amp=13</mrow>
+                    <mrow>2x- y\amp=0</mrow>
+                </md>
+                looking at the first column it looks like
+                <me>
+                    \left\lt
+                        \begin{array}{r}
+                            7x \\
+                            -x \\
+                            2x
+                        \end{array}
+                    \right\gt
+                    =x
+                    \left\lt
+                        \begin{array}{r}
+                            7 \\
+                            -1 \\
+                            2
+                        \end{array}
+                    \right\gt
+                </me>
+                that is an unknown scalar <m>x</m> times a vector <m>\left\lt7, -1, 2\right\gt</m>.  Similarly, the second column is
+                <me>
+                    \left\lt
+                        \begin{array}{r}
+                            3y \\
+                            2y \\
+                            -y
+                        \end{array}
+                    \right\gt
+                    =y
+                    \left\lt
+                        \begin{array}{r}
+                            3 \\
+                            2 \\
+                            -1
+                        \end{array}
+                    \right\gt
+                </me>
+                and the third is
+                <me>
+                    \left\lt
+                        \begin{array}{r}
+                            -9z \\
+                            5z \\
+                            0
+                        \end{array}
+                    \right\gt
+                    =z
+                    \left\lt
+                        \begin{array}{r}
+                            -9 \\
+                            5 \\
+                            0
+                        \end{array}
+                    \right\gt .
+                </me>
+                Thus the original system of equations can be rewritten into a single <term>vector equation</term><idx><h>vector equation</h></idx><idx><h>vector</h><h>vector equation</h></idx> like so
+                <me>
+                    \left\lt
+                        \begin{array}{r}
+                            7 \\
+                            -1 \\
+                            2
+                        \end{array}
+                    \right\gt x
+                    +
+                    \left\lt
+                        \begin{array}{r}
+                            3 \\
+                            2 \\
+                            -1
+                        \end{array}
+                    \right\gt y
+                    +
+                    \left\lt
+                        \begin{array}{r}
+                            -9 \\
+                            5 \\
+                            0
+                        \end{array}
+                    \right\gt z
+                    =
+                    \left\lt
+                        \begin{array}{r}
+                            2 \\
+                            13 \\
+                            0
+                        \end{array}
+                    \right\gt.
+                </me>
+                This is the sort of relationship we will explore in the next section.
             </p>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Vector, Scalar, Dot Product, Linear Combination, ...
+                Vector, Elementary Vectors, Unit Vectors, Magnitude, Scalar, Dot Product, Linear Combination, Vector Equation
             </p>
         </conclusion>
 
