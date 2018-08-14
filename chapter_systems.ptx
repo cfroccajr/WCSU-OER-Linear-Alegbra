@@ -604,7 +604,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <!-- Sums, Scalar Multiple, Dot Product and Angles -->
                 Thare are also a number of ways to combine vectors.  If <me>\vec{v}=\left\lt2,3,0\right\gt</me> and <me>\vec{u}=\left\lt-1,0,5\right\gt</me>, then we may add these to get
             </p>
-            <sidebyside widths="30% 30%">
+            <sidebyside widths="30% 40%">
                 <p>
                     <md>
                         <mrow>\vec{v}+\vec{u}\amp=\left\lt2,3,0\right\gt+\left\lt-1,0,5\right\gt</mrow>
@@ -633,7 +633,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 or similarly subtract them
             </p>
-            <sidebyside widths="30% 30%">
+            <sidebyside widths="30% 40%">
                 <p>
                     <md>
                         <mrow>\vec{v}-\vec{u}\amp=\left\lt2,3,0\right\gt-\left\lt-1,0,5\right\gt</mrow>
@@ -664,7 +664,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 We may also multiply vectors by <term>scalars</term><idx><h>scalar</h></idx>, which here means a number, like this
             </p>
-            <sidebyside widths="30% 30%">
+            <sidebyside widths="30% 40%">
                 <p>
                     <md>
                         <mrow>5\vec{u}\amp=5\left\lt -1,0,5\right\gt</mrow>
@@ -688,7 +688,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 If we do all of this at once like so
             </p>
-            <sidebyside widths="30% 30%">
+            <sidebyside widths="30% 40%">
                 <p>
                     <md>
                         <mrow>-2\vec{v}+5\vec{u}\amp=\left\lt-4,-6,0\right\gt+\left\lt-5,0,25\right\gt</mrow>

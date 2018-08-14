@@ -32,5 +32,11 @@ def _(v=('Vector v',input_grid(1,2,default=[2,1],type=int,width=2)),
             print "the angle between the vectors is",float(solution3*180/pi),"degrees"
         except:
             print "Error, likely division by zero."
+        zero=vector([0,0])
+        plotv=arrow(zero,V,color="blue")
+        plotu=arrow(zero,U,color="green")
+        plots=arrow(zero,solution1,color="red")
+        final_plot=plotv+plotu+plots
+        final_plot.show(aspect_ratio=1)
     print "\nOnce, you answer that one enter these new \nvectors and coefficients and try again."
     print "v =",rand_vector(),", u =",rand_vector(),", a =",random.randint(-5,5),", and b =",random.randint(-5,5)
