@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cd",
+				"cd"
+			],
+			[
+				"section",
+				"section_matrix_operations"
+			],
+			[
 				"sub",
 				"subsection"
 			],
@@ -127,14 +135,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "OER_Linear_Alg.ptx",
-			"settings":
-			{
-				"buffer_size": 1939,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -622,102 +622,6 @@
 					"Build youtube to all Images"
 				],
 				[
-					"Main PTX Build",
-					"Windows Main PTX Build"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					""
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Process PreTeXt to HTML"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Process PreTeXt to LaTeX"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Build latex-image images"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Build asymptote images"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Build sageplot images"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Fetch Youtube thumbnails (beta)"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Extract MyOpenMath problems (beta)"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Extract WeBWorK problems (beta)"
-				],
-				[
-					"Packages/PreTeXtual/PreTeXt.sublime-build",
-					"Update PreTeXt"
-				],
-				[
-					"Packages/User/xelatex.sublime-build",
-					""
-				]
-			],
-			[
-				"Main PTX Build",
-				"to HTML Folder"
-			]
-		],
-		[
-			[
-				[
-					"Main PTX Build",
-					""
-				],
-				[
-					"Main PTX Build",
-					"to HTML Folder"
-				],
-				[
-					"Main PTX Build",
-					"Check Schema"
-				],
-				[
-					"Main PTX Build",
-					"Build TeX File"
-				],
-				[
-					"Main PTX Build",
-					"Xelatex the .tex file"
-				],
-				[
-					"Main PTX Build",
-					"Open the .pdf file"
-				],
-				[
-					"Main PTX Build",
-					"Build latex-image to all Images"
-				],
-				[
-					"Main PTX Build",
-					"Build sageplot to svg Images"
-				],
-				[
-					"Main PTX Build",
-					"Build sageplot to pdf Images"
-				],
-				[
-					"Main PTX Build",
-					"Build youtube to all Images"
-				],
-				[
 					"Packages/LaTeXTools/LaTeX.sublime-build",
 					""
 				],
@@ -1008,7 +912,7 @@
 			]
 		]
 	],
-	"build_varint": "to HTML Folder",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1064,18 +968,21 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code"
 	],
 	"file_history":
 	[
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/combination_cell.sage",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/solving_system_cell.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/systems_cas_cell.sage",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.tex",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/combination_cell.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/magnitude_direction_cell.sage",
 		"/C/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/H/ciphers.csv",
 		"/H/cipher_file.csv",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/2018 Fall MAT 150 - Seminar I.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/Inspiring Your Teachers.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
@@ -1193,9 +1100,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/tmp/Junk2.ptx",
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/glossary.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/copySample/sample-article.xml",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx"
 	],
 	"find":
 	{
@@ -1213,6 +1118,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"objectives",
+			"vector equation",
 			"arrowhead=50,width=10",
 			"\\vfill",
 			" - ",
@@ -1240,7 +1147,7 @@
 			".txt"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -1275,39 +1182,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "OER_Linear_Alg.ptx",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
