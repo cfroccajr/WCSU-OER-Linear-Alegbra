@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"cd",
-				"cd"
-			],
-			[
 				"section",
 				"section_matrix_operations"
+			],
+			[
+				"me",
+				"me"
 			],
 			[
 				"sub",
@@ -135,6 +135,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "chapter_systems.ptx",
+			"settings":
+			{
+				"buffer_size": 86645,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -534,6 +543,142 @@
 					"Windows Main PTX Build"
 				],
 				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build sageplot to pdf Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
 					"Packages/PreTeXtual/PreTeXt.sublime-build",
 					""
 				],
@@ -577,6 +722,102 @@
 			[
 				"Main PTX Build",
 				"Windows Main PTX Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"to HTML Folder"
 			]
 		],
 		[
@@ -912,7 +1153,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "to HTML Folder",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -968,21 +1209,23 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code"
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
 	],
 	"file_history":
 	[
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/solving_system_cell.sage",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/systems_cas_cell.sage",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.tex",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/solving_system_cell.sage",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/texmf-local/TeXinput/beamerthemeWCSUUS.sty",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/combination_cell.sage",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/matrix_vector_product_cell.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/combination_cell.sage",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/magnitude_direction_cell.sage",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/H/ciphers.csv",
 		"/H/cipher_file.csv",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/You and Your Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/2018 Fall MAT 150 - Seminar I.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 150 Mathematics Seminar/Inspiring Your Teachers.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
@@ -1004,7 +1247,6 @@
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/systems_cell.sage",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Resource Spread Sheet.csv",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT467 Proposals",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_systems.ptx",
@@ -1098,13 +1340,11 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_mathematical_ciphers.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/tmp/junk.ptx",
 		"/Users/cfroccajr/Documents/CryptoText/tmp/Junk2.ptx",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/glossary.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -1118,8 +1358,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"objectives",
-			"vector equation",
+			"\\right\\gt",
+			"\\left\\lt",
+			"check",
+			"\\leadsto",
 			"arrowhead=50,width=10",
 			"\\vfill",
 			" - ",
@@ -1152,6 +1394,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\\right]",
+			"\\left[",
 			"arrowhead=20,width=4",
 			"",
 			":\\par ",
@@ -1182,8 +1426,40 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "chapter_systems.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 86645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77822,
+								77822
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 23760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1238,7 +1514,7 @@
 	"project": "OER_Linear_Alg.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
