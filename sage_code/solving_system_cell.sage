@@ -1,34 +1,43 @@
-# Enter data here, note that all the vectors should have three entries and the matrix should have dimensions 3x3:
+#
+# Enter data here, note that all the vectors 
+# should have three entries and the matrix 
+# should have dimensions 3x3:
+#
 
 # variables and variable vector
 var('x,y,z')
-variable_vector=vector([x,y,z])
+variable_vector=vector([...])
 
 # zero vector
-zero=vector([0,0,0])
+zero=vector([...])
 
 # coefficient matrix
-A=matrix([[3,1,-1],[-1,7,0],[2,8,-1]])
+A=matrix([...])
 pretty_print("A=",A)
 
 # solving the equations
 
 # step 0
-A = A.augment(zero)
-pretty_print("A=",A)
+Az = A.augment(zero)
+pretty_print(LatexExpr("[A|0]="),Az)
 
 # step 1
-A.swap_rows(0,1)
-pretty_print(LatexExpr("\leadsto"),A)
+Az.swap_rows(0,1)
+pretty_print(LatexExpr("\leadsto"),Az)
 
 # step 2
-A.rescale_row(0,-1)
-pretty_print(LatexExpr("\leadsto"),A)
+Az.rescale_row(0,-1)
+pretty_print(LatexExpr("\leadsto"),Az)
 
 # step 3
-A.add_multiple_of_row(1,0,-3)
-A.add_multiple_of_row(2,0,-2)
-pretty_print(LatexExpr("\leadsto"),A)
+Az.add_multiple_of_row(1,0,-3)
+Az.add_multiple_of_row(2,0,-2)
+pretty_print(LatexExpr("\leadsto"),Az)
+
+
+# A Quicker Way?
+#A.solve_right?
+#A.rref()
 
 # corresponding vectors for a vector equation
 #A1 = A.column(0)
@@ -37,9 +46,10 @@ pretty_print(LatexExpr("\leadsto"),A)
 
 # Generate plot objects
 #A1_plot = arrow(zero,A1,width=5,arrowhead=10,color="blue")
-#A2_plot = arrow(zero,A3,width=5,arrowhead=10,color="green")
+#A2_plot = arrow(zero,A2,width=5,arrowhead=10,color="green")
 #A3_plot = ...
+#var('t,s')
+#plain_plot = parametric_plot3d(A1*t+A2*s,(t,-1,1),(s,-1,1))
 
 # Plot objects
-
-#A.solve_right?
+#A1_plot+A2_plot+plain_plot+A3_plot

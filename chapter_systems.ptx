@@ -1469,7 +1469,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         The first thing you should try is clicking and dragging on the image, what happens?  What if click on the image and then scroll?
                     </li>
                     <li>
-                        Try changing some of the numerical parameters in the plot commands, like <c>width</c>, <c>color></c>, or <c>(x,-5,5)</c>, what happens when you re-evaluate?
+                        Try changing some of the parameters in the plot commands, like <c>width</c>, <c>color</c>, or <c>(x,-5,5)</c>, what happens when you re-evaluate?
                     </li>
                     <li>
                         Following the example of <c>v_plot</c> and <c>u_plot</c> create an arrow plot of the vector <m>R\vec{v}</m> with the matrix <m>R</m> provided.
@@ -1505,13 +1505,51 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <alert>Comments and Comprehension Check</alert>
                 <ul>
                     <li>
-                        stuff?
+                        Look carefully at the output; what are the effects of the commands <c>augment</c>, <c>swap_rows</c>, <c>rescale_row</c>, and <c>add_multiple_of_row</c>?
                     </li>
-
+                    <li>
+                        Using the row commands you just looked at, finish row reducing the matrix to row echelon form in order to find all the possible solutions.
+                    </li>
+                    <li>
+                        Now uncomment <c>#A.solve_right?</c> and learn to use the <c>solve_right</c> command.  How do these results compare to what you found using row reduction?
+                    </li>
+                    <li>
+                        Next try the same with <c>#A.solve_right</c>?
+                    </li>
+                    <li>
+                        Finally look at the situation graphically.  Start by uncommenting the lines where it says <c>#A1 = A.column(0)</c> and <c>#A2 = A.column(1)</c> and re-evaluating the Sage Cell.  What do these commands do?  If you are unsure try using the command <c>A.column?</c> to get help.
+                    </li>
+                    <li>
+                        Plot the vectors <c>A1</c>, <c>A2</c>, and <c>A3</c> along with the plane whose plot is defined parametrically with <c>parametric_plot3d(A1*t+A2*s,(t,-1,1),(s,-1,1))</c>.  What do you notice about the three vectors and the plane?  How does this relate to the solutions for this system?
+                    </li>
                 </ul>
             </p>
         </subsection>
     </section>
+
+
+<!-- Supplementary Material -->
+
+    <section xml:id="section_supplement_systems">
+        <title>Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Sage and Row Operations</caption>
+                    <video youtube="vP37EvSMWes" />
+            </figure>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Sage and Plots</caption>
+                    <video youtube="pKkUZ8yiXjU" />
+            </figure>
+    </section>
+
+
 
 <!-- Exercises -->
 
@@ -1689,16 +1727,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </exercisegroup>
     </exercises>
 
-<!-- Supplementary Material -->
-
-    <section xml:id="section_supplement_systems">
-        <title>Supplementary Material</title>
-            <figure>
-                    <!-- <title>Modern Marvels: Codes</title> -->
-                    <caption>Gaussian Elimination</caption>
-                    <video youtube="qbWDZM4qgEk" />
-            </figure>
-    </section>
 
 </chapter>
 
