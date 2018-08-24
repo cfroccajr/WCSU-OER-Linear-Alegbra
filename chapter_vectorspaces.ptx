@@ -98,20 +98,53 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     </section>
 
+<!-- Supplementary Material -->
+
+    <section xml:id="section_supplement_spaces">
+        <title>Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+    </section>
+
+    <section xml:id="section_supplement_stractures">
+        <title>Preview of Algebraic Structures</title>
+        <p>In this section we preview algebraic structures as a generalization of the idea of a vector space.</p>
+    </section>
+
 <!-- Exercises -->
 
     <exercises xml:id="section_exercises_spaces">
         <title>Exercises and Practice Exam on Systems of Equations</title>
         <introduction>
             <p>
+                <alert>Textbook Exercises:</alert>
+            </p>
+            <p>
+                These are the exercises from <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you need to hand in as part of your grade.  The solutions to these are available in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement, but you need to, to the best of your ability, answer them in your own words.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Spaces (p.86): 30</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=107">Subspaces and Spanning Set (p.97): 43</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=119">Definitions and Examples of Independence (p.109): 35, Extra Credit for 43</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=128">Basis (p.118): 29</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=135">Dimension (p.125): 22, Extra Credit fo 33</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=143">Vector Spaces and Linear Systems (p.133): 29 and 30</url> </li>
+                </ul>
+            </p>
+            <p>
+                <alert>Practice Exercises:</alert>
+            </p>
+            <p>
                 Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
                 <ul>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Spaces:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=107">Subspaces and Spanning Set:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=119">Definitions and Examples of Independence:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=128">Basis:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=135">Dimension:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=143">Vector Spaces and Linear Systems:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Spaces (p.86): 17,18,19,22</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=107">Subspaces and Spanning Set (p.97): 20,22,25,26</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=119">Definitions and Examples of Independence (p.109): 20,21,22,32</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=128">Basis (p.118): 18,19,20,23,33,35</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=135">Dimension (p.125): 16,17,18</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=143">Vector Spaces and Linear Systems (p.133): 16-25</url> </li>
                 </ul>
             </p>
         </introduction>
@@ -248,21 +281,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </exercisegroup>
     </exercises>
 
-<!-- Supplementary Material -->
 
-    <section xml:id="section_supplement_spaces">
-        <title>Supplementary Material</title>
-            <figure>
-                    <!-- <title>Modern Marvels: Codes</title> -->
-                    <caption>Gaussian Elimination</caption>
-                    <video youtube="qbWDZM4qgEk" />
-            </figure>
-    </section>
-
-    <section xml:id="section_supplement_stractures">
-        <title>Preview of Algebraic Structures</title>
-        <p>In this section we preview algebraic structures as a generalization of the idea of a vector space.</p>
-    </section>
 
 </chapter>
 
