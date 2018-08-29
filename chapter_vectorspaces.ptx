@@ -160,12 +160,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Given a vector space <me>H=span\{\vec{v_1},\vec{v_3},\vec{v_3}\}</me> and <me>-3\vec{v_1}+2\vec{v_2}+\vec{v_3}=\vec{0},</me> assuming that <m>\vec{v_i}\neq\vec{0}</m> and that they are not multiples of one another, what is a possible basis for <m>H</m>?  What is the dimension of <m>H</m>?
                     </p>
                 </statement>
                 <hint>
                     <p>
-                        Some more Content!!!
+                        In the definition of a basis what conditions must it satisfy?
                     </p>
                 </hint>
             </exercise>
@@ -173,12 +173,42 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Find <m>n</m> such that <m>Row\ A</m> is a subspace of <m>\mathbb{R}^n</m> and find <m>m</m> such that <m>Col\ A</m> is a subspace of <m>\mathbb{R}^m</m> given
+                        <me>
+                            A=
+                            \left[
+                                \begin{array}{rrrr}
+                                    1 \amp 13 \amp 5 \amp 0 \\
+                                    0 \amp 1 \amp 4 \amp 1
+                                \end{array}
+                            \right].
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find a matrix <m>A</m> such that the given set is <m>Col\ A</m>.
+                        <me>
+                            V=
+                            \left\{
+                                \left[
+                                    \begin{array}{r}
+                                        3r-2s\\
+                                        s-4t\\
+                                        -r+4t\\
+                                        r+2s+t
+                                    \end{array}
+                                \right]:r,s,t\in\mathbb{R}
+                            \right\}
+                        </me>
                     </p>
                 </statement>
                 <hint>
                     <p>
-                        Some more Content!!!
+                        Rewrite the vectors described in the set as a linear combination of multiple vectors.
                     </p>
                 </hint>
             </exercise>
@@ -186,67 +216,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Find bases for <m>Row\ A</m> and <m>Col A</m> given:
+                        <me>
+                            A=
+                            \left[
+                                \begin{array}{rrrr}
+                                    5 \amp 0 \amp 25 \amp 10 \\
+                                    3 \amp 1 \amp 15 \amp 5  \\
+                                    2 \amp -1 \amp 10 \amp 5 
+                                \end{array}
+                            \right].
+                        </me>
                     </p>
                 </statement>
                 <hint>
                     <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
+                        You may need to row reduce the matrix to get an idea of what is happening.
                     </p>
                 </hint>
             </exercise>
@@ -255,12 +240,61 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Given a <m>7\times3</m> matrix, what are the maximum and minimum dimensions for the row and column spaces?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Give a basis for the space
+                        <me>
+                            \mathcal{P}_3=\left\{a_0+a_1x+a_2x^2+a_3x^3\right\}
+                        </me>
+                        then list three distinct elements of the space.
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Is the given vector in the span of the given set?
+                        <me>
+                            \vec{v}=
+                            \left[
+                                \begin{array}{r}
+                                    7\\
+                                    3\\
+                                    13
+                                \end{array}
+                            \right]
+                            \mbox{ and }
+                            S=
+                            \left\{
+                            \left[
+                                \begin{array}{r}
+                                    -1\\
+                                    7\\
+                                    0
+                                \end{array}
+                            \right],
+                            \left[
+                                \begin{array}{r}
+                                    1\\
+                                    5\\
+                                    0
+                                \end{array}
+                            \right]
+                            \right\}
+                        </me>
                     </p>
                 </statement>
                 <hint>
                     <p>
-                        Some more Content!!!
+                        You can try to look at the problem as a set of equations, but try not to over think it.
                     </p>
                 </hint>
             </exercise>
@@ -269,14 +303,81 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Show that
+                        <me>
+                            S=
+                            \left\{
+                            \left[
+                                \begin{array}{r}
+                                    -1\\
+                                    0\\
+                                    2
+                                \end{array}
+                            \right],
+                            \left[
+                                \begin{array}{r}
+                                    1\\
+                                    5\\
+                                    0
+                                \end{array}
+                            \right]
+                            \right\}
+                        </me>
+                        are linearly independent and write
+                        <me>
+                            \vec{v}=
+                            \left[
+                                \begin{array}{r}
+                                    -2\\
+                                    25\\
+                                    14
+                                \end{array}
+                            \right]
+                        </me>
+                        as a linear combination of the two.
                     </p>
                 </statement>
                 <hint>
                     <p>
-                        Some more Content!!!
+                        Think in terms of vector equations, but again stop and think before you start to calculate.
                     </p>
                 </hint>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find a basis for the solution set of this system:
+                        <md>
+                            <mrow>x_1+x_2+x_3+x_4\amp =0</mrow>
+                            <mrow>-x_2+7x_3-4x_4\amp =0</mrow>
+                            <mrow>x_1+8x_3-3x_4\amp =0</mrow>
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the basis and dimension of the vector space:
+                        <me>
+                            V=
+                            \left\{
+                                \left[
+                                    \begin{array}{r}
+                                        r\\
+                                        s\\
+                                        t\\
+                                        w
+                                    \end{array}
+                                \right]:r,s,t,w\in\mathbb{R}\mbox{ and }r+2t-w=0
+                            \right\}
+                        </me>
+                    </p>
+                </statement>
             </exercise>
         </exercisegroup>
     </exercises>
