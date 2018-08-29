@@ -57,10 +57,91 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_space_definitions">
         <title>What is a Vector Space</title>
         <idx><h>vector space</h></idx>
-
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Exapnding Our Perspectives</title>
+            <investigation xml:id="xy-coordinates">
+                <title>Something Old, Something New</title>
+                <p>
+                    Statement:
+                </p>
+                <p>
+                    Long ago an far away you learned to plot points in two dimensions with <m>x</m> and <m>y</m> coordinates:
+                </p>
+                <figure>
+                    <caption>A Few Points</caption>
+                    <image width="30%">
+                        <latex-image>
+                            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                            <![CDATA[
+                                \tikz{
+                                    \draw[->] (-1,0) -- (3,0);
+                                    \draw[->] (0,-1) -- (0,3);
+                                    \node[anchor = west] at (3,0) {$x$};
+                                    \node[anchor = south] at (0,3) {$y$};
+                                    \draw[blue, fill=blue] (1,1) circle [radius = 3pt] node[anchor=west] {(1,1)};
+                                    \draw[red, fill=red] (0,2.5) circle [radius = 3pt] node[anchor=west] {(0,2.5)};
+                                    \draw[green!70!black, fill=green!70!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+                                }
+                            ]]>
+                        </latex-image>
+                    </image>
+                </figure>
+                <p>
+                    But, how can we understand this in terms of vectors and how can we most efficiently describe infinitely many points and vectors?
+                </p>
+                <p>
+                    Solution:
+                </p>
+                <sidebyside widths="60% 30%">
+                    <p>
+                        The simplest thing to do would be to have a single vector like <m>\vec{v}=\left[ 2,3\right]</m>, but with infinitely many points to choose from this isn't very efficient.  A little better is to recognize that that can be written as a sum of two vectors like so
+                        <me>\vec{v}=\left[ 2,3\right]=\left[ 2,0\right]+\left[ 0,3\right].</me> Best of all is to realize that this is a linear combination of our elementary vectors <me>\vec{v}=\left[ 2,3\right]=2\vec{e}_1+3\vec{e}_2.</me><idx><h>elementary vectors</h></idx>
+                    </p>
+                    <figure>
+                        <caption>A Few Vectors</caption>
+                        <image>
+                            <latex-image>
+                                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                                <![CDATA[
+                                    \tikz{
+                                        \draw[->] (-1,0) -- (3,0);
+                                        \draw[->] (0,-1) -- (0,3);
+                                        \draw[very thick,->,red!50!blue] (0,0) -- (1.94,2.91);
+                                        \node[red!50!blue,thick,anchor=south east] at (1.2,1.5) {$\left[ 2,3\right]$};
+                                        \draw[very thick,->,blue] (1.94,0) -- (1.94,2.91);
+                                        \node[blue,thick,anchor=west] at (2,1.5) {$\left[ 0,3\right]$};
+                                        \draw[very thick,->,red] (0,0) -- (1.94,0);
+                                        \node[red,thick,anchor=north] at (0.97,0) {$\left[ 2,0\right]$};
+                                        \node[anchor = west] at (3,0) {$x$};
+                                        \node[anchor = south] at (0,3) {$y$};
+                                        \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+                                    }
+                                ]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>
+                    Use what you learned in <xref ref="section_CAS_systems" /> to recreate the image above in the Sage Cell below.
+                </p>
+                <sage>
+                    <input><xi:include href="sage_code/vector_spaces_cell.sage" parse="text" /></input>
+                    <output></output>
+                </sage>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>It's Kinda All the Same</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <conclusion>
+            <title>Section Vocabulary</title>
+            <p>
+                Some Words
+            </p>
+        </conclusion>
     </section>
 
 <!-- Linear independence and bases -->
@@ -68,19 +149,48 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_bases">
         <title>Linear Independence and Bases</title>
         <idx><h>linear independence</h></idx><idx><h>basis</h></idx>
-
-        <p>
-            Some Content!!!<idx><h>vector</h></idx>
-        </p>
+        <subsection>
+            <title>Independence Day</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>A Strong Foundation</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <conclusion>
+            <title>Section Vocabulary</title>
+            <p>
+                Some Words
+            </p>
+        </conclusion>
     </section>
 
 <!-- Systems and Matrices -->
 
     <section xml:id="section_matrices_spaces">
         <title>Spaces, Systems, Matrices</title>
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>A Rose by Any Other Name</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>A Universe in a Matrix</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <conclusion>
+            <title>Section Vocabulary</title>
+            <p>
+                Some Words
+            </p>
+        </conclusion>
     </section>
 
 <!-- CAS and Systems -->
@@ -109,7 +219,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </figure>
     </section>
 
-    <section xml:id="section_supplement_stractures">
+    <section xml:id="section_supplement_structures">
         <title>Preview of Algebraic Structures</title>
         <p>In this section we preview algebraic structures as a generalization of the idea of a vector space.</p>
     </section>
