@@ -136,7 +136,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Main PTX Build",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -768,7 +768,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"XeLaTeX"
+				""
 			]
 		],
 		[
@@ -912,7 +912,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -973,6 +973,12 @@
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 272 - Linear Algebra/Openner.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/cipher_cell.html",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/math_clinic_clue.html",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Resource Spread Sheet.csv",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/tutoring_center_clue.html",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/handout.txt",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
 		"/C/texmf/tex/latex/roboto/roboto.sty",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Latex/font_test.tex",
@@ -1094,13 +1100,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_frontmatter.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter5_mechanical_ciphers.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chart_appendix.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter7_modern_cryptology.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter4_mathematical_analysis.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers copy.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter1_early_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter7_modern_cryptology.mbx"
 	],
 	"find":
 	{
@@ -1234,7 +1234,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "OER_Linear_Alg.sublime-project",
 	"replace":
 	{
