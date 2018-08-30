@@ -598,7 +598,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <output></output>
             </sage>
         </subsection>
-        <subsection>
+        <subsection xml:id="combining_vectors">
             <title>Combining Vectors</title>
             <p>
                 <!-- Sums, Scalar Multiple, Dot Product and Angles -->
