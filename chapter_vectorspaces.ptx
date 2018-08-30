@@ -57,113 +57,113 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_space_definitions">
         <title>What is a Vector Space</title>
         <idx><h>vector space</h></idx>
-        <subsection>
-            <title>Exapnding Our Perspectives</title>
-            <investigation xml:id="xy-coordinates">
-                <title>Something Old, Something New</title>
+        <subsection  xml:id="xy-coordinates">
+            <title>Something Old, Something New</title>
+            <p>
+                Long ago an far away you learned to plot points in two dimensions with <m>x</m> and <m>y</m> coordinates:
+            </p>
+            <figure>
+                <caption>A Few Points</caption>
+                <image width="40%">
+                    <latex-image>
+                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                        <![CDATA[
+                            \tikz{
+                                \draw[->] (-1,0) -- (3,0);
+                                \draw[->] (0,-1) -- (0,3);
+                                \node[anchor = west] at (3,0) {$x$};
+                                \node[anchor = south] at (0,3) {$y$};
+                                \draw[blue, fill=blue] (1,1) circle [radius = 3pt] node[anchor=west] {(1,1)};
+                                \draw[red, fill=red] (0,2.5) circle [radius = 3pt] node[anchor=west] {(0,2.5)};
+                                \draw[green!70!black, fill=green!70!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+                            }
+                        ]]>
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                But, how can we understand this in terms of vectors and how can we most efficiently describe infinitely many points and vectors?
+            </p>
+            <sidebyside widths="60% 40%">
                 <p>
-                    Long ago an far away you learned to plot points in two dimensions with <m>x</m> and <m>y</m> coordinates:
+                    The simplest thing to do would be to have a single vector like <m>\vec{v}=\left[ 2,3\right]</m>, but with infinitely many points to choose from this isn't very efficient.  A little better is to recognize that that can be written as a sum of two vectors like so
+                    <me>\vec{v}=\left[ 2,3\right]=\left[ 2,0\right]+\left[ 0,3\right].</me> Best of all is to realize that this is a linear combination of our elementary vectors <me>\vec{v}=\left[ 2,3\right]=2\vec{e}_1+3\vec{e}_2.</me><idx><h>elementary vectors</h></idx>
                 </p>
                 <figure>
-                    <caption>A Few Points</caption>
-                    <image width="40%">
+                    <caption>A Few Vectors</caption>
+                    <image>
                         <latex-image>
                             <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
                             <![CDATA[
                                 \tikz{
                                     \draw[->] (-1,0) -- (3,0);
                                     \draw[->] (0,-1) -- (0,3);
+                                    \draw[very thick,->,red!50!blue] (0,0) -- (1.94,2.91);
+                                    \node[red!50!blue,thick,anchor=south east] at (1.2,1.5) {$\left[ 2,3\right]$};
+                                    \draw[very thick,->,blue] (1.94,0) -- (1.94,2.91);
+                                    \node[blue,thick,anchor=west] at (2,1.5) {$\left[ 0,3\right]$};
+                                    \draw[very thick,->,red] (0,0) -- (1.94,0);
+                                    \node[red,thick,anchor=north] at (0.97,0) {$\left[ 2,0\right]$};
                                     \node[anchor = west] at (3,0) {$x$};
                                     \node[anchor = south] at (0,3) {$y$};
-                                    \draw[blue, fill=blue] (1,1) circle [radius = 3pt] node[anchor=west] {(1,1)};
-                                    \draw[red, fill=red] (0,2.5) circle [radius = 3pt] node[anchor=west] {(0,2.5)};
-                                    \draw[green!70!black, fill=green!70!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+                                    \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
                                 }
                             ]]>
                         </latex-image>
                     </image>
                 </figure>
-                <p>
-                    But, how can we understand this in terms of vectors and how can we most efficiently describe infinitely many points and vectors?
-                </p>
-                <sidebyside widths="60% 40%">
-                    <p>
-                        The simplest thing to do would be to have a single vector like <m>\vec{v}=\left[ 2,3\right]</m>, but with infinitely many points to choose from this isn't very efficient.  A little better is to recognize that that can be written as a sum of two vectors like so
-                        <me>\vec{v}=\left[ 2,3\right]=\left[ 2,0\right]+\left[ 0,3\right].</me> Best of all is to realize that this is a linear combination of our elementary vectors <me>\vec{v}=\left[ 2,3\right]=2\vec{e}_1+3\vec{e}_2.</me><idx><h>elementary vectors</h></idx>
-                    </p>
-                    <figure>
-                        <caption>A Few Vectors</caption>
-                        <image>
-                            <latex-image>
-                                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                                <![CDATA[
-                                    \tikz{
-                                        \draw[->] (-1,0) -- (3,0);
-                                        \draw[->] (0,-1) -- (0,3);
-                                        \draw[very thick,->,red!50!blue] (0,0) -- (1.94,2.91);
-                                        \node[red!50!blue,thick,anchor=south east] at (1.2,1.5) {$\left[ 2,3\right]$};
-                                        \draw[very thick,->,blue] (1.94,0) -- (1.94,2.91);
-                                        \node[blue,thick,anchor=west] at (2,1.5) {$\left[ 0,3\right]$};
-                                        \draw[very thick,->,red] (0,0) -- (1.94,0);
-                                        \node[red,thick,anchor=north] at (0.97,0) {$\left[ 2,0\right]$};
-                                        \node[anchor = west] at (3,0) {$x$};
-                                        \node[anchor = south] at (0,3) {$y$};
-                                        \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
-                                    }
-                                ]]>
-                            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-                <p>
-                    Use what you learned in <xref ref="section_CAS_systems" /> to recreate the image above in the Sage Cell below.  Then adjust the Sage code in the cell to create similar pictures for the points <m>(1,3)</m>, <m>(-2,1)</m>, and <m>(-3,-2)</m>.  Are you convinced that you can always make this sort of picture?  Can you tell that this mens you can always write any vector as a combination of copies of the elementary vectors?
-                </p>
-                <sage>
-                    <input><xi:include href="sage_code/vector_spaces_cell.sage" parse="text" /></input>
-                    <output></output>
-                </sage>
-                <p>
-                    Because we can always write any vector (or describe steps to any point) using copies of elementary vectors <m>\vec{e}_1=[1,0]</m> and <m>\vec{e}_1=[1,0]</m> we say that they form a <term>basis</term><idx><h></h></idx>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in <m>\mathbb{R}^2</m> as the set
-                    <me>
-                        \mathbb{R}^2=\left\{a\, \vec{e}_1+b\, \vec{e}_2:a,b\in\mathbb{R}\right\}
-                    </me>
-                </p>
-            </investigation>
-            <investigation xml:id="polynomial_vectors">
-                <title>It's Not All About the Arrows</title>
-                <p>
-                    Consider the set of all quadratic polynomials
-                    <me>\mathcal{P_2}=\left\{ax^2+bx+c:a,b,c\in\mathbb{R}\right\}</me>
-                    which you should hopefully recognize as all the possible parabolas.  If we take two of these, <m>v(x)=2x^2+3x</m> and <m>u(x)=-x^2+5</m>, we can add and subtract them
-                    <me>
-                        v(x)+u(x)=x^2+3x+5\ \mbox{ and }\ v(x)-u(x)=3x^2+3x-5,
-                    </me>
-                    we can multiply them by constants
-                    <me>
-                        5u(x)=-5x^2+25,
-                    </me>
-                    and in fact we can take any linear combinations we would like
-                    <me>
-                        -2v(x)+5u(x)=-9x^2-6x+25.
-                    </me>
-                    All of this means that we can manipulate these polynomials just like we vectors.  In fact if you look back at <xref ref="combining_vectors"/> you will see that the coefficients we used for <m>u(x)</m> and <m>v(x)</m> are the same as the entries we had in <m>\vec{u}</m> and <m>\vec{v}</m>.
-                </p>
-                <p>
-                    We can take the analogy even further by setting up systems of equations involving polynomials.  For example can we find scalars <m>a</m> and <m>b</m> such that <me>a\, u(x)+b\, v(x)=19x^2+21x-25?</me> Expanding the left hand side we get <me>2ax^2+3ax-bx^2+5b=19x^2+21x-25</me> which gives us three equations when we compare coefficients
-                    <md>
-                        <mrow>2ax^2-bx^2\amp = 19</mrow>
-                        <mrow>3ax\amp = 21</mrow>
-                        <mrow>5b\amp= -25.</mrow>
-                    </md>
-                    By inspection (i.e. just looking at it for a minute) we can see that <m>a=7</m> and <m>b=-5</m>.
-                </p>
-                <p>
-                    Finally, one more observation.  If we let <m>e_2(x)=x^2</m>, <m>e_1(x)=x</m>, and <m>e_0(x)=1</m>, then we can write every possible quadratic polynomial (every parabola) as a combination of <m>e_2</m>, <m>e_1</m>, and <m>e_0</m>.  This means that we can define a set of elementary polynomials which we can combine to give us all the rest.  We can form a basis of polynomials.
-                </p>
-                <p>
-                    So, these quadratic polynomials can be added like vectors, they can be subtracted like vectors, they can be multiplied by scalars like vectors, they can be put together in linear combinations like vectors, and we can solve systems of equations with them just like vectors.  Therefore, they are in a very real sense vectors.
-                </p>
-            </investigation>
+            </sidebyside>
+            <p>
+                Use what you learned in <xref ref="section_CAS_systems" /> to recreate the image above in the Sage Cell below.  Then adjust the Sage code in the cell to create similar pictures for the points <m>(1,3)</m>, <m>(-2,1)</m>, and <m>(-3,-2)</m>.  Are you convinced that you can always make this sort of picture?  Can you tell that this mens you can always write any vector as a combination of copies of the elementary vectors?
+            </p>
+            <sage>
+                <input><xi:include href="sage_code/vector_spaces_cell.sage" parse="text" /></input>
+                <output></output>
+            </sage>
+            <p>
+                Because we can always write any vector (or describe steps to any point) using copies of elementary vectors <m>\vec{e}_1=[1,0]</m> and <m>\vec{e}_1=[1,0]</m> we say that they form a <term>basis</term><idx><h></h></idx>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in <m>\mathbb{R}^2</m> as the set
+                <me>
+                    \mathbb{R}^2=\left\{a\, \vec{e}_1+b\, \vec{e}_2:a,b\in\mathbb{R}\right\}
+                </me>
+            </p>
+        </subsection>
+        <subsection  xml:id="polynomial_vectors">
+            <title>It's Not All About the Arrows</title>
+            <p>
+                Consider the set of all quadratic polynomials
+                <me>\mathcal{P_2}=\left\{ax^2+bx+c:a,b,c\in\mathbb{R}\right\}</me>
+                which you should hopefully recognize as all the possible parabolas.  If we take two of these, <m>v(x)=2x^2+3x</m> and <m>u(x)=-x^2+5</m>, we can add and subtract them
+                <me>
+                    v(x)+u(x)=x^2+3x+5\ \mbox{ and }\ v(x)-u(x)=3x^2+3x-5,
+                </me>
+                we can multiply them by constants
+                <me>
+                    5u(x)=-5x^2+25,
+                </me>
+                and in fact we can take any linear combinations we would like
+                <me>
+                    -2v(x)+5u(x)=-9x^2-6x+25.
+                </me>
+                All of this means that we can manipulate these polynomials just like we vectors.  In fact if you look back at <xref ref="combining_vectors"/> you will see that the coefficients we used for <m>u(x)</m> and <m>v(x)</m> are the same as the entries we had in <m>\vec{u}</m> and <m>\vec{v}</m>.
+            </p>
+            <p>
+                We can take the analogy even further by setting up systems of equations involving polynomials.  For example can we find scalars <m>a</m> and <m>b</m> such that <me>a\, v(x)+b\, u(x)=19x^2+21x-25?</me> Expanding the left hand side we get <me>2ax^2+3ax-bx^2+5b=19x^2+21x-25</me> which gives us three equations when we compare coefficients
+                <md>
+                    <mrow>2ax^2-bx^2\amp = 19</mrow>
+                    <mrow>3ax\amp = 21</mrow>
+                    <mrow>5b\amp= -25.</mrow>
+                </md>
+                By inspection (i.e. just looking at it for a minute) we can see that <m>a=7</m> and <m>b=-5</m>.
+            </p>
+            <p>
+                Finally, one more observation.  If we let <m>e_2(x)=x^2</m>, <m>e_1(x)=x</m>, and <m>e_0(x)=1</m>, then we can write every possible quadratic polynomial (every parabola) as a combination of <m>e_2</m>, <m>e_1</m>, and <m>e_0</m>.  This means that we can define a set of elementary polynomials which we can combine to give us all the rest.  We can form a basis of polynomials.
+            </p>
+            <p>
+                So, these quadratic polynomials can be added like vectors, they can be subtracted like vectors, they can be multiplied by scalars like vectors, they can be put together in linear combinations like vectors, and we can solve systems of equations with them just like vectors.  Therefore, they are in a very real sense vectors.
+            </p>
+        </subsection>
+        <subsection>
+            <title>It's Kinda All the Same</title>
             <definition xml:id="vector_space_def">
                 <statement>
                     <p>
@@ -180,17 +180,133 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </statement>
             </definition>
-        </subsection>
-        <subsection>
-            <title>It's Kinda All the Same</title>
             <p>
-                Some Content!!!
+                As observed above the coefficients in <m>v(x)=2x^2+3x</m> and <m>u(x)=-x^2+5</m> are the same as the entries in <m>\vec{v}=[2,3,0]</m> and <m>\vec{u}=[-1,0,5]</m> in <xref ref="combining_vectors"/> and so we can rewrite the system we solved above as a vector equation
+                <me>
+                    a\, \vec{v}+b\, \vec{u} =
+                    a\left[
+                        \begin{array}{r}
+                            2\\
+                            3\\
+                            0
+                        \end{array}
+                    \right]
+                    +
+                    b\left[
+                        \begin{array}{r}
+                            -1\\
+                            0\\
+                            5
+                        \end{array}
+                    \right]=
+                    \left[
+                        \begin{array}{r}
+                            19\\
+                            21\\
+                            -25
+                        \end{array}
+                    \right]
+                </me>
+                which we can solve using techniques from the previous chapter.  That is we can solve the problem as follows:
+                <md>
+                    <mrow>
+                        \left[
+                            \begin{array}{rr|r}
+                                2 \amp -1 \amp 19\\
+                                3 \amp 0 \amp 21\\
+                                0 \amp 5 \amp -25
+                            \end{array}
+                        \right]\amp\amp\amp
+                        \stackrel{\large \frac{1}{3}R_2,\, \frac{1}{5}R_3}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                2 \amp -1 \amp 19\\
+                                1 \amp 0 \amp 7\\
+                                0 \amp 1 \amp -5
+                            \end{array}
+                        \right]
+                    </mrow>
+                    <mrow>
+                        \amp\amp\amp
+                        \stackrel{\large Swap\ Rows}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                1 \amp 0 \amp 7\\
+                                0 \amp 1 \amp -5\\
+                                2 \amp -1 \amp 19
+                            \end{array}
+                        \right]
+                    </mrow>
+                    <mrow>
+                        \amp\amp\amp
+                        \stackrel{\large R_3-2R_1+R_2}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                1 \amp 0 \amp 7\\
+                                0 \amp 1 \amp -5\\
+                                0 \amp 0 \amp 0
+                            \end{array}
+                        \right]
+                    </mrow>
+                </md>
+            </p>
+            <p>
+                What this hopefully highlights is that any two sets that satisfy <xref ref="vector_space_def"/> and in some sense are the same dimension then whatever we say about one we can say about the other.  And, any visualization of one is, in a way, also a visualization of the other. (Press <c>Evaluate (Sage)</c>)
+            </p>
+            <sage>
+                <input><xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text" /></input>
+                <output></output>
+            </sage>
+            <p>
+                Every point on that plain can be written as a combination of <m>\vec{v}=[2,3,0]</m> and <m>\vec{u}=[-1,0,5]</m> and so equivalently could be the coefficients for a polynomial of the form <m>f(x)=a\, v(x)+b\, u(x)</m>.  In particular we see that the point <m>(19,21,-15)</m> is on the plane.  But not all points are on the plain, for example we see that the point <m>(15,9,5)</m> is not, this means there does not exist <m>a</m> and <m>b</m> such that <m>a\, v(x)+b\, u(x)=15x^2+9x+5</m> or <m>a\vec{v}+b\vec{u}=[15,9,5]</m>.  In fact if we try to solve for <m>a</m> and <m>b</m> in the vector equation it doesn't work:
+                <md>
+                    <mrow>
+                        \left[
+                            \begin{array}{rr|r}
+                                2 \amp -1 \amp 15\\
+                                3 \amp 0 \amp 9\\
+                                0 \amp 5 \amp 5
+                            \end{array}
+                        \right]\amp\amp\amp
+                        \stackrel{\large \frac{1}{3}R_2,\, \frac{1}{5}R_3}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                2 \amp -1 \amp 15\\
+                                1 \amp 0 \amp 3\\
+                                0 \amp 1 \amp -1
+                            \end{array}
+                        \right]
+                    </mrow>
+                    <mrow>
+                        \amp\amp\amp
+                        \stackrel{\large Swap\ Rows}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                1 \amp 0 \amp 3\\
+                                0 \amp 1 \amp -1\\
+                                2 \amp -1 \amp 15
+                            \end{array}
+                        \right]
+                    </mrow>
+                    <mrow>
+                        \amp\amp\amp
+                        \stackrel{\large R_3-2R_1+R_2}{\Huge \leadsto}\amp\amp
+                        \left[
+                            \begin{array}{rr|r}
+                                1 \amp 0 \amp 3\\
+                                0 \amp 1 \amp -1\\
+                                0 \amp 0 \amp 8
+                            \end{array}
+                        \right]
+                    </mrow>
+                </md>
+                which implies <m>0=8</m>.
             </p>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Some Words
+                Vector Space, Subspace, ...
             </p>
         </conclusion>
     </section>
