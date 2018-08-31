@@ -75,7 +75,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 \node[anchor = south] at (0,3) {$y$};
                                 \draw[blue, fill=blue] (1,1) circle [radius = 3pt] node[anchor=west] {(1,1)};
                                 \draw[red, fill=red] (0,2.5) circle [radius = 3pt] node[anchor=west] {(0,2.5)};
-                                \draw[green!70!black, fill=green!70!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+                                \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
                             }
                         ]]>
                     </latex-image>
@@ -121,7 +121,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <output></output>
             </sage>
             <p>
-                Because we can always write any vector (or describe steps to any point) using copies of elementary vectors <m>\vec{e}_1=[1,0]</m> and <m>\vec{e}_1=[1,0]</m> we say that they form a <term>basis</term><idx><h></h></idx>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in <m>\mathbb{R}^2</m> as the set
+                Because we can always write any vector (or describe steps to any point) using copies of elementary vectors <m>\vec{e}_1=[1,0]</m> and <m>\vec{e}_1=[1,0]</m> we say that they form a <term>basis</term><idx><h>basis</h></idx>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in <m>\mathbb{R}^2</m> as the set
                 <me>
                     \mathbb{R}^2=\left\{a\, \vec{e}_1+b\, \vec{e}_2:a,b\in\mathbb{R}\right\}
                 </me>
@@ -251,12 +251,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </md>
             </p>
             <p>
-                What this hopefully highlights is that any two sets that satisfy <xref ref="vector_space_def"/> and in some sense are the same dimension then whatever we say about one we can say about the other.  And, any visualization of one is, in a way, also a visualization of the other. (Press <c>Evaluate (Sage)</c>)
+                What this hopefully highlights is that any two sets that satisfy <xref ref="vector_space_def"/> and in some sense are the same dimension then whatever we say about one we can say about the other.  And, any visualization of one is, in a way, also a visualization of the other.
             </p>
-            <sage>
-                <input><xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text" /></input>
-                <output></output>
-            </sage>
+            <figure>
+                <caption>Subspacesplains_and_vectors_cell.sage</caption>
+                <interactive xml:id="subspace_example_1" platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
             <p>
                 Every point on that plain can be written as a combination of <m>\vec{v}=[2,3,0]</m> and <m>\vec{u}=[-1,0,5]</m> and so equivalently could be the coefficients for a polynomial of the form <m>f(x)=a\, v(x)+b\, u(x)</m>.  In particular we see that the point <m>(19,21,-15)</m> is on the plane.  But not all points are on the plain, for example we see that the point <m>(15,9,5)</m> is not, this means there does not exist <m>a</m> and <m>b</m> such that <m>a\, v(x)+b\, u(x)=15x^2+9x+5</m> or <m>a\vec{v}+b\vec{u}=[15,9,5]</m>.  In fact if we try to solve for <m>a</m> and <m>b</m> in the vector equation it doesn't work:
                 <md>
@@ -300,13 +304,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         \right]
                     </mrow>
                 </md>
-                which implies <m>0=8</m>.
+                which implies <m>0=8</m>, which is nonsense.  We say then that all the linear combinations of <m>\vec{v}</m> and <m>\vec{u}</m> form a <term>subspace</term><idx><h>vector space</h><h>subspace</h></idx>, that is they form a vector space of their own, but don't give you every possible point.
             </p>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Vector Space, Subspace, ...
+                Vector Space, Subspace
             </p>
         </conclusion>
     </section>
@@ -319,19 +323,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection>
             <title>Independence Day</title>
             <p>
-                Some Content!!!
+                Some Content about independent vectors!!!
             </p>
         </subsection>
         <subsection>
             <title>A Strong Foundation</title>
             <p>
-                Some Content!!!
+                Some Content about bases!!!
             </p>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Some Words
+                Linearly Independent, Basis
             </p>
         </conclusion>
     </section>
@@ -343,19 +347,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection>
             <title>A Rose by Any Other Name</title>
             <p>
-                Some Content!!!
+                Some Content about solution sets as subspaces!!!
             </p>
         </subsection>
         <subsection>
             <title>A Universe in a Matrix</title>
             <p>
-                Some Content!!!
+                Some Content about Row and Column Spaces (and Null Space?)!!!
             </p>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Some Words
+                Column Space, Row Space
             </p>
         </conclusion>
     </section>
@@ -367,11 +371,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
         </p>
-        <p>Hill Cipher Cell</p>
-            <sage>
-                <input><xi:include href="sage_code/sample_sage.sage" parse="text"/></input>
-                <output></output>
-            </sage>
+        <p>Subspace of <m>\mathbb{R}^3</m></p>
+        <sage>
+            <input><xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text" /></input>
+            <output></output>
+        </sage>
 
     </section>
 
