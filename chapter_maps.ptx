@@ -92,7 +92,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- CAS and Systems -->
 
-    <section xml:id="section_CAS_spaces">
+    <section xml:id="section_CAS_maps">
         <title>CAS - Fitting Data</title>
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
