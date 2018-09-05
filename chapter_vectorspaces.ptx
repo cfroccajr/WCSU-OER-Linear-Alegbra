@@ -253,9 +253,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 What this hopefully highlights is that any two sets that satisfy <xref ref="vector_space_def"/> and in some sense are the same dimension then whatever we say about one we can say about the other.  And, any visualization of one is, in a way, also a visualization of the other.
             </p>
-            <figure>
-                <caption>Subspacesplains_and_vectors_cell.sage</caption>
-                <interactive xml:id="subspace_example_1" platform="sage" width="100%" aspect="1:1">
+            <figure xml:id="subspace_example_1">
+                <caption>Subspaces and Plains and Polynomials</caption>
+                <interactive platform="sage" width="100%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text"/>
                     </slate>
@@ -323,19 +323,174 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection>
             <title>Independence Day</title>
             <p>
-                Some Content about independent vectors!!!
+                Consider the following set of vectors:
+                <me>
+                    S=\left\{
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]
+                    \right\}
+                </me>
+                from our work in <xref ref="xy-coordinates" /> we know that each of these can be written as a combination of the elementary vectors <m>\vec{e}_1</m> and <m>\vec{e}_2</m>. They can also be written as combinations of each other like so:
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]=
+                        -2\, 
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]-7\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right],
+                </me>
+                or
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right]=
+                        -\frac{2}{7}\, 
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]-\frac{1}{7}\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right],
+                </me>
+                or finally
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]=
+                        -\frac{1}{2}\, 
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]-\frac{7}{2}\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right].
+                </me>
+                Because we can write these vectors in relation to each other in this way we say that they are <term>linearly dependent</term>.
+            </p>
+            <definition>
+                <title>Linearly Independent</title>
+                <idx><h>linearly independent</h></idx>
+                <statement>
+                    <p>
+                        A set of vecotors, <m>S=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}</m> is <term>linearly independent</term> if no single vector in the set may be written as a linear combination of the other vectors in the set.  Equivalently, if the homogeneous system of equations
+                        <me>
+                            a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{0}
+                        </me>
+                        has only the trivial solution <m>a_i=0,\ \forall\, i</m>.  A set of vectors which are not linearly independent are called <term>linearly dependent</term><idx><h>linearly dependent</h></idx>.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                In contrast to the example above here is a linearly independent:
+                <me>
+                    S=\left\{
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 1 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0 \\1
+                            \end{array}
+                        \right]
+                    \right\}.
+                </me>
+                We could demonstrate this with a lengthy argument about what combinations are possible or not possible, but it is better to set up and solve the system of equations
+                <me>
+                    a_1\,
+                    \left[
+                        \begin{array}{r}
+                            1 \\ -2 \\ 0
+                        \end{array}
+                    \right]+a_2\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 1 \\ 0
+                        \end{array}
+                    \right]+a_3\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 0 \\1
+                        \end{array}
+                    \right]=
+                    \vec{0}
+                </me>
+                and use the techniques from <xref ref="section_basic_systems" /> to show that <m>a_1=a_2=a_3=0</m>, that is that there is only one solution to this system.  In fact a linearly dependent set of vectors always corresponds to an underdetermined system with a free variable, which is why the first example above is really the same as <xref ref="underdetermined"/>.  A set of vectors which are linearly independent always correspond to a system which is overdetermined or which has the same number of variables as equations with no free variables like the vectors in <xref ref="system-example2"/> or <xref ref="overdetermined"/>.
             </p>
         </subsection>
         <subsection>
             <title>A Strong Foundation</title>
             <p>
-                Some Content about bases!!!
+                As mentioned above the vectors in <xref ref="overdetermined" /> are linearly independent, but the system is inconsistent, i.e. there is not solution in that example.  From the perspective of <xref ref="section_space_definitions" /> and in particular the example in <xref ref="subspace_example_1" /> the point <m>(7,2,16)</m> is not in the plain determined by the vectors <m>[3,1,0]</m> and <m>[2,-1,4]</m>.  Convince yourself of this by altering the Sage code below to plot the appropriate plain and point:
             </p>
+            <sage>
+                <input>
+                    <xi:include href="sage_code/plains_and_vectors_cell.sage" parse="text"/>
+                </input>
+                <output></output>
+            </sage>
+            <p>
+                The reason this happens is because the vectors <m>[3,1,0]</m> and <m>[2,-1,4]</m> do not form a <term>basis</term> for 3D space <m>\left(\mathbb{R}^3\right)</m>.
+            </p>
+            <definition>
+                <title>Basis</title>
+                <idx><h>basis</h></idx>
+                <statement>
+                    <p>
+                        A <term>basis</term> is a set of vectors <m>B=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}</m> such that there exists a unique solution to any equation of the form
+                        <me>
+                            a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{v}
+                        </me>
+                        for all <m>\vec{v}</m> in the given vector space.  The number of vectors required for a basis in a vector space is called the <term>dimension</term><idx><h>dimension</h></idx> of the vector space.
+                    </p>
+                </statement>
+            </definition>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Linearly Independent, Basis
+                Linearly Independent, Linearly Dependent, Basis
             </p>
         </conclusion>
     </section>
