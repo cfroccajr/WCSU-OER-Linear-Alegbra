@@ -486,6 +486,145 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </statement>
             </definition>
+            <exercise xml:id="basis_exercise_1">
+                <title>These Vectors are Not Enough</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 13
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that this system is inconsistent, this tells us that the two vectors on the left hand side do not form a basis for the vector space.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        stuff...
+                    </p>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_2">
+                <title>These Vectors are Too Many</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 0 \\ 0
+                                \end{array}
+                            \right]+a_4\, 
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 1 \\ 1
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though we don't know the values of <m>x</m>, <m>y</m>, and <m>z</m> this system is consistent and in fact there will always be a free variable/infinitely many solutions.
+                    </p>
+                </statement>
+                <answer>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_3">
+                <title>These Vectors are Just Right</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 0 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though we don't know the values of <m>x</m>, <m>y</m>, and <m>z</m> this system is consistent and there will always be a unique solution.
+                    </p>
+                </statement>
+                <answer>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_4">
+                <title>These Vectors are Tricky</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 0 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though this looks like the previous exercise, there are in fact values for <m>x</m>, <m>y</m>, and <m>z</m> for which there is not solution.  Find and example of this and try to explain why this happens
+                    </p>
+                </statement>
+                <answer>
+                </answer>
+            </exercise>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
