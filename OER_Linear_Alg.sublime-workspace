@@ -143,15 +143,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.tex",
-			"settings":
-			{
-				"buffer_size": 3323,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
@@ -1082,6 +1073,8 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/perspectives.ptx",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.log",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Reference_File.txt",
@@ -1207,9 +1200,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Mesopotamian_Review.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 141 - Discrete Mathematics/2017 Fall Unit II Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Exam 2.tex",
-		"/Users/cfroccajr/Documents/CryptoText/src/Reference_File.txt",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_bookinfo.mbx"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Exam 2.tex"
 	],
 	"find":
 	{
@@ -1227,6 +1218,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"figure",
 			"sage",
 			"</investigation>",
 			"<investigation(.*)>",
@@ -1299,40 +1291,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1864,
-								1864
-							]
-						],
-						"settings":
-						{
-							"SL.14.region_keys":
-							[
-							],
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 450.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
