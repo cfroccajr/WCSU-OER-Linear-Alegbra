@@ -763,19 +763,236 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection>
             <title>A Rose by Any Other Name</title>
             <p>
-                Some Content about solution sets as subspaces!!!
+                Consider the system of equations
+                <md>
+                    <mrow>x+3y-z\amp =0</mrow>
+                    <mrow>y-z\amp =0.</mrow>
+                </md>
+                Using the techniques we have studied this simplifies to
+                <md>
+                    <mrow>x+2z\amp =0</mrow>
+                    <mrow>y-z\amp =0</mrow>
+                </md>
+                so that the general solution is
+                <md>
+                    <mrow>x\amp =-2z</mrow>
+                    <mrow>y\amp =z</mrow>
+                </md>
+                If we write the solutions as vectors we get
+                <me>
+                    \left[
+                        \begin{array}{r}
+                            -2 \\ 1 \\ 1
+                        \end{array}
+                    \right]z
+                </me>
+                so that both
+                <me>
+                    \left[
+                        \begin{array}{r}
+                            -4 \\ 2 \\ 2
+                        \end{array}
+                    \right]\mbox{ and }
+                    \left[
+                        \begin{array}{r}
+                            6 \\ -3 \\ -3
+                        \end{array}
+                    \right]
+                </me>
+                will be solutions with <m>z=2</m> and <m>z=-3</m> respectively.  However, if we add or subtract these from each other
+                <me>
+                    \left[
+                        \begin{array}{r}
+                            -4 \\ 2 \\ 2
+                        \end{array}
+                    \right]+
+                    \left[
+                        \begin{array}{r}
+                            6 \\ -3 \\ -3
+                        \end{array}
+                    \right]=
+                    \left[
+                        \begin{array}{r}
+                            2 \\ -1 \\ -1
+                        \end{array}
+                    \right]\mbox{ or }
+                    \left[
+                        \begin{array}{r}
+                            -4 \\ 2 \\ 2
+                        \end{array}
+                    \right]-
+                    \left[
+                        \begin{array}{r}
+                            6 \\ -3 \\ -3
+                        \end{array}
+                    \right]=
+                    \left[
+                        \begin{array}{r}
+                            -10 \\ 5 \\ 5
+                        \end{array}
+                    \right]
+                </me>
+                we get two more solutions.  What this tells us is that any multiple of a solution is a solution and any sum of two solutions is another solution; solutions therefore form a vector space of their own.  However since not all vectors in <m>\mathbb{R}^3</m> are solutions to the system, the solutions are a subspace of something larger.
+            </p>
+            <p>
+                What we see here is another way to think of solutions to a system of equations.  The solutions of a homogeneous system of equations form a subspace.  Therefore we can talk about a basis for the solutions and the span of the solutions.  This is another example of how one idea can be looked at from different perspectives.
             </p>
         </subsection>
         <subsection>
             <title>A Universe in a Matrix</title>
-            <p>
-                Some Content about Row and Column Spaces (and Null Space?)!!!
-            </p>
+            <introduction>
+                <p>
+                    If we let
+                    <me>
+                        A=
+                        \left[
+                            \begin{array}{rrr}
+                                1 \amp 3 \amp -1\\
+                                0 \amp 1 \amp -1\\
+                            \end{array}
+                        \right]
+                    </me>
+                    then there are three spacial subspaces associated with the matrix.  The <term>column space</term><idx><h>column space</h></idx> which is the set of all <m>\vec{b}</m> such that there is a solution for
+                    <me>
+                        A\vec{x}=\vec{b}.
+                    </me>
+                    The <term>row space</term><idx><h>row space</h></idx> which is the set of all <m>\vec{c}</m> such that there is a solution for
+                    <me>
+                        \vec{x}A=\vec{c}.
+                    </me>
+                    And, the <term>null space</term><idx><h>null space</h></idx> which is the set of all solutions to the homogeneous equation
+                    <me>
+                        A\vec{x}=\vec{0}.
+                    </me>
+                </p>
+            </introduction>
+            <subsubsection>
+                <title>The Null Space</title>
+                <p>
+                    The null space is the simplest to explain.  In this case it is precisely the set of solutions we found above
+                <me>
+                    Null(A)=
+                    \left\{
+                        \left[
+                            \begin{array}{r}
+                                -2 \\ 1 \\ 1
+                            \end{array}
+                        \right]t:
+                        t\in\mathbb{R}
+                    \right\}
+                </me>
+                which is a subspace of <m>\mathbb{R}^3</m>.  Because of how matrix multiplication works the dimension the null space is in must always be the same as the number of columns in the matrix.
+                </p>
+            </subsubsection>
+            <subsubsection>
+                <title>The Column Space</title>
+                <p>
+                    The column space is a little harder.  Consider the equation
+                    <me>
+                        A\vec{x}=\vec{b}\equiv
+                        \left[
+                            \begin{array}{rrr}
+                                1 \amp 3 \amp -1\\
+                                0 \amp 1 \amp -1\\
+                            \end{array}
+                        \right]
+                        \left[
+                            \begin{array}{r}
+                                x_1\\ x_2\\ x_3
+                            \end{array}
+                        \right]=
+                        \left[
+                            \begin{array}{r}
+                                b_1\\ b_2
+                            \end{array}
+                        \right] 
+                    </me>
+                    We can write this as a linear combination of vectors from <m>\mathbb{R}^2</m>
+                    <me>
+                        \left[
+                            \begin{array}{r}
+                                1\\ 0
+                            \end{array}
+                        \right]x_1+ 
+                        \left[
+                            \begin{array}{r}
+                                3\\ 1
+                            \end{array}
+                        \right]x_2+
+                        \left[
+                            \begin{array}{r}
+                                -1\\ -1
+                            \end{array}
+                        \right]x_3=
+                        \left[
+                            \begin{array}{r}
+                                b_1\\ b_2
+                            \end{array}
+                        \right].                      
+                    </me>
+                    Thus the column space, unlike the null space, is in this case in <m>\mathbb{R}^2</m>.  In general the dimension the column space is on is the same as the number of rows in the matrix.
+                </p>
+                <p>
+                    If we let <m>x_1=2</m> and <m>x_2=-1</m> then
+                    <me>
+                        \left[
+                            \begin{array}{r}
+                                1\\ 0
+                            \end{array}
+                        \right]x_1+ 
+                        \left[
+                            \begin{array}{r}
+                                3\\ 1
+                            \end{array}
+                        \right]x_2=
+                        2
+                        \left[
+                            \begin{array}{r}
+                                1\\ 0
+                            \end{array}
+                        \right]- 
+                        \left[
+                            \begin{array}{r}
+                                3\\ 1
+                            \end{array}
+                        \right]=
+                        \left[
+                            \begin{array}{r}
+                                -1\\ -1
+                            \end{array}
+                        \right].
+                    </me>
+                    That is we don't really need the third vector, the basis for the column space of <m>A</m> is therefore
+                    <me>
+                        Col(A)=
+                        \left\{
+                        \left[
+                            \begin{array}{r}
+                                1\\ 0
+                            \end{array}
+                        \right]s+ 
+                        \left[
+                            \begin{array}{r}
+                                3\\ 1
+                            \end{array}
+                        \right]t:
+                        s,t\in\mathbb{R}
+                        \right\}.
+                    </me>
+                    With a little work you should be able to, at this point, convince yourself that that includes every point in <m>\mathbb{R}^3</m>.
+                </p>
+            </subsubsection>
+            <subsubsection>
+                <title>The Row Space</title>
+                <p>
+                    row space
+                </p>
+            </subsubsection>
         </subsection>
         <conclusion>
             <title>Section Vocabulary</title>
             <p>
-                Column Space, Row Space
+                Column Space, Row Space, Null Space
             </p>
         </conclusion>
     </section>
