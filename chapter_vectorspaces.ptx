@@ -456,8 +456,83 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     \right]=
                     \vec{0}
                 </me>
-                and use the techniques from <xref ref="section_basic_systems" /> to show that <m>a_1=a_2=a_3=0</m>, that is that there is only one solution to this system.  In fact a linearly dependent set of vectors always corresponds to an underdetermined system with a free variable, which is why the first example above is really the same as <xref ref="underdetermined"/>.  A set of vectors which are linearly independent always correspond to a system which is overdetermined or which has the same number of variables as equations with no free variables like the vectors in <xref ref="system-example2"/> or <xref ref="overdetermined"/>.
+                useing the techniques from <xref ref="section_basic_systems" /> to show that <m>a_1=a_2=a_3=0</m>, that is that there is only one solution to this system.  In fact a linearly dependent set of vectors always corresponds to a system with a free variable. Underdetermined systems like the first example above, which is really the same as <xref ref="underdetermined"/>, will always be linearly dependent.  A set of vectors which are linearly independent always correspond to a system which is overdetermined or which has the same number of variables as equations with no free variables like the vectors in <xref ref="system-example2"/> or <xref ref="overdetermined"/>.
             </p>
+            <p>
+                Important Point: The following implications are only true in one direction!
+                <ul>
+                    <li>
+                        If a set of vectors is linearly independent, then it corresponds to a system which is overdetermined or which has the same number of variables as equations.
+                    </li>
+                    <li>
+                        If a system is underdetermined, then it corresponds to a set of vectors which are linearly dependent.
+                    </li>
+                </ul>
+                To see that the converse<fn>The converse of a statement <em>If P, then Q</em> is <em>If Q, then P</em>.</fn> of these are not true complete the following exercises.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Solve this overdetermined system to see that there is a free variable:
+                        <me>
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 2 \\ 3
+                                \end{array}
+                            \right]x+
+                            \left[
+                                \begin{array}{r}
+                                    2 \\ 4 \\ 6
+                                \end{array}
+                            \right]y=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 0
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        After reducing we see that <m>x=-2y</m> and <m>y</m> is free.
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Solve this "determined" system to see that there are free variables:
+                        <me>
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 2 \\ 3
+                                \end{array}
+                            \right]x+
+                            \left[
+                                \begin{array}{r}
+                                    2 \\ 4 \\ 6
+                                \end{array}
+                            \right]y+
+                            \left[
+                                \begin{array}{r}
+                                    3 \\ 6 \\ 9
+                                \end{array}
+                            \right]z=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 0
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        After reducing we see that <m>x=-2y-3z</m> and <m>y</m> and <m>z</m> are both free.
+                    </p>
+                </answer>
+            </exercise>
         </subsection>
         <subsection>
             <title>A Strong Foundation</title>
@@ -962,7 +1037,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             \end{array}
                         \right].
                     </me>
-                    That is we don't really need the third vector, the basis for the column space of <m>A</m> is therefore
+                    That is we don't really need the third vector, the column space of <m>A</m> is therefore
                     <me>
                         Col(A)=
                         \left\{
@@ -979,7 +1054,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         s,t\in\mathbb{R}
                         \right\}.
                     </me>
-                    With a little work you should be able to, at this point, convince yourself that that includes every point in <m>\mathbb{R}^3</m>.
+                    With a little work you should be able to, at this point, convince yourself that that includes every point in <m>\mathbb{R}^2</m>.
                 </p>
             </subsubsection>
             <subsubsection>
@@ -1060,7 +1135,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     If we row reduce this to its row reduced echelon form we get identity matrix (you should pause for a moment and make sure you can get that.)  This means that we could solve any equation of the form <m>\mathcal{B}\vec{x}=\vec{b}</m> and that it would have a unique solution for any <m>\vec{b}\in\mathbb{R}^3</m>.  That is, the three vectors that make up the columns of the matrix are linearly independent and form a basis for <m>\mathbb{R}^3</m>.  This is a result that will actually be true for any matrix.
                 </p>
                 <p>
-                    If you evaluate the code below you can see how the row space and column space complement each other to give us all of <m>\mathbb{R}</m>.  You can also see that we need three dimensions to draw them which is the number of columns we originally started with.  However, the null space here is a line, which is one dimensional.  The row space is a plane which is two dimensional.  So, the dimension of a space is not the same as the number of dimensions you need to draw or understand it.
+                    If you evaluate the code below you can see how the row space and null space complement each other to give us all of <m>\mathbb{R}</m>.  You can also see that we need three dimensions to draw them which is the number of columns we originally started with.  However, the null space here is a line, which is one dimensional.  The row space is a plane which is two dimensional.  So, the dimension of a space is not the same as the number of dimensions you need to draw or understand it.
                 </p>
                 <theorem><idx><h>row space</h></idx><idx><h>null space</h></idx>
                     <statement>
@@ -1068,6 +1143,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             Given an <m>m\times n</m> matrix <m>A</m> the row space is the set of all linear combinations of the rows and the null space is the set of all solutions to <m>A\vec{x}=\vec{0}</m>.  Bases for each taken together will form a basis for <m>\mathbb{R}^n</m>.
                         </p>
                     </statement>
+<!--                     <proof>
+                        <p>
+                            Let <m>\mathcal{R}=\{\rho_1,\rho_2,\ldots,\rho_l\}</m> be a basis for the row space and <m>\mathcal{N}=\{\eta_1,\eta_2,\ldots,\eta_k\}</m> be a basis for the null space.  Each set is a basis and so are individually linearly independent.  If we were to assume we could write ...
+                        </p>
+                    </proof> -->
                 </theorem>
                 <sage>
                     <input>
@@ -1088,7 +1168,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- CAS and Systems -->
 
     <section xml:id="section_CAS_spaces">
-        <title>CAS - Visualizing Subspaces</title>
+        <title>*CAS - Visualizing Subspaces</title>
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
         </p>
@@ -1103,7 +1183,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Supplementary Material -->
 
     <section xml:id="section_supplement_spaces">
-        <title>Supplementary Material</title>
+        <title>*Supplementary Material</title>
             <figure>
                     <!-- <title>Modern Marvels: Codes</title> -->
                     <caption>Gaussian Elimination</caption>
