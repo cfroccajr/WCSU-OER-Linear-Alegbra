@@ -124,7 +124,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- Exercises -->
 
-    <exercises xml:id="section_exercises_maps">
+    <exercises xml:id="section_exercises_determinants">
         <title>Exercises and Practice Exam on Linear Transformations</title>
         <introduction>
             <p>

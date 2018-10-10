@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"exercise",
+				"exercisegroup"
+			],
+			[
 				"vecto",
 				"vector_space_def"
 			],
@@ -144,7 +148,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system": "Main PTX Build",
 	"build_system_choices":
 	[
 		[
@@ -1012,7 +1016,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1073,10 +1077,12 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_determinants.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/perspectives.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.log",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Reference_File.txt",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/plains_and_vectors_cell.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
@@ -1198,9 +1204,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Spring 2009 Chapter 4 Test.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Mesopotamian_Review.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 141 - Discrete Mathematics/2017 Fall Unit II Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Exam 2.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Mesopotamian_Review.tex"
 	],
 	"find":
 	{

@@ -93,7 +93,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- CAS and Systems -->
 
     <section xml:id="section_CAS_maps">
-        <title>CAS - Fitting Data</title>
+        <title>*CAS - Fitting Data</title>
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
         </p>
@@ -105,30 +105,57 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     </section>
 
+<!-- Supplementary Material -->
+
+    <section xml:id="section_supplement_spaces">
+        <title>*Supplementary Material</title>
+            <figure>
+                    <!-- <title>Modern Marvels: Codes</title> -->
+                    <caption>Gaussian Elimination</caption>
+                    <video youtube="qbWDZM4qgEk" />
+            </figure>
+    </section>
+
 <!-- Exercises -->
 
     <exercises xml:id="section_exercises_maps">
         <title>Exercises and Practice Exam on Linear Transformations</title>
         <introduction>
             <p>
-                Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <alert>Textbook Exercises:</alert>
+            </p>
+            <p>
+                These are the exercises from <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you need to hand in as part of your grade.  The solutions to these are available in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement, but you need to, to the best of your ability, answer them in your own words.
                 <ul>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=96">Definition and Examples of Isomorphisms:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182">Dimension and Isomorphisms:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=198">Definition of Homomorphism:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">Range Space and Null Space:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=221">Linear Maps and Matrices:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230">Matrices and Linear Maps:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=236">Sums and Scalar Products:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243">Matrix Multiplication:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=255">Mechanics of Matrix Multiplication:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">Inverses:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267">Representations of Vectors:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=275">Map Representations:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280">Orthogonal Projections into a Line:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace:</url> </li>
-                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=300">Line of Best Fit:</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182">Definition and Examples of Isomorphisms (p.172): Extra Credit for 29 </url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">Range Space and Null Space (p.200): 26</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243">Matrix Multiplication (p.233): 28, Extra for 19</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=253">Mechanics of Matrix Multiplication (p.243): 34, Extra for 30</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">Inverses (p.252): 29</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280">Orthogonal Projections into a Line (p.270): 10</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt (p.275): 16</url> </li>
+                </ul>
+            </p>
+            <p>
+                <alert>Practice Exercises:</alert>
+            </p>
+            <p>
+                Here are some exercises from <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try while studying for the exam, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182">Definition and Examples of Isomorphisms (p.172): 13, 17ac</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=191">Dimension and Isomorphisms (p.181): 10, 12</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=198">Definition of Homomorphism (p.188): 18, 19, 22, 25a</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">Range Space and Null Space (p.200): 22, 23, 29</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=221">Linear Maps and Matrices (p.211): 12, 13, 14, 15, 18</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230">Matrices and Linear Maps (p.220): 12, 13, 15, 17</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=236">Sums and Scalar Products (p.226): 8,9</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243">Matrix Multiplication (p.233): 14-17</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=253">Mechanics of Matrix Multiplication (p.243): 24-27, 31</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">Inverses (p.252): 13-19</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267">Representations of Vectors (p.257): 7-14</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280">Orthogonal Projections into a Line (p.270): 6-9</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt (p.275): 10-14</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace (p.283): 10, 11, 12</url> </li>
                 </ul>
             </p>
         </introduction>
@@ -144,14 +171,119 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Find the kernel (i.e. null space) for the transformation defined by multiplication by:
+                        <me>
+                            A=\left[
+                                \begin{array}{rrr}
+                                    3 \amp 2 \amp 5\\
+                                    -1 \amp 0 \amp 2
+                                \end{array}
+                            \right]
+                        </me>
                     </p>
                 </statement>
-                <hint>
+            </exercise>
+
+            <exercise xml:id="first_basis_question">
+                <statement>
                     <p>
-                        Some more Content!!!
+                        Find the transformation, <m>Rep_{\mathcal{E}_3,\mathcal{B}}</m>, from the standard basis, <m>\mathcal{E}_3</m>, to the basis <m>\mathcal{B}</m>.
+                        <me>
+                            \mathcal{E}_3=
+                            \left\{
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 0 \\0
+                                    \end{array}
+                                \right)
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 1 \\0
+                                    \end{array}
+                                \right),
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 0 \\1
+                                    \end{array}
+                                \right)
+                            \right\},\ 
+                            \mathcal{B}=
+                            \left\{
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 0 \\-1
+                                    \end{array}
+                                \right)
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 1 \\1
+                                    \end{array}
+                                \right),
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 1 \\2
+                                    \end{array}
+                                \right)
+                            \right\}
+                        </me>
                     </p>
-                </hint>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Use your answer from <xref ref="first_basis_question" /> to find the transformation from <m>\mathcal{C}</m> to <m>\mathcal{B}</m>, <m>Rep_{\mathcal{C}, \mathcal{B}}</m>.
+                        <me>
+                            \mathcal{C}=
+                            \left\{
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 0 \\ 0
+                                    \end{array}
+                                \right)
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 1 \\0
+                                    \end{array}
+                                \right),
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 1 \\1
+                                    \end{array}
+                                \right)
+                            \right\}
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Use the Gram-Schmidt process to create and orthogonal basis to replace <m>\mathcal{D}</m>.
+                        <me>
+                            \mathcal{D}=
+                            \left\{
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 1 \\1
+                                    \end{array}
+                                \right)
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 2 \\0
+                                    \end{array}
+                                \right),
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 1 \\1
+                                    \end{array}
+                                \right)
+                            \right\}
+                        </me>
+                    </p>
+                </statement>
             </exercise>
 
             <exercise>
@@ -160,24 +292,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
 
@@ -187,24 +301,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
 
@@ -214,11 +310,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
 
@@ -228,11 +319,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
 
@@ -242,25 +328,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
             <exercise>
@@ -269,51 +336,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Some Content!!!
                     </p>
                 </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
             </exercise>
 
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-                <hint>
-                    <p>
-                        Some more Content!!!
-                    </p>
-                </hint>
-            </exercise>
         </exercisegroup>
     </exercises>
 
-<!-- Supplementary Material -->
-
-    <section xml:id="section_supplement_spaces">
-        <title>Supplementary Material</title>
-            <figure>
-                    <!-- <title>Modern Marvels: Codes</title> -->
-                    <caption>Gaussian Elimination</caption>
-                    <video youtube="qbWDZM4qgEk" />
-            </figure>
-    </section>
 
 </chapter>
 
