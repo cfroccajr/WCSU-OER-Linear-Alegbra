@@ -57,37 +57,144 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_morphisams">
         <title>Isomorphisms and Homomorphisms of Vector Spaces</title>
         <idx><h>isomorphism</h></idx><idx><h>homomorphism</h></idx>
-
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Homorphisms and Functions</title>
+            <definition>
+                <statement>
+                    <p><idx><h>function</h></idx><idx><h>homomorphism</h></idx><idx><h>linear map</h></idx>
+                        A <term>function</term> is a relation, call it <m>A</m>, from one set called the <em>domain</em>, <m>X</m>, to another set called the <em>codomain</em>, <m>Y</m> such that
+                        <ul>
+                            <li><m>\forall x\in X,\ \exists y\in Y:\ A(x)=y</m></li>, and
+                            <li><m>\forall x\in X:</m> if <m>y_1=A(x)</m> and <m>y_2=A(x)</m>, then <m>y_1=y_2</m>.</li>
+                        </ul>
+                        If in addition we know that <m>A(ax+by)=a\, A(x)\, +\, b\, A(y)</m> we say that the function is a <term>homomorphism</term>, or that it is a <term>linear map</term>.
+                    </p>
+                </statement>
+            </definition>
+            <investigation xml:id="basic_linear_exmaple">
+                <title>Something Linear</title>
+                <p>
+                    Let <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> be defined by <m>f(x)=-7x</m> and let's see that this is linear.  First, since both the input and output for the function comes from <m>\mathbb{R}</m> that is the domain and the codomain.  If <m>x=ax_1+bx_2</m>, then we get
+                    <md>
+                        <mrow>f(x)\amp = f\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ x</mrow>
+                        <mrow>    \amp = -7\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ f</mrow>
+                        <mrow>    \amp = -7ax_1-7bx_2 \amp\amp \mbox{distributive property}</mrow>
+                        <mrow>    \amp = a\left(-7x_1\right)+b\left(-7x_2\right) \amp\amp \mbox{commutative property}</mrow>
+                        <mrow>    \amp = af\left(x_1\right)+bf\left(x_2\right)\amp\amp \mbox{definition of}\ f</mrow>
+                    </md>
+                    Therefore, <m>f(x)</m> satisfies the definition of a homomorphism (linear function).
+                </p>
+            </investigation>
+            <investigation xml:id="derivative_of_cubic">
+                <title>Also Linear</title>
+                <p>
+                    Let <m>d:\mathcal{P}_3\rightarrow\mathcal{P}_3</m> be defined by <m>d(f)=3ax^2+2bx+c</m> and let's see that this too is linear.  First, since both the input and output for the function comes from <m>\mathcal{P}_3</m> that is the domain and the codomain.  If <m>f(x)=a_1x^3+b_1x^2+c_1x+d_1</m> and <m>g(x)=a_2x^3+b_2x^2+c_2x+d_2</m>, then we get
+                    <me>(f+g)(x)=f(x)+g(x)=(a_1+a_2)x^3+(b_1+b_2)x^2+(c_1+c_2)x+(d_1+d_2)</me>
+                    and when we apply the function <m>d</m>
+                    <md>
+                        <mrow>d(f+g)\amp = 3(a_1+a_2)x^2+2(b_1+b_2)x+(c_1+c_2) \amp\amp \mbox{definition of}\ d</mrow>
+                        <mrow>    \amp = 3a_1x^2+3a_2x^2+2b_1x+2b_2x+c_1+c_2\amp\amp \mbox{distributive property}</mrow>
+                        <mrow>    \amp = (3a_1x^2+2b_1x+c_1)+(3a_2x^2+2b_2x+c_2) \amp\amp \mbox{commutative property}</mrow>
+                        <mrow>    \amp = d(f)+d(g) \amp\amp \mbox{definition of}\ d</mrow>
+                    </md>
+                    Therefore, <m>d</m> satisfies the definition of a homomorphism (linear function).
+                </p>
+            </investigation>
+            <investigation xml:id="line_not_linear">
+                <title>Surprisingly Not Linear</title>
+                <p>
+                    Let <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> be defined by <m>f(x)=x+1</m> and let's see that this is not linear.  Since we want to see that something is not the case we just need a counter example.  If <m>x=1</m> and <m>y=2</m> then
+                    <me>f(x)+f(y)=f(1)+f(2)=2+3=5,</me>
+                    but
+                    <me>f(x+y)=f(3)=4</me>
+                    so that <m>f(x)+f(y)\neq f(x+y)</m>, i.e. <m>f</m> is not linear.  This may be surprising since <m>f(x)=x+1</m> is a line, but this is what is called an <term>affine map</term> since it is the sum of a linear map and a constant.<idx><h>affine map</h></idx>
+                </p>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>Isomorphisms (one-to-one and onto)</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
     </section>
 
 <!-- Matrix operations and Maps -->
 
     <section xml:id="section_matrix_operations">
         <title>Linear Maps and Matrix Operations</title>
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Basic Matrix Arithmetic</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Matrices as Maps</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Invertible Matrices</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
     </section>
 
 <!-- Change of Bases -->
 
     <section xml:id="section_coordinates">
         <title>Change of Bases/Coordinates</title>
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Coordinate Systems</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Changing Bases</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Changing Morphisms</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
     </section>
 
 <!-- Orthogonal Projections and Curve Fitting -->
 
     <section xml:id="section_projections">
         <title>Orthogonal Projections and Curve Fitting</title>
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Orthogonal and Orthonormal Bases</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Orthogonal Complements</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Subspace Projections</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Curve Fitting</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
     </section>
 
 <!-- CAS and Systems -->
@@ -171,12 +278,63 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
+                        Find the inverse of the given matrix:
+                        <me>
+                            A=\left[
+                                \begin{array}{rrr}
+                                    1 \amp 2 \amp 4\\
+                                    -1 \amp 0 \amp 2\\
+                                    0 \amp 3 \amp 10
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
                         Find the kernel (i.e. null space) for the transformation defined by multiplication by:
                         <me>
                             A=\left[
                                 \begin{array}{rrr}
                                     3 \amp 2 \amp 5\\
                                     -1 \amp 0 \amp 2
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Is the transformation defined by the given matrix one-to-one?  Is it onto?
+                        <me>
+                            B=\left[
+                                \begin{array}{rr}
+                                    1 \amp 2 \\
+                                    -3 \amp -5\\
+                                    4 \amp 7\\
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the domain, codomain, and range for the transformation defined by the matrix.
+                        <me>
+                            C=\left[
+                                \begin{array}{rrrr}
+                                    1 \amp 0 \amp 3 \amp 0\\
+                                    -3 \amp 1\amp -5\amp 1\\
+                                    2 \amp 1\amp 2\amp 2\\
                                 \end{array}
                             \right]
                         </me>
@@ -261,6 +419,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
+                        Find the orthogonal compliment of the subspace defined by the set of vectors:
+                        <me>
+                            \mathcal{D}=
+                            \left\{
+                                \left(
+                                    \begin{array}{r}
+                                        1 \\ 0 \\ 0 \\ 1
+                                    \end{array}
+                                \right),
+                                \left(
+                                    \begin{array}{r}
+                                        0 \\ 0 \\ 2 \\ -1
+                                    \end{array}
+                                \right)
+                            \right\}
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
                         Use the Gram-Schmidt process to create and orthogonal basis to replace <m>\mathcal{D}</m>.
                         <me>
                             \mathcal{D}=
@@ -289,52 +470,25 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Some Content!!!
+                        Use linear algebra to find the line of best fit for the points <m>(1,5)</m>, <m>(3,3)</m>, and <m>(4,0)</m>.
                     </p>
-                </statement>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-            </exercise>
-
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
-                </statement>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>
-                        Some Content!!!
-                    </p>
+                    <figure>
+                        <caption>Least Squares Problem</caption>
+                        <image width="40%">
+                            <latex-image>
+                                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                                <![CDATA[
+                                    \tikz{
+                                        \draw[->] (-1,0) -- (4,0);
+                                        \draw[->] (0,-1) -- (0,6);
+                                        \draw[blue, fill=blue] (1,5) circle [radius = 3pt] node[anchor=west] {(1,5)};
+                                        \draw[red, fill=red] (3,3) circle [radius = 3pt] node[anchor=west] {(3,3)};
+                                        \draw[green!30!black, fill=green!30!black] (4,0) circle [radius = 3pt] node[anchor=west] {(4,0)};
+                                    }
+                                ]]>
+                            </latex-image>
+                        </image>
+                    </figure>
                 </statement>
             </exercise>
 
