@@ -1242,7 +1242,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Given a vector space <me>H=span\{\vec{v_1},\vec{v_3},\vec{v_3}\}</me> and <me>-3\vec{v_1}+2\vec{v_2}+\vec{v_3}=\vec{0},</me> assuming that <m>\vec{v_i}\neq\vec{0}</m> and that they are not multiples of one another, what is a possible basis for <m>H</m>?  What is the dimension of <m>H</m>?
+                        Given a vector space <me>H=span\{\vec{v_1},\vec{v_2},\vec{v_3}\}</me> and <me>-3\vec{v_1}+2\vec{v_2}+\vec{v_3}=\vec{0},</me> assuming that <m>\vec{v_i}\neq\vec{0}</m> and that they are not multiples of one another, what is a possible basis for <m>H</m>?  What is the dimension of <m>H</m>?
                     </p>
                 </statement>
                 <hint>
