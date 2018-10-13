@@ -130,15 +130,80 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </p>
         </subsection>
         <subsection>
+            <title>Invertible Matrices</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
             <title>Matrices as Maps</title>
             <p>
                 Some Content!!!
             </p>
         </subsection>
         <subsection>
-            <title>Invertible Matrices</title>
+            <title>Row, Column, and Null Spaces (again)</title>
             <p>
-                Some Content!!!
+                The row, column, and null spaces for the matrix
+                <me>
+                    A=\left[
+                        \begin{array}{rrr}
+                            1 \amp 0 \amp -1\\
+                            0 \amp 1 \amp 0\\
+                            0 \amp 1 \amp 0\\
+                        \end{array}
+                    \right]
+                </me>
+                are
+                <md>
+                    <mrow>Row\ A\amp=\left\{\left\lt 1,0,-1\right\gt, \left\lt 0,1,0\right\gt \right\}, </mrow>
+                    <mrow>Col\ A\amp=\left\{\left\lt 1,0,0\right\gt, \left\lt 0,1,1\right\gt \right\}, and</mrow>
+                    <mrow>Nul\ A\amp=\left\{\left\lt 1,0,1\right\gt\right\}.</mrow>
+                </md>
+                We can see these visually in <xref ref="row_null_to_col_zero"/> where you can see the plain of the row space transition to the plain of the column space while the vector of the null space transitions to zero.
+            </p>
+            <figure xml:id="row_null_to_col_zero">
+                <caption>Row and Null Spaces Transitioning to Column Space and Zero</caption>
+                <image width="50%" source="images/row_col_null.gif"/>
+            </figure>
+            <p>
+                If we multiply each of the standard basis elements by the matrix <m>A</m> we get
+                <md>
+                    <mrow> \vec{e}_1=\left\lt 1,0,0 \right\gt \leadsto \left\lt 1,0,0 \right\gt</mrow>
+                    <mrow> \vec{e}_2=\left\lt 0,1,0 \right\gt \leadsto \left\lt 0,1,1 \right\gt</mrow>
+                    <mrow> \vec{e}_3=\left\lt 0,0,1 \right\gt \leadsto \left\lt -1,0,0 \right\gt</mrow>
+                </md>
+                which are the columns of the matrix.  The domain of the transformation defined by <m>A</m> is therefore <m>\mathbb{R}^3</m>, <xref ref="pre_image_A"/>. Meanwhile, the image (or range) of the transformation is the column space of <m>A</m> which is a copy of <m>\mathbb{R}^2</m>, <xref ref="image_A"/>.  So the basis for <m>\mathbb{R}^3</m> has been turned into a basis for a plain that is a copy of <m>\mathbb{R}^2</m>.<fn>This is the perspective that we will spend time on in <xref ref="section_coordinates"/>.</fn>
+            </p>
+            <sidebyside>
+                <figure xml:id="pre_image_A">
+                    <caption>Standard Basis Before Transformation</caption>
+                    <image width="50%" source="images/pre_image_A.png"/>
+                </figure>
+                <figure xml:id="image_A">
+                    <caption>Basis After Transformation by <m>A</m></caption>
+                    <image width="50%" source="images/image_A.png"/>
+                </figure>
+            </sidebyside>
+            <p>
+                We can also define a linear transformation <m>T_A</m> algebraically by
+                <me>
+                    \left(
+                        \begin{array}{c}
+                            x\\ y \\ z
+                        \end{array}
+                    \right)
+                    \stackrel{T_A}{\leadsto}
+                    \left(
+                        \begin{array}{c}
+                            x-z\\ y \\ y
+                        \end{array}
+                    \right)
+                </me>
+                which has the same effect as multiplying the vector <m>\left\lt x,y,z\right\gt</m> by <m>A</m>.
+            </p>
+            <p>
+                We have three ways to think of each transformation.  Each transformation is a manipulation of a physical space, a change from one basis to another, or a series of algebraic instructions.  All of these are reasonable ways to view a transformation and which perspective we use depends on what we wish to accomplish.
             </p>
         </subsection>
     </section>
