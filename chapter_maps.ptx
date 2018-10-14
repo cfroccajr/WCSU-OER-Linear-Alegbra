@@ -100,6 +100,97 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Therefore, <m>d</m> satisfies the definition of a homomorphism (linear function).
                 </p>
             </investigation>
+            <investigation xml:id="vector_map_eg1">
+                <title>Something with Vectors</title>
+                <p>
+                    Define <m>T:\mathbb{R}^3\rightarrow\mathbb{R}^2</m> by
+                    <me>
+                        T\left(
+                            \begin{array}{c}
+                                x \\ y \\ z
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{c}
+                                x+z \\ y+z
+                            \end{array}
+                        \right).
+                    </me>
+                    For example:
+                    <me>
+                        T\left(
+                            \begin{array}{c}
+                                1 \\ 0 \\ 1
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                2 \\ 1
+                            \end{array}
+                        \right)\mbox{ or }
+                        T\left(
+                            \begin{array}{r}
+                                3 \\ 1 \\ 5
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                8 \\ 6
+                            \end{array}
+                        \right).
+                    </me>
+                    This is a linear map since
+                    <md>
+                        <mrow>
+                            T\left(
+                                \begin{array}{c}
+                                    x_1+x_2 \\ y_1+y_2 \\ z_1+z_2
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{c}
+                                    x_1+x_2+z_1+z_2 \\ y_1+y_2+z_1+z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =\left(
+                                \begin{array}{c}
+                                    x_1+z_1 \\ y_1+z_1
+                                \end{array}
+                            \right)+
+                             \left(
+                                \begin{array}{c}
+                                    x_2+z_2 \\ y_2+z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp=
+                            T\left(
+                                \begin{array}{c}
+                                    x_1 \\ y_1 \\ z_1
+                                \end{array}
+                            \right)+
+                            T\left(
+                                \begin{array}{c}
+                                    x_2 \\ y_2 \\ z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+                <sidebyside>
+                    <figure>
+                        <caption>Basis for <m>\mathbb{R}^3</m></caption>
+                        <image width="60%" source="images/r3_basis.png" />
+                    </figure>
+                    <figure>
+                        <caption>Transformation of the basis for <m>\mathbb{R}^3</m> by <m>T</m></caption>
+                        <image width="20%" source="images/r2_basis_with_diagonal.png" />
+                    </figure>
+                </sidebyside>
+            </investigation>
             <investigation xml:id="line_not_linear">
                 <title>Surprisingly Not Linear</title>
                 <p>
@@ -113,8 +204,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </subsection>
         <subsection>
             <title>Isomorphisms (one-to-one and onto)</title>
+            <definition xml:id="one_to_one_onto">
+                <statement><idx><h>one-to-one</h></idx><idx><h>1-1</h></idx><idx><h>onto</h></idx><idx><h>isomorphism</h></idx>
+                    <p>
+                        A function <m>f:V\rightarrow W</m> is <term>one-to-one</term> if for all <m>v_1,v_2\in V</m>, <m>f(v_1)=f(v_2)</m> implies <m>v_1=v_2</m>.  The function is <term>onto</term> if for all <m>w\in W</m> there exists <m>v\in V</m> such that <m>f(v)=w</m>. A function which is both is called an <term>isomorphism</term>.
+                    </p>
+                </statement>
+            </definition>
             <p>
-                Some Content!!!
+                Looking back at <xref ref="basic_linear_exmaple"/> the function is an isomorphism. If <m>-7x_1=-7x_2</m>, then <m>x_1=x_2</m> and <m>f</m> is one-to-one.  Also, for any <m>y</m>, <me>y=-7\left(-\frac{1}{7}y\right)</me> so that when <m>x=-\frac{1}{7}y</m> we get <m>f(x)=y</m> and <m>f</m> is onto.
+            </p>
+            <p>
+                In <xref ref="derivative_of_cubic"/>, <me>d(x^3+7)=d(x^3-9)</me> so that <m>d</m> is not 1-1. Also, for all cubics the output of <m>d</m> is a quadratic so it is not onto, nothing gives the output <m>x^3</m>.
+            </p>
+            <p>
+                Finally, in <xref ref="vector_map_eg1"/> the map is onto but not 1-1.  We could set up systems of equations and show this (and you should try that on your own), but it is better to try and understand this intuitively.  The map <m>T</m> maps three dimensions onto two.  Since the output of the map, the <term>image</term> has more than two different vectors it is onto.  But, since we are squeezing three dimensions down to two it can't be 1-1.<fn>This is a very imprecise way of looking at it but it is good a good visual.</fn>
             </p>
         </subsection>
     </section>
