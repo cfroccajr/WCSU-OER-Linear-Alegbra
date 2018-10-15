@@ -229,14 +229,198 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <title>Linear Maps and Matrix Operations</title>
         <subsection>
             <title>Basic Matrix Arithmetic</title>
-            <p>
-                Some Content!!!
-            </p>
+            <investigation>
+                <title>
+                    Addition
+                </title>
+                <p>
+                     Matrix addition is done term by term.
+                </p>
+                <p>
+                    <md>
+                        <mrow>
+                            \left(
+                                \begin{array}{rrr}
+                                    2\amp 0 \amp 5\\
+                                    -1\amp 3 \amp 4
+                                \end{array}
+                            \right)+
+                            \left(
+                                \begin{array}{rrr}
+                                    0\amp 5 \amp 1\\
+                                    1\amp 7 \amp -2
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    2+0\amp 0+5 \amp 5+1\\
+                                    -1+1\amp 3+7 \amp 4+(-2)
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    2\amp 5 \amp 6\\
+                                    0\amp 10 \amp 2
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
+            <investigation>
+                <title>Scalar Multiplication</title>
+                <p>
+                    Scalar multiplication is likewise done term by term.
+                </p>
+                <p>
+                    <md>
+                        <mrow>5
+                            \left(
+                                \begin{array}{rrr}
+                                    2\amp 0 \amp 5\\
+                                    -1\amp 3 \amp 4
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    5(2)\amp 5(0) \amp 5(5)\\
+                                    5(-1)\amp 5(3) \amp 5(4)
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    10\amp 0 \amp 25\\
+                                    -5\amp 15 \amp 20
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
+            <investigation>
+                <title>Matrix Multiplication</title>
+                <p>
+                    Multiply the rows of the first matrix by the columns of the second, multiplication is taking the dot product of rows with columns.
+                </p>
+                <p>
+                    <md>
+                        <mrow>
+                            \left(
+                                \begin{array}{rrr}
+                                    2\amp 0 \amp 5\\
+                                    -1\amp 3 \amp 4
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rr}
+                                    0\amp 5 \\
+                                    1\amp 7 \\
+                                    0\amp 1 
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{rr}
+                                    2(0)+0(1)+5(0) \amp 2(5)+0(7)+5(1) \\
+                                    -1(0)+3(1)+4(0) \amp -1(5)+3(7)+4(1)
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    0\amp 15 \\
+                                    3\amp 20
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
+            <investigation>
+                <title>Putting it All Together:</title>
+                <p>
+                    <md>
+                        <mrow>2
+                            \left(
+                                \begin{array}{rr}
+                                    1\amp -7 \\
+                                    3\amp 2
+                                \end{array}
+                            \right)+
+                            \left(
+                                \begin{array}{rrr}
+                                    2\amp 0 \amp 5\\
+                                    -1\amp 3 \amp 4
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rr}
+                                    0\amp 5 \\
+                                    1\amp 7 \\
+                                    0\amp 1 
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{rr}
+                                    2(1)\amp 2(-7) \\
+                                    2(3)\amp 2(2)
+                                \end{array}
+                            \right)+
+                            \left(
+                                \begin{array}{rr}
+                                    2(0)+0(1)+5(0) \amp 2(5)+0(7)+5(1) \\
+                                    -1(0)+3(1)+4(0) \amp -1(5)+3(7)+4(1)
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    2\amp -14 \\
+                                    6\amp 4
+                                \end{array}
+                            \right)+
+                            \left(
+                                \begin{array}{rr}
+                                    0 \amp 15 \\
+                                    3 \amp 20
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    2+0 \amp -14+15 \\
+                                    6+3 \amp 4+20
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    2 \amp 1 \\
+                                    9 \amp 24
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
         </subsection>
         <subsection>
             <title>Invertible Matrices</title>
             <p>
-                Some Content!!!
+                <alert>Invertible Matrix</alert>
             </p>
         </subsection>
         <subsection>
