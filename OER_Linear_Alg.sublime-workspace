@@ -906,6 +906,138 @@
 					"Update PreTeXt"
 				],
 				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
 					"Packages/User/xelatex.sublime-build",
 					""
 				]
@@ -1248,7 +1380,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1304,13 +1436,13 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src"
 	],
 	"file_history":
 	[
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_determinants.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/perspectives.ptx",
@@ -1439,7 +1571,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
