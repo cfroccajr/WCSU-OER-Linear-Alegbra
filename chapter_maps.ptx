@@ -419,9 +419,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </subsection>
         <subsection>
             <title>Invertible Matrices</title>
-            <p>
-                <alert>Invertible Matrix</alert>
-            </p>
+            <definition><idx><h>inverse matrix</h></idx><idx><h>left inverse</h></idx><idx><h>right inverse</h></idx>
+                <statement>
+                    <p>
+                        A matrix <m>A</m> is <term>invertible</term> is there exists a matrix <m>A^{-1}</m> such that <m>A\, A^{-1}=A^{-1}\, A=I</m> where <m>I</m> is the identity matrix.  If there exists <m>B</m> such that only <m>A\, B=I</m> and <m>B\, A\neq I</m>, then <m>B</m> is the <term>right inverse</term> of <m>A</m> and <m>A</m> is the <term>left inverse</term> of <m>B</m>.
+                    </p>
+                </statement>
+            </definition>
         </subsection>
         <subsection>
             <title>Matrices as Maps</title>
@@ -617,6 +621,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt (p.275): 10-14</url> </li>
                     <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace (p.283): 10, 11, 12</url> </li>
                 </ul>
+                Aditionally, be sure you can define the following: Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Null Space, Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace, Orthonormal Basis, Change of Basis Matrix (also called change of coordinate matrix)
             </p>
         </introduction>
         <exercisegroup>
@@ -628,10 +633,47 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
                 </p>
             </introduction>
+            <!-- Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Null Space, Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace, Orthonormal Basis, Change of Basis Matrix (also called change of coordinate matrix) -->
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>linear transformation</term>.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>inverse matrix</term>.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>one-to-one function</term>.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>kernel of a transformation</term>.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>orthogonal complement</term>.
+                    </p>
+                </statement>
+            </exercise>
             <exercise>
                 <statement>
                     <p>
                         Find the inverse of the given matrix:
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262">p.252</url>)
                         <me>
                             A=\left[
                                 \begin{array}{rrr}
@@ -649,6 +691,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Find the kernel (i.e. null space) for the transformation defined by multiplication by:
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">p.200</url>)
                         <me>
                             A=\left[
                                 \begin{array}{rrr}
@@ -665,6 +708,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Is the transformation defined by the given matrix one-to-one?  Is it onto?
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=282">p.272</url>)
                         <me>
                             B=\left[
                                 \begin{array}{rr}
@@ -682,6 +726,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Find the domain, codomain, and range for the transformation defined by the matrix.
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230">p.220</url>)
                         <me>
                             C=\left[
                                 \begin{array}{rrrr}
@@ -699,6 +744,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Find the transformation, <m>Rep_{\mathcal{E}_3,\mathcal{B}}</m>, from the standard basis, <m>\mathcal{E}_3</m>, to the basis <m>\mathcal{B}</m>.
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210">p.200</url>)
                         <me>
                             \mathcal{E}_3=
                             \left\{
@@ -745,6 +791,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Use your answer from <xref ref="first_basis_question" /> to find the transformation from <m>\mathcal{C}</m> to <m>\mathcal{B}</m>, <m>Rep_{\mathcal{C}, \mathcal{B}}</m>.
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267">p.257</url>)
                         <me>
                             \mathcal{C}=
                             \left\{
@@ -773,6 +820,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Find the orthogonal compliment of the subspace defined by the set of vectors:
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">p.283</url>)
                         <me>
                             \mathcal{D}=
                             \left\{
@@ -796,6 +844,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Use the Gram-Schmidt process to create and orthogonal basis to replace <m>\mathcal{D}</m>.
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">p.275</url>)
                         <me>
                             \mathcal{D}=
                             \left\{
@@ -824,6 +873,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <statement>
                     <p>
                         Use linear algebra to find the line of best fit for the points <m>(1,5)</m>, <m>(3,3)</m>, and <m>(4,0)</m>.
+                        (compare to <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=300">p.290</url> and 
+                        <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">p.283</url>)
                     </p>
                     <figure>
                         <caption>Least Squares Problem</caption>

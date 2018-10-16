@@ -19,11 +19,12 @@
 \begin{document}
 \pagestyle{empty}
 \tikz{
-    \draw[->] (0,0) -- (1,1);
-    \draw[->] (0,0) -- (2,0);
-    \node[anchor=west] at (0.1,0.15) {\tiny $\theta$};
-    \node[anchor=east] at (0.7,0.7) {\tiny $|\vec{v}|$};
-    \node[anchor=north] at (1,0) {\tiny $|\vec{w}|$};
-    \node[anchor=west] at (1.5,0.5) {\tiny$\vec{v}\cdot\vec{w}=|\vec{v}||\vec{w}|\cos(\theta)$};
+    \draw[->] (-1,0) -- (3,0);
+    \draw[->] (0,-1) -- (0,3);
+    \node[anchor = west] at (3,0) {$x$};
+    \node[anchor = south] at (0,3) {$y$};
+    \draw[blue, fill=blue] (1,1) circle [radius = 3pt] node[anchor=west] {(1,1)};
+    \draw[red, fill=red] (0,2.5) circle [radius = 3pt] node[anchor=west] {(0,2.5)};
+    \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
 }
 \end{document}

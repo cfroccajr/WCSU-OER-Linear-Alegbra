@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+\tikz{
+    \draw[->] (-1,0) -- (3,0);
+    \draw[->] (0,-1) -- (0,3);
+    \draw[very thick,->,red!50!blue] (0,0) -- (1.94,2.91);
+    \node[red!50!blue,thick,anchor=south east] at (1.2,1.5) {$\left[ 2,3\right]$};
+    \draw[very thick,->,blue] (1.94,0) -- (1.94,2.91);
+    \node[blue,thick,anchor=west] at (2,1.5) {$\left[ 0,3\right]$};
+    \draw[very thick,->,red] (0,0) -- (1.94,0);
+    \node[red,thick,anchor=north] at (0.97,0) {$\left[ 2,0\right]$};
+    \node[anchor = west] at (3,0) {$x$};
+    \node[anchor = south] at (0,3) {$y$};
+    \draw[green!30!black, fill=green!30!black] (2,3) circle [radius = 3pt] node[anchor=west] {(2,3)};
+}
+\end{document}
