@@ -649,7 +649,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </me>
                     This is really the same thing we did before, but we did it all at once to save time.
                 </p>
-                <p>
+                <p xml:id="two_by_two_inverse">
                     As a final note on <m>2\times 2</m> matrices if
                     <me>
                         A=\left(
@@ -822,7 +822,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <investigation>
                 <title>A Couple Non-Examples</title>
                 <p>
-                    If we try to get an inverse for
+                    Suppose that we were given
+                    <me>
+                        A=\left(
+                            \begin{array}{rr}
+                                2 \amp 3 \\
+                                4 \amp 6\\
+                            \end{array}
+                        \right)
+                    </me>
+                    and we were asked to find the inverse, could we do it? From what we mentioned above (<xref ref="two_by_two_inverse" />) we know the answer is no because <m>2(6)-3(4)=0</m>.  But, what woudl happen if we ignored this and tried any ways:
+                    <me>
+                        \left(
+                            \begin{array}{rr|rr}
+                                2 \amp 3 \amp 1 \amp 0\\
+                                4 \amp 6 \amp 0 \amp 1\\
+                            \end{array}
+                        \right)
+                        \leadsto
+                        \left(
+                            \begin{array}{rr|rr}
+                                2 \amp 3 \amp 1 \amp 0\\
+                                0 \amp 0 \amp -2 \amp 1\\
+                            \end{array}
+                        \right),
+                    </me>
+                    which is an inconsistent system.  This happens because the row space of <m>A</m> is one dimensional, it is a single line in the direction of <m>\left\lt2,3\right\gt</m>, but it exists in two dimensions.
+                </p>
+                <figure xml:id="one_d_row_space">
+                    <caption>One Dimensional Row Space for a <m>2\times 2</m> matrix</caption>
+                    <image width="50%" source="images/row_space_oneD.png"/>
+                </figure>
+                <p>
+                    Now for a larger example, if we try to get an inverse for
                     <me>
                         A=\left(
                             \begin{array}{rrr}
@@ -852,9 +884,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </me>
                     We can't row reduce <m>A</m> so we don't get an inverse.  This is happening because the rows of <m>A</m> are not linearly independent, the row space for <m>A</m> is
                     <md>
-                        <mrow>Row\ A\amp=\left\{\left\lt 1,0,-1\right\gt, \left\lt 0,1,0\right\gt \right\}. </mrow>
+                        <mrow>Row\ A\amp=\left\{\left\lt 1,0,-1\right\gt, \left\lt 0,1,0\right\gt \right\}</mrow>
                     </md>
+                    which is only two dimensional.  That is, a matrix which in a sense has a two dimensional span but exists in three dimensions doesn't have an inverse.
                 </p>
+                <figure xml:id="two_d_row_space">
+                    <caption>Two Dimensional Row Space for a <m>3\times 3</m> matrix</caption>
+                    <image width="70%" source="images/row_space_twoD.png"/>
+                </figure>
+                <p>
+                    Note that while <m>A</m> doesn't have an inverse
+                    <me>
+                        \left(
+                            \begin{array}{rrr}
+                                1 \amp 0 \amp -1\\
+                                0 \amp 1 \amp 0\\
+                            \end{array}
+                        \right)
+                        \left(
+                            \begin{array}{rr}
+                                1 \amp 0 \\
+                                0 \amp 1 \\
+                                0 \amp 0 \\
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{rr}
+                                1 \amp 0 \\
+                                0 \amp 1 \\
+                            \end{array}
+                        \right),
+                    </me>
+                </p>
+                so that a matrix with the same row space has a <em>right inverse</em>.<fn>You should convenes yourself that it doesn't have a left inverse.</fn>
             </investigation>
         </subsection>
         <conclusion>
