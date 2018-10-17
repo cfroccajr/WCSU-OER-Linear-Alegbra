@@ -226,7 +226,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Matrix operations and Maps -->
 
     <section xml:id="section_matrix_operations">
-        <title>Linear Maps and Matrix Operations</title>
+        <title>Matrix Operations</title>
         <subsection>
             <title>Basic Matrix Arithmetic</title>
             <investigation>
@@ -671,7 +671,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     provided <m>ad-bc\neq 0</m>; if <m>ad-bc=0</m> then <m>A</m> doesn't have an inverse.  Unfortunately, there is not such a simple formula for larger matrices.
                 </p>
             </investigation>
-            <example>
+            <investigation>
                 <title>Inverse of a <m>3\times 3</m> Matrix </title>
                 <p>
                     Find the inverse of
@@ -746,8 +746,132 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         \right).
                     </me>
                 </p>
-            </example>
+            </investigation>
+            <investigation>
+                <title>Inverse of a <m>4\times 4</m> Matrix </title>
+                <p>
+                    Find the inverse of
+                    <me>
+                        A=\left(
+                            \begin{array}{rrrr}
+                                1 \amp 0 \amp 1 \amp 5 \\
+                                3 \amp 1 \amp 0 \amp 15\\
+                                0 \amp 1 \amp -2 \amp 0\\
+                                7 \amp 5 \amp 8 \amp 36
+                            \end{array}
+                        \right).
+                    </me>
+                    As before we set up an augmented matrix with <m>A</m> as the coefficients on the left and vectors on the right that when taken together look like the identity matrix, then we row reduce.
+                    <md>
+                        <mrow>
+                            \left(
+                                \begin{array}{rrrr|rrrr}
+                                    1 \amp 0 \amp 1 \amp 5 \amp 1 \amp 0 \amp 0 \amp 0\\
+                                    3 \amp 1 \amp 0 \amp 15 \amp 0 \amp 1 \amp 0 \amp 0\\
+                                    0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+                                    2 \amp 3 \amp -7 \amp 11 \amp 0 \amp 0 \amp 0 \amp 1
+                                \end{array}
+                            \right)
+                            \amp\leadsto
+                            \left(
+                                \begin{array}{rrrr|rrrr}
+                                    1 \amp 0 \amp 1 \amp 5  \amp 1 \amp 0 \amp 0 \amp 0\\
+                                    0 \amp 1 \amp -3 \amp 0 \amp -3 \amp 1 \amp 0 \amp 0\\
+                                    0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+                                    0 \amp 3 \amp -9 \amp 1  \amp -2 \amp 0 \amp 0 \amp 1
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp\leadsto
+                            \left(
+                                \begin{array}{rrrr|rrrr}
+                                    1 \amp 0 \amp 1 \amp 5  \amp 1 \amp 0 \amp 0 \amp 0\\
+                                    0 \amp 1 \amp -3 \amp 0 \amp -3 \amp 1 \amp 0 \amp 0\\
+                                    0 \amp 0 \amp 1 \amp 0 \amp 3 \amp -1 \amp 1 \amp 0\\
+                                    0 \amp 0 \amp 0 \amp 1  \amp 7 \amp -3 \amp 0 \amp 1
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp\leadsto
+                            \left(
+                                \begin{array}{rrrr|rrrr}
+                                    1 \amp 0 \amp 0 \amp 0  \amp -37 \amp 16 \amp -1 \amp -5\\
+                                    0 \amp 1 \amp 0 \amp 0 \amp 6 \amp -2 \amp 3 \amp 0\\
+                                    0 \amp 0 \amp 1 \amp 0 \amp 3 \amp -1 \amp 1 \amp 0\\
+                                    0 \amp 0 \amp 0 \amp 1  \amp 7 \amp -3 \amp 0 \amp 1
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                    So that we get
+                    <me>
+                        A^{-1}=
+                            \left(
+                                \begin{array}{rrrr}
+                                    -37 \amp 16 \amp -1 \amp -5\\
+                                    6 \amp -2 \amp 3 \amp 0\\
+                                    3 \amp -1 \amp 1 \amp 0\\
+                                    7 \amp -3 \amp 0 \amp 1
+                                \end{array}
+                            \right).
+                    </me>
+                </p>
+            </investigation>
+            <investigation>
+                <title>A Couple Non-Examples</title>
+                <p>
+                    If we try to get an inverse for
+                    <me>
+                        A=\left(
+                            \begin{array}{rrr}
+                                1 \amp 0 \amp -1\\
+                                0 \amp 1 \amp 0\\
+                                0 \amp 1 \amp 0\\
+                            \end{array}
+                        \right)
+                    </me>
+                    we get
+                    <me>
+                        \left(
+                            \begin{array}{rrr|rrr}
+                                1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0\\
+                                0 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0\\
+                                0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1\\
+                            \end{array}
+                        \right)
+                        \leadsto
+                        \left(
+                            \begin{array}{rrr|rrr}
+                                1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0\\
+                                0 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0\\
+                                0 \amp 0 \amp 0 \amp 0 \amp -1 \amp 1\\
+                            \end{array}
+                        \right).
+                    </me>
+                    We can't row reduce <m>A</m> so we don't get an inverse.  This is happening because the rows of <m>A</m> are not linearly independent, the row space for <m>A</m> is
+                    <md>
+                        <mrow>Row\ A\amp=\left\{\left\lt 1,0,-1\right\gt, \left\lt 0,1,0\right\gt \right\}. </mrow>
+                    </md>
+                </p>
+            </investigation>
         </subsection>
+        <conclusion>
+            <title>Concluding Remarks</title>
+            <p>
+                Using row reduction to get inverses is the standard introductory way to find them.  It does take patience and precision, both of which can be bad at.  Computers can do this very well though.  Use the code below to help you check your work while practicing.  You should also learn to use the computer to help you check your other calculations.  (Make use of the <url href="quickref-linalg.pdf">Linear Algebra Quick Reference</url> and you can use the box below or go to the <url href="https://sagecell.sagemath.org/" >SageMathCell</url> main page.)
+            </p>
+            <sage>
+                <input>
+                    <xi:include href="sage_code/matrix_inverses.sage" parse="text"/>
+                </input>
+                <output></output>
+            </sage>
+        </conclusion>
+    </section>
+    <section>
+        <title>Linear Maps and Matrices</title>
         <subsection>
             <title>Matrices as Maps</title>
             <p>

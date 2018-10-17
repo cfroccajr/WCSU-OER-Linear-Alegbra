@@ -27,4 +27,4 @@ n_plot=arrow(zero,n,width=2,arrowhead=5,color="red")
 
 
 # Plot objects
-plain_plot+v_plot+u_plot+n_plot+line_plot
+(plain_plot+v_plot+u_plot+n_plot+line_plot).show(aspect_ratio=[1,1,1])
