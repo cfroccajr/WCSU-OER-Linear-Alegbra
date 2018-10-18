@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"two",
+				"two_by_two_inverse"
+			],
+			[
 				"exercise",
 				"exercisegroup"
 			],
@@ -147,6 +151,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "chapter_maps.ptx",
+			"settings":
+			{
+				"buffer_size": 81420,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -1440,7 +1453,9 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/matrix_inverses.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
@@ -1450,7 +1465,6 @@
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.log",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Reference_File.txt",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/plains_and_vectors_cell.sage",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 272 - Linear Algebra/Openner.tex",
@@ -1566,8 +1580,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Spring 2009 Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Mesopotamian_Review.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex"
 	],
 	"find":
 	{
@@ -1585,6 +1598,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"convenes",
+			"row_null",
+			"<(.*)example>",
+			"<[\"\"|/]example>",
 			"<m",
 			"<figure>",
 			"image",
@@ -1629,6 +1646,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<$1investigation>",
 			"</subsection>",
 			"<subsection $1>",
 			"arrowhead=20,width=4",
@@ -1661,8 +1679,43 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "chapter_maps.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53618,
+								53618
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"spell_check": true,
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20119.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
