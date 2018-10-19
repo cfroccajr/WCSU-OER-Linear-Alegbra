@@ -218,9 +218,75 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 In <xref ref="derivative_of_cubic"/>, <me>d(x^3+7)=d(x^3-9)</me> so that <m>d</m> is not 1-1. Also, for all cubics the output of <m>d</m> is a quadratic so it is not onto, nothing gives the output <m>x^3</m>.
             </p>
             <p>
-                Finally, in <xref ref="vector_map_eg1"/> the map is onto but not 1-1.  We could set up systems of equations and show this (and you should try that on your own), but it is better to try and understand this intuitively.  The map <m>T</m> maps three dimensions onto two.  Since the output of the map, the <term>image</term> has more than two different vectors it is onto.  But, since we are squeezing three dimensions down to two it can't be 1-1.<fn>This is a very imprecise way of looking at it but it is good a good visual.</fn>
+                Finally, in <xref ref="vector_map_eg1"/> the map is onto but not 1-1.  We could set up systems of equations and show this (and you should try that on your own), but it is better to try and understand this intuitively.  The map <m>T</m> maps three dimensions onto two.  Since the output of the map, the <term>image</term><idx><h>image</h></idx>, has more than two different vectors it is onto.  But, since we are squeezing three dimensions down to two it can't be 1-1.<fn>This is a very imprecise way of looking at it but it is good a good visual.</fn>
             </p>
         </subsection>
+        <subsection>
+            <title>Kernel, Domain, and Image</title>
+            <definition xml:id="kernel"><idx><h>kernel</h></idx>
+                <statement>
+                    <p>
+                        The <term>Kernel</term> of a transformation <m>T:V\rightarrow W</m> is the set of all <m>\vec{v}\in V</m> such that <m>T(\vec{v})=\vec{0}</m>.  A transformation is one-to-one if and only if the kernel contains only the zero vector.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                Above in <xref ref="vector_map_eg1"/> any vector of the form <m>\vec{v}=\left\lt-z,-z,z\right\gt</m> maps to <m>\left\lt 0,0\right\gt</m>:
+                <me>
+                    T\left(
+                        \begin{array}{c}
+                            -z \\ -z \\ z
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{c}
+                            -z+z \\ -z+z
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{c}
+                            0 \\ 0
+                        \end{array}
+                    \right).
+                </me>
+                And so we could show that the kernel of <m>T</m> is <m>span\left\{\left\lt-1,-1,1\right\gt\right\}</m>.  Significantly, we can use this to rewrite every element of the domain as
+                <me>
+                    \left(
+                        \begin{array}{r}
+                            x\\ y \\z
+                        \end{array}
+                    \right) = 
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z \\0
+                        \end{array}
+                    \right) + 
+                    \left(
+                        \begin{array}{r}
+                            -z\\ -z \\z
+                        \end{array}
+                    \right)
+                </me>
+                so that it is the sum of something in the kernel and something that is not in the kernel unless it happens that <m>x=y=-z</m>.  This is a small example of a much more general truth, and we will use this later when we discuss orthogonal projections and curve fitting.
+            </p>
+            <p>
+                As a final note you can see that the non-kernel piece of the above vector looks just like the image (or output) of the transformation:
+                <me>
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z \\0
+                        \end{array}
+                    \right)\ \mbox{ versus }
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z
+                        \end{array}
+                    \right).
+                </me>
+                This too is a part of the a larger picture and it tells us that in a sense the non-kernel portion of the domain is isomorphic to the image of the transformation.
+            </p>
+        </subsection>
+
     </section>
 
 <!-- Matrix operations and Maps -->
@@ -1129,12 +1195,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </statement>
             </theorem>
-        </subsection>
-        <subsection>
-            <title>Kernel and Image</title>
-            <p>
-                Some content...
-            </p>
         </subsection>
         <subsection>
             <title>Row, Column, and Null Spaces (again)</title>

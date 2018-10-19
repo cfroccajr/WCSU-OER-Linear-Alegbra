@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"vector",
+				"vector_map_eg1"
+			],
+			[
 				"two",
 				"two_by_two_inverse"
 			],
@@ -151,15 +155,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "chapter_maps.ptx",
-			"settings":
-			{
-				"buffer_size": 81420,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -1453,8 +1448,8 @@
 	],
 	"file_history":
 	[
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/matrix_inverses.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/matrix_inverses.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
@@ -1679,43 +1674,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "chapter_maps.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 81420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53618,
-								53618
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-							],
-							"spell_check": true,
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 20119.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
