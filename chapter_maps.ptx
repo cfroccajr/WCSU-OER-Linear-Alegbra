@@ -1270,7 +1270,186 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <subsection>
             <title>Coordinate Systems</title>
             <p>
-                Some Content!!!
+                Suppose that we want to walk to the point <m>(2,3)</m> from the origin, how might we get there?
+            </p>
+            <sidebyside widths="30% 37%">
+                <stack>
+                    <p>
+                        We can get from the origin to the point <m>(2,3)</m> by walking east 2 blocks and north 3.
+                        <me>
+                            2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
+                            +3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_e">
+                    <caption>Path one with the elementary basis <m>\mathcal{E}_2</m>.</caption>
+                    <image source="images/basis_e.png"/>
+                </figure>
+            </sidebyside>
+            <sidebyside widths="30% 40%">
+                <stack>
+                    <p>
+                        We can get there by walking northeast(ish) 3 blocks and northwest(ish) 1.
+                        <me>
+                            3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
+                            +\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_b">
+                    <caption>Path two with some basis <m>\mathcal{B}</m>.</caption>
+                    <image source="images/basis_b.png"/>
+                </figure>
+            </sidebyside>
+            <sidebyside widths="30% 48%">
+                <stack>
+                    <p>
+                        We can get there by walking northwest(ish) 2 blocks and northeast(ish) 4.
+                        <me>
+                            2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
+                            +4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_d">
+                    <caption>Path three with some basis <m>\mathcal{D}</m>.</caption>
+                    <image source="images/basis_d.png"/>
+                </figure>
+            </sidebyside>
+            <p>
+                In each case you get to the same place but using different paths.  That is because in each case we are using different bases or coordinate systems.
+            </p>
+            <p>
+                In <xref ref="basis_e"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{E}_2=
+                    \left\{
+                        \vec{e}_1=\left(\begin{array}{r}1 \\ 0 \end{array}\right),
+                        \vec{e}_2=\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{E}_2</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{E}_2}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left\lt
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right\gt
+                </me>
+                because
+                <me>
+                    2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
+                    +3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In <xref ref="basis_b"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{B}=
+                    \left\{
+                        \vec{\beta}_1=\left(\begin{array}{r}1 \\ 1/2 \end{array}\right),
+                        \vec{\beta}_2=\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{B}</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{B}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left\lt
+                        \begin{array}{r}
+                            3 \\ 1
+                        \end{array}
+                    \right\gt
+                </me>
+                because
+                <me>
+                    3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
+                    +1\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In <xref ref="basis_d"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{D}=
+                    \left\{
+                        \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                        \vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{D}</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{D}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left\lt
+                        \begin{array}{r}
+                            2 \\ 4
+                        \end{array}
+                    \right\gt
+                </me>
+                because
+                <me>
+                    2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
+                    +4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In each case the coordinates for the point <m>(2,3)</m> are the coefficients for a linear combination of basis vectors.
+            </p>
+            <definition>
+                <title><m>\mathcal{B}</m>-Coordinates</title>
+                <idx><h>coordinate system</h></idx>
+                <idx><h><m>\mathcal{B}</m>-coordinates</h></idx>
+                <statement>
+                    <p>
+                        Given a basis <me>\mathcal{B}=\left\{\beta_1,\, \beta_2,\, \ldots,\, \beta_k\right\}</me> the <term><m>\mathcal{B}</m>-coordinates</term> for a point or vector <m>\vec{p}</m> are the coefficients <m>b_1,\, b_2,\, \ldots,\, b_k</m> so that <me>\vec{p}=b_1\beta_1+b_2\beta_2+\cdots+b_k\beta_k</me> and we write
+                        <me>
+                            Rep_{\mathcal{B}}(\vec{p})=
+                            \left[
+                                \begin{array}{l}
+                                    b_1\\ b_2\\ \vdots\\ b_k
+                                \end{array}
+                            \right].
+                        </me>
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                Finally, we can connect this to matrices by observing that if the columns of a matrix are the basis vectors then when we multiply that by a representation we get our point, for example
+                <me>
+                    \left(\vec{\beta}_1\ \vec{\beta}_2\right)Rep_{\mathcal{B}}
+                    \left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                    =
+                    \left(
+                        \begin{array}{rr}
+                            1 \amp -1\\
+                            1/2 \amp 3/2
+                        \end{array}
+                    \right)
+                    \left(\begin{array}{r}2 \\ 1 \end{array}\right)
+                    =
+                    \left(\begin{array}{r}2 \\ 3 \end{array}\right).                   
+                </me>
             </p>
         </subsection>
         <subsection>
@@ -1637,7 +1816,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 \begin{array}{r}
                                     1 \\ 0 \\0
                                 \end{array}
-                            \right)
+                            \right),
                             \left(
                                 \begin{array}{r}
                                     0 \\ 1 \\0
@@ -1655,7 +1834,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 \begin{array}{r}
                                     1 \\ 0 \\-1
                                 \end{array}
-                            \right)
+                            \right),
                             \left(
                                 \begin{array}{r}
                                     0 \\ 1 \\1
@@ -1684,7 +1863,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 \begin{array}{r}
                                     1 \\ 0 \\ 0
                                 \end{array}
-                            \right)
+                            \right),
                             \left(
                                 \begin{array}{r}
                                     1 \\ 1 \\0
@@ -1737,7 +1916,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 \begin{array}{r}
                                     1 \\ 1 \\1
                                 \end{array}
-                            \right)
+                            \right),
                             \left(
                                 \begin{array}{r}
                                     0 \\ 2 \\0

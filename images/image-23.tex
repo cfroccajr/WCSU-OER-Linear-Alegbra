@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+\tikz{
+    \draw[->] (-1,0) -- (4,0);
+    \draw[->] (0,-1) -- (0,6);
+    \draw[blue, fill=blue] (1,5) circle [radius = 3pt] node[anchor=west] {(1,5)};
+    \draw[red, fill=red] (3,3) circle [radius = 3pt] node[anchor=west] {(3,3)};
+    \draw[green!30!black, fill=green!30!black] (4,0) circle [radius = 3pt] node[anchor=west] {(4,0)};
+}
+\end{document}
