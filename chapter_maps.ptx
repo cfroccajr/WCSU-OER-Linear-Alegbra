@@ -913,7 +913,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             \end{array}
                         \right),
                     </me>
-                    which is an inconsistent system.  This happens because the row space of <m>A</m> is one dimensional, it is a single line in the direction of <m>\left\lt2,3\right\gt</m>, but it exists in two dimensions.
+                    which is an inconsistent system.  This happens because the row space of <m>A</m> is one dimensional, it is a single line in the direction of <m>\left(2,3\right)</m>, but it exists in two dimensions.
                 </p>
                 <figure xml:id="one_d_row_space">
                     <caption>One Dimensional Row Space for a <m>2\times 2</m> matrix</caption>
@@ -950,7 +950,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </me>
                     We can't row reduce <m>A</m> so we don't get an inverse.  This is happening because the rows of <m>A</m> are not linearly independent, the row space for <m>A</m> is
                     <md>
-                        <mrow>Row\ A\amp=\left\{\left\lt 1,0,-1\right\gt, \left\lt 0,1,0\right\gt \right\}</mrow>
+                        <mrow>Row\ A\amp=\left\{\left( 1,0,-1\right), \left( 0,1,0\right) \right\}</mrow>
                     </md>
                     which is only two dimensional.  That is, a matrix which in a sense has a two dimensional span but exists in three dimensions doesn't have an inverse.
                 </p>
@@ -1340,11 +1340,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             2 \\ 3
                         \end{array}
                     \right)=
-                    \left\lt
+                    \left(
                         \begin{array}{r}
                             2 \\ 3
                         \end{array}
-                    \right\gt
+                    \right)
                 </me>
                 because
                 <me>
@@ -1370,11 +1370,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             2 \\ 3
                         \end{array}
                     \right)=
-                    \left\lt
+                    \left(
                         \begin{array}{r}
                             3 \\ 1
                         \end{array}
-                    \right\gt
+                    \right)
                 </me>
                 because
                 <me>
@@ -1400,11 +1400,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             2 \\ 3
                         \end{array}
                     \right)=
-                    \left\lt
+                    \left(
                         \begin{array}{r}
                             2 \\ 4
                         \end{array}
-                    \right\gt
+                    \right)
                 </me>
                 because
                 <me>
@@ -1422,7 +1422,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <idx><h><m>\mathcal{B}</m>-coordinates</h></idx>
                 <statement>
                     <p>
-                        Given a basis <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me> the <term><m>\mathcal{B}</m>-coordinates</term> for a point or vector <m>\vec{p}</m> are the coefficients <m>b_1,\, b_2,\, \ldots,\, b_k</m> so that <me>\vec{p}=b_1\beta_1+b_2\beta_2+\cdots+b_k\beta_k</me> and we write
+                        Given a basis <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me> the <term><m>\mathcal{B}</m>-coordinates</term> for a point or vector <m>\vec{p}</m> are the coefficients <m>b_1,\, b_2,\, \ldots,\, b_k</m> so that <me>\vec{p}=b_1\vec{\beta}_1+b_2\vec{\beta}_2+\cdots+b_k\vec{\beta}_k</me> and we write
                         <me>
                             Rep_{\mathcal{B}}(\vec{p})=
                             \left[
@@ -1588,7 +1588,185 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <investigation>
                 <title><m>\mathcal{B}</m> to <m>\mathcal{D}</m></title>
                 <p>
-                    some content
+                    Finally, let
+                   <me>
+                        \mathcal{D}=
+                        \left\{
+                            \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                            \vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                        \right\}.
+                    </me>
+                    and let <m>\mathcal{B}</m> and <m>\mathcal{E}_2</m> be as before.  Suppose also that
+                   <me>
+                        Rep_{\mathcal{B}}\left(\vec{v}\right)=
+                        \left(
+                            \begin{array}{r}
+                                -1 \\ 3
+                            \end{array}
+                        \right).
+                    </me>
+                    if we want to find <m>Rep_{\mathcal{D}}(\vec{v})</m> then multiply by the matrix
+                    <md>
+                        <mrow>Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    -1 \amp 1 \\ 
+                                    1\amp 1/4 
+                                \end{array}
+                            \right)^{-1}
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    -1/5 \amp 4/5 \\ 
+                                    4/5\amp 4/5 
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    1/5 \amp 7/5 \\ 
+                                    6/5\amp 2/5 
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    So that we get
+                    <me>
+                        Rep_{\mathcal{D}}(\vec{v})=Rep_{\mathcal{B},\mathcal{D}}Rep_{\mathcal{B}}(\vec{v})=
+                        \left(
+                                \begin{array}{rr}
+                                    1/5 \amp 7/5 \\ 
+                                    6/5\amp 2/5 
+                                \end{array}
+                        \right)
+                        \left(
+                            \begin{array}{r}
+                                -1 \\ 3
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                4 \\ 0
+                            \end{array}
+                        \right).
+                    </me>
+                    We can verify that this is correct because
+                    <me>
+                        -1\vec{\beta}_1+3\vec{\beta}_2=
+                        \left(
+                            \begin{array}{r}
+                                -4 \\ 4
+                            \end{array}
+                        \right)
+                    </me>
+                    and
+                    <me>
+                        4\vec{\delta}_1+0\vec{\delta}_2=
+                        \left(
+                            \begin{array}{r}
+                                -4 \\ 4
+                            \end{array}
+                        \right).
+                    </me>
+                    In general if
+                    <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me>
+                    and
+                    <me>\mathcal{D}=\left\{\vec{\delta}_1,\, \vec{\delta}_2,\, \ldots,\, \vec{\delta}_k\right\}</me>
+                    then
+                    <md>
+                        <mrow>Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>\amp=(Rep_{\mathcal{D},\mathcal{E}_2})^{-1}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>
+                            \amp=\left(\vec{\delta}_1\ \vec{\delta}_2\ \cdots\ \vec{\delta}_k\right)^{-1}
+                            \left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right).
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
+            <investigation>
+                <title>Back to the Beginning</title>
+                <p>
+                    We started above with
+                <me>
+                    Rep_{\mathcal{E}_2}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right),\ 
+                    Rep_{\mathcal{B}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            3 \\ 1
+                        \end{array}
+                    \right),\ \mbox{ and }
+                    Rep_{\mathcal{D}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 4
+                        \end{array}
+                    \right).                    
+                </me>
+                Now, we know that if we multiply the first one,
+                <me>
+                    Rep_{\mathcal{E}_2}\left(\begin{array}{r}2\\3\end{array}\right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)
+                </me>
+                by
+                <me>
+                    Rep_{\mathcal{E}_2,\mathcal{B}}=
+                    \left(
+                        \begin{array}{rr}
+                            3/4 \amp 1/2 \\ 
+                            -1/4\amp 1/2 
+                        \end{array}
+                    \right)
+                </me>
+                or
+                <me>
+                    Rep_{\mathcal{E}_2,\mathcal{D}}=
+                    \left(
+                        \begin{array}{rr}
+                            -1/5 \amp 4/5 \\ 
+                            4/5\amp 4/5 
+                        \end{array}
+                    \right)
+                </me>
+                we get the other two.  That is we have a reliable, algorithmic way to change from one basis to another in the same dimension.
                 </p>
             </investigation>
         </subsection>
