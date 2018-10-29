@@ -1446,7 +1446,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             1/2 \amp 3/2
                         \end{array}
                     \right)
-                    \left(\begin{array}{r}2 \\ 1 \end{array}\right)
+                    \left(\begin{array}{r}3 \\ 1 \end{array}\right)
                     =
                     \left(\begin{array}{r}2 \\ 3 \end{array}\right).                   
                 </me>
