@@ -1769,21 +1769,146 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 we get the other two.  That is we have a reliable, algorithmic way to change from one basis to another in the same dimension.
                 </p>
             </investigation>
+            <p>
+                <alert>Summary Diagram for Bases Changes:</alert>
+            </p>
+            <figure xml:id="bases_change">
+                <caption> Changing from <m>\mathcal{B}</m> to other bases. </caption>
+                <image width="60%" source="images/basis_cycle.png" />
+            </figure>
         </subsection>
         <subsection>
             <title>Changing Morphisms</title>
             <investigation>
                 <title>Change a transformation of <m>\mathcal{E}_2</m> to one from <m>\mathcal{B}</m> to <m>\mathcal{D}</m></title>
                 <p>
-                    some content
+                    Let <m>\mathcal{E}_2</m> be as bove and let
+                    <me>
+                        \mathcal{E}_3=
+                        \left\{
+                            \vec{e}_1=
+                            \left(
+                                \begin{array}{r}
+                                    1 \\ 0 \\0
+                                \end{array}
+                            \right),\, \vec{e}_2=
+                            \left(
+                                \begin{array}{r}
+                                    0 \\ 1 \\0
+                                \end{array}
+                            \right),\, \vec{e}_3=
+                            \left(
+                                \begin{array}{r}
+                                    0 \\ 0 \\1
+                                \end{array}
+                            \right)
+                        \right\}
+                    </me>
+                    Define a transformation <m>P</m> from <m>\mathbb{R}^3</m> to <m>\mathbb{R}^2</m> by
+                    <me>
+                        P(\vec{v})=(x,y).
+                    </me>
+                    From before the matrix for <m>P</m> is
+                    <me>
+                        A=
+                        \left(
+                            \begin{array}{rrr}
+                                1 \amp 0 \amp 0 \\
+                                0 \amp 1 \amp 0 
+                            \end{array}
+                        \right)
+                    </me>
+                    and it maps <m>\mathcal{E}_3</m> to <m>\mathcal{E}_2</m>.
                 </p>
-            </investigation>
-            <investigation>
-                <title>Change a transformation from <m>\mathcal{B}</m> to <m>\mathcal{D}</m> to one for <m>\mathcal{E}_2</m> </title>
                 <p>
-                    some content
+                    Now suppose that we want the transformation to change vectors with coordinates in the basis
+                        <me>
+                            \mathcal{B}=
+                            \left\{
+                                \vec{\beta}_1=\left(\begin{array}{r}1 \\ -2 \\ 0\end{array}\right),
+                                \vec{\beta}_2=\left(\begin{array}{r}0 \\ 3 \\ 1 \end{array}\right)
+                                \vec{\beta}_3=\left(\begin{array}{r}1 \\ 0 \\ 1 \end{array}\right)
+                            \right\}
+                        </me>
+                    to vectors in terms of the basis
+                        <me>
+                            \mathcal{D}=
+                            \left\{
+                                \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                                \vec{\delta}_2=\left(\begin{array}{r}-3 \\ 4 \end{array}\right)
+                            \right\}.
+                        </me>
+                    Do this by going from <m>\mathcal{B}</m> to <m>\mathcal{E}_3</m> to <m>\mathcal{E}_2</m> to <m>\mathcal{D}</m>,
+                    <md>
+                        <mrow>
+                            (Rep_{\mathcal{D},\mathcal{E}_2})^{-1}\, A\, Rep_{\mathcal{B},\mathcal{E}_3} \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    -4 \amp -3 \\
+                                    1 \amp 1\\
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 0 \\
+                                    0 \amp 1 \amp 0 
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 1 \\
+                                    -2 \amp 3 \amp 0\\
+                                    0 \amp 1 \amp 1
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    -4 \amp -3 \\
+                                    1 \amp 1\\
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 1 \\
+                                    -2 \amp 3 \amp 0
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    2 \amp -9 \amp -4 \\
+                                    -1 \amp 3 \amp 1
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    Using this we get
+                    <me>
+                        \left(
+                            \begin{array}{r}
+                                x \\ y \\ z
+                            \end{array}
+                        \right)\longmapsto
+                        \left(
+                            \begin{array}{r}
+                                x-9y-4z \\ -x+3y+z
+                            \end{array}
+                        \right).
+                    </me>
                 </p>
             </investigation>
+            <p>
+                <alert>Summary Diagram for Transformation Changes:</alert>
+            </p>
+            <figure xml:id="bases_transform_change">
+                <caption> Changing transformations to new bases. </caption>
+                <image width="70%" source="images/basis_transform_cycle.png" />
+            </figure>
         </subsection>
     </section>
 
