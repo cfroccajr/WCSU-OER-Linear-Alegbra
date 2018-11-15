@@ -57,10 +57,73 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_determinants">
         <title>Determinants and their Geometry</title>
         <idx><h>determinant</h></idx>
-
-        <p>
-            Some Content!!!
-        </p>
+        <subsection>
+            <title>Linear Distortions</title>
+            <investigation>
+                <title>Distorted Area</title>
+                <p>
+                    Suppose we form a parallelogram with the vectors <m>\vec{v}=\left\lt3,1\right\gt</m> and <m>\vec{w}=\left\lt1,2\right\gt</m>.  To find the area we need to multiply the length of the base by the height, or (from <xref ref="parallelogram_area"/>) <me>Area = ||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||.</me>
+                    <sidebyside widths="50% 40%">
+                        <p>
+                            <md>
+                                <mrow>\vec{w}-proj_{\vec{v}}\vec{w}\amp=\left\lt1,2\right\gt-\frac{5}{10}\left\lt3,1\right\gt</mrow>
+                                <mrow>\amp=\left\lt-\frac{1}{2},\frac{3}{2}\right\gt</mrow>
+                            </md>
+                            <md>
+                                <mrow>||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||\amp= \left(\sqrt{10}\right)\left(\frac{\sqrt{10}}{2}\right)</mrow>
+                                <mrow>\amp = 5</mrow>
+                            </md>
+                        </p>
+                        <figure xml:id="parallelogram_area">
+                            <caption>Area of a Parallelogram</caption>
+                            <image width="40%" source="images/vector_parallelagram.svg" />
+                        </figure>
+                    </sidebyside>
+                    So, the area of the parallelogram is 5.  Interestingly if we define the transformation
+                    <me>
+                        T\left(\vec{x}\right)=
+                        \left(
+                            \begin{array}{rr}
+                                3 \amp 1\\
+                                1 \amp 2
+                            \end{array}
+                        \right)\vec{x},
+                    </me>
+                    which carries the square of area 1 made by the standard basis to this parallelogram, then <me>a_{11}\, a_{22}-a_{12}\, a_{21}=3\cdot2-1\cdot1=5.</me>  This is because given a matrix
+                    <me>
+                        A=
+                        \left(
+                            \begin{array}{rr}
+                                a_{11} \amp a_{12}\\
+                                a_{21} \amp a_{22}
+                            \end{array}
+                        \right),
+                    </me>
+                    the value <me>det\, A=a_{11}\, a_{22}-a_{12}\, a_{21}</me> called the <term>determinant of <m>A</m></term><idx><h>determinant</h></idx> measures how much <m>A</m> distorts <m>\mathbb{R}^2</m> if we think of it as a transformation.
+                </p>
+            </investigation>
+            <investigation>
+                <title>Distorted Volume</title>
+                <p>
+                    <figure>
+                        <caption>Volume of a Parallelepiped</caption>
+                        <image width="75%" source="images/vector_parallelpiped.svg" />
+                    </figure>
+                </p>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>Calculating Determinants (Laplace's Formula)</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
+        <subsection>
+            <title>Properties of Determinants</title>
+            <p>
+                Some Content!!!
+            </p>
+        </subsection>
     </section>
 
 <!-- Similar Matrices -->
