@@ -2300,7 +2300,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285">Gram-Schmidt (p.275): 10-14</url> </li>
                     <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293">Projections into a Subspace (p.283): 10, 11, 12</url> </li>
                 </ul>
-                Aditionally, be sure you can define the following: Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Null Space, Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace, Orthonormal Basis, Change of Basis Matrix (also called change of coordinate matrix)
+                Additionally, be sure you can define the following: Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Null Space, Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace, Orthonormal Basis, Change of Basis Matrix (also called change of coordinate matrix)
             </p>
             <p>
                 <alert>Practice Exam:</alert>
