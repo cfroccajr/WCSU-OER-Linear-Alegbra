@@ -104,19 +104,63 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </investigation>
             <investigation>
                 <title>Distorted Volume</title>
-                <p>
+                <sidebyside>
+                    <p>
+                        Suppose we have a parallelepiped as in the figure, for simplicity assume the base is a rectangle.  The the volume will be area of the base times the height.  The area of the base is easy, <m>Area=||\vec{v}||\, ||\vec{w}||</m>.  To get the height we need to use projections, in particular:
+                        <me>
+                            ||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||.
+                        </me>
+                    </p>
                     <figure>
                         <caption>Volume of a Parallelepiped</caption>
-                        <image width="75%" source="images/vector_parallelpiped.svg" />
+                        <image width="40%" source="images/vector_parallelpiped.svg" />
                     </figure>
+                </sidebyside>
+                <p>
+                    <md>
+                        <mrow>
+                            ||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||\amp=\left|\left|\vec{u}-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\vec{v}-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\vec{v}\right|\right|
+                        </mrow>
+                        <mrow>
+                            \amp=\left|\left|\left\lt u_1,u_2,u_3\right\gt-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\left\lt v_1,v_2,v_3\right\gt-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\left\lt w_1,w_2,w_3\right\gt\right|\right|
+                        </mrow>
+                        <mrow>
+                            \amp \vdots
+                        </mrow>
+                        <mrow>
+                             \mbox{Then A}\ \amp \mbox{Miracle Occurs}
+                        </mrow>
+                        <mrow>
+                            \amp \vdots
+                        </mrow>
+                        <mrow>
+                            \amp = \frac{|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|}{||\vec{v}||\, ||\vec{w}||}
+                        </mrow>
+                    </md>
+                    So, that the magnitude will be
+                    <me>|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|,</me> 
+                    the expression inside the absolute value is the determinant of the matrix
+                    <me>
+                        \left(
+                            \begin{array}{lll}
+                                v_1 \amp u_1 \amp w_1\\
+                                v_2 \amp u_2 \amp w_2\\
+                                v_3 \amp u_3 \amp w_3\\
+                            \end{array}
+                        \right)
+                    </me>
+                    which transforms the vectors of the standard basis into the vectors <m>\vec{v}</m>, <m>\vec{w}</m>, and <m>\vec{u}</m>.
                 </p>
             </investigation>
         </subsection>
         <subsection>
             <title>Calculating Determinants (Laplace's Formula)</title>
-            <p>
-                Some Content!!!
-            </p>
+            <investigation>
+                <title>Two-By-Two</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
         </subsection>
         <subsection>
             <title>Properties of Determinants</title>
@@ -267,9 +311,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             \end{array}
                         \right).
                     </me>
+                    Note that since <m>p_3</m> and <m>p_4</m> are free variables there are in fact infinitely many solutions. Finally, we will see in <xref ref="section_diagonal"/> that there is an easier way.
                 </p>
             </investigation>
         </subsection>
+        <conclusion>
+            <p>
+                Here are some basic key observations:
+            </p>
+            <theorem xml:id="similar_properties">
+                <title>Basic Properties of Similar Matrices</title>
+                <statement>
+                    <p>
+                        If the matrices <m>A</m> and <m>B</m> are similar, then
+                        <ul>
+                            <li><m>\exists\ P:\ A=P\, B\, P^{-1}</m></li>
+                            <li><m>\exists\ P:\ A^n=P\, B^n\, P^{-1}</m></li>
+                            <li><m>det(A)=det(B)</m></li>
+                            <li><m>A</m> is invertible if and only if <m>B</m> is also invertible</li>
+                            <li><m>A=I</m> if and only if <m>B=I</m></li>
+                            <li><m>A=0</m> if and only if <m>B=0</m></li>
+                        </ul>
+                    </p>
+                </statement>
+            </theorem>
+        </conclusion>
     </section>
 
 <!-- Eigenvalues and Vectors -->
