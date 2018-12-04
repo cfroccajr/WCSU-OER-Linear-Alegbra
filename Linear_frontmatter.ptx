@@ -29,16 +29,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <frontmatter xml:id="frontmatter">
-	<titlepage>
-	   <author>
-		    <personname>Charles F. Rocca Jr.</personname>
-	    	<department>Department of Mathematics</department>
-	    	<institution>Western Connecticut State University</institution>
-	    	<email>roccac@wcsu.edu</email>
-		</author>
-	</titlepage>
+    <titlepage>
+       <author>
+            <personname>Charles F. Rocca Jr.</personname>
+            <department>Department of Mathematics</department>
+            <institution>Western Connecticut State University</institution>
+            <email>roccac@wcsu.edu</email>
+        </author>
+    </titlepage>
 
-	<colophon>
+    <colophon>
         <copyright>
             <year>2017<ndash />Present</year>
             <holder>Charles F. Rocca Jr</holder>
@@ -46,16 +46,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </copyright>
     </colophon>
 
-	<!-- Introductory Remarks -->
+    <!-- Introductory Remarks -->
 
-	<preface xml:id="Intro">
-		<title> Introduction </title>
-		<p> 
-			The site/text represents the backbone of an section of MAT 272: Introduction to Linear Algebra at Western Connecticut State University.  The primary text for the course is <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Linear Algebra by Jim Hefferon</url>.
-		</p>
-	<!-- 	<figure>
-	            <title>Modern Marvels: Codes</title>
-	            <video youtube="H9Cu36Qj3dQ" />
-	    </figure> -->
-	</preface>
+    <preface xml:id="Intro">
+        <title> Introduction </title>
+        <p>
+            The site/text represents the backbone of an section of MAT 272: Introduction to Linear Algebra at Western Connecticut State University.  The primary text for the course is <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Linear Algebra by Jim Hefferon</url>.
+        </p>
+    <!--    <figure>
+                <title>Modern Marvels: Codes</title>
+                <video youtube="H9Cu36Qj3dQ" />
+        </figure> -->
+    </preface>
 </frontmatter>

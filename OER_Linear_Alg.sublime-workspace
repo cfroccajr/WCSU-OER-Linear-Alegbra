@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"dia",
+				"diagonal_investigation"
+			],
+			[
+				"def",
+				"def_similar"
+			],
+			[
+				"section",
+				"section_diagonal"
+			],
+			[
 				"pa",
 				"parallelogram_area"
 			],
@@ -30,10 +42,6 @@
 			[
 				"cd",
 				"cd"
-			],
-			[
-				"section",
-				"section_matrix_operations"
 			],
 			[
 				"sub",
@@ -1447,14 +1455,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src"
 	],
 	"file_history":
 	[
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_determinants.ptx",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/Image_Blank.tex",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_backmatter.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_bookinfo.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_frontmatter.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/Image_Blank.tex",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/matrix_inverses.sage",
@@ -1576,14 +1585,11 @@
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT 113/2015 Fall Geometry Exam.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Text Review/Text Review Rubric and Report.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Spring 2009 Chapter 4 Test.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -1597,6 +1603,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<definition",
+			"definition",
 			"\\lt",
 			"convenes",
 			"row_null",

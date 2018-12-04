@@ -161,13 +161,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Consider the matrix...
                 </p>
             </investigation>
+            <investigation>
+                <title>Three-By-Three</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
+            <investigation>
+                <title>N-By-N</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
         </subsection>
-        <subsection>
-            <title>Properties of Determinants</title>
-            <p>
-                Some Content!!!
-            </p>
-        </subsection>
+        <conclusion>
+            <title>Properties of Determinants Summarized</title>
+            <theorem>
+                <statement>
+                    <p>
+                        If <m>A</m> and <m>B</m> are both <m>n\times n</m> matrices and <m>I</m> is the identity matrix, then:
+                        <ul>
+                            <li><m>det(I)=1</m></li>
+                            <li><m>det(AB)=det(A)det(B)</m></li>
+                            <li><m>det(A^{-1})=det(A)^{-1}</m> provided <m>A</m> is invertible</li>
+                            <li><m>det(A^T)=det(A)</m></li>
+                            <li>if <m>A</m> is upper diagonal, lower diagonal, or diagonal, then <m>det(A)</m> is the product of the entries along the main diagonal.</li>
+                            <li>swapping two rows of <m>A</m> changes the sign of <m>det(A)</m></li>
+                            <li>multiplying a row of <m>A</m> by <m>k</m> multiplies <m>det(A)</m> by <m>k</m></li>
+                            <li>adding copies of one row of <m>A</m> to another does not change <m>det(A)</m></li>
+                        </ul>
+                    </p>
+                </statement>
+            </theorem>
+        </conclusion>
     </section>
 
 <!-- Similar Matrices -->
@@ -213,7 +239,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </subsection>
         <subsection>
             <title>Similar Matrices</title>
-            <definition>
+            <definition xml:id="def_similar">
                 <title>
                     Similar Matrices<idx><h>similar matrices</h></idx>
                 </title>
@@ -338,28 +364,299 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </conclusion>
     </section>
 
-<!-- Eigenvalues and Vectors -->
+<!-- Diagonalizable, and Eigenvalues and Vectors -->
 
-    <section xml:id="section_eigen">
-        <title>Eigenvalues and Eigenvectors</title>
-        <p>
-            Some Content!!!
-        </p>
-    </section>
-
-<!-- Diagonalizable -->
-
-    <section xml:id="section_diagonal">
-        <title>Diagonalizable Matrices</title>
-        <p>
-            Some Content!!!
-        </p>
+    <section>
+        <title>Diagonalizable Matrices, Eigenvalues, and Eigenvectors</title>
+        <subsection xml:id="section_diagonal">
+            <title>Diagonalizable Matrices</title>
+            <definition xml:id="def_diagonalizable">
+                <title>Diagonalizable</title>
+                <idx><h>diagonalizable</h></idx>
+                <idx><h>diagonal matrix</h></idx>
+                <idx><h>similar matrix</h></idx>
+                <statement>
+                    <p>
+                        We say that an <m>n\times n</m> matrix <m>A</m> is <term>diagonalizable</term> if it is similar (<xref ref="def_similar"/>) to a diagonal matrix <m>D</m>.  That is if there exists an invertible matrix <m>P</m> such that <me>A=PDP^{-1}.</me>
+                    </p>
+                </statement>
+            </definition>
+            <investigation xml:id="diagonal_investigation">
+                <title>A First Basic Example</title>
+                <p>
+                    Consider the matrix
+                    <me>
+                        A=\left[
+                            \begin{array}{rr}
+                                4 \amp -2 \\
+                                1 \amp 1
+                            \end{array}
+                        \right]
+                    </me>
+                    and let's try to find <m>D</m> and <m>P</m> such that <me>A=PDP^{-1}.</me>  Note, this is the same as <me>AP=PD,</me>
+                    so letting
+                    <me>
+                        P=\left[
+                            \begin{array}{rr}
+                                p_1 \amp p_2 \\
+                                p_3 \amp p_4
+                            \end{array}
+                        \right]\ \mbox{and}\ 
+                        D=\left[
+                            \begin{array}{rr}
+                                \lambda_1 \amp 0 \\
+                                0 \amp \lambda_2
+                            \end{array}
+                        \right]
+                    </me>
+                    then we get the system of equations
+                    <md>
+                        <mrow>4p_1-2p_3\amp =\lambda_1 p_1</mrow>
+                        <mrow>p_1+p_3\amp =\lambda_1 p_3</mrow>
+                        <mrow>4p_2-2p_4\amp =\lambda_2 p_2</mrow>
+                        <mrow>p_2+p_4\amp =\lambda_2 p_4.</mrow>
+                    </md>
+                    Since the second two equations are the same as the first two we really just need to solve one pair.  If we set up an augmented matrix and solve we get:
+                    <md>
+                        <mrow>
+                            \left[
+                                \begin{array}{cc|c}
+                                    (4-\lambda) \amp -2 \amp 0\\
+                                    1 \amp (1-\lambda) \amp 0
+                                \end{array}
+                            \right]\amp \leadsto
+                            \left[
+                                \begin{array}{cc|c}
+                                    1 \amp (1-\lambda) \amp 0\\
+                                     0 \amp -2-(1-\lambda)(4-\lambda) \amp 0
+                                \end{array}
+                            \right]
+                        </mrow>
+                        <mrow>
+                            \amp \leadsto
+                            \left[
+                                \begin{array}{cc|c}
+                                    1 \amp (1-\lambda) \amp 0\\
+                                     0 \amp -1(\lambda^2-5\lambda+6) \amp 0
+                                \end{array}
+                            \right].
+                        </mrow>
+                    </md>
+                    So, if <m>p_3\neq0</m>, then we get <m>\lambda = 2</m> or <m>3</m> and <m>p_1=p_3</m> or <m>2\, p_3</m>.  Therefore, we get two vectors and two values for <m>\lambda</m>, if <m>\lambda=2</m> then the vector we want looks like
+                    <me>
+                        \vec{x}=k\, \left(
+                            \begin{array}{r}
+                                1\\
+                                1
+                            \end{array}
+                        \right)
+                    </me>
+                    and if <m>\lambda=3</m> then the vector we want looks like
+                    <me>
+                        \vec{x}=k\, \left(
+                            \begin{array}{r}
+                                2\\
+                                1
+                            \end{array}
+                        \right).
+                    </me>
+                    Finally, this is what we need because
+                    <md>
+                        <mrow>
+                            A\left[
+                                \begin{array}{rr}
+                                    1 \amp 2\\
+                                    1 \amp 1
+                                \end{array}
+                            \right]\amp= \left[
+                                \begin{array}{rr}
+                                    2 \amp 6\\
+                                    2 \amp 3
+                                \end{array}
+                            \right]
+                        </mrow>
+                        <mrow>
+                            \amp=\left[
+                                \begin{array}{rr}
+                                    1 \amp 2\\
+                                    1 \amp 1
+                                \end{array}
+                            \right]
+                            \left[
+                                \begin{array}{rr}
+                                    2 \amp 0\\
+                                    0 \amp 3
+                                \end{array}
+                            \right].
+                        </mrow>
+                    </md>
+                    Thus, with
+                    <me>
+                        P=\left[
+                            \begin{array}{rr}
+                                1 \amp 2 \\
+                                1 \amp 1
+                            \end{array}
+                        \right]\ \mbox{and}\ 
+                        D=\left[
+                            \begin{array}{rr}
+                                2 \amp 0 \\
+                                0 \amp 3
+                            \end{array}
+                        \right],
+                    </me>
+                    we finally have <m>A=PDP^{-1}</m>.
+                </p>
+                <p>
+                    The vectors we found along the way and the values for <m>\lambda</m> both play a special roll in linear algebra, they are called <term>eigenvectors</term> and <term>eigenvalues</term>; they are the topic of the next section (<xref ref="section_eigen"/>).
+                </p>
+            </investigation>
+            <investigation>
+                <title>A Non-Example</title>
+                <p>
+                    Insert example of a matrix that can't be diagonalized.
+                </p>
+            </investigation>
+        </subsection>
+        <subsection xml:id="section_eigen">
+            <title>Eigenvalues and Eigenvectors</title>
+            <definition>
+                <title>
+                    Eigenvalues and Eigenvectors
+                    <idx><h>eigenvalue</h></idx>
+                    <idx><h>eigenvector</h></idx>
+                </title>
+                <statement>
+                    <p>
+                        An <term>eigenvector</term> of a matrix <m>A</m> is a non-zero vector <m>\vec{x}</m> such that
+                        <me>A\vec{x}=\lambda \vec{x}</me>
+                        for some constant <m>\lambda</m> which is called the corresponding <term>eigenvalue</term>.
+                    </p>
+                </statement>
+            </definition>
+            <investigation>
+                <p>
+                    Let's revisit <xref ref="diagonal_investigation"/> since we already know the answers we should get we can focus on how we might get them.  We are looking at
+                    <me>A\vec{x}=\lambda \vec{x}</me>
+                    which is the same as
+                    <me>A\vec{x}-\lambda \vec{x}=\vec{0}\ \mbox{or}\ (A-\lambda I)\, \vec{x}=\vec{0}.</me>
+                    If <m>\vec{x}\neq \vec{0}</m>, then <m>(A-\lambda I)</m> must be singular (a.k.a. non-invertible or a zero divisor) or zero, either way <m>det(A-\lambda I)=0</m>.  That is,
+                    <md>
+                        <mrow>
+                            |det(A-\lambda I)|\amp = 
+                            \left|
+                                \left[
+                                    \begin{array}{cc}
+                                        4-\lambda \amp -2\\
+                                        1 \amp 1-\lambda
+                                    \end{array}
+                                \right]
+                            \right|
+                        </mrow>
+                        <mrow>
+                            \amp = |(4-\lambda)(1-\lambda)+2|
+                        </mrow>
+                        <mrow>
+                            \amp = |\lambda^2-5\lambda+6|
+                        </mrow>
+                        <mrow>
+                            \amp = 0.
+                        </mrow>
+                    </md>
+                    Solving for <m>\lambda</m> we get <m>\lambda = 2</m> or <m>3</m>, as before.
+                </p>
+                <p>
+                    If we now take our values for <m>\lambda</m> and substitute them back into our original equation we can find our values for <m>\vec{x}</m>.  Let <m>\lambda=2</m> so that we are solving
+                    <me>
+                        \left[
+                            \begin{array}{rr}
+                                2 \amp -2 \\
+                                1 \amp -1
+                            \end{array}
+                        \right]\vec{x}=\vec{0}.
+                    </me>
+                    Row reducing the matrix we quickly get one free variable and all the possible solutions look like
+                    <me>
+                        \vec{x}=k\, \left(
+                            \begin{array}{r}
+                                1\\
+                                1
+                            \end{array}
+                        \right).
+                    </me>
+                    Similarly, if we let <m>\lambda=3</m> we need to solve
+                    <me>
+                        \left[
+                            \begin{array}{rr}
+                                1 \amp -2 \\
+                                1 \amp -2
+                            \end{array}
+                        \right]\vec{x}=\vec{0},
+                    </me>
+                    which yields solutions of the form
+                    <me>
+                        \vec{x}=k\, \left(
+                            \begin{array}{r}
+                                2\\
+                                1
+                            \end{array}
+                        \right).
+                    </me>
+                </p>
+            </investigation>
+        </subsection>
+        <conclusion>
+            <title>Final Remarks:</title>
+            <theorem>
+                <statement>
+                    <p>
+                        If an <m>n\times n</m> matrix <m>A</m> has <m>n</m> distinct eigenvector, <m>\lambda_1,\ldots,\lambda_n</m>, and corresponding eigenvectors, <m>\vec{x}_1,\ldots,\vec{x}_n</m>, then <m>A</m> is diagonalizable and in particular
+                        <me>
+                            A=PDP^{-1}
+                        </me>
+                        where the columns of <m>P</m> are the eigenvectors,
+                        <me>
+                            P=
+                            \left[
+                                \vec{x}_1\, \vec{x}_2\, \cdots\, \vec{x}_n 
+                            \right],
+                        </me>
+                        and <m>D</m> is a diagonal matrix with the eigenvalues on the diagonal,
+                        <me>
+                            D=
+                            \left[
+                                \begin{array}{ccccc}
+                                    \lambda_1 \amp 0 \amp 0 \amp \cdots \amp 0\\
+                                    0 \amp \lambda_2 \amp 0 \amp \cdots \amp 0\\
+                                      \amp \amp \ddots \amp \amp \\
+                                      \amp \amp \amp \ddots  \amp \\
+                                    0 \amp 0 \amp 0 \amp \cdots \amp \lambda_n\\
+                                \end{array}
+                            \right].
+                        </me>
+                    </p>
+                </statement>
+            </theorem>
+            <theorem>
+                <statement>
+                    <p>
+                        If <m>A</m> is a diagonalizable matrix so that <me>A=PDP^{-1}</me> for some diagonal matrix <m>D</m>, then:
+                        <ul>
+                            <li>the entries in <m>D</m> are the eigenvalues of <m>A</m></li>
+                            <li>the columns of <m>P</m> are eigenvectors of <m>A</m></li>
+                            <li><m>A^{-1}=PD^{-1}P^{-1}</m>, if <m>A</m> is invertible</li>
+                            <li><m>A^n=PD^nP^{-1}</m></li>
+                        </ul>
+                    </p>
+                </statement>
+            </theorem>
+        </conclusion>
     </section>
 
 <!-- CAS and Eigenvalues -->
 
     <section xml:id="section_CAS_eigen">
-        <title>CAS - Visualizing Eigenvectors</title>
+        <title>*CAS - Visualizing Eigenvectors</title>
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
         </p>
@@ -374,7 +671,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- CAS and Models -->
 
     <section xml:id="section_CAS_models">
-        <title>CAS - Modeling with Matrices</title>
+        <title>*CAS - Modeling with Matrices</title>
         <p>
             <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
         </p>
@@ -390,7 +687,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Supplementary Material -->
 
     <section xml:id="section_supplement_determinants">
-        <title>Supplementary Material</title>
+        <title>*Supplementary Material</title>
             <figure>
                     <!-- <title>Modern Marvels: Codes</title> -->
                     <caption>Gaussian Elimination</caption>
@@ -578,7 +875,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
     <exercises xml:id="section_practice_exam_determinants">
-        <title>Practice Exam on Linear Transformations</title>
+        <title>Practice Exam on Determinants and Such</title>
         <introduction>
             <p>
                 Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
