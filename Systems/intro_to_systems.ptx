@@ -1,0 +1,471 @@
+<!-- Basic Linear Systems of Equations -->
+
+    <section xml:id="section_basic_systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Solving Linear Systems</title>
+        <idx><h>linear system</h></idx>
+        <subsection>
+            <title>Some Initial Thoughts</title>
+
+            <investigation xml:id="system-example1">
+                <title>A 20% Solution (A First Simple Example)</title>
+                    <p>Statement:</p>
+                    <p>
+                        Given a solution which it 75% alcohol (call it <m>A</m>) and distilled water (call it <m>W</m>) mix one liter of solution with a concentration of 20% alcohol.
+                    </p>
+                    <p>Analysis:</p>
+                    <p>
+                        Total solution 1 liter:
+                        <me>A+W=1</me>
+
+                        Total alcohol in solution 0.2 liters (20%):
+                        <me>0.75A=0.2</me>
+                    </p>
+                    <p>Solution 1:</p>
+                    <p>
+                        From the second equation we derive:
+                        <me>A=20/75=4/15\approx 0.267</me>
+                        Substituted into the first equation this gives:
+                        <me>4/15+W=1</me>
+                        or
+                        <me>W=11/15\approx0.733</me>
+                        So, a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.
+                    </p>
+                    <p>Solution 2:</p>
+                    <p>
+                        Consider the equations together:
+                        <md>
+                            <mrow>      \amp A +  W \amp \amp= \amp \amp 1</mrow>
+                            <mrow>0.75  \amp A      \amp \amp= \amp 0.\amp2</mrow>
+                        </md>
+                        When we do this we refer to the set of equations as a <term>system of equations</term><idx><h>system of equations</h></idx> and the <m>A</m> and <m>W</m> as the <term>unknowns</term>. Subtracting 0.75 of the first from the second we get:
+                        <me>
+                            -0.75 W = -0.55
+                        </me>
+                        or
+                        <me>
+                            W = 55/75 \approx 0.733
+                        </me>
+                        As before, using the second equation or substitution, we get <m>A=20/75\approx 0.267</m> so that a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.
+                    </p>
+                    <p>
+                        Both of the above are examples of what can termed <term>elimination and back substitution</term><idx><h>elimination and back substitution</h></idx>.  The goal being to isolate one variable to find its value, and then work back from there to find the values of the rest.  This is a quick easy way to find solutions when there are only two variables, but it becomes cumbersome as soon as there are three or more.
+                    </p>
+            </investigation>
+            <investigation xml:id="system-example2">
+                <title>Name the Parabola (A Not So Simple Example)</title>
+                    <p>Statement:</p>
+                    <sidebyside>
+                        <p>
+                            Given a parabola with a <m>y</m> intercept of 7, which passes through the point (1,6), and has a slope of 8 at <m>x=-1</m> find the coefficients <m>a,b,c</m> in <m>y=ax^2+bx+c</m>.
+                        </p>
+                        <figure>
+                            <caption>A Parabola?</caption>
+                            <image xml:id="perry_parabola">
+                                <sageplot>
+                                    var("x,y")
+                                    plot(-3*x^2+2*x+7,[x,-2,3],ymin=-5, color='blue', thickness=3)
+                                </sageplot>
+                            </image>
+                        </figure>
+                    </sidebyside>
+                    <p>Analysis:</p>
+                    <p>
+                        First if we let <m>f(x)=ax^2+bx+c</m>, so that its derivative is <m>f'(x)=2ax+b</m>, then from the information given we know:
+                        <md>
+                            <mrow>f(1) \amp = \amp a+b+c \amp = 6</mrow>
+                            <mrow>f'(-1) \amp = \amp -2a +b \amp = 8 </mrow>
+                            <mrow>f(0) \amp = \amp c \amp = 7 </mrow>
+                        </md>
+                        giving us a system of three equations and three unknowns.
+                    </p>
+                    <p>Solution 1:</p>
+                    <p>
+                        Using elimination and back substitution we first see that <m>c=7</m>.  Then plugging that into the first equation above we can simplify the problem to solving:
+                        <md>
+                            <mrow>a+b \amp = -1</mrow>
+                            <mrow>-2a +b \amp = 8 </mrow>
+                        </md>
+                        We can now subtract the second equation from the first to find <m>3a=-9</m> or <m>a=-3</m>.  Finally, substituting this value for <m>a</m> into either of the previous equations we derive <m>b=2</m>.  Thus using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
+                    </p>
+                    <p>Solution 2:</p>
+                    <p>
+                        Alternately, we can use mostly just elimination.  If we consider our original equations
+                        <md>
+                            <mrow>a+b+c \amp = 6</mrow>
+                            <mrow>-2a +b \amp = 8 </mrow>
+                            <mrow>c \amp = 7 </mrow>
+                        </md>
+                        then we might first subtract row three from row one, eliminating the <m>c</m>.  This reduces our system to
+                        <md>
+                            <mrow>a+b \amp = -1</mrow>
+                            <mrow>-2a +b \amp = 8 </mrow>
+                            <mrow>c \amp = 7 </mrow>
+                        </md>
+                        which we can similarly reduce by subtracting the second row from the first
+                        <md>
+                            <mrow>3a  \amp = -9</mrow>
+                            <mrow>-2a +b \amp = 8 </mrow>
+                            <mrow>c \amp = 7 </mrow>
+                        </md>
+                        Finally, we simplify the first row by dividing by 3 (giving <m>a=-3</m>) and then add two copies of that to the second row to get
+                        <md>
+                            <mrow>a  \amp = -3</mrow>
+                            <mrow> b \amp = 2 </mrow>
+                            <mrow>c \amp = 7 </mrow>
+                        </md>
+                        Thus arriving at the same solution.  Again, using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
+                    </p>
+                    <p>Solution 3:</p>
+                    <p>
+                        Notice that in the work above the variables <m>a,b,c</m>, the equal signs, and even the plus signs served no purpose, they just kept things neat.  All that really mattered were the coefficients and constant values to the right of the equals.  This hints at a better solution.  Consider the following array containing just the coefficients from the system of equations
+                        <me>
+                            A=\left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 1 \amp 1 \amp 6 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                        </me>
+                        which we will call an <term>augmented matrix</term><idx>augmented matrix</idx> (note that the left hand portion is called the <term>coefficient matrix</term><idx><h>coefficient matrix</h></idx> for this system).  Now let us perform all the same steps we used in the solution above, only now with the matrix.
+                    </p>
+                    <p>
+                        First we subtract the third row from row one
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 1 \amp 1 \amp 6 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                            \stackrel{R_1-R_3}{\Huge \leadsto}
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 1 \amp 0 \amp -1 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right].
+                        </me>
+                        We can reduce this further by subtracting the second row from the first
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 1 \amp 0 \amp -1 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                            \stackrel{R_1-R_2}{\Huge \leadsto}
+                            \left[
+                                \begin{array}{rrr|r}
+                                    3 \amp 0 \amp 0 \amp -9 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right].
+                        </me>
+                        Now we can divide row one by 3
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    3 \amp 1 \amp 0 \amp -9 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                            \stackrel{\frac{1}{3}R_1}{\Huge \leadsto}
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 0 \amp 0 \amp -3 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                        </me>
+                        and add two copies of this to the second row to get
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 0 \amp 0 \amp -3 \\
+                                    -2 \amp 1 \amp 0 \amp 8 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right]
+                            \stackrel{R_2+2R_1}{\Huge \leadsto}
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 0 \amp 0 \amp -3 \\
+                                    0 \amp 1 \amp 0 \amp 2 \\
+                                    0 \amp 0 \amp 1 \amp 7
+                                \end{array}
+                            \right].
+                        </me>
+                        Following the same steps as before we get the same answer, that is using the information given we know that the desired parabola is given by <m>f(x)=-3x^2+2x+7</m>.
+                    </p>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>Further Examples</title>
+            <p>
+                Take a look at the next few examples to get a feel for what happens when you have different combinations of equations and unknowns.
+            </p>
+            <example xml:id="system-example3">
+                <title>Another Plane but not so Simple Example</title>
+                <p>
+                    Statement:
+                </p>
+                <sidebyside widths="40% 40%">
+                    <p>
+                        Given three planes:
+                        <me>2x+3y-z=1</me>
+                        <me>-2x+y+z=1</me>
+                        <me>y-z=1</me>
+                        find the point <m>(x,y,z)</m> at which all three intersect.
+                    </p>
+                    <figure>
+                        <caption>Planes</caption>
+                        <image xml:id="triple_planes">
+                            <sageplot>
+                                var("x,y,z")
+                                plot1=implicit_plot3d(2*x+3*y-z==1,(x,-2,2),(y,-2,2),(z,-2,2),color="blue")
+                                plot2=implicit_plot3d(-2*x+y+z==1,(x,-2,2),(y,-2,2),(z,-2,2),color="red")
+                                plot3=implicit_plot3d(y-z==1,(x,-2,2),(y,-2,2),(z,-2,2),color="green")
+                                final_plot=plot1+plot2+plot3
+                                final_plot
+                            </sageplot>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>Solution 1:</p>
+                <p>
+                    As before we have a system of three equations and three unknowns
+                    <md>
+                        <mrow>2x + 3y - z \amp= 1 </mrow>
+                        <mrow>-2x + y + z \amp= 1 </mrow>
+                        <mrow> y - z \amp= 1 </mrow>
+                    </md>
+                    Now we can add row one to row two to get
+                    <md>
+                        <mrow>2x + 3y - z \amp= 1 </mrow>
+                        <mrow>  4y \amp= 2 </mrow>
+                        <mrow> y - z \amp= 1 </mrow>
+                    </md>
+                    Multiplying the second row by <m>1/4^{th}</m> and subtracting this from row three we get
+                    <md>
+                        <mrow>2x + 3y - z \amp= 1 </mrow>
+                        <mrow>  y \amp= 1/2 </mrow>
+                        <mrow> - z \amp= 1/2 </mrow>
+                    </md>
+                    or
+                    <md>
+                        <mrow>2x + 3y - z \amp= 1 </mrow>
+                        <mrow>  y \amp= 1/2 </mrow>
+                        <mrow> z \amp= -1/2 </mrow>
+                    </md>
+                    If we then subtract three copies of row two and add one copy of row three from row one we are left with
+                    <md>
+                        <mrow>2x   \amp= -1 </mrow>
+                        <mrow>  y \amp= 1/2 </mrow>
+                        <mrow> z \amp= -1/2 </mrow>
+                    </md>
+                    which gives the solution
+                    <md>
+                        <mrow>x   \amp= -1/2 </mrow>
+                        <mrow>y \amp= 1/2 </mrow>
+                        <mrow>z \amp= -1/2 </mrow>
+                    </md>
+                    If we substitute these in to the original equations
+                    <md>
+                        <mrow>2\left(-\frac{1}{2}\right) + 3\left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                        <mrow>-2\left(-\frac{1}{2}\right) + \left(\frac{1}{2}\right) + \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                        <mrow> \left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 </mrow>
+                    </md>
+                    we can verify that the solution is correct.  Therefore the answer to the original question is that the single point at which all three planes intersect is <me>(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).</me>
+                </p>
+                <p>Solution 2:</p>
+                <p>
+                    Alternately we can rewrite the system as an augmented matrix like so
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                -2 \amp 1 \amp 1 \amp 1 \\
+                                 0\amp 1 \amp -1 \amp 1 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    If we now follow the steps we used before we should get the same solution.
+                    First add row 1 to row 2:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                -2 \amp 1 \amp 1 \amp 1 \\
+                                 0\amp 1 \amp -1 \amp 1 \\
+                            \end{array}
+                        \right]
+                        \stackrel{R_2+R_1}{\Huge \leadsto}
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                0 \amp 4 \amp 0 \amp 2 \\
+                                0\amp 1 \amp -1 \amp 1 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    Next we multiply row 2 by <m>1/4</m> and then subtract that from row 3:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                0 \amp 4 \amp 0 \amp 2 \\
+                                0\amp 1 \amp -1 \amp 1 \\
+                            \end{array}
+                        \right]
+                        \stackrel{1/4\times R_2,\\ R_3-R_2}{\Huge \leadsto}
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                0 \amp 1 \amp 0 \amp 1/2 \\
+                                0\amp 0 \amp -1 \amp 1/2 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    The latter matrix is said to be in <term>row echelon form</term><idx><h>row echelon form</h></idx> since all the entries below the diagonal are 0.  Now, as before we next multiply row 3 by -1 and then subtract three copies of row 2 and add one copy of row 3 to row one:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 3 \amp -1 \amp 1 \\
+                                0 \amp 1 \amp 0 \amp 1/2 \\
+                                0\amp 0 \amp -1 \amp 1/2 \\
+                            \end{array}
+                        \right]
+                        \stackrel{-R_3,\\ R_1-3R_2+R_3}{\Huge \leadsto}
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 0 \amp 0 \amp -1 \\
+                                0 \amp 1 \amp 0 \amp 1/2 \\
+                                0\amp 0 \amp 1 \amp -1/2 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    Finally, we multiply row 1 by 1/2:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                2 \amp 0 \amp 0 \amp -1 \\
+                                0 \amp 1 \amp 0 \amp 1/2 \\
+                                0\amp 0 \amp 1 \amp -1/2 \\
+                            \end{array}
+                        \right]
+                        \stackrel{1/2\times R_1}{\Huge \leadsto}
+                        \left[
+                            \begin{array}{rrr|r}
+                                1 \amp 0 \amp 0 \amp -1/2 \\
+                                0 \amp 1 \amp 0 \amp 1/2 \\
+                                0\amp 0 \amp 1 \amp -1/2 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    This last form of the matrix is called <term>reduced row echelon form</term><idx><h>reduced row echelon form</h></idx> since the diagonal is all 1's and the off diagonals are 0.  Having followed the same steps we get the same solution:
+                    <me>(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).</me>
+                </p>
+            </example>
+            <example xml:id="underdetermined">
+                <title>An Underdetermined System</title>
+                <p>
+                    Consider the system of equations:
+                    <md>
+                        <mrow>t-4s+r \amp =0</mrow>
+                        <mrow>  s-2r \amp =0</mrow>
+                    </md>
+                    this system is called <term>underdetermined</term><idx><h>underdetermined</h></idx> because there are more variables than equations.  However, we can still use the same strategies to try and solve it.  First we form an augmented matrix:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                1 \amp -4 \amp 1 \amp 0\\
+                                0 \amp 1 \amp -2 \amp 0
+                            \end{array}
+                        \right].
+                    </me>
+                    then we can try to simplify this as before:
+                    <me>
+                        \left[
+                            \begin{array}{rrr|r}
+                                1 \amp -4 \amp 1 \amp 0\\
+                                0 \amp 1 \amp -2 \amp 0
+                            \end{array}
+                        \right]
+                        \stackrel{R_1+4R_2}{\Huge \leadsto}
+                        \left[
+                            \begin{array}{rrr|r}
+                                1 \amp 0 \amp -7 \amp 0\\
+                                0 \amp 1 \amp -2 \amp 0
+                            \end{array}
+                        \right].
+                    </me>
+                    But, we can't go any further than this because there are only two equations for our three unknowns.  Consequently the solution we get is that <m>t=7r</m>, <m>s=2r</m>, and <m>r</m> may be any this we like.  For example if <m>r=7</m> then <m>t=49</m> and <m>s=14</m>, which we can see satisfies the original equation:
+                    <md>
+                        <mrow>49-4(14)+7 \amp =0</mrow>
+                        <mrow>  14-2(7) \amp =0</mrow>
+                    </md>
+                    However we could also let <m>r=1</m> so that <m>t=7</m> and <m>s=2</m>, or let <m>r=-2</m> so that <m>t=-14</m> and <m>s=4</m>.  In fact we have infinitely many solutions since there are no restrictions on <m>r</m>.  In this situation we say that <m>r</m> is a <term>free variable</term><idx><h>free variable</h></idx>.  Also, note that all the equations were set equal to zero, we call this a <term>homogeneous</term><idx><h>homogeneous</h></idx> system and these will come to play a special roll in finding general solutions to systems of equations.
+                </p>
+            </example>
+            <example xml:id="overdetermined">
+                <title> An Overdetermined System</title>
+                <p>
+                    Of course if there can be underdetermined systems, then there can be <term>overdetermined</term><idx><h>overdetermined</h></idx> systems as well.  Let's look to this system of three equations but only two unknowns:
+                    <md>
+                        <mrow>3x+2y \amp =7</mrow>
+                        <mrow>x-y \amp = 2</mrow>
+                        <mrow> 4y \amp =16</mrow>
+                    </md>
+                    note that the equations are not set equal to 0, so this system is <term>non-homogeneous</term><idx><h>non-homogeneous</h></idx>. We could use the same technique of setting up an augmented matrix like so
+                    <me>
+                        \left[
+                            \begin{array}{rr|r}
+                                3 \amp 2 \amp 7\\
+                                1 \amp -1 \amp 2\\
+                                0 \amp 4 \amp 16
+                            \end{array}
+                        \right],
+                    </me>
+                    however in this case we can really solve this by inspection or observation, that is we just look at it for a minute.  From the last equation we conclude <m>y=4</m>, substituting that into the next equation up we get <m>x=6</m>.  However if we substitute <m>y=4</m> into the first equation we get <m>x=-1/3</m>, since <m>x</m> can't have two different values we conclude that this system of equations doesn't have a solution.  When a system doesn't have a solution we say that it is <term>inconsistent</term><idx><h>inconsistent</h></idx>, other wise it is <term>consistent</term><idx><h>consistent</h></idx>.
+                </p>
+            </example>
+            <example>
+                <title>Consistent and Inconsistent Systems</title>
+                <p>
+                    Just so that you don't get the idea that overdetermined is synonymous with inconsistent consider the homogeneous version of the system we just looked at:
+                    <md>
+                        <mrow>3x+2y \amp = 0</mrow>
+                        <mrow>x-y \amp = 0</mrow>
+                        <mrow> 4y \amp = 0</mrow>
+                    </md>
+                    Note that if <m>x=y=0</m> then all three equations are true and we have a consistent system.  This illustrates an important property of homogeneous systems, they are always have at least one solution and so are consistent, you just need to make all the variables 0.
+                </p>
+                <p>
+                    You should also be careful not to think that all under determined systems have infinitely many solutions, or even that they are consistent.  If we look at the system
+                    <md>
+                        <mrow>s+t+r\amp = 2</mrow>
+                        <mrow>-2s-2t-2r\amp = -10</mrow>
+                    </md>
+                    and then multiply the second equation by -1/2 we get
+                    <md>
+                        <mrow>s+t+r\amp = 2</mrow>
+                        <mrow>s+t+r\amp = 5</mrow>
+                    </md>
+                    clearly the sum of the three variables can not simultaneously be 2 and 5, so the system is inconsistent.
+                </p>
+            </example>
+        </subsection>
+        <conclusion>
+            <title>Section Vocabulary</title>
+            <p>
+                Homogeneous, Non-homogeneous, Consistent, Inconsistent, Overdetermined, Underdetermined, Augmented Matrix, Coefficient Matrix, System of Equations, Row Echelon form, Reduced Row Echelon Form,  Elimination and Back Substitution.
+            </p>
+        </conclusion>
+    </section>

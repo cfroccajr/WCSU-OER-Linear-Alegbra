@@ -1,0 +1,173 @@
+    <exercises xml:id="section_exercises_systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Exercises and Practice Exam on Systems of Equations</title>
+        <introduction>
+            <p>
+                <alert>Textbook Exercises:</alert>
+            </p>
+            <p>
+                These are the exercises from <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you need to hand in as part of your grade.  The solutions to these are available in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement, but you need to, to the best of your ability, answer them in your own words.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method (p.9): 30 and 32</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set (p.20): Extra Credit for 32</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous (p.33): 22</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space (p.41): 7</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure (p.47): 18</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations (p.62): 24</url></li>
+                </ul>
+            </p>
+            <p>
+                <alert>Practice Exercises:</alert>
+            </p>
+            <p>
+                Here are some exercises from <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try while studying for the exam, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=19">Gauss's Method (p.9): 17-20, 22, 27</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=30">Describing the Solution Set (p.20): 15-22, 28</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=43">General=Particular+Homogeneous (p.33): 14-21, 24</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=51">Vectors in Space (p.41): 1-6</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=57">Length and Angle Measure (p.47): 11, 12, 14, 15</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=64">Gauss-Jordan: (p.54): 8-12</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=72">Linear Combinations (p.62): 11-14</url></li>
+                </ul>
+            </p>
+        </introduction>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    <alert>Practice Exam:</alert>
+                </p>
+                <p>
+                    In addition to the practice problems above, below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
+                </p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>
+                        Use Gauss's Method to find the unique solution to the given equation: <!-- <1, -1, -2> -->
+                        <md>
+                            <mrow> x-7y+z \amp =6</mrow>
+                            <mrow>3x+z \amp =1</mrow>
+                            <mrow>  2y-2z \amp =2</mrow>
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="non-trivial_homogeneous">
+                <statement>
+                    <p>
+                        Solve the given homogeneous system and write the solutions using vectors (also called parametric form).
+                        <md>
+                            <mrow>4x-3y+z\amp = 0</mrow>
+                            <mrow>-13y-26z\amp = 0</mrow>
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find a particular solution to
+                        <md>
+                            <mrow>4x-3y+z\amp = 1</mrow>
+                            <mrow>-13y-26z\amp = -26</mrow>
+                        </md>
+                        be sure not to over think it you should be able to find one by observation.  Then use your solution to <xref ref="non-trivial_homogeneous" /> to write a general solution to the system.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="rewrite_system">
+                <statement>
+                    <p>
+                        Write the given system of equations in matrix form and as a vector equation.
+                        <md>
+                            <mrow> x   +y-z \amp=7</mrow>
+                            <mrow> 2x  -y-z \amp=9</mrow>
+                            <mrow>    12y+4z \amp=6</mrow>
+                            <mrow> 3x+12y+2z \amp=22</mrow>
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Is the system in <xref ref="rewrite_system" /> homogeneous or non-homogeneous?  Since the system has four equations and three unknowns can it have a unique solution?  Can it have no solution or infinitely many?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Suppose that the cubic equation <me>f(x)=ax^3+bx+c</me> passes through the points <m>(1,0)</m>, <m>(3,2)</m>, and <m>(-1,0)</m>.  Find the values of <m>a</m>, <m>b</m>, and <m>c</m>.
+                    </p>
+                </statement>
+            </exercise>
+
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Describe the plane through the three points <m>(2,3,0,1)</m>, <m>(0,-1,1,5)</m>, and <m>(0,0,7,-2)</m>.  Is the origin in this plane?
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Describe the set of vectors (or points) in <m>\mathbb{R}^3</m> orthogonal to the vector <m>\left[ 1,-2,3\right]</m>.
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the a reduced echelon form for the given matrix.
+                        <me>
+                            \left[
+                                \begin{array}{rrr}
+                                    2 \amp 3 \amp 7\\
+                                    1 \amp 0 \amp 9\\
+                                    -2 \amp 5 \amp -10
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the length of each vector and the angle between each pair.
+                        <me>
+                            \vec{v}=
+                                \left[
+                                    \begin{array}{r} 1 \\ 2\end{array}
+                                \right],
+                            \vec{w}=
+                                \left[
+                                    \begin{array}{r} 0 \\ -7\end{array}
+                                \right],
+                            \vec{u}=
+                                \left[
+                                    \begin{array}{r} -2 \\ 5\end{array}
+                                \right]
+                        </me>
+                    </p>
+                </statement>
+            </exercise>
+
+        </exercisegroup>
+    </exercises>
