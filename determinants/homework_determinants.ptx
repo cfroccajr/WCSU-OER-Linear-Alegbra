@@ -1,0 +1,175 @@
+    <exercises xml:id="section_exercises_determinants"  xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Homework Exercises on Determinants</title>
+        <shorttitle>Homework</shorttitle>
+        <introduction>
+            <p>
+                <alert>Homework Exercises:</alert>
+            </p>
+            <p>
+                These exercises are here to check your deeper conceptual understanding of the material and your ability to problem solve; they are not skill drills.  As such they are for homework and not test preparation, they would be far to long for an exam.  You need to complete each problem to the best of your ability.  Every answer you give needs to be your own work, needs to be written neatly on lined paper or typed, and at least the final answer for each should be a complete sentence.  Do not include a copy of the question with your solution, that is not needed to convey your thoughts clearly.
+            </p>
+            <p>
+            </p>
+        </introduction>
+        <exercise>
+            <statement>
+                <p>
+                    Show that if the columns of <m>U</m> are form an orthonormal basis, then <m>det(U)=1</m>.  Then use this to argue that if the columns of <m>A</m> are orthogonal but not necessarily normalized, then <m>det(A)</m> is the product of the lengths of each column vector.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    For the first part you need to remember that <m>U^{-1}</m> is the same as <m>U^T</m>.  For the second portion you need to know the effect on the determinant when you multiply a row of a matrix by a scalar.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find the determinant of each of the following:
+                    <me>
+                        E_1=\left[
+                            \begin{array}{rr}
+                                0 \amp 1 \\
+                                1 \amp 0 \\
+                            \end{array}
+                        \right],\
+                        E_2=\left[
+                            \begin{array}{rr}
+                                r \amp 0 \\
+                                0 \amp 1 \\
+                            \end{array}
+                        \right],\
+                        E_3=\left[
+                            \begin{array}{rr}
+                                1 \amp 0 \\
+                                0 \amp r \\
+                            \end{array}
+                        \right],\
+                        E_4=\left[
+                            \begin{array}{rr}
+                                1 \amp k \\
+                                0 \amp 1 \\
+                            \end{array}
+                        \right],\
+                        E_5=\left[
+                            \begin{array}{rr}
+                                1 \amp 0 \\
+                                k \amp 1 \\
+                            \end{array}
+                        \right].
+                    </me>
+                    Use this work to argue, at least for <m>2\times 2</m> matrices that:
+                    <ol>
+                        <li>Swapping two rows of a matrix multiplies the determinant by -1.</li>
+                        <li>Multiplying a row by a constant multiplies the determinant by that constant.</li>
+                        <li>Adding a multiple of one row to another row, and replacing the initial row, doesn't change the determinant.</li>
+                    </ol>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Try simplifying a couple example <m>2\tinmes2</m> matrices and connecting the row operations to the given matrices.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Show that the determinant of
+                    <me>
+                        A=\left[
+                            \begin{array}{rr}
+                                1 \amp a \\
+                                1 \amp b \\
+                            \end{array}
+                        \right]
+                    </me>
+                    is <m>(b-a)</m>.
+                    Next, show that the determinant of
+                    <me>
+                        B=\left[
+                            \begin{array}{rrr}
+                                1 \amp a \amp a^2\\
+                                1 \amp b \amp b^2\\
+                                1 \amp c \amp c^2\\
+                            \end{array}
+                        \right]
+                    </me>
+                    is <m>(b-a)(c-a)(c-b)</m>.
+                    Finally, find the determinant of
+                    <me>
+                        C=\left[
+                            \begin{array}{rrrr}
+                                1 \amp a \amp a^2 \amp a^3\\
+                                1 \amp b \amp b^2 \amp b^3\\
+                                1 \amp c \amp c^2 \amp c^3\\
+                                1 \amp d \amp d^2 \amp d^3\\
+                            \end{array}
+                        \right].
+                    </me>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Find the determinants by using elementary row operations, Gauss's method, not Laplace's method.  Also, recall that for all possible <m>x</m> and <m>y</m> the expression <m>x^n-y^n</m> is divisible by <m>x-y</m>.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find the eigenvalues and eigenvectors of:
+                    <me>
+                        A=\left[
+                            \begin{array}{rr}
+                                a \amp b \\
+                                0 \amp d \\
+                            \end{array}
+                        \right].
+                    </me>
+                    Use your result to show that
+                    <me>
+                        B=\left[
+                            \begin{array}{rr}
+                                a \amp b \\
+                                0 \amp a \\
+                            \end{array}
+                        \right]
+                    </me>
+                    is not diagonalizable.  Is this still true for the matrix
+                    <me>
+                        C=\left[
+                            \begin{array}{rrr}
+                                a \amp b \amp c\\
+                                0 \amp a \amp d\\
+                                0 \amp 0 \amp a\\
+                            \end{array}
+                        \right],
+                    </me>
+                    or
+                    <me>
+                        D=\left[
+                            \begin{array}{rrr}
+                                a \amp b \amp c\\
+                                0 \amp a \amp d\\
+                                0 \amp 0 \amp e\\
+                            \end{array}
+                        \right].
+                    </me>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Take advantage of the fact that these are all upper diagonal matrices.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find the eigenvalues and eigenvectors for three or four <m>2\times2</m> matrices and their inverses.  Make a conjecture about how the eigenvalues and eigenvectors of a matrix <m>A</m> and its inverse <m>A^{-1}</m> are related.  Finally, prove your conjecture.
+                </p>
+            </statement>
+        </exercise>
+    </exercises>

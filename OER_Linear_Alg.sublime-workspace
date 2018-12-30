@@ -1400,7 +1400,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1455,20 +1455,48 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Determinants/intro_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/similar_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/diagonal_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/cas_determinants2.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/homework_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/practice_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/supplement_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/cas_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/definition_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/bases_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/matrices_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/cas_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/supplement_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/algebra_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Spaces/practice_spaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/linear_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/matrix_maps2.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/matrix_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/bases_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/orthogonal_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/cas_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/supplement_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/homework_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Maps/practice_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_determinants.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_backmatter.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_bookinfo.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_frontmatter.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/Image_Blank.tex",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_maps.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/sage_code/matrix_inverses.sage",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_vectorspaces.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_systems.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/perspectives.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Schedules/2018_Fall_Schedule.tex",
@@ -1518,9 +1546,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT467 Proposals",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_systems.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Reference_File.txt",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-workspace",
@@ -1561,35 +1587,11 @@
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.mbx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx.xml",
 		"/Users/cfroccajr/Documents/CryptoText/src/Intro_Crypto_Main.mbx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Number Theory Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fal MAT 110 Beyond Counting.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall Geometry Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/texmf/tex/latex/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/WCSU/2012 Spring Make Ups/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/WCSU/MATH 363/Historical_Persons.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 5 Exam.tex",
-		"/Users/cfroccajr/Library/texmf/tex/latex/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Complex Numbers and Visuals.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex",
-		"/Users/cfroccajr/Documents/Temp/books.csv",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall Indirect Proofs Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring 272 Chapter 4-5 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Practice Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring Chapter 2-3 Test.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/SphereDistance.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall History of Algebra Exam.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT 113/2015 Fall Geometry Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Text Review/Text Review Rubric and Report.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Number Theory Exam.tex"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -1603,6 +1605,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"href=\"",
 			"<definition",
 			"definition",
 			"\\lt",
@@ -1654,6 +1657,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"href=\"../",
 			"<$1investigation>",
 			"</subsection>",
 			"<subsection $1>",
@@ -1698,7 +1702,7 @@
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -1743,7 +1747,7 @@
 	"project": "OER_Linear_Alg.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -1,0 +1,141 @@
+    <section xml:id="section_determinants"   xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Determinants and their Geometry</title>
+        <idx><h>determinant</h></idx>
+        <subsection>
+            <title>Linear Distortions</title>
+            <investigation>
+                <title>Distorted Area</title>
+                <p>
+                    Suppose we form a parallelogram with the vectors <m>\vec{v}=\left\lt3,1\right\gt</m> and <m>\vec{w}=\left\lt1,2\right\gt</m>.  To find the area we need to multiply the length of the base by the height, or (from <xref ref="parallelogram_area"/>) <me>Area = ||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||.</me>
+                    <sidebyside widths="50% 40%">
+                        <p>
+                            <md>
+                                <mrow>\vec{w}-proj_{\vec{v}}\vec{w}\amp=\left\lt1,2\right\gt-\frac{5}{10}\left\lt3,1\right\gt</mrow>
+                                <mrow>\amp=\left\lt-\frac{1}{2},\frac{3}{2}\right\gt</mrow>
+                            </md>
+                            <md>
+                                <mrow>||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||\amp= \left(\sqrt{10}\right)\left(\frac{\sqrt{10}}{2}\right)</mrow>
+                                <mrow>\amp = 5</mrow>
+                            </md>
+                        </p>
+                        <figure xml:id="parallelogram_area">
+                            <caption>Area of a Parallelogram</caption>
+                            <image width="40%" source="images/vector_parallelagram.svg" />
+                        </figure>
+                    </sidebyside>
+                    So, the area of the parallelogram is 5.  Interestingly if we define the transformation
+                    <me>
+                        T\left(\vec{x}\right)=
+                        \left(
+                            \begin{array}{rr}
+                                3 \amp 1\\
+                                1 \amp 2
+                            \end{array}
+                        \right)\vec{x},
+                    </me>
+                    which carries the square of area 1 made by the standard basis to this parallelogram, then <me>a_{11}\, a_{22}-a_{12}\, a_{21}=3\cdot2-1\cdot1=5.</me>  This is because given a matrix
+                    <me>
+                        A=
+                        \left(
+                            \begin{array}{rr}
+                                a_{11} \amp a_{12}\\
+                                a_{21} \amp a_{22}
+                            \end{array}
+                        \right),
+                    </me>
+                    the value <me>det\, A=a_{11}\, a_{22}-a_{12}\, a_{21}</me> called the <term>determinant of <m>A</m></term><idx><h>determinant</h></idx> measures how much <m>A</m> distorts <m>\mathbb{R}^2</m> if we think of it as a transformation.
+                </p>
+            </investigation>
+            <investigation>
+                <title>Distorted Volume</title>
+                <sidebyside>
+                    <p>
+                        Suppose we have a parallelepiped as in the figure, for simplicity assume the base is a rectangle.  The the volume will be area of the base times the height.  The area of the base is easy, <m>Area=||\vec{v}||\, ||\vec{w}||</m>.  To get the height we need to use projections, in particular:
+                        <me>
+                            ||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||.
+                        </me>
+                    </p>
+                    <figure>
+                        <caption>Volume of a Parallelepiped</caption>
+                        <image width="40%" source="images/vector_parallelpiped.svg" />
+                    </figure>
+                </sidebyside>
+                <p>
+                    <md>
+                        <mrow>
+                            ||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||\amp=\left|\left|\vec{u}-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\vec{v}-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\vec{v}\right|\right|
+                        </mrow>
+                        <mrow>
+                            \amp=\left|\left|\left\lt u_1,u_2,u_3\right\gt-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\left\lt v_1,v_2,v_3\right\gt-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\left\lt w_1,w_2,w_3\right\gt\right|\right|
+                        </mrow>
+                        <mrow>
+                            \amp \vdots
+                        </mrow>
+                        <mrow>
+                             \mbox{Then A}\ \amp \mbox{Miracle Occurs}
+                        </mrow>
+                        <mrow>
+                            \amp \vdots
+                        </mrow>
+                        <mrow>
+                            \amp = \frac{|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|}{||\vec{v}||\, ||\vec{w}||}
+                        </mrow>
+                    </md>
+                    So, that the magnitude will be
+                    <me>|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|,</me> 
+                    the expression inside the absolute value is the determinant of the matrix
+                    <me>
+                        \left(
+                            \begin{array}{lll}
+                                v_1 \amp u_1 \amp w_1\\
+                                v_2 \amp u_2 \amp w_2\\
+                                v_3 \amp u_3 \amp w_3\\
+                            \end{array}
+                        \right)
+                    </me>
+                    which transforms the vectors of the standard basis into the vectors <m>\vec{v}</m>, <m>\vec{w}</m>, and <m>\vec{u}</m>.
+                </p>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>Calculating Determinants (Laplace's Formula)</title>
+            <investigation>
+                <title>Two-By-Two</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
+            <investigation>
+                <title>Three-By-Three</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
+            <investigation>
+                <title>N-By-N</title>
+                <p>
+                    Consider the matrix...
+                </p>
+            </investigation>
+        </subsection>
+        <conclusion>
+            <title>Properties of Determinants Summarized</title>
+            <theorem>
+                <statement>
+                    <p>
+                        If <m>A</m> and <m>B</m> are both <m>n\times n</m> matrices and <m>I</m> is the identity matrix, then:
+                        <ul>
+                            <li><m>det(I)=1</m></li>
+                            <li><m>det(AB)=det(A)det(B)</m></li>
+                            <li><m>det(A^{-1})=det(A)^{-1}</m> provided <m>A</m> is invertible</li>
+                            <li><m>det(A^T)=det(A)</m></li>
+                            <li>if <m>A</m> is upper diagonal, lower diagonal, or diagonal, then <m>det(A)</m> is the product of the entries along the main diagonal.</li>
+                            <li>swapping two rows of <m>A</m> changes the sign of <m>det(A)</m></li>
+                            <li>multiplying a row of <m>A</m> by <m>k</m> multiplies <m>det(A)</m> by <m>k</m></li>
+                            <li>adding copies of one row of <m>A</m> to another does not change <m>det(A)</m></li>
+                        </ul>
+                    </p>
+                </statement>
+            </theorem>
+        </conclusion>
+    </section>

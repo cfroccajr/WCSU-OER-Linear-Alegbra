@@ -1,0 +1,216 @@
+    <exercises xml:id="section_practice_exam_determinants"  xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Practice Exam on Determinants and Such</title>
+        <introduction>
+            <p>
+                Here are some exercises from the <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefferon's text</url> which you should try, the answers to all of these can be found in the <url href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf"><em>Answers to Exercises</em></url> supplement for Hefferon's text.  You do not need to hand in these exercises.
+                <ul>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=331">Definition of Determinants (p.321): 1, 2, 4, 5, 6</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=367">Laplace's Expansion (p.357): 11, 13, 14, 19</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=336">Properties of Determinants (p.326): 8, 9, 10</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=360">Determinants as Size Functions (p.350): 9, 11, 12, 14</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=401">Definition of Similarity (p.391): 5</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=415">Eigenvalues and Eigenvectors (p.405): 22, 23, 24, 25, 26</url> </li>
+                    <li> <m>\S</m> - <url href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=406">Diagonalizability (p.396): 7,15</url> </li>
+                </ul>
+                Additionally, be sure you can define the following: Determinants, Cofactors, Minor Matrix, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Singular, Non-Singular
+            </p>
+        </introduction>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    <alert>Practice Exam:</alert>
+                </p>
+                <p>
+                    In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.
+                </p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>Minor Matrix <m>A_{ij}</m></term>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>Eigenvector</term>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>Characteristic Polynomial</term>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Define <term>Similar Matrices</term>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Given that <m>C</m> and <m>D</m> are <m>n\times n</m> matrices, that <m>det(C)=4</m>, and that <m>det(D)=-7</m> find the value of
+                        <me>
+                            det\left(
+                                5\, C^2\, D^{-1}
+                            \right).
+                        </me>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Your answer will be in terms of <m>n</m>.
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Suppose that <m>T</m> and <m>R</m> are similar matrices and that <m>det\left(T\right)=9</m> what is the determinant of <m>R</m>, and why.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        You will need to use the definition of similar matrices.
+                    </p>
+                </hint>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                      Show that the determinant of the matrix
+                      <me>
+                          A=\left[
+                            \begin{array}{rrr}
+                                2 \amp 0 \amp 8\\
+                                0 \amp 3 \amp 2\\
+                                7 \amp 4 \amp 9
+                            \end{array}
+                          \right]
+                      </me>
+                      is equal to -130 by expanding down the first column.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                      Show that the determinant of the matrix
+                      <me>
+                          A=\left[
+                            \begin{array}{rrr}
+                                2 \amp 0 \amp 8\\
+                                0 \amp 3 \amp 2\\
+                                7 \amp 4 \amp 9
+                            \end{array}
+                          \right]
+                      </me>
+                      is equal to -130 by expanding along the second row.
+                    </p>
+                </statement>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                      Show that the determinant of the matrix
+                      <me>
+                          A=\left[
+                            \begin{array}{rrr}
+                                2 \amp 0 \amp 8\\
+                                0 \amp 3 \amp 2\\
+                                7 \amp 4 \amp 9
+                            \end{array}
+                          \right]
+                      </me>
+                      is equal to -130 by first reducing it to row echelon form.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the eigenvalues of the matrix
+                        <me>
+                            B=\left[
+                                \begin{array}{rr}
+                                    1 \amp 1\\
+                                    2 \amp 0\\
+                                \end{array}
+                            \right],
+                        </me>
+                        you should get <m>\lambda_1=2</m> and <m>\lambda_2=-1</m>.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        First find the characteristic polynomial for <m>B</m>.
+                    </p>
+                </hint>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the eigenvectors of the matrix
+                        <me>
+                            B=\left[
+                                \begin{array}{rr}
+                                    1 \amp 1\\
+                                    2 \amp 0\\
+                                \end{array}
+                            \right],
+                        </me>
+                        you should get <m>\vec{v}_1=\left\lt1,1\right\gt</m> and <m>\vec{v}_2=\left\lt1,-2\right\gt</m>.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Use the results from the previous problem and solve the equations <m>B\vec{v}_i=\lambda_i\vec{v}_i</m>.
+                    </p>
+                </hint>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find matrices <m>P</m> and <m>D</m> such that <m>B=P\, D\, P^{-1}</m> where
+                        <me>
+                            B=\left[
+                                \begin{array}{rr}
+                                    1 \amp 1\\
+                                    2 \amp 0\\
+                                \end{array}
+                            \right],
+                        </me>
+                        and <m>D</m> is a diagonal matrix.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Use the information from the previous two problems.
+                    </p>
+                </hint>
+            </exercise>
+
+
+        </exercisegroup>
+    </exercises>

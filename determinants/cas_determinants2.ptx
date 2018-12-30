@@ -1,0 +1,13 @@
+    <section xml:id="section_CAS_models" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>*CAS - Modeling with Matrices</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Hill Cipher Cell</p>
+        <sage>
+            <input><xi:include href="../sage_code/sample_sage.sage" parse="text" /></input>
+            <output></output>
+        </sage>
+
+
+    </section>

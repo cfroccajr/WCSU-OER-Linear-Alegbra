@@ -1,0 +1,12 @@
+    <section xml:id="section_CAS_eigen" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>*CAS - Visualizing Eigenvectors</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Hill Cipher Cell</p>
+        <sage>
+            <input><xi:include href="../sage_code/sample_sage.sage" parse="text" /></input>
+            <output></output>
+        </sage>
+
+    </section>
