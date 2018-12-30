@@ -1,0 +1,12 @@
+    <section xml:id="section_CAS_spaces"  xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>*CAS - Visualizing Subspaces</title>
+        <p>
+            <url href="http://joshua.smcvt.edu/linearalgebra/lab.pdf">Sage Lab Manual</url> Some Content!!!
+        </p>
+        <p>Subspace of <m>\mathbb{R}^3</m></p>
+        <sage>
+            <input><xi:include href="../sage_code/plains_and_vectors_cell.sage" parse="text" /></input>
+            <output></output>
+        </sage>
+
+    </section>

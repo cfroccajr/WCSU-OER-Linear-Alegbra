@@ -1,0 +1,513 @@
+    <section xml:id="section_bases"  xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Linear Independence and Bases</title>
+        <idx><h>linear independence</h></idx><idx><h>basis</h></idx>
+        <subsection>
+            <title>Independence Day</title>
+            <p>
+                Consider the following set of vectors:
+                <me>
+                    S=\left\{
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]
+                    \right\}
+                </me>
+                from our work in <xref ref="xy-coordinates" /> we know that each of these can be written as a combination of the elementary vectors <m>\vec{e}_1</m> and <m>\vec{e}_2</m>. They can also be written as combinations of each other like so:
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]=
+                        -2\, 
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]-7\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right],
+                </me>
+                or
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right]=
+                        -\frac{2}{7}\, 
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]-\frac{1}{7}\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right],
+                </me>
+                or finally
+                <me>
+                        \left[
+                            \begin{array}{r}
+                                -4 \\ 1
+                            \end{array}
+                        \right]=
+                        -\frac{1}{2}\, 
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2
+                            \end{array}
+                        \right]-\frac{7}{2}\,
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0
+                            \end{array}
+                        \right].
+                </me>
+                Because we can write these vectors in relation to each other in this way we say that they are <term>linearly dependent</term>.
+            </p>
+            <definition>
+                <title>Linearly Independent</title>
+                <idx><h>linearly independent</h></idx>
+                <statement>
+                    <p>
+                        A set of vecotors, <m>S=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}</m> is <term>linearly independent</term> if no single vector in the set may be written as a linear combination of the other vectors in the set.  Equivalently, if the homogeneous system of equations
+                        <me>
+                            a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{0}
+                        </me>
+                        has only the trivial solution <m>a_i=0,\ \forall\, i</m>.  A set of vectors which are not linearly independent are called <term>linearly dependent</term><idx><h>linearly dependent</h></idx>.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                In contrast to the example above here is a linearly independent:
+                <me>
+                    S=\left\{
+                        \left[
+                            \begin{array}{r}
+                                1 \\ -2 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 1 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0 \\1
+                            \end{array}
+                        \right]
+                    \right\}.
+                </me>
+                We could demonstrate this with a lengthy argument about what combinations are possible or not possible, but it is better to set up and solve the system of equations
+                <me>
+                    a_1\,
+                    \left[
+                        \begin{array}{r}
+                            1 \\ -2 \\ 0
+                        \end{array}
+                    \right]+a_2\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 1 \\ 0
+                        \end{array}
+                    \right]+a_3\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 0 \\1
+                        \end{array}
+                    \right]=
+                    \vec{0}
+                </me>
+                useing the techniques from <xref ref="section_basic_systems" /> to show that <m>a_1=a_2=a_3=0</m>, that is that there is only one solution to this system.  In fact a linearly dependent set of vectors always corresponds to a system with a free variable. Underdetermined systems like the first example above, which is really the same as <xref ref="underdetermined"/>, will always be linearly dependent.  A set of vectors which are linearly independent always correspond to a system which is overdetermined or which has the same number of variables as equations with no free variables like the vectors in <xref ref="system-example2"/> or <xref ref="overdetermined"/>.
+            </p>
+            <p>
+                Important Point: The following implications are only true in one direction!
+                <ul>
+                    <li>
+                        If a set of vectors is linearly independent, then it corresponds to a system which is overdetermined or which has the same number of variables as equations.
+                    </li>
+                    <li>
+                        If a system is underdetermined, then it corresponds to a set of vectors which are linearly dependent.
+                    </li>
+                </ul>
+                To see that the converse<fn>The converse of a statement <em>If P, then Q</em> is <em>If Q, then P</em>.</fn> of these are not true complete the following exercises.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Solve this overdetermined system to see that there is a free variable:
+                        <me>
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 2 \\ 3
+                                \end{array}
+                            \right]x+
+                            \left[
+                                \begin{array}{r}
+                                    2 \\ 4 \\ 6
+                                \end{array}
+                            \right]y=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 0
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        After reducing we see that <m>x=-2y</m> and <m>y</m> is free.
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Solve this "determined" system to see that there are free variables:
+                        <me>
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 2 \\ 3
+                                \end{array}
+                            \right]x+
+                            \left[
+                                \begin{array}{r}
+                                    2 \\ 4 \\ 6
+                                \end{array}
+                            \right]y+
+                            \left[
+                                \begin{array}{r}
+                                    3 \\ 6 \\ 9
+                                \end{array}
+                            \right]z=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 0
+                                \end{array}
+                            \right]
+                        </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        After reducing we see that <m>x=-2y-3z</m> and <m>y</m> and <m>z</m> are both free.
+                    </p>
+                </answer>
+            </exercise>
+        </subsection>
+        <subsection>
+            <title>A Strong Foundation</title>
+            <p>
+                As mentioned above the vectors in <xref ref="overdetermined" /> are linearly independent, but the system is inconsistent, i.e. there is not solution in that example.  From the perspective of <xref ref="section_space_definitions" /> and in particular the example in <xref ref="subspace_example_1" /> the point <m>(7,2,16)</m> is not in the plain determined by the vectors <m>[3,1,0]</m> and <m>[2,-1,4]</m>.  Convince yourself of this by altering the Sage code below to plot the appropriate plain and point:
+            </p>
+            <sage>
+                <input>
+                    <xi:include href="../sage_code/plains_and_vectors_cell.sage" parse="text"/>
+                </input>
+                <output></output>
+            </sage>
+            <p>
+                The reason this happens is because the vectors <m>[3,1,0]</m> and <m>[2,-1,4]</m> do not form a <term>basis</term> for 3D space <m>\left(\mathbb{R}^3\right)</m>.
+            </p>
+            <definition>
+                <title>Basis</title>
+                <idx><h>basis</h></idx>
+                <statement>
+                    <p>
+                        A <term>basis</term> is a set of vectors <m>\mathcal{B}=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}</m> such that there exists a unique solution to any equation of the form
+                        <me>
+                            a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{v}
+                        </me>
+                        for all <m>\vec{v}</m> in the given vector space.  The number of vectors required for a basis in a vector space is called the <term>dimension</term><idx><h>dimension</h></idx> of the vector space.
+                    </p>
+                </statement>
+            </definition>
+            <exercise xml:id="basis_exercise_1">
+                <title>These Vectors are Too Few</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 0 \\ 13
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that this system is inconsistent, this tells us that the two vectors on the left hand side do not form a basis for the vector space.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        A reduced system should give you something like:
+                        <me>
+                            \left[
+                                \begin{array}{rr|r}
+                                    1 \amp 0 \amp 13\\
+                                    0 \amp 1 \amp -13\\
+                                    0 \amp 1 \amp 26\\
+                                \end{array}
+                            \right]
+                        </me>
+                        giving us the contradictory result that <m>a_2=26</m> and <m>a_2=-13</m>.  In terms of what we have been discussing this means that the point <m>(0,0,13)</m> is not in the plain generated by the two vectors.
+                    </p>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_2">
+                <title>These Vectors are Too Many</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 0 \\ 0
+                                \end{array}
+                            \right]+a_4\, 
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 1 \\ 1
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though we don't know the values of <m>x</m>, <m>y</m>, and <m>z</m> this system is consistent and in fact there will always be a free variable/infinitely many solutions.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        A reduced system should give you something like:
+                        <me>
+                            \left[
+                                \begin{array}{rrrr|r}
+                                    1 \amp 0 \amp 0 \amp 1 \amp z\\
+                                    0 \amp 1 \amp 0 \amp 3 \amp y+2z\\
+                                    0 \amp 0 \amp 1 \amp -4 \amp x-3z-y\\
+                                \end{array}
+                            \right]
+                        </me>
+                        so that <m>a_1=z-a_4</m>, <m>a_2=y+2z-3a_4</m>, <m>a_3=x-3z-y+4a_4</m>, and <m>a_4</m> is a free variable, so there are infinitely many solutions.  Written as a set of vectors we would say that the solutions are the set
+                        <me>
+                            \left\{
+                                \left[
+                                    \begin{array}{r}
+                                        z \\ y+2z \\ x-3z-y
+                                    \end{array}
+                                \right]+
+                                \left[
+                                    \begin{array}{r}
+                                        -1 \\ -3 \\ 4
+                                    \end{array}
+                                \right]\, t
+                                :
+                                t\in\mathbb{R}
+                            \right\}.
+                        </me>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_3">
+                <title>These Vectors are Just Right</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 1 \\ 0
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ 0 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though we don't know the values of <m>x</m>, <m>y</m>, and <m>z</m> this system is consistent and there will always be a unique solution.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        A reduced system should give you something like:
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 0 \amp 0 \amp z\\
+                                    0 \amp 1 \amp 0 \amp y+2z\\
+                                    0 \amp 0 \amp 1 \amp x-3z-y\\
+                                \end{array}
+                            \right]
+                        </me>
+                        so that <m>a_1=z</m>, <m>a_2=y+2z</m>, and <m>a_3=x-3z-y</m>. So, when we can place the coefficient matrix in reduced row echelon form with no extra columns or rows we get a unique solution.
+                    </p>
+                </answer>
+            </exercise>
+            <exercise xml:id="basis_exercise_4">
+                <title>These Vectors are Tricky</title>
+                <statement>
+                    <p>
+                        Try solving the system of equations:
+                        <me>
+                            a_1\,
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -2 \\ 1
+                                \end{array}
+                            \right]+a_2\, 
+                            \left[
+                                \begin{array}{r}
+                                    0 \\ 1 \\ 1
+                                \end{array}
+                            \right]+a_3\, 
+                            \left[
+                                \begin{array}{r}
+                                    1 \\ -3 \\ 0
+                                \end{array}
+                            \right]=
+                            \left[
+                                \begin{array}{r}
+                                    x \\ y \\ z
+                                \end{array}
+                            \right]
+                        </me>
+                        you should find that even though this looks similar to the previous exercise, there are in fact values for <m>x</m>, <m>y</m>, and <m>z</m> for which there is not solution.  Find and example of this and try to explain why this happens
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        A reduced system should give you something like:
+                        <me>
+                            \left[
+                                \begin{array}{rrr|r}
+                                    1 \amp 0 \amp 0 \amp x\\
+                                    0 \amp 1 \amp -1 \amp y+2x\\
+                                    0 \amp 0 \amp 0 \amp z-3x-y\\
+                                \end{array}
+                            \right]
+                        </me>
+                        so that if <m>z-2x-y</m> is not zero we get a contradiction in the last row.  An example of this being an inconsistent system would be <m>[x,y,z]=[1,1,4]</m>.  What this tells us is that the three vectors on the left hand side of the equation would form at most a plain and that some points such as <m>(1,1,4)</m> are not on that plain.
+                    </p>
+                </answer>
+            </exercise>
+        </subsection>
+        <subsection xml:id="polynomial_basis">
+            <title>The Quadratic Strikes Back</title>
+            <p>
+                It should hopefully be clear that by taking linear combinations of <m>1</m>, <m>x</m>, and <m>x^2</m> we can get any quadratic <m>a_0+a_1\, x+a_2\, x^2</m> thus the set <m>\mathcal{B}=\left\{1,x,x^2\right\}</m> is a basis for the set of all quadratics.  What is not so obvious is that so is the set <m>\mathcal{C}=\left\{1-2x+x^2, 1+x, 1\right\}</m>.  However, if we recognize/recall that we can relate systems of polynomials with vector equations then solving <me>a_0(1-2x+x^2)+a_1(1+x)+a_2(1)=b_0+b_1x+b_2x^2</me> is the same as solving
+                <me>
+                    a_1\,
+                    \left[
+                        \begin{array}{r}
+                            1 \\ -2 \\ 1
+                        \end{array}
+                    \right]+a_2\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 1 \\ 0
+                        \end{array}
+                    \right]+a_3\, 
+                    \left[
+                        \begin{array}{r}
+                            1 \\ 0 \\ 0
+                        \end{array}
+                    \right]=
+                    \left[
+                        \begin{array}{r}
+                            b_0 \\ b_1 \\ b_2
+                        \end{array}
+                    \right]
+                </me>
+                which is the same as <xref ref="basis_exercise_3" /> and so we know there is a solution.
+            </p>
+            <p>
+                What this tells us is that we can apply the concept of basis to any type of vector space as long as it satisfies <xref ref="vector_space_def"/>.  Also, on a final note, for each vector space there is typically a basis which is considered the <term>standard basis</term><idx><h>standard basis</h></idx><idx><h>basis</h><h>standard basis</h></idx>.  For <m>\mathbb{R}^3</m> it is 
+                <me>
+                    \mathcal{E}=\left\{
+                        \left[
+                            \begin{array}{r}
+                                1 \\ 0 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                0 \\ 1 \\ 0
+                            \end{array}
+                        \right],
+                        \left[
+                            \begin{array}{r}
+                                0 \\ 0 \\1
+                            \end{array}
+                        \right]
+                    \right\}
+                </me>
+                and for quadratic polynomials it is
+                <me>
+                    \mathcal{E}=\left\{1,x,x^2\right\}.
+                </me>
+                We will see in <xref ref="section_coordinates" /> that we will be able to directly relate the standard bases with any other bases.
+            </p>
+        </subsection>
+        <conclusion>
+            <title>Section Vocabulary</title>
+            <p>
+                Linearly Independent, Linearly Dependent, Basis, Standard Basis
+            </p>
+        </conclusion>
+    </section>

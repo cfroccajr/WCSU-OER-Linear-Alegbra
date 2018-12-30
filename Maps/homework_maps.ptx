@@ -1,0 +1,140 @@
+    <exercises xml:id="section_exercises_maps">
+        <title>Homework Exercises on Linear Transformations and Projections</title>
+        <introduction>
+            <p>
+                <alert>Homework Exercises:</alert>
+            </p>
+            <p>
+                These exercises are here to check your deeper conceptual understanding of the material and your ability to problem solve; they are not skill drills.  As such they are for homework and not test preparation, they would be far to long for an exam.  You need to complete each problem to the best of your ability.  Every answer you give needs to be your own work, needs to be written neatly on lined paper or typed, and at least the final answer for each should be a complete sentence.  Do not include a copy of the question with your solution, that is not needed to convey your thoughts clearly.
+            </p>
+            <p>
+            </p>
+        </introduction>
+        <exercise>
+            <statement>
+                <p>
+                    Let <m>T:\mathbb{R}^n\rightarrow\mathbb{R}^m</m> be a linear transformation, and let <m>\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3\right\}</m> be a linearly dependent set.  Show that the set <m>\left\{T(\vec{v}_1),T(\vec{v}_2),T(\vec{v}_3)\right\}</m> is also necessarily linearly dependent.
+                </p>
+                <p>
+                    For bonus points, try to construct an example of a transformation such that <m>\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3\right\}</m> is linearly independent but <m>\left\{T(\vec{v}_1),T(\vec{v}_2),T(\vec{v}_3)\right\}</m> is linearly dependent.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    You will need to use the definitions of linearly dependent and linear transformation to answer this.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Define a transformation <m>T:\mathcal{P}_2\rightarrow\mathbb{R}^2</m> by <me>T(p)=\left(\begin{array}{l}p(1)\\ p(2)\end{array}\right).</me> For instance if <m>p(t)=t^2+3t</m> then
+                    <me>T(p)=\left(\begin{array}{l}p(1)\\ p(2)\end{array}\right)=\left(\begin{array}{r}4\\ 10\end{array}\right).</me>
+                    <ol>
+                        <li>First show that <m>T</m> is a linear map.</li>
+                        <li>Next, find a polynomial <m>p</m> which spans the kernel (null space) of <m>T</m></li>
+                        <li>Finally, show that the range of <m>T</m>, not just the codomain, is equal to all of <m>\mathbb{R}^2</m></li>
+                    </ol>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    You will need to work with the definitions of span, kernel, and linear transformation.  Also, to get a handle on the third part of the problem start out by showing that there is a quadratic polynomial such that <m>T(p)=(2,3)</m>.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Show that <me>T(x_1,x_2,x_3,x_4)=3x_1-7x_2+5x_4</me> is a linear transformation by finding the matrix for the transformation.  Then find a basis for the null space of the transformation.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Note that <m>T:\mathbb{R}^4\rightarrow\mathbb{R}</m>.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Let
+                    <me>
+                        A=\left(
+                            \begin{array}{rr}
+                                2 \amp -3 \\
+                                -4 \amp 6
+                            \end{array}
+                        \right),\ 
+                        B=\left(
+                            \begin{array}{rr}
+                                8 \amp 4 \\
+                                5 \amp 5
+                            \end{array}
+                        \right),\ \mbox{ and }
+                        C=\left(
+                            \begin{array}{rr}
+                                5 \amp -2 \\
+                                3 \amp 1
+                            \end{array}
+                        \right)
+                    </me>
+                    and verify that <m>AB=AC</m> even though <m>B\neq C</m>. (The matrix <m>A</m> is sometimes called a <term>zero divisor</term><idx><h>zero divisor</h></idx>.)
+                </p>
+                <p>
+                    Show that, in general for any matrices, if <m>DE=DF</m> and <m>D</m> is an invertible matrix, then <m>E=F</m>.
+                </p>
+                <p>
+                    Finally, use what you have done to argue that a matrix can be invertible or a zero divisor but it can't be both.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Suppose that <m>W</m> is a subspace of <m>\mathbb{R}^n</m> spanned by <m>n</m> orthogonal vectors.  Show that <m>W=\mathbb{R}^n</m> or equivalently the vectors which span <m>W</m> will form a basis for <m>\mathbb{R}^n</m>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    You have to use the definitions of span and basis, and think in terms of work we did in the previous to units.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find an orthogonal basis for the row space of the matrix
+                    <me>
+                        A=
+                        \left(
+                            \begin{array}{rrrr}
+                                1 \amp 0 \amp 5 \amp -2\\
+                                0 \amp 2 \amp 1 \amp 7 \\
+                                3 \amp 2 \amp 16 \amp 1\\
+                                -1 \amp 3 \amp 0 \amp 0
+                            \end{array}
+                        \right).
+                    </me>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    First find the row space and then find the orthogonal basis, you will need to use the Gram-Schmidt Process.
+                </p>
+            </hint>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Let <m>\left\{\vec{u}_1,\vec{u}_2,\ldots,\vec{u}_p\right\}</m> be an orthogonal basis for a subspace <m>W</m> of <m>\mathbb{R}^n</m>, and let <m>T:\mathbb{R}^n\rightarrow\mathbb{R}^n</m> be defined by
+                    <me>T(\vec{x})=proj_W(\vec{x}).</me> Show that <m>T</m> is a linear transformation.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    You need to use the definition of linear transformation and the properties of a dot product, as well as projection onto a subspace.
+                </p>
+            </hint>
+        </exercise>
+    </exercises>
