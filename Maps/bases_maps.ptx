@@ -1,0 +1,646 @@
+    <section xml:id="section_coordinates" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Change of Bases/Coordinates</title>
+        <subsection>
+            <title>Coordinate Systems</title>
+            <p>
+                Suppose that we want to walk to the point <m>(2,3)</m> from the origin, how might we get there?
+            </p>
+            <sidebyside widths="30% 37%">
+                <stack>
+                    <p>
+                        We can get from the origin to the point <m>(2,3)</m> by walking east 2 blocks and north 3.
+                        <me>
+                            2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
+                            +3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_e">
+                    <caption>Path one with the elementary basis <m>\mathcal{E}_2</m>.</caption>
+                    <image source="images/basis_e.png"/>
+                </figure>
+            </sidebyside>
+            <sidebyside widths="30% 40%">
+                <stack>
+                    <p>
+                        We can get there by walking northeast(ish) 3 blocks and northwest(ish) 1.
+                        <me>
+                            3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
+                            +\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_b">
+                    <caption>Path two with some basis <m>\mathcal{B}</m>.</caption>
+                    <image source="images/basis_b.png"/>
+                </figure>
+            </sidebyside>
+            <sidebyside widths="30% 48%">
+                <stack>
+                    <p>
+                        We can get there by walking northwest(ish) 2 blocks and northeast(ish) 4.
+                        <me>
+                            2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
+                            +4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                            =\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                        </me>
+                    </p>
+                </stack>
+                <figure xml:id="basis_d">
+                    <caption>Path three with some basis <m>\mathcal{D}</m>.</caption>
+                    <image source="images/basis_d.png"/>
+                </figure>
+            </sidebyside>
+            <p>
+                In each case you get to the same place but using different paths.  That is because in each case we are using different bases or coordinate systems.
+            </p>
+            <p>
+                In <xref ref="basis_e"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{E}_2=
+                    \left\{
+                        \vec{e}_1=\left(\begin{array}{r}1 \\ 0 \end{array}\right),
+                        \vec{e}_2=\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{E}_2</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{E}_2}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)
+                </me>
+                because
+                <me>
+                    2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
+                    +3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In <xref ref="basis_b"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{B}=
+                    \left\{
+                        \vec{\beta}_1=\left(\begin{array}{r}1 \\ 1/2 \end{array}\right),
+                        \vec{\beta}_2=\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{B}</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{B}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            3 \\ 1
+                        \end{array}
+                    \right)
+                </me>
+                because
+                <me>
+                    3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
+                    +1\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In <xref ref="basis_d"/> we follow the vectors in the basis
+                <me>
+                    \mathcal{D}=
+                    \left\{
+                        \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                        \vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                    \right\}.
+                </me>
+                We say that the <m>\mathcal{D}</m>-coordinates for <m>(2,3)</m> are
+                <me>
+                    Rep_{\mathcal{D}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 4
+                        \end{array}
+                    \right)
+                </me>
+                because
+                <me>
+                    2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
+                    +4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                    =\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+                </me>
+            </p>
+            <p>
+                In each case the coordinates for the point <m>(2,3)</m> are the coefficients for a linear combination of basis vectors.
+            </p>
+            <definition>
+                <title><m>\mathcal{B}</m>-Coordinates</title>
+                <idx><h>coordinate system</h></idx>
+                <idx><h><m>\mathcal{B}</m>-coordinates</h></idx>
+                <statement>
+                    <p>
+                        Given a basis <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me> the <term><m>\mathcal{B}</m>-coordinates</term> for a point or vector <m>\vec{p}</m> are the coefficients <m>b_1,\, b_2,\, \ldots,\, b_k</m> so that <me>\vec{p}=b_1\vec{\beta}_1+b_2\vec{\beta}_2+\cdots+b_k\vec{\beta}_k</me> and we write
+                        <me>
+                            Rep_{\mathcal{B}}(\vec{p})=
+                            \left[
+                                \begin{array}{l}
+                                    b_1\\ b_2\\ \vdots\\ b_k
+                                \end{array}
+                            \right].
+                        </me>
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                Finally, we can connect this to matrices by observing that if the columns of a matrix are the basis vectors then when we multiply that by a representation we get our point, for example
+                <me>
+                    \left(\vec{\beta}_1\ \vec{\beta}_2\right)Rep_{\mathcal{B}}
+                    \left(\begin{array}{r}2 \\ 3 \end{array}\right)
+                    =
+                    \left(
+                        \begin{array}{rr}
+                            1 \amp -1\\
+                            1/2 \amp 3/2
+                        \end{array}
+                    \right)
+                    \left(\begin{array}{r}3 \\ 1 \end{array}\right)
+                    =
+                    \left(\begin{array}{r}2 \\ 3 \end{array}\right).                   
+                </me>
+            </p>
+        </subsection>
+        <subsection>
+            <title>Changing Bases</title>
+            <investigation>
+                <title><m>\mathcal{B}</m> to <m>\mathcal{E}_2</m></title>
+                <p>
+                    The elementary or standard basis is
+                    <me>
+                        \mathcal{E}_2=
+                        \left\{
+                            \vec{e}_1=\left(\begin{array}{r}1 \\ 0 \end{array}\right),
+                            \vec{e}_2=\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+                        \right\}.
+                    </me>
+                    Let <m>\mathcal{B}</m> be the basis
+                    <me>
+                        \mathcal{B}=
+                        \left\{
+                            \vec{\beta}_1=\left(\begin{array}{r}1 \\ 1/2 \end{array}\right),
+                            \vec{\beta}_2=\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+                        \right\}
+                    </me>
+                    as above.  If we have a vector written in terms of <m>\mathcal{B}</m>,
+                    <me>
+                        Rep_{\mathcal{B}}\left(\vec{v}\right)=
+                        \left(
+                            \begin{array}{r}
+                                -1 \\ 3
+                            \end{array}
+                        \right)
+                    </me>
+                    and we want <m>Rep_{\mathcal{E}_2}(\vec{v})</m> then we multiply by the matrix
+                    <me>
+                        Rep_{\mathcal{B},\mathcal{E}_2}=
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right).
+                    </me>
+                    So we get,
+                    <md>
+                        <mrow>
+                            Rep_{\mathcal{E}_2}(\vec{v})\amp = Rep_{\mathcal{B},\mathcal{E}_2}\, Rep_{\mathcal{B}}\left(\vec{v}\right)
+                        </mrow>
+                        <mrow>
+                            \amp = 
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)\,
+                            \left(
+                                \begin{array}{r}
+                                    -1 \\ 3
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{r}
+                                    -4 \\ 4
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    To change from any basis <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me> to <m>\mathcal{E}_k</m> multiply by the matrix
+                    <me>Rep_{\mathcal{B},\mathcal{E}_k}=\left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right)</me>
+                    each of whose columns is an element of <m>\mathcal{B}</m>.
+                </p>
+            </investigation>
+            <investigation>
+                <title><m>\mathcal{E}_2</m> to <m>\mathcal{B}</m></title>
+                <p>
+                    Let <m>\mathcal{E}_2</m> and <m>\mathcal{B}</m> be the same as before and suppose
+                    <me>
+                        Rep_{\mathcal{E}_2}(\vec{w})=
+                        \left(
+                            \begin{array}{r}
+                                7\\-2
+                            \end{array}
+                        \right)
+                    </me>
+                    to change from <m>\mathcal{E}_2</m> to <m>\mathcal{B}</m> multiply by the matrix
+                    <me>
+                        Rep_{\mathcal{E}_2,\mathcal{B}}=
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)^{-1}=
+                            \left(
+                                \begin{array}{rr}
+                                    3/4 \amp 1/2 \\ 
+                                    -1/4\amp 1/2 
+                                \end{array}
+                            \right).
+                    </me>
+                    So we get,
+                    <md>
+                        <mrow>
+                            Rep_{\mathcal{B}}(\vec{w})\amp = Rep_{\mathcal{E}_2,\mathcal{B}}\, Rep_{\mathcal{E}_2}\left(\vec{w}\right)
+                        </mrow>
+                        <mrow>
+                            \amp = 
+                            \left(
+                                \begin{array}{rr}
+                                    3/4 \amp 1/2 \\ 
+                                    -1/4\amp 1/2 
+                                \end{array}
+                            \right)\,
+                            \left(
+                                \begin{array}{r}
+                                    7 \\ -2
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{r}
+                                    17/4 \\ -11/4
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    To change from <m>\mathcal{E}_k</m> to any basis <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me>  multiply by the matrix
+                    <me>Rep_{\mathcal{E}_k,\mathcal{B}}=(Rep_{\mathcal{B},\mathcal{E}_k})^{-1}=\left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right)^{-1}.</me>
+                </p>
+            </investigation>
+            <investigation>
+                <title><m>\mathcal{B}</m> to <m>\mathcal{D}</m></title>
+                <p>
+                    Finally, let
+                   <me>
+                        \mathcal{D}=
+                        \left\{
+                            \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                            \vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+                        \right\}.
+                    </me>
+                    and let <m>\mathcal{B}</m> and <m>\mathcal{E}_2</m> be as before.  Suppose also that
+                   <me>
+                        Rep_{\mathcal{B}}\left(\vec{v}\right)=
+                        \left(
+                            \begin{array}{r}
+                                -1 \\ 3
+                            \end{array}
+                        \right).
+                    </me>
+                    if we want to find <m>Rep_{\mathcal{D}}(\vec{v})</m> then multiply by the matrix
+                    <md>
+                        <mrow>Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    -1 \amp 1 \\ 
+                                    1\amp 1/4 
+                                \end{array}
+                            \right)^{-1}
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    -1/5 \amp 4/5 \\ 
+                                    4/5\amp 4/5 
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rr}
+                                    1 \amp -1 \\ 
+                                    1/2\amp 3/2 
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>\amp=
+                            \left(
+                                \begin{array}{rr}
+                                    1/5 \amp 7/5 \\ 
+                                    6/5\amp 2/5 
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    So that we get
+                    <me>
+                        Rep_{\mathcal{D}}(\vec{v})=Rep_{\mathcal{B},\mathcal{D}}Rep_{\mathcal{B}}(\vec{v})=
+                        \left(
+                                \begin{array}{rr}
+                                    1/5 \amp 7/5 \\ 
+                                    6/5\amp 2/5 
+                                \end{array}
+                        \right)
+                        \left(
+                            \begin{array}{r}
+                                -1 \\ 3
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                4 \\ 0
+                            \end{array}
+                        \right).
+                    </me>
+                    We can verify that this is correct because
+                    <me>
+                        -1\vec{\beta}_1+3\vec{\beta}_2=
+                        \left(
+                            \begin{array}{r}
+                                -4 \\ 4
+                            \end{array}
+                        \right)
+                    </me>
+                    and
+                    <me>
+                        4\vec{\delta}_1+0\vec{\delta}_2=
+                        \left(
+                            \begin{array}{r}
+                                -4 \\ 4
+                            \end{array}
+                        \right).
+                    </me>
+                    In general if
+                    <me>\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}</me>
+                    and
+                    <me>\mathcal{D}=\left\{\vec{\delta}_1,\, \vec{\delta}_2,\, \ldots,\, \vec{\delta}_k\right\}</me>
+                    then
+                    <md>
+                        <mrow>Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>\amp=(Rep_{\mathcal{D},\mathcal{E}_2})^{-1}Rep_{\mathcal{B},\mathcal{E}_2}</mrow>
+                        <mrow>
+                            \amp=\left(\vec{\delta}_1\ \vec{\delta}_2\ \cdots\ \vec{\delta}_k\right)^{-1}
+                            \left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right).
+                        </mrow>
+                    </md>
+                </p>
+            </investigation>
+            <investigation>
+                <title>Back to the Beginning</title>
+                <p>
+                    We started above with
+                <me>
+                    Rep_{\mathcal{E}_2}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right),\ 
+                    Rep_{\mathcal{B}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            3 \\ 1
+                        \end{array}
+                    \right),\ \mbox{ and }
+                    Rep_{\mathcal{D}}
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 4
+                        \end{array}
+                    \right).                    
+                </me>
+                Now, we know that if we multiply the first one,
+                <me>
+                    Rep_{\mathcal{E}_2}\left(\begin{array}{r}2\\3\end{array}\right)=
+                    \left(
+                        \begin{array}{r}
+                            2 \\ 3
+                        \end{array}
+                    \right)
+                </me>
+                by
+                <me>
+                    Rep_{\mathcal{E}_2,\mathcal{B}}=
+                    \left(
+                        \begin{array}{rr}
+                            3/4 \amp 1/2 \\ 
+                            -1/4\amp 1/2 
+                        \end{array}
+                    \right)
+                </me>
+                or
+                <me>
+                    Rep_{\mathcal{E}_2,\mathcal{D}}=
+                    \left(
+                        \begin{array}{rr}
+                            -1/5 \amp 4/5 \\ 
+                            4/5\amp 4/5 
+                        \end{array}
+                    \right)
+                </me>
+                we get the other two.  That is we have a reliable, algorithmic way to change from one basis to another in the same dimension.
+                </p>
+            </investigation>
+            <p>
+                <alert>Summary Diagram for Bases Changes:</alert>
+            </p>
+            <figure xml:id="bases_change">
+                <caption> Changing from <m>\mathcal{B}</m> to other bases. </caption>
+                <image width="60%" source="images/basis_cycle.png" />
+            </figure>
+        </subsection>
+        <subsection>
+            <title>Changing Morphisms</title>
+            <investigation>
+                <title>Change a transformation of <m>\mathcal{E}_2</m> to one from <m>\mathcal{B}</m> to <m>\mathcal{D}</m></title>
+                <p>
+                    Let <m>\mathcal{E}_2</m> be as bove and let
+                    <me>
+                        \mathcal{E}_3=
+                        \left\{
+                            \vec{e}_1=
+                            \left(
+                                \begin{array}{r}
+                                    1 \\ 0 \\0
+                                \end{array}
+                            \right),\, \vec{e}_2=
+                            \left(
+                                \begin{array}{r}
+                                    0 \\ 1 \\0
+                                \end{array}
+                            \right),\, \vec{e}_3=
+                            \left(
+                                \begin{array}{r}
+                                    0 \\ 0 \\1
+                                \end{array}
+                            \right)
+                        \right\}
+                    </me>
+                    Define a transformation <m>P</m> from <m>\mathbb{R}^3</m> to <m>\mathbb{R}^2</m> by
+                    <me>
+                        P(\vec{v})=(x,y).
+                    </me>
+                    From before the matrix for <m>P</m> is
+                    <me>
+                        A=
+                        \left(
+                            \begin{array}{rrr}
+                                1 \amp 0 \amp 0 \\
+                                0 \amp 1 \amp 0 
+                            \end{array}
+                        \right)
+                    </me>
+                    and it maps <m>\mathcal{E}_3</m> to <m>\mathcal{E}_2</m>.
+                </p>
+                <p>
+                    Now suppose that we want the transformation to change vectors with coordinates in the basis
+                        <me>
+                            \mathcal{B}=
+                            \left\{
+                                \vec{\beta}_1=\left(\begin{array}{r}1 \\ -2 \\ 0\end{array}\right),
+                                \vec{\beta}_2=\left(\begin{array}{r}0 \\ 3 \\ 1 \end{array}\right)
+                                \vec{\beta}_3=\left(\begin{array}{r}1 \\ 0 \\ 1 \end{array}\right)
+                            \right\}
+                        </me>
+                    to vectors in terms of the basis
+                        <me>
+                            \mathcal{D}=
+                            \left\{
+                                \vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+                                \vec{\delta}_2=\left(\begin{array}{r}-3 \\ 4 \end{array}\right)
+                            \right\}.
+                        </me>
+                    Do this by going from <m>\mathcal{B}</m> to <m>\mathcal{E}_3</m> to <m>\mathcal{E}_2</m> to <m>\mathcal{D}</m>,
+                    <md>
+                        <mrow>
+                            (Rep_{\mathcal{D},\mathcal{E}_2})^{-1}\, A\, Rep_{\mathcal{B},\mathcal{E}_3} \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    -4 \amp -3 \\
+                                    1 \amp 1\\
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 0 \\
+                                    0 \amp 1 \amp 0 
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 1 \\
+                                    -2 \amp 3 \amp 0\\
+                                    0 \amp 1 \amp 1
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rr}
+                                    -4 \amp -3 \\
+                                    1 \amp 1\\
+                                \end{array}
+                            \right)
+                            \left(
+                                \begin{array}{rrr}
+                                    1 \amp 0 \amp 1 \\
+                                    -2 \amp 3 \amp 0
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =
+                            \left(
+                                \begin{array}{rrr}
+                                    2 \amp -9 \amp -4 \\
+                                    -1 \amp 3 \amp 1
+                                \end{array}
+                            \right).
+                        </mrow>
+                    </md>
+                    Using this we get
+                    <me>
+                        \left(
+                            \begin{array}{r}
+                                x \\ y \\ z
+                            \end{array}
+                        \right)\longmapsto
+                        \left(
+                            \begin{array}{r}
+                                2x-9y-4z \\ -x+3y+z
+                            \end{array}
+                        \right).
+                    </me>
+                </p>
+            </investigation>
+            <p>
+                <alert>Summary Diagram for Transformation Changes:</alert>
+            </p>
+            <figure xml:id="bases_transform_change">
+                <caption> Changing transformations to new bases. </caption>
+                <image width="70%" source="images/basis_transform_cycle.png" />
+            </figure>
+        </subsection>
+    </section>

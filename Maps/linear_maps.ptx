@@ -1,0 +1,234 @@
+    <section xml:id="section_morphisams" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Isomorphisms and Homomorphisms of Vector Spaces</title>
+        <idx><h>isomorphism</h></idx><idx><h>homomorphism</h></idx>
+        <subsection>
+            <title>Homorphisms and Functions</title>
+            <definition>
+                <statement>
+                    <p><idx><h>function</h></idx><idx><h>homomorphism</h></idx><idx><h>linear map</h></idx>
+                        A <term>function</term> is a relation, call it <m>A</m>, from one set called the <em>domain</em>, <m>X</m>, to another set called the <em>codomain</em>, <m>Y</m> such that
+                        <ul>
+                            <li><m>\forall x\in X,\ \exists y\in Y:\ A(x)=y</m></li>, and
+                            <li><m>\forall x\in X:</m> if <m>y_1=A(x)</m> and <m>y_2=A(x)</m>, then <m>y_1=y_2</m>.</li>
+                        </ul>
+                        If in addition we know that <m>A(ax+by)=a\, A(x)\, +\, b\, A(y)</m> we say that the function is a <term>homomorphism</term>, or that it is a <term>linear map</term>.
+                    </p>
+                </statement>
+            </definition>
+            <investigation xml:id="basic_linear_exmaple">
+                <title>Something Linear</title>
+                <p>
+                    Let <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> be defined by <m>f(x)=-7x</m> and let's see that this is linear.  First, since both the input and output for the function comes from <m>\mathbb{R}</m> that is the domain and the codomain.  If <m>x=ax_1+bx_2</m>, then we get
+                    <md>
+                        <mrow>f(x)\amp = f\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ x</mrow>
+                        <mrow>    \amp = -7\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ f</mrow>
+                        <mrow>    \amp = -7ax_1-7bx_2 \amp\amp \mbox{distributive property}</mrow>
+                        <mrow>    \amp = a\left(-7x_1\right)+b\left(-7x_2\right) \amp\amp \mbox{commutative property}</mrow>
+                        <mrow>    \amp = af\left(x_1\right)+bf\left(x_2\right)\amp\amp \mbox{definition of}\ f</mrow>
+                    </md>
+                    Therefore, <m>f(x)</m> satisfies the definition of a homomorphism (linear function).
+                </p>
+            </investigation>
+            <investigation xml:id="derivative_of_cubic">
+                <title>Also Linear</title>
+                <p>
+                    Let <m>d:\mathcal{P}_3\rightarrow\mathcal{P}_3</m> be defined by <m>d(f)=3ax^2+2bx+c</m> and let's see that this too is linear.  First, since both the input and output for the function comes from <m>\mathcal{P}_3</m> that is the domain and the codomain.  If <m>f(x)=a_1x^3+b_1x^2+c_1x+d_1</m> and <m>g(x)=a_2x^3+b_2x^2+c_2x+d_2</m>, then we get
+                    <me>(f+g)(x)=f(x)+g(x)=(a_1+a_2)x^3+(b_1+b_2)x^2+(c_1+c_2)x+(d_1+d_2)</me>
+                    and when we apply the function <m>d</m>
+                    <md>
+                        <mrow>d(f+g)\amp = 3(a_1+a_2)x^2+2(b_1+b_2)x+(c_1+c_2) \amp\amp \mbox{definition of}\ d</mrow>
+                        <mrow>    \amp = 3a_1x^2+3a_2x^2+2b_1x+2b_2x+c_1+c_2\amp\amp \mbox{distributive property}</mrow>
+                        <mrow>    \amp = (3a_1x^2+2b_1x+c_1)+(3a_2x^2+2b_2x+c_2) \amp\amp \mbox{commutative property}</mrow>
+                        <mrow>    \amp = d(f)+d(g) \amp\amp \mbox{definition of}\ d</mrow>
+                    </md>
+                    Therefore, <m>d</m> satisfies the definition of a homomorphism (linear function).
+                </p>
+            </investigation>
+            <investigation xml:id="vector_map_eg1">
+                <title>Something with Vectors</title>
+                <p>
+                    Define <m>T:\mathbb{R}^3\rightarrow\mathbb{R}^2</m> by
+                    <me>
+                        T\left(
+                            \begin{array}{c}
+                                x \\ y \\ z
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{c}
+                                x+z \\ y+z
+                            \end{array}
+                        \right).
+                    </me>
+                    For example:
+                    <me>
+                        T\left(
+                            \begin{array}{c}
+                                1 \\ 0 \\ 1
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                2 \\ 1
+                            \end{array}
+                        \right)\mbox{ or }
+                        T\left(
+                            \begin{array}{r}
+                                3 \\ 1 \\ 5
+                            \end{array}
+                        \right)=
+                        \left(
+                            \begin{array}{r}
+                                8 \\ 6
+                            \end{array}
+                        \right).
+                    </me>
+                    This is a linear map since
+                    <md>
+                        <mrow>
+                            T\left(
+                                \begin{array}{c}
+                                    x_1+x_2 \\ y_1+y_2 \\ z_1+z_2
+                                \end{array}
+                            \right)\amp =
+                            \left(
+                                \begin{array}{c}
+                                    x_1+x_2+z_1+z_2 \\ y_1+y_2+z_1+z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp =\left(
+                                \begin{array}{c}
+                                    x_1+z_1 \\ y_1+z_1
+                                \end{array}
+                            \right)+
+                             \left(
+                                \begin{array}{c}
+                                    x_2+z_2 \\ y_2+z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                        <mrow>
+                            \amp=
+                            T\left(
+                                \begin{array}{c}
+                                    x_1 \\ y_1 \\ z_1
+                                \end{array}
+                            \right)+
+                            T\left(
+                                \begin{array}{c}
+                                    x_2 \\ y_2 \\ z_2
+                                \end{array}
+                            \right)
+                        </mrow>
+                    </md>
+                </p>
+                <sidebyside>
+                    <figure>
+                        <caption>Basis for <m>\mathbb{R}^3</m></caption>
+                        <image width="60%" source="images/r3_basis.png" />
+                    </figure>
+                    <figure>
+                        <caption>Transformation of the basis for <m>\mathbb{R}^3</m> by <m>T</m></caption>
+                        <image width="20%" source="images/r2_basis_with_diagonal.png" />
+                    </figure>
+                </sidebyside>
+            </investigation>
+            <investigation xml:id="line_not_linear">
+                <title>Surprisingly Not Linear</title>
+                <p>
+                    Let <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> be defined by <m>f(x)=x+1</m> and let's see that this is not linear.  Since we want to see that something is not the case we just need a counter example.  If <m>x=1</m> and <m>y=2</m> then
+                    <me>f(x)+f(y)=f(1)+f(2)=2+3=5,</me>
+                    but
+                    <me>f(x+y)=f(3)=4</me>
+                    so that <m>f(x)+f(y)\neq f(x+y)</m>, i.e. <m>f</m> is not linear.  This may be surprising since <m>f(x)=x+1</m> is a line, but this is what is called an <term>affine map</term> since it is the sum of a linear map and a constant.<idx><h>affine map</h></idx>
+                </p>
+            </investigation>
+        </subsection>
+        <subsection>
+            <title>Isomorphisms (one-to-one and onto)</title>
+            <definition xml:id="one_to_one_onto">
+                <statement><idx><h>one-to-one</h></idx><idx><h>1-1</h></idx><idx><h>onto</h></idx><idx><h>isomorphism</h></idx>
+                    <p>
+                        A function <m>f:V\rightarrow W</m> is <term>one-to-one</term> if for all <m>v_1,v_2\in V</m>, <m>f(v_1)=f(v_2)</m> implies <m>v_1=v_2</m>.  The function is <term>onto</term> if for all <m>w\in W</m> there exists <m>v\in V</m> such that <m>f(v)=w</m>. A function which is both is called an <term>isomorphism</term>.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                Looking back at <xref ref="basic_linear_exmaple"/> the function is an isomorphism. If <m>-7x_1=-7x_2</m>, then <m>x_1=x_2</m> and <m>f</m> is one-to-one.  Also, for any <m>y</m>, <me>y=-7\left(-\frac{1}{7}y\right)</me> so that when <m>x=-\frac{1}{7}y</m> we get <m>f(x)=y</m> and <m>f</m> is onto.
+            </p>
+            <p>
+                In <xref ref="derivative_of_cubic"/>, <me>d(x^3+7)=d(x^3-9)</me> so that <m>d</m> is not 1-1. Also, for all cubics the output of <m>d</m> is a quadratic so it is not onto, nothing gives the output <m>x^3</m>.
+            </p>
+            <p>
+                Finally, in <xref ref="vector_map_eg1"/> the map is onto but not 1-1.  We could set up systems of equations and show this (and you should try that on your own), but it is better to try and understand this intuitively.  The map <m>T</m> maps three dimensions onto two.  Since the output of the map, the <term>image</term><idx><h>image</h></idx>, has more than two different vectors it is onto.  But, since we are squeezing three dimensions down to two it can't be 1-1.<fn>This is a very imprecise way of looking at it but it is good a good visual.</fn>
+            </p>
+        </subsection>
+        <subsection>
+            <title>Kernel, Domain, and Image</title>
+            <definition xml:id="kernel"><idx><h>kernel</h></idx>
+                <statement>
+                    <p>
+                        The <term>Kernel</term> of a transformation <m>T:V\rightarrow W</m> is the set of all <m>\vec{v}\in V</m> such that <m>T(\vec{v})=\vec{0}</m>.  A transformation is one-to-one if and only if the kernel contains only the zero vector.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                Above in <xref ref="vector_map_eg1"/> any vector of the form <m>\vec{v}=\left\lt-z,-z,z\right\gt</m> maps to <m>\left\lt 0,0\right\gt</m>:
+                <me>
+                    T\left(
+                        \begin{array}{c}
+                            -z \\ -z \\ z
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{c}
+                            -z+z \\ -z+z
+                        \end{array}
+                    \right)=
+                    \left(
+                        \begin{array}{c}
+                            0 \\ 0
+                        \end{array}
+                    \right).
+                </me>
+                And so we could show that the kernel of <m>T</m> is <m>span\left\{\left\lt-1,-1,1\right\gt\right\}</m>.  Significantly, we can use this to rewrite every element of the domain as
+                <me>
+                    \left(
+                        \begin{array}{r}
+                            x\\ y \\z
+                        \end{array}
+                    \right) = 
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z \\0
+                        \end{array}
+                    \right) + 
+                    \left(
+                        \begin{array}{r}
+                            -z\\ -z \\z
+                        \end{array}
+                    \right)
+                </me>
+                so that it is the sum of something in the kernel and something that is not in the kernel unless it happens that <m>x=y=-z</m>.  This is a small example of a much more general truth, and we will use this later when we discuss orthogonal projections and curve fitting.
+            </p>
+            <p>
+                As a final note you can see that the non-kernel piece of the above vector looks just like the image (or output) of the transformation:
+                <me>
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z \\0
+                        \end{array}
+                    \right)\ \mbox{ versus }
+                    \left(
+                        \begin{array}{r}
+                            x+z\\ y+z
+                        \end{array}
+                    \right).
+                </me>
+                This too is a part of the a larger picture and it tells us that in a sense the non-kernel portion of the domain is isomorphic to the image of the transformation.
+            </p>
+        </subsection>
+
+    </section>
