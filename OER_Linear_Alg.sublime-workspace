@@ -1400,7 +1400,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1456,10 +1456,15 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src"
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/tmp",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/html"
 	],
 	"file_history":
 	[
+		"/C/GIT/mathbook/xsl/mathbook-html.xsl",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.ptx",
+		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Determinants/intro_determinants.ptx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/determinants/similar_determinants.ptx",
@@ -1490,7 +1495,6 @@
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/chapter_determinants.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_backmatter.ptx",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.sublime-project",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_bookinfo.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/src/Linear_frontmatter.ptx",
 		"/C/GIT/WCSU-OER-Linear-Alegbra/Image_Blank.tex",
@@ -1530,7 +1534,6 @@
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 272 - Linear Algebra/2018 Fall MAT 272 - Linear Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Latex/Brookfield Pres.tex",
-		"/C/GIT/WCSU-OER-Linear-Alegbra/src/OER_Linear_Alg.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/2018 Fall MAT 467 - Group Theory Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467/2018 Fall MAT 457 - Group Theory Syllabus.tex",
@@ -1586,8 +1589,7 @@
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_frontmatter.mbx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.mbx",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx.xml",
-		"/Users/cfroccajr/Documents/CryptoText/src/Intro_Crypto_Main.mbx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Number Theory Exam.tex"
+		"/Users/cfroccajr/Documents/CryptoText/src/Intro_Crypto_Main.mbx"
 	],
 	"find":
 	{
@@ -1605,6 +1607,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"core",
 			"href=\"",
 			"<definition",
 			"definition",
@@ -1788,7 +1791,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":
