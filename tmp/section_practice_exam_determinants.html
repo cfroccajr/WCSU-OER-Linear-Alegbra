@@ -1,0 +1,278 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:04-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Practice Exam on Determinants and Such</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_exercises_determinants.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_exercises_determinants.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants" class="active">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="exercises" id="section_practice_exam_determinants"><h2 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.8</span> <span class="title">Practice Exam on Determinants and Such</span>
+</h2>
+<a href="section_practice_exam_determinants.html" class="permalink">¶</a><section class="introduction" id="introduction-13"><p id="p-309">Here are some exercises from the <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf" target="_blank">Hefferon's text</a> which you should try, the answers to all of these can be found in the <a class="external" href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf" target="_blank"><em class="emphasis">Answers to Exercises</em></a> supplement for Hefferon's text.  You do not need to hand in these exercises.</p>
+<ul class="disc">
+<li id="li-123">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=331" target="_blank">Definition of Determinants (p.321): 1, 2, 4, 5, 6</a>
+</li>
+<li id="li-124">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=367" target="_blank">Laplace's Expansion (p.357): 11, 13, 14, 19</a>
+</li>
+<li id="li-125">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=336" target="_blank">Properties of Determinants (p.326): 8, 9, 10</a>
+</li>
+<li id="li-126">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=360" target="_blank">Determinants as Size Functions (p.350): 9, 11, 12, 14</a>
+</li>
+<li id="li-127">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=401" target="_blank">Definition of Similarity (p.391): 5</a>
+</li>
+<li id="li-128">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=415" target="_blank">Eigenvalues and Eigenvectors (p.405): 22, 23, 24, 25, 26</a>
+</li>
+<li id="li-129">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=406" target="_blank">Diagonalizability (p.396): 7,15</a>
+</li>
+</ul>
+<p>Additionally, be sure you can define the following: Determinants, Cofactors, Minor Matrix, Eigenvector, Eigenvalue, Characteristic Polynomial, Similar Matrices, Diagonalizable, Singular, Non-Singular</p></section><div class="exercisegroup" id="exercisegroup-3">
+<div class="introduction" id="introduction-14">
+<p id="p-310"><em class="alert">Practice Exam:</em></p>
+<p id="p-311">In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.</p>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-312">Define <dfn class="terminology">Minor Matrix \(A_{ij}\)</dfn>.</p></article><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-313">Define <dfn class="terminology">Eigenvector</dfn>.</p></article><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-314">Define <dfn class="terminology">Characteristic Polynomial</dfn>.</p></article><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-315">Define <dfn class="terminology">Similar Matrices</dfn>.</p></article><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-316">Given that \(C\) and \(D\) are \(n\times n\) matrices, that \(det(C)=4\text{,}\) and that \(det(D)=-7\) find the value of</p>
+<div class="displaymath">
+\begin{equation*}
+det\left(
+5\, C^2\, D^{-1}
+\right).
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span></a><div id="hk-hint-16" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-317">Your answer will be in terms of \(n\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-58"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-318">Suppose that \(T\) and \(R\) are similar matrices and that \(det\left(T\right)=9\) what is the determinant of \(R\text{,}\) and why.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span></a><div id="hk-hint-17" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-319">You will need to use the definition of similar matrices.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-59"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-320">Show that the determinant of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr}
+2 \amp 0 \amp 8\\
+0 \amp 3 \amp 2\\
+7 \amp 4 \amp 9
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>is equal to -130 by expanding down the first column.</p></article><article class="exercise-like" id="exercise-60"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-321">Show that the determinant of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr}
+2 \amp 0 \amp 8\\
+0 \amp 3 \amp 2\\
+7 \amp 4 \amp 9
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>is equal to -130 by expanding along the second row.</p></article><article class="exercise-like" id="exercise-61"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-322">Show that the determinant of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr}
+2 \amp 0 \amp 8\\
+0 \amp 3 \amp 2\\
+7 \amp 4 \amp 9
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>is equal to -130 by first reducing it to row echelon form.</p></article><article class="exercise-like" id="exercise-62"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-323">Find the eigenvalues of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+B=\left[
+\begin{array}{rr}
+1 \amp 1\\
+2 \amp 0\\
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>you should get \(\lambda_1=2\) and \(\lambda_2=-1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span></a><div id="hk-hint-18" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-324">First find the characteristic polynomial for \(B\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-63"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="p-325">Find the eigenvectors of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+B=\left[
+\begin{array}{rr}
+1 \amp 1\\
+2 \amp 0\\
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>you should get \(\vec{v}_1=\left\lt1,1\right\gt\) and \(\vec{v}_2=\left\lt1,-2\right\gt\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span></a><div id="hk-hint-19" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-326">Use the results from the previous problem and solve the equations \(B\vec{v}_i=\lambda_i\vec{v}_i\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-64"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<p id="p-327">Find matrices \(P\) and \(D\) such that \(B=P\, D\, P^{-1}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+B=\left[
+\begin{array}{rr}
+1 \amp 1\\
+2 \amp 0\\
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>and \(D\) is a diagonal matrix.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span></a><div id="hk-hint-20" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-328">Use the information from the previous two problems.</p></div></div>
+</div></article>
+</div>
+</div></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

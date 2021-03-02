@@ -1,0 +1,82 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Suppose we form a parallelogram with the vectors \(\vec{v}=\left\lt3,1\right\gt\) and \(\vec{w}=\left\lt1,2\right\gt\text{.}\)  To find the area we need to multiply the length of the base by the height, or (from <a data-knowl="./knowl/parallelogram_area.html" title="Figure 4.1.1">Figure 4.1.1</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+Area = ||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||.
+\end{equation*}
+</div>
+<p><div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:52.6315789473684%;justify-content:flex-start;">
+<div class="displaymath">
+\begin{align*}
+\vec{w}-proj_{\vec{v}}\vec{w}\amp=\left\lt1,2\right\gt-\frac{5}{10}\left\lt3,1\right\gt\\
+\amp=\left\lt-\frac{1}{2},\frac{3}{2}\right\gt
+\end{align*}
+</div>
+<div class="displaymath">
+\begin{align*}
+||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||\amp= \left(\sqrt{10}\right)\left(\frac{\sqrt{10}}{2}\right)\\
+\amp = 5
+\end{align*}
+</div>
+</div>
+<div class="sbspanel" style="width:42.1052631578947%;justify-content:flex-start;"><img src="images/vector_parallelagram.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<figcaption class="sbscaption" style="width:52.6315789473684%;"></figcaption><figcaption class="sbscaption" style="width:42.1052631578947%;"><span class="type">Figure</span> <span class="codenumber">4.1.1.</span> Area of a Parallelogram</figcaption>
+</div>
+</div> So, the area of the parallelogram is 5.  Interestingly if we define the transformation</p>
+<div class="displaymath">
+\begin{equation*}
+T\left(\vec{x}\right)=
+\left(
+\begin{array}{rr}
+3 \amp 1\\
+1 \amp 2
+\end{array}
+\right)\vec{x},
+\end{equation*}
+</div>
+<p>which carries the square of area 1 made by the standard basis to this parallelogram, then</p>
+<div class="displaymath">
+\begin{equation*}
+a_{11}\, a_{22}-a_{12}\, a_{21}=3\cdot2-1\cdot1=5.
+\end{equation*}
+</div>
+<p>This is because given a matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rr}
+a_{11} \amp a_{12}\\
+a_{21} \amp a_{22}
+\end{array}
+\right),
+\end{equation*}
+</div>
+<p>the value</p>
+<div class="displaymath">
+\begin{equation*}
+det\, A=a_{11}\, a_{22}-a_{12}\, a_{21}
+\end{equation*}
+</div>
+<p>called the <dfn class="terminology">determinant of \(A\)</dfn> measures how much \(A\) distorts \(\mathbb{R}^2\) if we think of it as a transformation.</p>
+<span class="incontext"><a href="section_determinants.html#p-270">in-context</a></span>
+</body>
+</html>

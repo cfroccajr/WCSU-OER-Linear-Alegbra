@@ -1,0 +1,664 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear Independence and Bases</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_space_definitions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="spaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_matrices_spaces.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_space_definitions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="spaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_matrices_spaces.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases" class="active">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_bases"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Linear Independence and Bases</span>
+</h2>
+<a href="section_bases.html" class="permalink">¶</a><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Independence Day</span>
+</h3>
+<p id="p-103">Consider the following set of vectors:</p>
+<div class="displaymath">
+\begin{equation*}
+S=\left\{
+\left[
+\begin{array}{r}
+1 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+-4 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+1 \\ -2
+\end{array}
+\right]
+\right\}
+\end{equation*}
+</div>
+<p>from our work in <a href="section_space_definitions.html#xy-coordinates" class="internal" title="Subsection 2.1.1: Something Old, Something New">Subsection 2.1.1</a> we know that each of these can be written as a combination of the elementary vectors \(\vec{e}_1\) and \(\vec{e}_2\text{.}\) They can also be written as combinations of each other like so:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+1 \\ -2
+\end{array}
+\right]=
+-2\, 
+\left[
+\begin{array}{r}
+-4 \\ 1
+\end{array}
+\right]-7\,
+\left[
+\begin{array}{r}
+1 \\ 0
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+1 \\ 0
+\end{array}
+\right]=
+-\frac{2}{7}\, 
+\left[
+\begin{array}{r}
+-4 \\ 1
+\end{array}
+\right]-\frac{1}{7}\,
+\left[
+\begin{array}{r}
+1 \\ -2
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>or finally</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+-4 \\ 1
+\end{array}
+\right]=
+-\frac{1}{2}\, 
+\left[
+\begin{array}{r}
+1 \\ -2
+\end{array}
+\right]-\frac{7}{2}\,
+\left[
+\begin{array}{r}
+1 \\ 0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Because we can write these vectors in relation to each other in this way we say that they are <dfn class="terminology">linearly dependent</dfn>.</p>
+<article class="definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.1</span>. <span class="title">Linearly Independent.</span>
+</h6>
+<p id="p-104">A set of vecotors, \(S=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}\) is <dfn class="terminology">linearly independent</dfn> if no single vector in the set may be written as a linear combination of the other vectors in the set.  Equivalently, if the homogeneous system of equations</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{0}
+\end{equation*}
+</div>
+<p>has only the trivial solution \(a_i=0,\ \forall\, i\text{.}\)  A set of vectors which are not linearly independent are called <dfn class="terminology">linearly dependent</dfn>.</p></article><p id="p-105">In contrast to the example above here is a linearly independent:</p>
+<div class="displaymath">
+\begin{equation*}
+S=\left\{
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+1 \\ 0 \\1
+\end{array}
+\right]
+\right\}.
+\end{equation*}
+</div>
+<p>We could demonstrate this with a lengthy argument about what combinations are possible or not possible, but it is better to set up and solve the system of equations</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 0
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right]+a_3\, 
+\left[
+\begin{array}{r}
+1 \\ 0 \\1
+\end{array}
+\right]=
+\vec{0}
+\end{equation*}
+</div>
+<p>useing the techniques from <a href="section_basic_systems.html" class="internal" title="Section 1.1: Solving Linear Systems">Section 1.1</a> to show that \(a_1=a_2=a_3=0\text{,}\) that is that there is only one solution to this system.  In fact a linearly dependent set of vectors always corresponds to a system with a free variable. Underdetermined systems like the first example above, which is really the same as <a data-knowl="./knowl/underdetermined.html" title="Example 1.1.4: An Underdetermined System">Example 1.1.4</a>, will always be linearly dependent.  A set of vectors which are linearly independent always correspond to a system which is overdetermined or which has the same number of variables as equations with no free variables like the vectors in <a data-knowl="./knowl/system-example2.html" title="Investigation 1.1.2: Name the Parabola (A Not So Simple Example)">Investigation 1.1.2</a> or <a data-knowl="./knowl/overdetermined.html" title="Example 1.1.5: An Overdetermined System">Example 1.1.5</a>.</p>
+<p id="p-106">Important Point: The following implications are only true in one direction!</p>
+<ul class="disc">
+<li id="li-57">If a set of vectors is linearly independent, then it corresponds to a system which is overdetermined or which has the same number of variables as equations.</li>
+<li id="li-58">If a system is underdetermined, then it corresponds to a set of vectors which are linearly dependent.</li>
+</ul>
+<p>To see that the converse<a data-knowl="" class="id-ref" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a><span id="hk-fn-1" class="hidden-content tex2jax_ignore"><span class="footnote">The converse of a statement <em class="emphasis">If P, then Q</em> is <em class="emphasis">If Q, then P</em>.</span></span> of these are not true complete the following exercises.</p>
+<article class="exercise-like" id="exercise-11"><a data-knowl="" class="id-ref" data-refid="hk-exercise-11"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.2</span>.</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-107">Solve this overdetermined system to see that there is a free variable:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+1 \\ 2 \\ 3
+\end{array}
+\right]x+
+\left[
+\begin{array}{r}
+2 \\ 4 \\ 6
+\end{array}
+\right]y=
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 0
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div id="hk-answer-1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-108">After reducing we see that \(x=-2y\) and \(y\) is free.</p></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-12"><a data-knowl="" class="id-ref" data-refid="hk-exercise-12"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.3</span>.</h6></a></article><div id="hk-exercise-12" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-109">Solve this "determined" system to see that there are free variables:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+1 \\ 2 \\ 3
+\end{array}
+\right]x+
+\left[
+\begin{array}{r}
+2 \\ 4 \\ 6
+\end{array}
+\right]y+
+\left[
+\begin{array}{r}
+3 \\ 6 \\ 9
+\end{array}
+\right]z=
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 0
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div id="hk-answer-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-110">After reducing we see that \(x=-2y-3z\) and \(y\) and \(z\) are both free.</p></div></div>
+</div></article></div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">A Strong Foundation</span>
+</h3>
+<p id="p-111">As mentioned above the vectors in <a data-knowl="./knowl/overdetermined.html" title="Example 1.1.5: An Overdetermined System">Example 1.1.5</a> are linearly independent, but the system is inconsistent, i.e. there is not solution in that example.  From the perspective of <a href="section_space_definitions.html" class="internal" title="Section 2.1: What is a Vector Space">Section 2.1</a> and in particular the example in <a data-knowl="./knowl/subspace_example_1.html" title="Figure 2.1.4">Figure 2.1.4</a> the point \((7,2,16)\) is not in the plain determined by the vectors \([3,1,0]\) and \([2,-1,4]\text{.}\)  Convince yourself of this by altering the Sage code below to plot the appropriate plain and point:</p>
+<div class="sagecell-sage" id="sage-9"><script type="text/x-sage">                    # Constants and Variable Names:
+var("x,y,z,a,b")
+variable_vector=vector([x,y,z])
+zero=vector([0,0,0])
+
+# Data to Enter
+v=vector([2,3,0])
+u=vector([-1,0,5])
+
+# Create the equation for a plain perpendicular to v
+plain_equation = a*v+b*u
+pretty_print(LatexExpr("a\\vec{v}+b\\vec{u}="),plain_equation)
+
+# Generate plot objects
+plain_plot=parametric_plot3d(plain_equation,(a,-2,8),(b,-6,2),color="orangered",opacity=0.5)
+v_plot=arrow(zero,v,width=5,arrowhead=10,color="blue")
+u_plot=arrow(zero,u,width=5,arrowhead=10,color="green")
+av_bu_point=point3d(7*v-5*u,color="green",size=20)
+no_good_point=point3d((15,9,5),color="red",size=20)
+
+
+# Plot objects
+plain_plot+v_plot+u_plot+av_bu_point+no_good_point
+</script></div>
+<p id="p-112">The reason this happens is because the vectors \([3,1,0]\) and \([2,-1,4]\) do not form a <dfn class="terminology">basis</dfn> for 3D space \(\left(\mathbb{R}^3\right)\text{.}\)</p>
+<article class="definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.4</span>. <span class="title">Basis.</span>
+</h6>
+<p id="p-113">A <dfn class="terminology">basis</dfn> is a set of vectors \(\mathcal{B}=\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3,\ldots,\vec{v}_n\right\}\) such that there exists a unique solution to any equation of the form</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\, \vec{v}_1+a_2\, \vec{v}_2+a_3\, \vec{v}_3+\cdots + a_n\, \vec{v}_n=\vec{v}
+\end{equation*}
+</div>
+<p>for all \(\vec{v}\) in the given vector space.  The number of vectors required for a basis in a vector space is called the <dfn class="terminology">dimension</dfn> of the vector space.</p></article><article class="exercise-like" id="basis_exercise_1"><a data-knowl="" class="id-ref" data-refid="hk-basis_exercise_1"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.5</span>. <span class="title">These Vectors are Too Few.</span>
+</h6></a></article><div id="hk-basis_exercise_1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">Try solving the system of equations:</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 1
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 13
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>you should find that this system is inconsistent, this tells us that the two vectors on the left hand side do not form a basis for the vector space.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div id="hk-answer-3" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-115">A reduced system should give you something like:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 13\\
+0 \amp 1 \amp -13\\
+0 \amp 1 \amp 26\\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>giving us the contradictory result that \(a_2=26\) and \(a_2=-13\text{.}\)  In terms of what we have been discussing this means that the point \((0,0,13)\) is not in the plain generated by the two vectors.</p>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="basis_exercise_2"><a data-knowl="" class="id-ref" data-refid="hk-basis_exercise_2"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.6</span>. <span class="title">These Vectors are Too Many.</span>
+</h6></a></article><div id="hk-basis_exercise_2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-116">Try solving the system of equations:</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 1
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right]+a_3\, 
+\left[
+\begin{array}{r}
+1 \\ 0 \\ 0
+\end{array}
+\right]+a_4\, 
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 1
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+x \\ y \\ z
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>you should find that even though we don't know the values of \(x\text{,}\) \(y\text{,}\) and \(z\) this system is consistent and in fact there will always be a free variable/infinitely many solutions.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div id="hk-answer-4" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-117">A reduced system should give you something like:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrrr|r}
+1 \amp 0 \amp 0 \amp 1 \amp z\\
+0 \amp 1 \amp 0 \amp 3 \amp y+2z\\
+0 \amp 0 \amp 1 \amp -4 \amp x-3z-y\\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>so that \(a_1=z-a_4\text{,}\) \(a_2=y+2z-3a_4\text{,}\) \(a_3=x-3z-y+4a_4\text{,}\) and \(a_4\) is a free variable, so there are infinitely many solutions.  Written as a set of vectors we would say that the solutions are the set</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+\left[
+\begin{array}{r}
+z \\ y+2z \\ x-3z-y
+\end{array}
+\right]+
+\left[
+\begin{array}{r}
+-1 \\ -3 \\ 4
+\end{array}
+\right]\, t
+:
+t\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="basis_exercise_3"><a data-knowl="" class="id-ref" data-refid="hk-basis_exercise_3"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.7</span>. <span class="title">These Vectors are Just Right.</span>
+</h6></a></article><div id="hk-basis_exercise_3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-118">Try solving the system of equations:</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 1
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right]+a_3\, 
+\left[
+\begin{array}{r}
+1 \\ 0 \\ 0
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+x \\ y \\ z
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>you should find that even though we don't know the values of \(x\text{,}\) \(y\text{,}\) and \(z\) this system is consistent and there will always be a unique solution.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div id="hk-answer-5" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-119">A reduced system should give you something like:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp z\\
+0 \amp 1 \amp 0 \amp y+2z\\
+0 \amp 0 \amp 1 \amp x-3z-y\\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>so that \(a_1=z\text{,}\) \(a_2=y+2z\text{,}\) and \(a_3=x-3z-y\text{.}\) So, when we can place the coefficient matrix in reduced row echelon form with no extra columns or rows we get a unique solution.</p>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="basis_exercise_4"><a data-knowl="" class="id-ref" data-refid="hk-basis_exercise_4"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.2.8</span>. <span class="title">These Vectors are Tricky.</span>
+</h6></a></article><div id="hk-basis_exercise_4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-120">Try solving the system of equations:</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 1
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 1
+\end{array}
+\right]+a_3\, 
+\left[
+\begin{array}{r}
+1 \\ -3 \\ 0
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+x \\ y \\ z
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>you should find that even though this looks similar to the previous exercise, there are in fact values for \(x\text{,}\) \(y\text{,}\) and \(z\) for which there is not solution.  Find and example of this and try to explain why this happens</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div id="hk-answer-6" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-121">A reduced system should give you something like:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp x\\
+0 \amp 1 \amp -1 \amp y+2x\\
+0 \amp 0 \amp 0 \amp z-3x-y\\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>so that if \(z-2x-y\) is not zero we get a contradiction in the last row.  An example of this being an inconsistent system would be \([x,y,z]=[1,1,4]\text{.}\)  What this tells us is that the three vectors on the left hand side of the equation would form at most a plain and that some points such as \((1,1,4)\) are not on that plain.</p>
+</div></div>
+</div></article></div></section><section class="subsection" id="polynomial_basis"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">The Quadratic Strikes Back</span>
+</h3>
+<a href="section_bases.html#polynomial_basis" class="permalink">¶</a><p id="p-122">It should hopefully be clear that by taking linear combinations of \(1\text{,}\) \(x\text{,}\) and \(x^2\) we can get any quadratic \(a_0+a_1\, x+a_2\, x^2\) thus the set \(\mathcal{B}=\left\{1,x,x^2\right\}\) is a basis for the set of all quadratics.  What is not so obvious is that so is the set \(\mathcal{C}=\left\{1-2x+x^2, 1+x, 1\right\}\text{.}\)  However, if we recognize/recall that we can relate systems of polynomials with vector equations then solving</p>
+<div class="displaymath">
+\begin{equation*}
+a_0(1-2x+x^2)+a_1(1+x)+a_2(1)=b_0+b_1x+b_2x^2
+\end{equation*}
+</div>
+<p>is the same as solving</p>
+<div class="displaymath">
+\begin{equation*}
+a_1\,
+\left[
+\begin{array}{r}
+1 \\ -2 \\ 1
+\end{array}
+\right]+a_2\, 
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 0
+\end{array}
+\right]+a_3\, 
+\left[
+\begin{array}{r}
+1 \\ 0 \\ 0
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+b_0 \\ b_1 \\ b_2
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>which is the same as <a data-knowl="./knowl/basis_exercise_3.html" title="Checkpoint 2.2.7: These Vectors are Just Right">Checkpoint 2.2.7</a> and so we know there is a solution.</p>
+<p id="p-123">What this tells us is that we can apply the concept of basis to any type of vector space as long as it satisfies <a data-knowl="./knowl/vector_space_def.html" title="Definition 2.1.3">Definition 2.1.3</a>.  Also, on a final note, for each vector space there is typically a basis which is considered the <dfn class="terminology">standard basis</dfn>.  For \(\mathbb{R}^3\) it is</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}=\left\{
+\left[
+\begin{array}{r}
+1 \\ 0 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 0 \\1
+\end{array}
+\right]
+\right\}
+\end{equation*}
+</div>
+<p>and for quadratic polynomials it is</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}=\left\{1,x,x^2\right\}.
+\end{equation*}
+</div>
+<p>We will see in <a href="section_coordinates.html" class="internal" title="Section 3.4: Change of Bases/Coordinates">Section 3.4</a> that we will be able to directly relate the standard bases with any other bases.</p></section><section class="conclusion" id="conclusion-5"><h6 class="heading">Section Vocabulary.<span></span>
+</h6>
+<p id="p-124">Linearly Independent, Linearly Dependent, Basis, Standard Basis</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

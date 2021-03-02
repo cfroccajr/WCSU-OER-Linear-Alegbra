@@ -1,0 +1,382 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>What is a Vector Space</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="spaces.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="spaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_bases.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="spaces.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="spaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_bases.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions" class="active">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_space_definitions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">What is a Vector Space</span>
+</h2>
+<a href="section_space_definitions.html" class="permalink">¶</a><section class="subsection" id="xy-coordinates"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Something Old, Something New</span>
+</h3>
+<a href="section_space_definitions.html#xy-coordinates" class="permalink">¶</a><p id="p-89">Long ago an far away you learned to plot points in two dimensions with \(x\) and \(y\) coordinates:</p>
+<figure class="figure-like" id="figure-14"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-11.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.1.1.</span> A Few Points</figcaption></figure><p id="p-90">But, how can we understand this in terms of vectors and how can we most efficiently describe infinitely many points and vectors?</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:60%;justify-content:flex-start;">
+<p id="p-91">The simplest thing to do would be to have a single vector like \(\vec{v}=\left[ 2,3\right]\text{,}\) but with infinitely many points to choose from this isn't very efficient.  A little better is to recognize that that can be written as a sum of two vectors like so</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=\left[ 2,3\right]=\left[ 2,0\right]+\left[ 0,3\right].
+\end{equation*}
+</div>
+<p>Best of all is to realize that this is a linear combination of our elementary vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=\left[ 2,3\right]=2\vec{e}_1+3\vec{e}_2.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:60%;"></figcaption><figcaption class="sbscaption" style="width:40%;"><span class="type">Figure</span> <span class="codenumber">2.1.2.</span> A Few Vectors</figcaption>
+</div>
+</div>
+<p id="p-92">Use what you learned in <a href="section_CAS_systems.html" class="internal" title="Section 1.4: CAS - Systems of Equations">Section 1.4</a> to recreate the image above in the Sage Cell below.  Then adjust the Sage code in the cell to create similar pictures for the points \((1,3)\text{,}\) \((-2,1)\text{,}\) and \((-3,-2)\text{.}\)  Are you convinced that you can always make this sort of picture?  Can you tell that this mens you can always write any vector as a combination of copies of the elementary vectors?</p>
+<div class="sagecell-sage" id="sage-8"><script type="text/x-sage"># Variables:
+var("x,y")
+
+# Zero and Elementary Vectors:
+zero=vector([0,0])
+e1=vector([1,0])
+e2=vector([0,1])
+
+# Data to Enter:
+v=vector([2,3])
+
+# Generate plot objects
+e1_plot=arrow(zero,e1,width=3,color="red")
+e2_plot=arrow(zero,e2,width=3,color="blue")
+v_plot=arrow(zero,v,width=3,color="purple")
+
+# Plot objects
+v_plot+e1_plot+e2_plot
+</script></div>
+<p id="p-93">Because we can always write any vector (or describe steps to any point) using copies of elementary vectors \(\vec{e}_1=[1,0]\) and \(\vec{e}_1=[1,0]\) we say that they form a <dfn class="terminology">basis</dfn>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in \(\mathbb{R}^2\) as the set</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{R}^2=\left\{a\, \vec{e}_1+b\, \vec{e}_2:a,b\in\mathbb{R}\right\}
+\end{equation*}
+</div></section><section class="subsection" id="polynomial_vectors"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">It's Not All About the Arrows</span>
+</h3>
+<a href="section_space_definitions.html#polynomial_vectors" class="permalink">¶</a><p id="p-94">Consider the set of all quadratic polynomials</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P_2}=\left\{ax^2+bx+c:a,b,c\in\mathbb{R}\right\}
+\end{equation*}
+</div>
+<p>which you should hopefully recognize as all the possible parabolas.  If we take two of these, \(v(x)=2x^2+3x\) and \(u(x)=-x^2+5\text{,}\) we can add and subtract them</p>
+<div class="displaymath">
+\begin{equation*}
+v(x)+u(x)=x^2+3x+5\ \mbox{ and }\ v(x)-u(x)=3x^2+3x-5,
+\end{equation*}
+</div>
+<p>we can multiply them by constants</p>
+<div class="displaymath">
+\begin{equation*}
+5u(x)=-5x^2+25,
+\end{equation*}
+</div>
+<p>and in fact we can take any linear combinations we would like</p>
+<div class="displaymath">
+\begin{equation*}
+-2v(x)+5u(x)=-9x^2-6x+25.
+\end{equation*}
+</div>
+<p>All of this means that we can manipulate these polynomials just like we vectors.  In fact if you look back at <a href="section_intro_vectors.html#combining_vectors" class="internal" title="Subsection 1.2.2: Combining Vectors">Subsection 1.2.2</a> you will see that the coefficients we used for \(u(x)\) and \(v(x)\) are the same as the entries we had in \(\vec{u}\) and \(\vec{v}\text{.}\)</p>
+<p id="p-95">We can take the analogy even further by setting up systems of equations involving polynomials.  For example can we find scalars \(a\) and \(b\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a\, v(x)+b\, u(x)=19x^2+21x-25?
+\end{equation*}
+</div>
+<p>Expanding the left hand side we get</p>
+<div class="displaymath">
+\begin{equation*}
+2ax^2+3ax-bx^2+5b=19x^2+21x-25
+\end{equation*}
+</div>
+<p>which gives us three equations when we compare coefficients</p>
+<div class="displaymath">
+\begin{align*}
+2ax^2-bx^2\amp = 19\\
+3ax\amp = 21\\
+5b\amp= -25.
+\end{align*}
+</div>
+<p>By inspection (i.e. just looking at it for a minute) we can see that \(a=7\) and \(b=-5\text{.}\)</p>
+<p id="p-96">Finally, one more observation.  If we let \(e_2(x)=x^2\text{,}\) \(e_1(x)=x\text{,}\) and \(e_0(x)=1\text{,}\) then we can write every possible quadratic polynomial (every parabola) as a combination of \(e_2\text{,}\) \(e_1\text{,}\) and \(e_0\text{.}\)  This means that we can define a set of elementary polynomials which we can combine to give us all the rest.  We can form a basis of polynomials.</p>
+<p id="p-97">So, these quadratic polynomials can be added like vectors, they can be subtracted like vectors, they can be multiplied by scalars like vectors, they can be put together in linear combinations like vectors, and we can solve systems of equations with them just like vectors.  Therefore, they are in a very real sense vectors.</p></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">It's Kinda All the Same</span>
+</h3>
+<article class="definition-like" id="vector_space_def"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.1.3</span>.</h6>
+<p id="p-98">a <dfn class="terminology">vector space</dfn> is a pair of sets, vectors and scalars, together with a pair of binary operations, addition and scalar multiplication, that satisfy the following conditions: if \(v\text{,}\) \(u\text{,}\) and \(w\) are vectors and \(a\) and \(b\) are scalars, then</p>
+<ul class="disc">
+<li id="li-50">\(a\,v +b\, v\) is another vector (closure)</li>
+<li id="li-51">there exists a vector 0 such that \(v+0=0+v=v\) (additive identity)</li>
+<li id="li-52">for each \(v\) there exists \(-v\) such that \(v+\, -v=-v+v=0\) (additive inverses)</li>
+<li id="li-53">there exists a scalar 1 such that \(1\, v=v\) (multiplicative identity)</li>
+<li id="li-54">\(v+u=u+v\) (commutative law)</li>
+<li id="li-55">\((v+u)+w=v+(u+w)\) and \((ab)v=a(bv)\) (associative laws)</li>
+<li id="li-56">\(a(u+v)=au+av\) and \((a+b)v=av+bv\) (distributive laws)</li>
+</ul></article><p id="p-99">As observed above the coefficients in \(v(x)=2x^2+3x\) and \(u(x)=-x^2+5\) are the same as the entries in \(\vec{v}=[2,3,0]\) and \(\vec{u}=[-1,0,5]\) in <a href="section_intro_vectors.html#combining_vectors" class="internal" title="Subsection 1.2.2: Combining Vectors">Subsection 1.2.2</a> and so we can rewrite the system we solved above as a vector equation</p>
+<div class="displaymath">
+\begin{equation*}
+a\, \vec{v}+b\, \vec{u} =
+a\left[
+\begin{array}{r}
+2\\
+3\\
+0
+\end{array}
+\right]
++
+b\left[
+\begin{array}{r}
+-1\\
+0\\
+5
+\end{array}
+\right]=
+\left[
+\begin{array}{r}
+19\\
+21\\
+-25
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>which we can solve using techniques from the previous chapter.  That is we can solve the problem as follows:</p>
+<div class="displaymath">
+\begin{align*}
+\left[
+\begin{array}{rr|r}
+2 \amp -1 \amp 19\\
+3 \amp 0 \amp 21\\
+0 \amp 5 \amp -25
+\end{array}
+\right]\amp\amp\amp
+\stackrel{\large \frac{1}{3}R_2,\, \frac{1}{5}R_3}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+2 \amp -1 \amp 19\\
+1 \amp 0 \amp 7\\
+0 \amp 1 \amp -5
+\end{array}
+\right]\\
+\amp\amp\amp
+\stackrel{\large Swap\ Rows}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 7\\
+0 \amp 1 \amp -5\\
+2 \amp -1 \amp 19
+\end{array}
+\right]\\
+\amp\amp\amp
+\stackrel{\large R_3-2R_1+R_2}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 7\\
+0 \amp 1 \amp -5\\
+0 \amp 0 \amp 0
+\end{array}
+\right]
+\end{align*}
+</div>
+<p id="p-100">What this hopefully highlights is that any two sets that satisfy <a data-knowl="./knowl/vector_space_def.html" title="Definition 2.1.3">Definition 2.1.3</a> and in some sense are the same dimension then whatever we say about one we can say about the other.  And, any visualization of one is, in a way, also a visualization of the other.</p>
+<figure class="figure-like" id="subspace_example_1"><iframe id="interactive-1" width="600" height="600" src="interactive-1-if.html"></iframe><figcaption><span class="type">Figure</span> <span class="codenumber">2.1.4.</span> Subspaces and Plains and Polynomials</figcaption></figure><p id="p-101">Every point on that plain can be written as a combination of \(\vec{v}=[2,3,0]\) and \(\vec{u}=[-1,0,5]\) and so equivalently could be the coefficients for a polynomial of the form \(f(x)=a\, v(x)+b\, u(x)\text{.}\)  In particular we see that the point \((19,21,-15)\) is on the plane.  But not all points are on the plain, for example we see that the point \((15,9,5)\) is not, this means there does not exist \(a\) and \(b\) such that \(a\, v(x)+b\, u(x)=15x^2+9x+5\) or \(a\vec{v}+b\vec{u}=[15,9,5]\text{.}\)  In fact if we try to solve for \(a\) and \(b\) in the vector equation it doesn't work:</p>
+<div class="displaymath">
+\begin{align*}
+\left[
+\begin{array}{rr|r}
+2 \amp -1 \amp 15\\
+3 \amp 0 \amp 9\\
+0 \amp 5 \amp 5
+\end{array}
+\right]\amp\amp\amp
+\stackrel{\large \frac{1}{3}R_2,\, \frac{1}{5}R_3}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+2 \amp -1 \amp 15\\
+1 \amp 0 \amp 3\\
+0 \amp 1 \amp -1
+\end{array}
+\right]\\
+\amp\amp\amp
+\stackrel{\large Swap\ Rows}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 3\\
+0 \amp 1 \amp -1\\
+2 \amp -1 \amp 15
+\end{array}
+\right]\\
+\amp\amp\amp
+\stackrel{\large R_3-2R_1+R_2}{\Huge \leadsto}\amp\amp
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 3\\
+0 \amp 1 \amp -1\\
+0 \amp 0 \amp 8
+\end{array}
+\right]
+\end{align*}
+</div>
+<p>which implies \(0=8\text{,}\) which is nonsense.  We say then that all the linear combinations of \(\vec{v}\) and \(\vec{u}\) form a <dfn class="terminology">subspace</dfn>, that is they form a vector space of their own, but don't give you every possible point.</p></section><section class="conclusion" id="conclusion-4"><h6 class="heading">Section Vocabulary.<span></span>
+</h6>
+<p id="p-102">Vector Space, Subspace</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

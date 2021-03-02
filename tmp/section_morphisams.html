@@ -1,0 +1,373 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Isomorphisms and Homomorphisms of Vector Spaces</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="transformations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_matrix_operations.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="transformations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_matrix_operations.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams" class="active">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_morphisams"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Isomorphisms and Homomorphisms of Vector Spaces</span>
+</h2>
+<a href="section_morphisams.html" class="permalink">¶</a><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Homorphisms and Functions</span>
+</h3>
+<article class="definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1.1</span>.</h6>
+<p id="p-161"> A <dfn class="terminology">function</dfn> is a relation, call it \(A\text{,}\) from one set called the <em class="emphasis">domain</em>, \(X\text{,}\) to another set called the <em class="emphasis">codomain</em>, \(Y\) such that</p>
+<ul class="disc">
+<li id="li-77">\(\forall x\in X,\ \exists y\in Y:\ A(x)=y\)</li>
+<li id="li-78">\(\forall x\in X:\) if \(y_1=A(x)\) and \(y_2=A(x)\text{,}\) then \(y_1=y_2\text{.}\)</li>
+</ul>
+<p>If in addition we know that \(A(ax+by)=a\, A(x)\, +\, b\, A(y)\) we say that the function is a <dfn class="terminology">homomorphism</dfn>, or that it is a <dfn class="terminology">linear map</dfn>.</p></article><article class="project-like" id="basic_linear_exmaple"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.1.1</span>. <span class="title">Something Linear.</span>
+</h6>
+<p id="p-162">Let \(f:\mathbb{R}\rightarrow\mathbb{R}\) be defined by \(f(x)=-7x\) and let's see that this is linear.  First, since both the input and output for the function comes from \(\mathbb{R}\) that is the domain and the codomain.  If \(x=ax_1+bx_2\text{,}\) then we get</p>
+<div class="displaymath">
+\begin{align*}
+f(x)\amp = f\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ x\\
+\amp = -7\left(ax_1+bx_2\right)\amp\amp \mbox{definition of}\ f\\
+\amp = -7ax_1-7bx_2 \amp\amp \mbox{distributive property}\\
+\amp = a\left(-7x_1\right)+b\left(-7x_2\right) \amp\amp \mbox{commutative property}\\
+\amp = af\left(x_1\right)+bf\left(x_2\right)\amp\amp \mbox{definition of}\ f
+\end{align*}
+</div>
+<p>Therefore, \(f(x)\) satisfies the definition of a homomorphism (linear function).</p></article><article class="project-like" id="derivative_of_cubic"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.1.2</span>. <span class="title">Also Linear.</span>
+</h6>
+<p id="p-163">Let \(d:\mathcal{P}_3\rightarrow\mathcal{P}_3\) be defined by \(d(f)=3ax^2+2bx+c\) and let's see that this too is linear.  First, since both the input and output for the function comes from \(\mathcal{P}_3\) that is the domain and the codomain.  If \(f(x)=a_1x^3+b_1x^2+c_1x+d_1\) and \(g(x)=a_2x^3+b_2x^2+c_2x+d_2\text{,}\) then we get</p>
+<div class="displaymath">
+\begin{equation*}
+(f+g)(x)=f(x)+g(x)=(a_1+a_2)x^3+(b_1+b_2)x^2+(c_1+c_2)x+(d_1+d_2)
+\end{equation*}
+</div>
+<p>and when we apply the function \(d\)</p>
+<div class="displaymath">
+\begin{align*}
+d(f+g)\amp = 3(a_1+a_2)x^2+2(b_1+b_2)x+(c_1+c_2) \amp\amp \mbox{definition of}\ d\\
+\amp = 3a_1x^2+3a_2x^2+2b_1x+2b_2x+c_1+c_2\amp\amp \mbox{distributive property}\\
+\amp = (3a_1x^2+2b_1x+c_1)+(3a_2x^2+2b_2x+c_2) \amp\amp \mbox{commutative property}\\
+\amp = d(f)+d(g) \amp\amp \mbox{definition of}\ d
+\end{align*}
+</div>
+<p>Therefore, \(d\) satisfies the definition of a homomorphism (linear function).</p></article><article class="project-like" id="vector_map_eg1"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.1.3</span>. <span class="title">Something with Vectors.</span>
+</h6>
+<p id="p-164">Define \(T:\mathbb{R}^3\rightarrow\mathbb{R}^2\) by</p>
+<div class="displaymath">
+\begin{equation*}
+T\left(
+\begin{array}{c}
+x \\ y \\ z
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+x+z \\ y+z
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>For example:</p>
+<div class="displaymath">
+\begin{equation*}
+T\left(
+\begin{array}{c}
+1 \\ 0 \\ 1
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+2 \\ 1
+\end{array}
+\right)\mbox{ or }
+T\left(
+\begin{array}{r}
+3 \\ 1 \\ 5
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+8 \\ 6
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>This is a linear map since</p>
+<div class="displaymath">
+\begin{align*}
+T\left(
+\begin{array}{c}
+x_1+x_2 \\ y_1+y_2 \\ z_1+z_2
+\end{array}
+\right)\amp =
+\left(
+\begin{array}{c}
+x_1+x_2+z_1+z_2 \\ y_1+y_2+z_1+z_2
+\end{array}
+\right)\\
+\amp =\left(
+\begin{array}{c}
+x_1+z_1 \\ y_1+z_1
+\end{array}
+\right)+
+\left(
+\begin{array}{c}
+x_2+z_2 \\ y_2+z_2
+\end{array}
+\right)\\
+\amp=
+T\left(
+\begin{array}{c}
+x_1 \\ y_1 \\ z_1
+\end{array}
+\right)+
+T\left(
+\begin{array}{c}
+x_2 \\ y_2 \\ z_2
+\end{array}
+\right)
+\end{align*}
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/r3_basis.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/r2_basis_with_diagonal.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">3.1.2.</span> Basis for \(\mathbb{R}^3\)</figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">3.1.3.</span> Transformation of the basis for \(\mathbb{R}^3\) by \(T\)</figcaption>
+</div>
+</div></article><article class="project-like" id="line_not_linear"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.1.4</span>. <span class="title">Surprisingly Not Linear.</span>
+</h6>
+<p id="p-165">Let \(f:\mathbb{R}\rightarrow\mathbb{R}\) be defined by \(f(x)=x+1\) and let's see that this is not linear.  Since we want to see that something is not the case we just need a counter example.  If \(x=1\) and \(y=2\) then</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)+f(y)=f(1)+f(2)=2+3=5,
+\end{equation*}
+</div>
+<p>but</p>
+<div class="displaymath">
+\begin{equation*}
+f(x+y)=f(3)=4
+\end{equation*}
+</div>
+<p>so that \(f(x)+f(y)\neq f(x+y)\text{,}\) i.e. \(f\) is not linear.  This may be surprising since \(f(x)=x+1\) is a line, but this is what is called an <dfn class="terminology">affine map</dfn> since it is the sum of a linear map and a constant.</p></article></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Isomorphisms (one-to-one and onto)</span>
+</h3>
+<article class="definition-like" id="one_to_one_onto"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1.4</span>.</h6>
+<p id="p-166">A function \(f:V\rightarrow W\) is <dfn class="terminology">one-to-one</dfn> if for all \(v_1,v_2\in V\text{,}\) \(f(v_1)=f(v_2)\) implies \(v_1=v_2\text{.}\)  The function is <dfn class="terminology">onto</dfn> if for all \(w\in W\) there exists \(v\in V\) such that \(f(v)=w\text{.}\) A function which is both is called an <dfn class="terminology">isomorphism</dfn>.</p></article><p id="p-167">Looking back at <a data-knowl="./knowl/basic_linear_exmaple.html" title="Investigation 3.1.1: Something Linear">Investigation 3.1.1</a> the function is an isomorphism. If \(-7x_1=-7x_2\text{,}\) then \(x_1=x_2\) and \(f\) is one-to-one.  Also, for any \(y\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+y=-7\left(-\frac{1}{7}y\right)
+\end{equation*}
+</div>
+<p>so that when \(x=-\frac{1}{7}y\) we get \(f(x)=y\) and \(f\) is onto.</p>
+<p id="p-168">In <a data-knowl="./knowl/derivative_of_cubic.html" title="Investigation 3.1.2: Also Linear">Investigation 3.1.2</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+d(x^3+7)=d(x^3-9)
+\end{equation*}
+</div>
+<p>so that \(d\) is not 1-1. Also, for all cubics the output of \(d\) is a quadratic so it is not onto, nothing gives the output \(x^3\text{.}\)</p>
+<p id="p-169">Finally, in <a data-knowl="./knowl/vector_map_eg1.html" title="Investigation 3.1.3: Something with Vectors">Investigation 3.1.3</a> the map is onto but not 1-1.  We could set up systems of equations and show this (and you should try that on your own), but it is better to try and understand this intuitively.  The map \(T\) maps three dimensions onto two.  Since the output of the map, the <dfn class="terminology">image</dfn>, has more than two different vectors it is onto.  But, since we are squeezing three dimensions down to two it can't be 1-1.<a data-knowl="" class="id-ref" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a><span id="hk-fn-2" class="hidden-content tex2jax_ignore"><span class="footnote">This is a very imprecise way of looking at it but it is good a good visual.</span></span></p></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Kernel, Domain, and Image</span>
+</h3>
+<article class="definition-like" id="kernel"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1.5</span>.</h6>
+<p id="p-170">The <dfn class="terminology">Kernel</dfn> of a transformation \(T:V\rightarrow W\) is the set of all \(\vec{v}\in V\) such that \(T(\vec{v})=\vec{0}\text{.}\)  A transformation is one-to-one if and only if the kernel contains only the zero vector.</p></article><p id="p-171">Above in <a data-knowl="./knowl/vector_map_eg1.html" title="Investigation 3.1.3: Something with Vectors">Investigation 3.1.3</a> any vector of the form \(\vec{v}=\left\lt-z,-z,z\right\gt\) maps to \(\left\lt 0,0\right\gt\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+T\left(
+\begin{array}{c}
+-z \\ -z \\ z
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+-z+z \\ -z+z
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+0 \\ 0
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>And so we could show that the kernel of \(T\) is \(span\left\{\left\lt-1,-1,1\right\gt\right\}\text{.}\)  Significantly, we can use this to rewrite every element of the domain as</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{r}
+x\\ y \\z
+\end{array}
+\right) = 
+\left(
+\begin{array}{r}
+x+z\\ y+z \\0
+\end{array}
+\right) + 
+\left(
+\begin{array}{r}
+-z\\ -z \\z
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that it is the sum of something in the kernel and something that is not in the kernel unless it happens that \(x=y=-z\text{.}\)  This is a small example of a much more general truth, and we will use this later when we discuss orthogonal projections and curve fitting.</p>
+<p id="p-172">As a final note you can see that the non-kernel piece of the above vector looks just like the image (or output) of the transformation:</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{r}
+x+z\\ y+z \\0
+\end{array}
+\right)\ \mbox{ versus }
+\left(
+\begin{array}{r}
+x+z\\ y+z
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>This too is a part of the a larger picture and it tells us that in a sense the non-kernel portion of the domain is isomorphic to the image of the transformation.</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

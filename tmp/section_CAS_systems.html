@@ -1,0 +1,319 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CAS - Systems of Equations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_vectors_equations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_supplement_systems.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_vectors_equations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_supplement_systems.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems" class="active">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_CAS_systems"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">CAS - Systems of Equations</span>
+</h2>
+<a href="section_CAS_systems.html" class="permalink">¶</a><article class="objectives" id="objectives-2"><h6 class="heading"><span class="type">Objectives</span></h6>
+<ul class="disc">
+<li id="li-7">Input vectors and matrices</li>
+<li id="li-8">Multiply matrices and vectors</li>
+<li id="li-9">plot vectors in two and three dimensions</li>
+<li id="li-10">perform elementary row operations</li>
+<li id="li-11">solve systems of equations</li>
+<li id="li-12">enter comments so that your code can be understood</li>
+<li id="li-13">get help</li>
+</ul></article><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">A Few Basic Commands</span>
+</h3>
+<p id="p-66">Vectors are entered into sage like so:</p>
+<pre class="code-block tex2jax_ignore">v=vector([7,-1])</pre>
+<p>And matrices like this:</p>
+<pre class="code-block tex2jax_ignore">A=matrix([[2,3],[4,5]])</pre>
+<p>Finish entering the vector and matrix in the <dfn class="terminology">Sage Cell</dfn>, then hit <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<div class="sagecell-sage" id="sage-5"><script type="text/x-sage"># Enter data here:
+v=vector(...) # use the values provided
+A=matrix(...) # use the values provided
+u=vector([3,-1]) # enter another vector of your choice
+a=7 # enter any number
+b=-2 # enter any number
+
+
+# Perform some simple operations:
+Av_product = A*v
+vA_product = v*A
+linear_combo = a*v+b*u
+
+print A,v,"=",Av_product
+pretty_print(A,v,"=",Av_product)
+
+print v,A,"=",vA_product
+pretty_print(v,A,"=",vA_product)
+
+print("av+bu=",linear_combo)
+pretty_print("av+bu=",linear_combo)
+</script></div>
+<p id="p-67"><em class="alert">Comments and Comprehension Check</em></p>
+<ul class="disc">
+<li id="li-14">Looking at the output what is the difference between <code class="code-inline tex2jax_ignore">print</code> and <code class="code-inline tex2jax_ignore">pretty_print</code>?</li>
+<li id="li-15">In <code class="code-inline tex2jax_ignore">pretty_print(A,v,"=",Av_product)</code> it actually prints the values for the matrix and vector, but in <code class="code-inline tex2jax_ignore">pretty_print("av+bu=",linear_combo)</code> it prints the letters, what is the difference in how these were entered?</li>
+<li id="li-16">Sage is a little sloppy with its vectors, it always writes them horizontally.  In one of the print commands change <code class="code-inline tex2jax_ignore">v</code> to <code class="code-inline tex2jax_ignore">matrix(v).transpose()</code>, what happens?</li>
+<li id="li-17">Try adding these lines to the end and re-evaluating the cell:<pre class="code-block tex2jax_ignore">
+                            print type(A)
+                            print type(v)
+                            print type(Av_product)
+                            print type(vector(A))
+                            print type(matrix(v))
+                        </pre>What does the <code class="code-inline tex2jax_ignore">type</code> command tell you? What happens when you put a matrix inside the <code class="code-inline tex2jax_ignore">vector</code> command or vice versa?</li>
+<li id="li-18">Reload the page and click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> without filling in the missing values, based on what you know should happen try to make some sense of the error messages.</li>
+<li id="li-19">What happens if you put a <code class="code-inline tex2jax_ignore">#</code> in front of a line of text?</li>
+</ul></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">The Big Picture</span>
+</h3>
+<p id="p-68">Next let's get a handle on visualizing our vectors and systems of equations, go ahead and click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> to begin.</p>
+<div class="sagecell-sage" id="sage-6"><script type="text/x-sage"># Enter data here:
+var("x,y,z")
+variable_vector=vector([x,y,z])
+zero=vector([0,0,0])
+v=vector([3,2,-1])
+u=vector([17,3,-1])
+R=matrix([[cos(pi/4),sin(pi/4),0],[-sin(pi/4),cos(pi/4),0],[0,0,1]])
+
+# Create the equation for a plain perpendicular to v
+plain_equation = v.dot_product(variable_vector)==2
+pretty_print(plain_equation)
+
+# Generate plot objects
+plain_plot=implicit_plot3d(plain_equation,(x,-5,5),(y,-5,5),(z,-5,5),color="orangered",opacity=0.5)
+v_plot=arrow(zero,v,width=5,arrowhead=10,color="blue")
+u_plot=arrow(zero,u,width=5,arrowhead=10,color="green")
+
+# Plot objects
+plain_plot+v_plot
+</script></div>
+<p id="p-69"><em class="alert">Comments and Comprehension Check</em></p>
+<ul class="disc">
+<li id="li-20">The first thing you should try is clicking and dragging on the image, what happens?  What if click on the image and then scroll?</li>
+<li id="li-21">Try changing some of the parameters in the plot commands, like <code class="code-inline tex2jax_ignore">width</code>, <code class="code-inline tex2jax_ignore">color</code>, or <code class="code-inline tex2jax_ignore">(x,-5,5)</code>, what happens when you re-evaluate?</li>
+<li id="li-22">Following the example of <code class="code-inline tex2jax_ignore">v_plot</code> and <code class="code-inline tex2jax_ignore">u_plot</code> create an arrow plot of the vector \(R\vec{v}\) with the matrix \(R\) provided.</li>
+<li id="li-23">Looking at how the plain and the vector \(\vec{v}\) are plotted, try and add the plots of \(\vec{u}\) and \(R\vec{v}\) to the picture.</li>
+<li id="li-24">Add the command <code class="code-inline tex2jax_ignore">implicit_plot3d?</code> to the end of the cell and re-evaluate, what happens?</li>
+<li id="li-25">Now try the same with <code class="code-inline tex2jax_ignore">arrow?</code>, what do you get?  What should you type in if your looking for a three dimensional arrow?</li>
+</ul></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Solving Equations</span>
+</h3>
+<p id="p-70">We can use sage to find solutions to the sorts of systems of equations we have been working on, only it can do the heavy lifting.  Let us start with the homogeneouos system:</p>
+<div class="displaymath">
+\begin{align*}
+3x+y-z\amp =0\\
+-x+7y\amp =0\\
+2x+8y-z\amp =0
+\end{align*}
+</div>
+<p>Enter the corresponding matrix of coefficients, vector of variables, and zero vector, then click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<div class="sagecell-sage" id="sage-7"><script type="text/x-sage">#
+# Enter data here, note that all the vectors 
+# should have three entries and the matrix 
+# should have dimensions 3x3:
+#
+
+# variables and variable vector
+var('x,y,z')
+variable_vector=vector([...])
+
+# zero vector
+zero=vector([...])
+
+# coefficient matrix
+A=matrix([...])
+pretty_print("A=",A)
+
+# solving the equations
+
+# step 0
+Az = A.augment(zero)
+pretty_print(LatexExpr("[A|0]="),Az)
+
+# step 1
+Az.swap_rows(0,1)
+pretty_print(LatexExpr("\leadsto"),Az)
+
+# step 2
+Az.rescale_row(0,-1)
+pretty_print(LatexExpr("\leadsto"),Az)
+
+# step 3
+Az.add_multiple_of_row(1,0,-3)
+Az.add_multiple_of_row(2,0,-2)
+pretty_print(LatexExpr("\leadsto"),Az)
+
+
+# A Quicker Way?
+#A.solve_right?
+#A.rref()
+
+# corresponding vectors for a vector equation
+#A1 = A.column(0)
+#A2 = A.column(1)
+#A3 = ...
+
+# Generate plot objects
+#A1_plot = arrow(zero,A1,width=5,arrowhead=10,color="blue")
+#A2_plot = arrow(zero,A2,width=5,arrowhead=10,color="green")
+#A3_plot = ...
+#var('t,s')
+#plain_plot = parametric_plot3d(A1*t+A2*s,(t,-1,1),(s,-1,1))
+
+# Plot objects
+#A1_plot+A2_plot+plain_plot+A3_plot
+</script></div>
+<p id="p-71"><em class="alert">Comments and Comprehension Check</em></p>
+<ul class="disc">
+<li id="li-26">Look carefully at the output; what are the effects of the commands <code class="code-inline tex2jax_ignore">augment</code>, <code class="code-inline tex2jax_ignore">swap_rows</code>, <code class="code-inline tex2jax_ignore">rescale_row</code>, and <code class="code-inline tex2jax_ignore">add_multiple_of_row</code>?</li>
+<li id="li-27">Using the row commands you just looked at, finish row reducing the matrix to row echelon form in order to find all the possible solutions.</li>
+<li id="li-28">Now uncomment <code class="code-inline tex2jax_ignore">#A.solve_right?</code> and learn to use the <code class="code-inline tex2jax_ignore">solve_right</code> command.  How do these results compare to what you found using row reduction?</li>
+<li id="li-29">Next try the same with <code class="code-inline tex2jax_ignore">#A.solve_right</code>?</li>
+<li id="li-30">Finally look at the situation graphically.  Start by uncommenting the lines where it says <code class="code-inline tex2jax_ignore">#A1 = A.column(0)</code> and <code class="code-inline tex2jax_ignore">#A2 = A.column(1)</code> and re-evaluating the Sage Cell.  What do these commands do?  If you are unsure try using the command <code class="code-inline tex2jax_ignore">A.column?</code> to get help.</li>
+<li id="li-31">Plot the vectors <code class="code-inline tex2jax_ignore">A1</code>, <code class="code-inline tex2jax_ignore">A2</code>, and <code class="code-inline tex2jax_ignore">A3</code> along with the plane whose plot is defined parametrically with <code class="code-inline tex2jax_ignore">parametric_plot3d(A1*t+A2*s,(t,-1,1),(s,-1,1))</code>.  What do you notice about the three vectors and the plane?  How does this relate to the solutions for this system?</li>
+</ul></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

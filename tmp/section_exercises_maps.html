@@ -1,0 +1,244 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Homework Exercises on Linear Transformations and Projections</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_supplement_spaces.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-4.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_supplement_spaces.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps" class="active">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="exercises" id="section_exercises_maps"><h2 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.8</span> <span class="title">Homework Exercises on Linear Transformations and Projections</span>
+</h2>
+<a href="section_exercises_maps.html" class="permalink">¶</a><section class="introduction" id="introduction-9"><p id="p-232"><em class="alert">Homework Exercises:</em></p>
+<p id="p-233">These exercises are here to check your deeper conceptual understanding of the material and your ability to problem solve; they are not skill drills.  As such they are for homework and not test preparation, they would be far to long for an exam.  You need to complete each problem to the best of your ability.  Every answer you give needs to be your own work, needs to be written neatly on lined paper or typed, and at least the final answer for each should be a complete sentence.  Do not include a copy of the question with your solution, that is not needed to convey your thoughts clearly.</p>
+<p id="p-234"></p></section><article class="exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-235">Let \(T:\mathbb{R}^n\rightarrow\mathbb{R}^m\) be a linear transformation, and let \(\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3\right\}\) be a linearly dependent set.  Show that the set \(\left\{T(\vec{v}_1),T(\vec{v}_2),T(\vec{v}_3)\right\}\) is also necessarily linearly dependent.</p>
+<p id="p-236">For bonus points, try to construct an example of a transformation such that \(\left\{\vec{v}_1,\vec{v}_2,\vec{v}_3\right\}\) is linearly independent but \(\left\{T(\vec{v}_1),T(\vec{v}_2),T(\vec{v}_3)\right\}\) is linearly dependent.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span></a><div id="hk-hint-6" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-237">You will need to use the definitions of linearly dependent and linear transformation to answer this.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-238">Define a transformation \(T:\mathcal{P}_2\rightarrow\mathbb{R}^2\) by</p>
+<div class="displaymath">
+\begin{equation*}
+T(p)=\left(\begin{array}{l}p(1)\\ p(2)\end{array}\right).
+\end{equation*}
+</div>
+<p>For instance if \(p(t)=t^2+3t\) then</p>
+<div class="displaymath">
+\begin{equation*}
+T(p)=\left(\begin{array}{l}p(1)\\ p(2)\end{array}\right)=\left(\begin{array}{r}4\\ 10\end{array}\right).
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-79">First show that \(T\) is a linear map.</li>
+<li id="li-80">Next, find a polynomial \(p\) which spans the kernel (null space) of \(T\)</li>
+<li id="li-81">Finally, show that the range of \(T\text{,}\) not just the codomain, is equal to all of \(\mathbb{R}^2\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div id="hk-hint-7" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-239">You will need to work with the definitions of span, kernel, and linear transformation.  Also, to get a handle on the third part of the problem start out by showing that there is a quadratic polynomial such that \(T(p)=(2,3)\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-240">Show that</p>
+<div class="displaymath">
+\begin{equation*}
+T(x_1,x_2,x_3,x_4)=3x_1-7x_2+5x_4
+\end{equation*}
+</div>
+<p>is a linear transformation by finding the matrix for the transformation.  Then find a basis for the null space of the transformation.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div id="hk-hint-8" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-241">Note that \(T:\mathbb{R}^4\rightarrow\mathbb{R}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-242">Let</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp -3 \\
+-4 \amp 6
+\end{array}
+\right),\ 
+B=\left(
+\begin{array}{rr}
+8 \amp 4 \\
+5 \amp 5
+\end{array}
+\right),\ \mbox{ and }
+C=\left(
+\begin{array}{rr}
+5 \amp -2 \\
+3 \amp 1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and verify that \(AB=AC\) even though \(B\neq C\text{.}\) (The matrix \(A\) is sometimes called a <dfn class="terminology">zero divisor</dfn>.)</p>
+<p id="p-243">Show that, in general for any matrices, if \(DE=DF\) and \(D\) is an invertible matrix, then \(E=F\text{.}\)</p>
+<p id="p-244">Finally, use what you have done to argue that a matrix can be invertible or a zero divisor but it can't be both.</p></article><article class="exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-245">Suppose that \(W\) is a subspace of \(\mathbb{R}^n\) spanned by \(n\) orthogonal vectors.  Show that \(W=\mathbb{R}^n\) or equivalently the vectors which span \(W\) will form a basis for \(\mathbb{R}^n\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div id="hk-hint-9" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-246">You have to use the definitions of span and basis, and think in terms of work we did in the previous to units.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-247">Find an orthogonal basis for the row space of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rrrr}
+1 \amp 0 \amp 5 \amp -2\\
+0 \amp 2 \amp 1 \amp 7 \\
+3 \amp 2 \amp 16 \amp 1\\
+-1 \amp 3 \amp 0 \amp 0
+\end{array}
+\right).
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div id="hk-hint-10" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-248">First find the row space and then find the orthogonal basis, you will need to use the Gram-Schmidt Process.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-249">Let \(\left\{\vec{u}_1,\vec{u}_2,\ldots,\vec{u}_p\right\}\) be an orthogonal basis for a subspace \(W\) of \(\mathbb{R}^n\text{,}\) and let \(T:\mathbb{R}^n\rightarrow\mathbb{R}^n\) be defined by</p>
+<div class="displaymath">
+\begin{equation*}
+T(\vec{x})=proj_W(\vec{x}).
+\end{equation*}
+</div>
+<p>Show that \(T\) is a linear transformation.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div id="hk-hint-11" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-250">You need to use the definition of linear transformation and the properties of a dot product, as well as projection onto a subspace.</p></div></div>
+</div></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

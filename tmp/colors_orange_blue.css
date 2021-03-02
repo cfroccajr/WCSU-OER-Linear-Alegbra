@@ -1,0 +1,53 @@
+
+
+
+:root {
+/*
+  Official WCSU Primary and Scondary Colors
+
+  Starburst Orange: #FF4D00;
+  Deep Blue: #002856;
+  Light Blue: #003DA6;
+  Really Deep Blue: #051C2C;
+  Cool Gray: #D9D8D6;
+*/
+
+  --s-orange:#FF4D00;
+  --d-blue:#002856;
+  --l-blue: #003DA6;
+  --rd-blue: #051C2C;
+  --c-gray: #D9D8D6;
+
+  --documenttitle: var(--l-blue);
+  --bodytitle: var(--rd-blue);  /* often a darker version of documenttitle  */
+  --bodysubtitle: var(--rd-blue);  /* can be the same as bodytitle  */
+  --bodytitlehighlight: var(--l-blue);  /* light, and contrasting to bodytitle  */
+  --bodysubtitlehighlight: var(--l-blue);  /* light, and contrasting to bodysubtitle  */
+     /*
+       The bodytitle and bodysubtitle colors must have at least a 3:1 contrast
+       ratio with black, and at least 5:1 ratio with with the corresponding highlight.
+       (The second condition will guarantee an adequate contrast with white.)
+     */
+
+  --chaptertoc: var(--s-orange);
+  --chaptertoctext: var(--d-blue);
+  --chaptertocactive: var(--d-blue);   /* often the same as documenttitle */
+  --chaptertoctextactive: white;
+  --sectiontoc: var(--c-gray);   /* can also write it as #ffffff  */
+  --sectiontoctext: var(--d-blue);
+  --sectiontocactive: var(--d-blue);   /* often the same as documenttitle */
+  --sectiontoctextactive: var(--l-blue);
+  --tocborder: var(--s-orange);
+
+  --highlighttoc: var(--l-blue);   /* often a dark version of documenttitle */
+  --highlighttoctext: white;
+  --highlighttocborder: var(--l-blue);
+
+  --videoplay: var(--bodytitle);
+  --assemblageborder: var(--bodytitle);
+  --assemblagebackground: var(--c-gray);
+
+  --knowlborder: var(--bodytitlehighlight);
+  --knowlbackground: var(--assemblagebackground);
+}
+

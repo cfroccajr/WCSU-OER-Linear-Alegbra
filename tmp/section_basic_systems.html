@@ -1,0 +1,664 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solving Linear Systems</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="systems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_intro_vectors.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="systems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_intro_vectors.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems" class="active">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_basic_systems"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Solving Linear Systems</span>
+</h2>
+<a href="section_basic_systems.html" class="permalink">¶</a><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Some Initial Thoughts</span>
+</h3>
+<article class="project-like" id="system-example1"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">1.1.1</span>. <span class="title">A 20% Solution (A First Simple Example).</span>
+</h6>
+<p id="p-3">Statement:</p>
+<p id="p-4">Given a solution which it 75% alcohol (call it \(A\)) and distilled water (call it \(W\)) mix one liter of solution with a concentration of 20% alcohol.</p>
+<p id="p-5">Analysis:</p>
+<p id="p-6">Total solution 1 liter:</p>
+<div class="displaymath">
+\begin{equation*}
+A+W=1
+\end{equation*}
+</div>
+<p>Total alcohol in solution 0.2 liters (20%):</p>
+<div class="displaymath">
+\begin{equation*}
+0.75A=0.2
+\end{equation*}
+</div>
+<p id="p-7">Solution 1:</p>
+<p id="p-8">From the second equation we derive:</p>
+<div class="displaymath">
+\begin{equation*}
+A=20/75=4/15\approx 0.267
+\end{equation*}
+</div>
+<p>Substituted into the first equation this gives:</p>
+<div class="displaymath">
+\begin{equation*}
+4/15+W=1
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+W=11/15\approx0.733
+\end{equation*}
+</div>
+<p>So, a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.</p>
+<p id="p-9">Solution 2:</p>
+<p id="p-10">Consider the equations together:</p>
+<div class="displaymath">
+\begin{align*}
+\amp A +  W \amp \amp= \amp \amp 1\\
+0.75  \amp A      \amp \amp= \amp 0.\amp2
+\end{align*}
+</div>
+<p>When we do this we refer to the set of equations as a <dfn class="terminology">system of equations</dfn> and the \(A\) and \(W\) as the <dfn class="terminology">unknowns</dfn>. Subtracting 0.75 of the first from the second we get:</p>
+<div class="displaymath">
+\begin{equation*}
+-0.75 W = -0.55
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+W = 55/75 \approx 0.733
+\end{equation*}
+</div>
+<p>As before, using the second equation or substitution, we get \(A=20/75\approx 0.267\) so that a solution containing 267 milliliters of the original alcohol solution and 733 milliliters of the distilled water will yield 1 liter of a 20% alcohol solution.</p>
+<p id="p-11">Both of the above are examples of what can termed <dfn class="terminology">elimination and back substitution</dfn>.  The goal being to isolate one variable to find its value, and then work back from there to find the values of the rest.  This is a quick easy way to find solutions when there are only two variables, but it becomes cumbersome as soon as there are three or more.</p></article><article class="project-like" id="system-example2"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">1.1.2</span>. <span class="title">Name the Parabola (A Not So Simple Example).</span>
+</h6>
+<p id="p-12">Statement:</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-13">Given a parabola with a \(y\) intercept of 7, which passes through the point (1,6), and has a slope of 8 at \(x=-1\) find the coefficients \(a,b,c\) in \(y=ax^2+bx+c\text{.}\)</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/perry_parabola.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/perry_parabola.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">1.1.1.</span> A Parabola?</figcaption>
+</div>
+</div>
+<p id="p-14">Analysis:</p>
+<p id="p-15">First if we let \(f(x)=ax^2+bx+c\text{,}\) so that its derivative is \(f'(x)=2ax+b\text{,}\) then from the information given we know:</p>
+<div class="displaymath">
+\begin{align*}
+f(1) \amp = \amp a+b+c \amp = 6\\
+f'(-1) \amp = \amp -2a +b \amp = 8 \\
+f(0) \amp = \amp c \amp = 7 
+\end{align*}
+</div>
+<p>giving us a system of three equations and three unknowns.</p>
+<p id="p-16">Solution 1:</p>
+<p id="p-17">Using elimination and back substitution we first see that \(c=7\text{.}\)  Then plugging that into the first equation above we can simplify the problem to solving:</p>
+<div class="displaymath">
+\begin{align*}
+a+b \amp = -1\\
+-2a +b \amp = 8 
+\end{align*}
+</div>
+<p>We can now subtract the second equation from the first to find \(3a=-9\) or \(a=-3\text{.}\)  Finally, substituting this value for \(a\) into either of the previous equations we derive \(b=2\text{.}\)  Thus using the information given we know that the desired parabola is given by \(f(x)=-3x^2+2x+7\text{.}\)</p>
+<p id="p-18">Solution 2:</p>
+<p id="p-19">Alternately, we can use mostly just elimination.  If we consider our original equations</p>
+<div class="displaymath">
+\begin{align*}
+a+b+c \amp = 6\\
+-2a +b \amp = 8 \\
+c \amp = 7 
+\end{align*}
+</div>
+<p>then we might first subtract row three from row one, eliminating the \(c\text{.}\)  This reduces our system to</p>
+<div class="displaymath">
+\begin{align*}
+a+b \amp = -1\\
+-2a +b \amp = 8 \\
+c \amp = 7 
+\end{align*}
+</div>
+<p>which we can similarly reduce by subtracting the second row from the first</p>
+<div class="displaymath">
+\begin{align*}
+3a  \amp = -9\\
+-2a +b \amp = 8 \\
+c \amp = 7 
+\end{align*}
+</div>
+<p>Finally, we simplify the first row by dividing by 3 (giving \(a=-3\)) and then add two copies of that to the second row to get</p>
+<div class="displaymath">
+\begin{align*}
+a  \amp = -3\\
+b \amp = 2 \\
+c \amp = 7 
+\end{align*}
+</div>
+<p>Thus arriving at the same solution.  Again, using the information given we know that the desired parabola is given by \(f(x)=-3x^2+2x+7\text{.}\)</p>
+<p id="p-20">Solution 3:</p>
+<p id="p-21">Notice that in the work above the variables \(a,b,c\text{,}\) the equal signs, and even the plus signs served no purpose, they just kept things neat.  All that really mattered were the coefficients and constant values to the right of the equals.  This hints at a better solution.  Consider the following array containing just the coefficients from the system of equations</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr|r}
+1 \amp 1 \amp 1 \amp 6 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>which we will call an <dfn class="terminology">augmented matrix</dfn> (note that the left hand portion is called the <dfn class="terminology">coefficient matrix</dfn> for this system).  Now let us perform all the same steps we used in the solution above, only now with the matrix.</p>
+<p id="p-22">First we subtract the third row from row one</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp 1 \amp 1 \amp 6 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\stackrel{R_1-R_3}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 1 \amp 0 \amp -1 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>We can reduce this further by subtracting the second row from the first</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp 1 \amp 0 \amp -1 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\stackrel{R_1-R_2}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+3 \amp 0 \amp 0 \amp -9 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Now we can divide row one by 3</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+3 \amp 1 \amp 0 \amp -9 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\stackrel{\frac{1}{3}R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp -3 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>and add two copies of this to the second row to get</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp -3 \\
+-2 \amp 1 \amp 0 \amp 8 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right]
+\stackrel{R_2+2R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp -3 \\
+0 \amp 1 \amp 0 \amp 2 \\
+0 \amp 0 \amp 1 \amp 7
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Following the same steps as before we get the same answer, that is using the information given we know that the desired parabola is given by \(f(x)=-3x^2+2x+7\text{.}\)</p></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Further Examples</span>
+</h3>
+<p id="p-23">Take a look at the next few examples to get a feel for what happens when you have different combinations of equations and unknowns.</p>
+<article class="example-like" id="system-example3"><a data-knowl="" class="id-ref" data-refid="hk-system-example3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.2</span>. <span class="title">Another Plane but not so Simple Example.</span>
+</h6></a></article><div id="hk-system-example3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-24">Statement:</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;">
+<p id="p-25">Given three planes:</p>
+<div class="displaymath">
+\begin{equation*}
+2x+3y-z=1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+-2x+y+z=1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+y-z=1
+\end{equation*}
+</div>
+<p>find the point \((x,y,z)\) at which all three intersect.</p>
+</div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="images/triple_planes.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/triple_planes.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<figcaption class="sbscaption" style="width:44.4444444444444%;"></figcaption><figcaption class="sbscaption" style="width:44.4444444444444%;"><span class="type">Figure</span> <span class="codenumber">1.1.3.</span> Planes</figcaption>
+</div>
+</div>
+<p id="p-26">Solution 1:</p>
+<p id="p-27">As before we have a system of three equations and three unknowns</p>
+<div class="displaymath">
+\begin{align*}
+2x + 3y - z \amp= 1 \\
+-2x + y + z \amp= 1 \\
+y - z \amp= 1 
+\end{align*}
+</div>
+<p>Now we can add row one to row two to get</p>
+<div class="displaymath">
+\begin{align*}
+2x + 3y - z \amp= 1 \\
+4y \amp= 2 \\
+y - z \amp= 1 
+\end{align*}
+</div>
+<p>Multiplying the second row by \(1/4^{th}\) and subtracting this from row three we get</p>
+<div class="displaymath">
+\begin{align*}
+2x + 3y - z \amp= 1 \\
+y \amp= 1/2 \\
+- z \amp= 1/2 
+\end{align*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{align*}
+2x + 3y - z \amp= 1 \\
+y \amp= 1/2 \\
+z \amp= -1/2 
+\end{align*}
+</div>
+<p>If we then subtract three copies of row two and add one copy of row three from row one we are left with</p>
+<div class="displaymath">
+\begin{align*}
+2x   \amp= -1 \\
+y \amp= 1/2 \\
+z \amp= -1/2 
+\end{align*}
+</div>
+<p>which gives the solution</p>
+<div class="displaymath">
+\begin{align*}
+x   \amp= -1/2 \\
+y \amp= 1/2 \\
+z \amp= -1/2 
+\end{align*}
+</div>
+<p>If we substitute these in to the original equations</p>
+<div class="displaymath">
+\begin{align*}
+2\left(-\frac{1}{2}\right) + 3\left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 \\
+-2\left(-\frac{1}{2}\right) + \left(\frac{1}{2}\right) + \left(-\frac{1}{2}\right) \amp= 1 \\
+\left(\frac{1}{2}\right) - \left(-\frac{1}{2}\right) \amp= 1 
+\end{align*}
+</div>
+<p>we can verify that the solution is correct.  Therefore the answer to the original question is that the single point at which all three planes intersect is</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).
+\end{equation*}
+</div>
+<p id="p-28">Solution 2:</p>
+<p id="p-29">Alternately we can rewrite the system as an augmented matrix like so</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+-2 \amp 1 \amp 1 \amp 1 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>If we now follow the steps we used before we should get the same solution. First add row 1 to row 2:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+-2 \amp 1 \amp 1 \amp 1 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right]
+\stackrel{R_2+R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 4 \amp 0 \amp 2 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Next we multiply row 2 by \(1/4\) and then subtract that from row 3:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 4 \amp 0 \amp 2 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right]
+\stackrel{1/4\times R_2,\\ R_3-R_2}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp -1 \amp 1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>The latter matrix is said to be in <dfn class="terminology">row echelon form</dfn> since all the entries below the diagonal are 0.  Now, as before we next multiply row 3 by -1 and then subtract three copies of row 2 and add one copy of row 3 to row one:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp -1 \amp 1/2 \\
+\end{array}
+\right]
+\stackrel{-R_3,\\ R_1-3R_2+R_3}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 0 \amp 0 \amp -1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Finally, we multiply row 1 by 1/2:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 0 \amp 0 \amp -1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right]
+\stackrel{1/2\times R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp -1/2 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>This last form of the matrix is called <dfn class="terminology">reduced row echelon form</dfn> since the diagonal is all 1's and the off diagonals are 0.  Having followed the same steps we get the same solution:</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).
+\end{equation*}
+</div></article></div>
+<article class="example-like" id="underdetermined"><a data-knowl="" class="id-ref" data-refid="hk-underdetermined"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.4</span>. <span class="title">An Underdetermined System.</span>
+</h6></a></article><div id="hk-underdetermined" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-30">Consider the system of equations:</p>
+<div class="displaymath">
+\begin{align*}
+t-4s+r \amp =0\\
+s-2r \amp =0
+\end{align*}
+</div>
+<p>this system is called <dfn class="terminology">underdetermined</dfn> because there are more variables than equations.  However, we can still use the same strategies to try and solve it.  First we form an augmented matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp -4 \amp 1 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>then we can try to simplify this as before:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp -4 \amp 1 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right]
+\stackrel{R_1+4R_2}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp -7 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>But, we can't go any further than this because there are only two equations for our three unknowns.  Consequently the solution we get is that \(t=7r\text{,}\) \(s=2r\text{,}\) and \(r\) may be any this we like.  For example if \(r=7\) then \(t=49\) and \(s=14\text{,}\) which we can see satisfies the original equation:</p>
+<div class="displaymath">
+\begin{align*}
+49-4(14)+7 \amp =0\\
+14-2(7) \amp =0
+\end{align*}
+</div>
+<p>However we could also let \(r=1\) so that \(t=7\) and \(s=2\text{,}\) or let \(r=-2\) so that \(t=-14\) and \(s=4\text{.}\)  In fact we have infinitely many solutions since there are no restrictions on \(r\text{.}\)  In this situation we say that \(r\) is a <dfn class="terminology">free variable</dfn>.  Also, note that all the equations were set equal to zero, we call this a <dfn class="terminology">homogeneous</dfn> system and these will come to play a special roll in finding general solutions to systems of equations.</p></article></div>
+<article class="example-like" id="overdetermined"><a data-knowl="" class="id-ref" data-refid="hk-overdetermined"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.5</span>. <span class="title">An Overdetermined System.</span>
+</h6></a></article><div id="hk-overdetermined" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-31">Of course if there can be underdetermined systems, then there can be <dfn class="terminology">overdetermined</dfn> systems as well.  Let's look to this system of three equations but only two unknowns:</p>
+<div class="displaymath">
+\begin{align*}
+3x+2y \amp =7\\
+x-y \amp = 2\\
+4y \amp =16
+\end{align*}
+</div>
+<p>note that the equations are not set equal to 0, so this system is <dfn class="terminology">non-homogeneous</dfn>. We could use the same technique of setting up an augmented matrix like so</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rr|r}
+3 \amp 2 \amp 7\\
+1 \amp -1 \amp 2\\
+0 \amp 4 \amp 16
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>however in this case we can really solve this by inspection or observation, that is we just look at it for a minute.  From the last equation we conclude \(y=4\text{,}\) substituting that into the next equation up we get \(x=6\text{.}\)  However if we substitute \(y=4\) into the first equation we get \(x=-1/3\text{,}\) since \(x\) can't have two different values we conclude that this system of equations doesn't have a solution.  When a system doesn't have a solution we say that it is <dfn class="terminology">inconsistent</dfn>, other wise it is <dfn class="terminology">consistent</dfn>.</p></article></div>
+<article class="example-like" id="example-4"><a data-knowl="" class="id-ref" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.6</span>. <span class="title">Consistent and Inconsistent Systems.</span>
+</h6></a></article><div id="hk-example-4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-32">Just so that you don't get the idea that overdetermined is synonymous with inconsistent consider the homogeneous version of the system we just looked at:</p>
+<div class="displaymath">
+\begin{align*}
+3x+2y \amp = 0\\
+x-y \amp = 0\\
+4y \amp = 0
+\end{align*}
+</div>
+<p>Note that if \(x=y=0\) then all three equations are true and we have a consistent system.  This illustrates an important property of homogeneous systems, they are always have at least one solution and so are consistent, you just need to make all the variables 0.</p>
+<p id="p-33">You should also be careful not to think that all under determined systems have infinitely many solutions, or even that they are consistent.  If we look at the system</p>
+<div class="displaymath">
+\begin{align*}
+s+t+r\amp = 2\\
+-2s-2t-2r\amp = -10
+\end{align*}
+</div>
+<p>and then multiply the second equation by -1/2 we get</p>
+<div class="displaymath">
+\begin{align*}
+s+t+r\amp = 2\\
+s+t+r\amp = 5
+\end{align*}
+</div>
+<p>clearly the sum of the three variables can not simultaneously be 2 and 5, so the system is inconsistent.</p></article></div></section><section class="conclusion" id="conclusion-1"><h6 class="heading">Section Vocabulary.<span></span>
+</h6>
+<p id="p-34">Homogeneous, Non-homogeneous, Consistent, Inconsistent, Overdetermined, Underdetermined, Augmented Matrix, Coefficient Matrix, System of Equations, Row Echelon form, Reduced Row Echelon Form,  Elimination and Back Substitution.</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

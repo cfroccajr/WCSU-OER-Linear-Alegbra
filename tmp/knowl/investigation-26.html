@@ -1,0 +1,77 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="project-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.5.2</span>. <span class="title">Orthogonalization.</span>
+</h6>
+<p>Consider again</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 1
+\end{array}
+\right]
+\right\}.
+\end{equation*}
+</div>
+<p>and suppose that we want to develop an orthonormal basis from this.  We will do this a step at a time using the <dfn class="terminology">Gram-Schmidt Orthogonalization</dfn> process.</p>
+<p>The process is based on the vector projections we studied before.  If \(\vec{v}=\left\lt1,1\right\gt\) and \(\vec{w}=\left\lt0,1\right\gt\text{,}\) then</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:42.1052631578947%;justify-content:flex-start;">
+<div class="displaymath">
+\begin{equation*}
+proj_{\vec{v}}\vec{w}=\frac{\vec{v}\cdot\vec{w}}{\vec{v}\cdot\vec{v}}\vec{v}=\left\lt\frac{1}{2},\frac{1}{2}\right\gt.
+\end{equation*}
+</div>
+<p>The vector</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{w}-proj_{\vec{v}}\vec{w}=\left\lt-\frac{1}{2},\frac{1}{2}\right\gt.
+\end{equation*}
+</div>
+<p>is an orthogonal complement of the projection; it is orthogonal to \(\vec{v}\) and we can use it to replace \(\vec{w}\text{.}\)</p>
+</div>
+<div class="sbspanel" style="width:52.6315789473684%;justify-content:flex-start;"><img src="images/vector_projection.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<figcaption class="sbscaption" style="width:42.1052631578947%;"></figcaption><figcaption class="sbscaption" style="width:52.6315789473684%;"><span class="type">Figure</span> <span class="codenumber">3.5.5.</span> </figcaption>
+</div>
+</div>
+<p>Consider</p>
+<div class="displaymath">
+\begin{align*}
+a\vec{v}+b\vec{w}\amp = a\vec{v}+b\vec{w}\\
+\amp = a\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}+proj_{\vec{v}}\vec{w}\right)\\
+\amp = a\vec{v}+b\, proj_{\vec{v}}\vec{w}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right)\\
+\amp = a\vec{v}+\frac{b}{2}\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right),\\
+\amp = \left(a+\frac{b}{2}\right)\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right),
+\end{align*}
+</div>
+<p>so we can systematically replace any linear combination of \(\vec{v}\) and \(\vec{w}\) with a combination of \(\vec{v}\) and \(\vec{w}-proj_{\vec{v}}\vec{w}\text{.}\)  This is the Gram-Schmidt Orthogonalization process.</p></article><span class="incontext"><a href="section_projections.html#investigation-26">in-context</a></span>
+</body>
+</html>

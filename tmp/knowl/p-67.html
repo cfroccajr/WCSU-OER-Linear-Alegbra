@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:05-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Comments and Comprehension Check</em></p>
+<ul class="disc">
+<li>Looking at the output what is the difference between <code class="code-inline tex2jax_ignore">print</code> and <code class="code-inline tex2jax_ignore">pretty_print</code>?</li>
+<li>In <code class="code-inline tex2jax_ignore">pretty_print(A,v,"=",Av_product)</code> it actually prints the values for the matrix and vector, but in <code class="code-inline tex2jax_ignore">pretty_print("av+bu=",linear_combo)</code> it prints the letters, what is the difference in how these were entered?</li>
+<li>Sage is a little sloppy with its vectors, it always writes them horizontally.  In one of the print commands change <code class="code-inline tex2jax_ignore">v</code> to <code class="code-inline tex2jax_ignore">matrix(v).transpose()</code>, what happens?</li>
+<li>Try adding these lines to the end and re-evaluating the cell:<pre class="code-block tex2jax_ignore">
+                            print type(A)
+                            print type(v)
+                            print type(Av_product)
+                            print type(vector(A))
+                            print type(matrix(v))
+                        </pre>What does the <code class="code-inline tex2jax_ignore">type</code> command tell you? What happens when you put a matrix inside the <code class="code-inline tex2jax_ignore">vector</code> command or vice versa?</li>
+<li>Reload the page and click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> without filling in the missing values, based on what you know should happen try to make some sense of the error messages.</li>
+<li>What happens if you put a <code class="code-inline tex2jax_ignore">#</code> in front of a line of text?</li>
+</ul>
+<span class="incontext"><a href="section_CAS_systems.html#p-67">in-context</a></span>
+</body>
+</html>

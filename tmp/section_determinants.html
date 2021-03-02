@@ -1,0 +1,292 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Determinants and their Geometry</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="determinants.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_similarity.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="determinants.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_similarity.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants" class="active">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_determinants"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Determinants and their Geometry</span>
+</h2>
+<a href="section_determinants.html" class="permalink">¶</a><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Linear Distortions</span>
+</h3>
+<article class="project-like" id="investigation-27"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.1</span>. <span class="title">Distorted Area.</span>
+</h6>
+<p id="p-270">Suppose we form a parallelogram with the vectors \(\vec{v}=\left\lt3,1\right\gt\) and \(\vec{w}=\left\lt1,2\right\gt\text{.}\)  To find the area we need to multiply the length of the base by the height, or (from <a data-knowl="./knowl/parallelogram_area.html" title="Figure 4.1.1">Figure 4.1.1</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+Area = ||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||.
+\end{equation*}
+</div>
+<p><div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:52.6315789473684%;justify-content:flex-start;">
+<div class="displaymath" id="p-271">
+\begin{align*}
+\vec{w}-proj_{\vec{v}}\vec{w}\amp=\left\lt1,2\right\gt-\frac{5}{10}\left\lt3,1\right\gt\\
+\amp=\left\lt-\frac{1}{2},\frac{3}{2}\right\gt
+\end{align*}
+</div>
+<div class="displaymath">
+\begin{align*}
+||\vec{v}||\, ||\vec{w}-proj_{\vec{v}}\vec{w}||\amp= \left(\sqrt{10}\right)\left(\frac{\sqrt{10}}{2}\right)\\
+\amp = 5
+\end{align*}
+</div>
+</div>
+<div class="sbspanel" style="width:42.1052631578947%;justify-content:flex-start;"><img src="images/vector_parallelagram.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<figcaption class="sbscaption" style="width:52.6315789473684%;"></figcaption><figcaption class="sbscaption" style="width:42.1052631578947%;"><span class="type">Figure</span> <span class="codenumber">4.1.1.</span> Area of a Parallelogram</figcaption>
+</div>
+</div> So, the area of the parallelogram is 5.  Interestingly if we define the transformation</p>
+<div class="displaymath">
+\begin{equation*}
+T\left(\vec{x}\right)=
+\left(
+\begin{array}{rr}
+3 \amp 1\\
+1 \amp 2
+\end{array}
+\right)\vec{x},
+\end{equation*}
+</div>
+<p>which carries the square of area 1 made by the standard basis to this parallelogram, then</p>
+<div class="displaymath">
+\begin{equation*}
+a_{11}\, a_{22}-a_{12}\, a_{21}=3\cdot2-1\cdot1=5.
+\end{equation*}
+</div>
+<p>This is because given a matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rr}
+a_{11} \amp a_{12}\\
+a_{21} \amp a_{22}
+\end{array}
+\right),
+\end{equation*}
+</div>
+<p>the value</p>
+<div class="displaymath">
+\begin{equation*}
+det\, A=a_{11}\, a_{22}-a_{12}\, a_{21}
+\end{equation*}
+</div>
+<p>called the <dfn class="terminology">determinant of \(A\)</dfn> measures how much \(A\) distorts \(\mathbb{R}^2\) if we think of it as a transformation.</p></article><article class="project-like" id="investigation-28"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.2</span>. <span class="title">Distorted Volume.</span>
+</h6>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-272">Suppose we have a parallelepiped as in the figure, for simplicity assume the base is a rectangle.  The the volume will be area of the base times the height.  The area of the base is easy, \(Area=||\vec{v}||\, ||\vec{w}||\text{.}\)  To get the height we need to use projections, in particular:</p>
+<div class="displaymath">
+\begin{equation*}
+||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/vector_parallelpiped.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">4.1.2.</span> Volume of a Parallelepiped</figcaption>
+</div>
+</div>
+<div class="displaymath" id="p-273">
+\begin{align*}
+||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||\amp=\left|\left|\vec{u}-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\vec{v}-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\vec{v}\right|\right|\\
+\amp=\left|\left|\left\lt u_1,u_2,u_3\right\gt-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\left\lt v_1,v_2,v_3\right\gt-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\left\lt w_1,w_2,w_3\right\gt\right|\right|\\
+\amp \vdots\\
+\mbox{Then A}\ \amp \mbox{Miracle Occurs}\\
+\amp \vdots\\
+\amp = \frac{|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|}{||\vec{v}||\, ||\vec{w}||}
+\end{align*}
+</div>
+<p>So, that the magnitude will be</p>
+<div class="displaymath">
+\begin{equation*}
+|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|,
+\end{equation*}
+</div>
+<p>the expression inside the absolute value is the determinant of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{lll}
+v_1 \amp u_1 \amp w_1\\
+v_2 \amp u_2 \amp w_2\\
+v_3 \amp u_3 \amp w_3\\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>which transforms the vectors of the standard basis into the vectors \(\vec{v}\text{,}\) \(\vec{w}\text{,}\) and \(\vec{u}\text{.}\)</p></article></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Calculating Determinants (Laplace's Formula)</span>
+</h3>
+<article class="project-like" id="investigation-29"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.3</span>. <span class="title">Two-By-Two.</span>
+</h6>
+<p id="p-274">Consider the matrix...</p></article><article class="project-like" id="investigation-30"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.4</span>. <span class="title">Three-By-Three.</span>
+</h6>
+<p id="p-275">Consider the matrix...</p></article><article class="project-like" id="investigation-31"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.5</span>. <span class="title">N-By-N.</span>
+</h6>
+<p id="p-276">Consider the matrix...</p></article></section><section class="conclusion" id="conclusion-9"><h6 class="heading">Properties of Determinants Summarized.<span></span>
+</h6>
+<article class="theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">4.1.3</span>.</h6>
+<p id="p-277">If \(A\) and \(B\) are both \(n\times n\) matrices and \(I\) is the identity matrix, then:</p>
+<ul class="disc">
+<li id="li-102">\(det(I)=1\)</li>
+<li id="li-103">\(det(AB)=det(A)det(B)\)</li>
+<li id="li-104">\(det(A^{-1})=det(A)^{-1}\) provided \(A\) is invertible</li>
+<li id="li-105">\(det(A^T)=det(A)\)</li>
+<li id="li-106">if \(A\) is upper diagonal, lower diagonal, or diagonal, then \(det(A)\) is the product of the entries along the main diagonal.</li>
+<li id="li-107">swapping two rows of \(A\) changes the sign of \(det(A)\)</li>
+<li id="li-108">multiplying a row of \(A\) by \(k\) multiplies \(det(A)\) by \(k\)</li>
+<li id="li-109">adding copies of one row of \(A\) to another does not change \(det(A)\)</li>
+</ul></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

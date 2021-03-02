@@ -1,0 +1,116 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:04-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Alternately we can rewrite the system as an augmented matrix like so</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+-2 \amp 1 \amp 1 \amp 1 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>If we now follow the steps we used before we should get the same solution. First add row 1 to row 2:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+-2 \amp 1 \amp 1 \amp 1 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right]
+\stackrel{R_2+R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 4 \amp 0 \amp 2 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Next we multiply row 2 by \(1/4\) and then subtract that from row 3:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 4 \amp 0 \amp 2 \\
+0\amp 1 \amp -1 \amp 1 \\
+\end{array}
+\right]
+\stackrel{1/4\times R_2,\\ R_3-R_2}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp -1 \amp 1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>The latter matrix is said to be in <dfn class="terminology">row echelon form</dfn> since all the entries below the diagonal are 0.  Now, as before we next multiply row 3 by -1 and then subtract three copies of row 2 and add one copy of row 3 to row one:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 3 \amp -1 \amp 1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp -1 \amp 1/2 \\
+\end{array}
+\right]
+\stackrel{-R_3,\\ R_1-3R_2+R_3}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+2 \amp 0 \amp 0 \amp -1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>Finally, we multiply row 1 by 1/2:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+2 \amp 0 \amp 0 \amp -1 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right]
+\stackrel{1/2\times R_1}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp 0 \amp -1/2 \\
+0 \amp 1 \amp 0 \amp 1/2 \\
+0\amp 0 \amp 1 \amp -1/2 \\
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>This last form of the matrix is called <dfn class="terminology">reduced row echelon form</dfn> since the diagonal is all 1's and the off diagonals are 0.  Having followed the same steps we get the same solution:</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y,z)=\left(-\frac{1}{2},\frac{1}{2},-\frac{1}{2}\right).
+\end{equation*}
+</div>
+<span class="incontext"><a href="section_basic_systems.html#p-29">in-context</a></span>
+</body>
+</html>

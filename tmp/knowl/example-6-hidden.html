@@ -1,0 +1,80 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-10-17T09:59:21-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rrrr}
+1 \amp 0 \amp 1 \amp 5 \\
+3 \amp 1 \amp 0 \amp 15\\
+0 \amp 1 \amp -2 \amp 0\\
+7 \amp 5 \amp 8 \amp 36
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>As before we set up an augmented matrix with \(A\) as the coefficients on the left and vectors on the right that when taken together look like the identity matrix, then we row reduce.</p>
+<div class="displaymath">
+\begin{align*}
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5 \amp 1 \amp 0 \amp 0 \amp 0\\
+3 \amp 1 \amp 0 \amp 15 \amp 0 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+7 \amp 5 \amp 8 \amp 36 \amp 0 \amp 0 \amp 0 \amp 1
+\end{array}
+\right)
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5  \amp 1 \amp 0 \amp 0 \amp 0\\
+0 \amp 1 \amp -3 \amp 0 \amp -3 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+0 \amp 5 \amp 1 \amp 1  \amp -7 \amp 0 \amp 0 \amp 1
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5      \amp 1 \amp 0 \amp 0 \amp 0\\
+0 \amp 1 \amp -3 \amp 0     \amp -3 \amp 1 \amp 0 \amp 0\\
+0 \amp 0 \amp 1 \amp 0      \amp 3 \amp -1 \amp 1 \amp 0\\
+0 \amp 0 \amp 15 \amp 1     \amp 8 \amp -5 \amp 0 \amp 1
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5      \amp 1 \amp 0 \amp 0 \amp 0\\
+0 \amp 1 \amp -3 \amp 0     \amp -3 \amp 1 \amp 0 \amp 0\\
+0 \amp 0 \amp 1 \amp 0      \amp 3 \amp -1 \amp 1 \amp 0\\
+0 \amp 0 \amp 0 \amp 1     \amp -37 \amp 10 \amp -15 \amp 1
+\end{array}
+\right)
+\end{align*}
+</div>
+<p>So that we get</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=
+\left(
+\begin{array}{rrr}
+4 \amp -1 \amp 2 \\
+-\frac{3}{2} \amp \frac{1}{2} \amp -\frac{3}{4} \\
+3 \amp -1 \amp 2\\
+\end{array}
+\right).
+\end{equation*}
+</div></article></body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-08-30T14:55:13-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">2.1.2</span> <span class="title">It's Not All About the Arrows</span>
+</h6>
+<p>Consider the set of all quadratic polynomials</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P_2}=\left\{ax^2+bx+c:a,b,c\in\mathbb{R}\right\}
+\end{equation*}
+</div>
+<p>which you should hopefully recognize as all the possible parabolas.  If we take two of these, \(v(x)=2x^2+3x\) and \(u(x)=-x^2+5\text{,}\) we can add and subtract them</p>
+<div class="displaymath">
+\begin{equation*}
+v(x)+u(x)=x^2+3x+5\ \mbox{ and }\ v(x)-u(x)=3x^2+3x-5,
+\end{equation*}
+</div>
+<p>we can multiply them by constants</p>
+<div class="displaymath">
+\begin{equation*}
+5u(x)=-5x^2+25,
+\end{equation*}
+</div>
+<p>and in fact we can take any linear combinations we would like</p>
+<div class="displaymath">
+\begin{equation*}
+-2v(x)+5u(x)=-9x^2-6x+25.
+\end{equation*}
+</div>
+<p>All of this means that we can manipulate these polynomials just like we vectors.  In fact if you look back at <a href="section_intro_vectors.html#combining_vectors" class="xref" title="Subsection 1.2.2: Combining Vectors">Subsection 1.2.2</a> you will see that the coefficients we used for \(u(x)\) and \(v(x)\) are the same as the entries we had in \(\vec{u}\) and \(\vec{v}\text{.}\)</p>
+<p>We can take the analogy even further by setting up systems of equations involving polynomials.  For example can we find scalars \(a\) and \(b\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a\, v(x)+b\, u(x)=19x^2+21x-25?
+\end{equation*}
+</div>
+<p>Expanding the left hand side we get</p>
+<div class="displaymath">
+\begin{equation*}
+2ax^2+3ax-bx^2+5b=19x^2+21x-25
+\end{equation*}
+</div>
+<p>which gives us three equations when we compare coefficients</p>
+<div class="displaymath">
+\begin{align*}
+2ax^2-bx^2\amp = 19\\
+3ax\amp = 21\\
+5b\amp= -25.
+\end{align*}
+</div>
+<p>By inspection (i.e. just looking at it for a minute) we can see that \(a=7\) and \(b=-5\text{.}\)</p>
+<p>Finally, one more observation.  If we let \(e_2(x)=x^2\text{,}\) \(e_1(x)=x\text{,}\) and \(e_0(x)=1\text{,}\) then we can write every possible quadratic polynomial (every parabola) as a combination of \(e_2\text{,}\) \(e_1\text{,}\) and \(e_0\text{.}\)  This means that we can define a set of elementary polynomials which we can combine to give us all the rest.  We can form a basis of polynomials.</p>
+<p>So, these quadratic polynomials can be added like vectors, they can be subtracted like vectors, they can be multiplied by scalars like vectors, they can be put together in linear combinations like vectors, and we can solve systems of equations with them just like vectors.  Therefore, they are in a very real sense vectors.</p></article><span class="incontext"><a href="section_space_definitions.html#polynomial_vectors">in-context</a></span>
+</body>
+</html>

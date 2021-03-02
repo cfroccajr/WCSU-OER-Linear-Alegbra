@@ -1,0 +1,314 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:03-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Matrix Equivalence and Similarity</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_determinants.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="diagonal_matrices_section.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_determinants.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a class="next-button button toolbar-item" href="diagonal_matrices_section.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity" class="active">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_similarity"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Matrix Equivalence and Similarity</span>
+</h2>
+<a href="section_similarity.html" class="permalink">¶</a><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.2.1</span> <span class="title">Change of Bases and Transformations</span>
+</h3>
+<p id="p-278">Recall that if \(\mathcal{B}\) is one basis for a vector space and \(\mathcal{D}\) is another, then the transformations \(Rep_{\mathcal{B}\mathcal{D}}\) and \(Rep_{\mathcal{D}\mathcal{B}}\) change coordinates back and forth between them, and that \((Rep_{\mathcal{D}\mathcal{B}})^{-1}=Rep_{\mathcal{B}\mathcal{D}}\text{.}\) (See also <a data-knowl="./knowl/bases_change.html" title="Figure 3.4.5">Figure 3.4.5</a> and <a data-knowl="./knowl/bases_transform_change.html" title="Figure 3.4.6">Figure 3.4.6</a>.) <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-279">If \(T\) is a transformation of the vector space in terms of the basis \(\mathcal{B}\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+\widehat{T}\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ Rep_{\mathcal{B}\mathcal{D}}\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1},
+\end{align*}
+</div>
+<p>is the same transformation except in terms of \(\mathcal{D}\text{.}\) <a data-knowl="" class="id-ref" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a><span id="hk-fn-6" class="hidden-content tex2jax_ignore"><span class="footnote">Why is the composition of the transformations written right to left?</span></span> When this situation exists we say that the transformations \(T\) and \(\widehat{T}\) are <dfn class="terminology">similar</dfn> (or in some settings we say they are <dfn class="terminology">conjugate</dfn>).</p>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/basis_commuting_diagram.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">4.2.1.</span> Transformations Between and Within Bases</figcaption>
+</div>
+</div> In your text (<a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=269" target="_blank">map representations, p.259</a> and <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=398" target="_blank">similarity, p.388</a>) you will see this written something like:</p>
+<div class="displaymath">
+\begin{equation*}
+T=Rep_{\mathcal{B}\mathcal{B}}\left(T\right)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+\widehat{T}\amp=Rep_{\mathcal{D}\mathcal{D}}\left(T\right)\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1}\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ Rep_{\mathcal{B}\mathcal{B}}\left(T\right)\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1}.
+\end{align*}
+</div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.2.2</span> <span class="title">Similar Matrices</span>
+</h3>
+<article class="definition-like" id="def_similar"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">4.2.2</span>. <span class="title">Similar Matrices.</span>
+</h6>
+<p id="p-280">Two matrices \(A\) and \(B\) are said to be <dfn class="terminology">similar</dfn> if there exists an invertible (non-singular) matrix \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+B=P\, A\, P^{-1}.
+\end{equation*}
+</div>
+<p>More generally, we say that two elements related in this way are <dfn class="terminology">conjugates</dfn>.</p></article><article class="project-like" id="investigation-32"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.2.1</span>. <span class="title">A Basic Example.</span>
+</h6>
+<p id="p-281">Suppose we have two matrices</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rr}
+1\amp 3 \\ -1 \amp-2\\
+\end{array}
+\right),\ \mbox{and}\ 
+B=
+\left(
+\begin{array}{rr}
+-10 \amp 7 \\
+-13 \amp 9
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and we want to see if they are similar.  By <em class="alert">definition</em> this means we need to find \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A=P\, B\, P^-1
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+A\, P=P\, B.
+\end{equation*}
+</div>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+P=
+\left(
+\begin{array}{rr}
+p_1 \amp p_2\\
+p_3 \amp p_4
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that the equation above becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr}
+p_1+3p_3\amp p_2+3p_4 \\ 
+-p_1-2p_3 \amp -p_2-2p_4\\
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+-10p_1-13p_2\amp 7p_1+9p_2 \\
+-10p_3-13p_4\amp 7p_3+9p_4 \\
+\end{array}
+\right)                                                
+\end{equation*}
+</div>
+<p>leaving us with four equations and four unknowns. Here we write it as a homogeneous system:</p>
+<div class="displaymath">
+\begin{align*}
+11p_1+13p_2+3p_3\amp = 0\\
+7p_1+8p_2-3p_4\amp = 0\\
+p_1-8p_3-13p_4\amp = 0\\
+p_2+7p_3+11p_4\amp = 0
+\end{align*}
+</div>
+<p>or as a matrix equation</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rrrr|r}
+11 \amp 13 \amp 3 \amp 0 \amp 0\\
+7 \amp 8 \amp 0 \amp -3 \amp 0\\
+1 \amp 0 \amp -8 \amp -13 \amp 0\\
+0 \amp 1 \amp 7 \amp 11 \amp 0\\
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>With a little work this reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\begin{array}{rrrr|r}
+1 \amp 0 \amp -8 \amp -13 \amp 0\\
+0 \amp 1 \amp 7 \amp 11 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0
+\end{array}\right).
+\end{equation*}
+</div>
+<p>So if we let \(p_3=-1\) and \(p_4=1\) we get \(p_1=5\) and \(p_2=-4\text{,}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+P=
+\left(
+\begin{array}{rr}
+5 \amp -4\\
+1 \amp -1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Note that since \(p_3\) and \(p_4\) are free variables there are in fact infinitely many solutions. Finally, we will see in <a href="diagonal_matrices_section.html#section_diagonal" class="internal" title="Subsection 4.3.1: Diagonalizable Matrices">Subsection 4.3.1</a> that there is an easier way.</p></article></section><section class="conclusion" id="conclusion-10"><p id="p-282">Here are some basic key observations:</p>
+<article class="theorem-like" id="similar_properties"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">4.2.3</span>. <span class="title">Basic Properties of Similar Matrices.</span>
+</h6>
+<p id="p-283">If the matrices \(A\) and \(B\) are similar, then</p>
+<ul class="disc">
+<li id="li-110">\(\exists\ P:\ A=P\, B\, P^{-1}\)</li>
+<li id="li-111">\(\exists\ P:\ A^n=P\, B^n\, P^{-1}\)</li>
+<li id="li-112">\(det(A)=det(B)\)</li>
+<li id="li-113">\(A\) is invertible if and only if \(B\) is also invertible</li>
+<li id="li-114">\(A=I\) if and only if \(B=I\)</li>
+<li id="li-115">\(A=0\) if and only if \(B=0\)</li>
+</ul></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

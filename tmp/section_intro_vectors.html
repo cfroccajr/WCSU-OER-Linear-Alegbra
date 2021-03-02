@@ -1,0 +1,490 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:54:59-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An Introduction to Vectors</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_basic_systems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_vectors_equations.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_basic_systems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_vectors_equations.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors" class="active">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_intro_vectors"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">An Introduction to Vectors</span>
+</h2>
+<a href="section_intro_vectors.html" class="permalink">¶</a><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Vectors and their Properties</span>
+</h3>
+<article class="definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.2.1</span>.</h6>
+<p id="p-35">A <dfn class="terminology">vector</dfn> is a,typically, a one dimensional array of numbers written as</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=
+\left[
+\begin{array}{r}
+2\\
+-3
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>or horizontally as \(\vec{v}=\left[ 2,-3\right]\text{.}\)</p></article><p id="p-36">We say that a vector is typically thought of as an array of numbers because in this course that is mostly how we use it.  We will look in later units at a couple examples where it is not and array of numbers.</p>
+<p id="p-37">In addition to the numerical definition/representation of vectors we can also view them graphically like so:</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-3.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/image-3.png';this.onerror=null;"></div></div>
+<div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><figcaption class="sbscaption" style="width:100%;"><span class="type">Figure</span> <span class="codenumber">1.2.2.</span> My First Vectors</figcaption></div>
+</div>
+<p id="p-38">The vector that is at an angle in <a data-knowl="./knowl/my_first_vectors.html" title="Figure 1.2.2">Figure 1.2.2</a> is the vector \(\vec{v}=\left[ 2,-3 \right]\) from above, the horizontal and vertical vectors in are called <dfn class="terminology">elementary vectors</dfn> and are called \(\vec{e_1}=\left[ 1,0 \right]\) and \(\vec{e_2}=\left[ 0,1 \right]\) respectively. Elementary vectors will play an important roll later.</p>
+<p id="p-39">Vectors play an important and useful roll in mathematics.  They can be used to gather, organize, and track related information such as populations of animals, profits and costs, or the spread of disease across population.  Here, and in multi-variable calculus, they are most frequently used because they can indicate direction and magnitude and so accurately represent change.  For example the vector \(\vec{v}=\left[ 2,-3 \right]\) has a magnitude of \(|\vec{v}|=\sqrt{2^2+(-3)^2}=\sqrt{13}\approx 3.61\text{,}\) which is found using the Pythagorean Theorem.  We describe its direction by using a <dfn class="terminology">unit vector</dfn>, that is a vector of length one pointing in the same direction.  In this case the unit vector will be</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{u}=\frac{1}{\sqrt{13}}\left[2,-3\right]=\left[\frac{2}{\sqrt{13}},-\frac{3}{\sqrt{13}}\right].
+\end{equation*}
+</div>
+<p>In general given a vector \(\vec{v}=\left[ v_1, v_2, v_3, \ldots, v_n\right]\) the length of \(\vec{v}\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left|\vec{v}\right|=\sqrt{v_1^2+v_2^2+v_3^2+\cdots+v_n^2},
+\end{equation*}
+</div>
+<p>and the unit vector giving the direction of \(\vec{v}\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\vec{v}}{\left|\vec{v}\right|}=
+\left[
+\frac{\vec{v_1}}{\left|\vec{v}\right|}, 
+\frac{\vec{v_2}}{\left|\vec{v}\right|}, 
+\frac{\vec{v_3}}{\left|\vec{v}\right|}, 
+\ldots, \frac{\vec{v_n}}{\left|\vec{v}\right|}
+\right]
+\end{equation*}
+</div>
+<p id="p-40">To practice calculating magnitudes and unit vectors click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">import random
+
+def rand_vector():
+    v1 = random.randint(-5,5)
+    v2 = random.randint(-5,5)
+    v3 = random.randint(-5,5)
+    v4 = random.randint(-5,5)
+    return vector(ZZ, [v1,v2,v3,v4])
+
+@interact
+def _(values=input_grid(1,4,default=[2,1,0,1],type=int,width=2),
+        action = selector(['Hide Solution','Show Solution'], buttons=True)):
+    v = vector(values[0])
+    print "Try to find the magnitude and unit vector for\n\nv=",v
+    if action=="Show Solution":
+        n = v.norm()
+        print "\nThe magnitude of v is",n,"or approximately",float(n)
+        try:
+            u=1/n*v
+        except:
+            print "Error encountered, possibly division by zero."
+        print "\nThe unit vector is \n\nu=",u
+    v=rand_vector()
+    print "\nAfter solving finind the values for the first one,\ntry to find the magnitude and unit vector for\n\n\tv=",v,".\n\nYou can enter it above to check your work."
+</script></div></section><section class="subsection" id="combining_vectors"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Combining Vectors</span>
+</h3>
+<a href="section_intro_vectors.html#combining_vectors" class="permalink">¶</a><p id="p-41"> Thare are also a number of ways to combine vectors.  If</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=\left[2,3,0\right]
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{u}=\left[-1,0,5\right]\text{,}
+\end{equation*}
+</div>
+<p>then we may add these to get</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:35.2941176470588%;justify-content:flex-start;"><div class="displaymath" id="p-42">
+\begin{align*}
+\vec{v}+\vec{u}\amp=\left[2,3,0\right]+\left[-1,0,5\right]\\
+\amp= \left[2-1,3+0,0+5\right]\\
+\amp= \left[ 1,3,5\right]
+\end{align*}
+</div></div>
+<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><img src="images/image-4.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/image-4.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<figcaption class="sbscaption" style="width:35.2941176470588%;"></figcaption><figcaption class="sbscaption" style="width:47.0588235294118%;"><span class="type">Figure</span> <span class="codenumber">1.2.3.</span> \(\vec{v}+\vec{u}\)</figcaption>
+</div>
+</div>
+<p id="p-43">or similarly subtract them</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:35.2941176470588%;justify-content:flex-start;"><div class="displaymath" id="p-44">
+\begin{align*}
+\vec{v}-\vec{u}\amp=\left[2,3,0\right]-\left[-1,0,5\right]\\
+\amp= \left[2+1,3-0,0-5\right]\\
+\amp= \left[ 3,3,-5\right]\, .
+\end{align*}
+</div></div>
+<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><img src="images/image-5.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/image-5.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<figcaption class="sbscaption" style="width:35.2941176470588%;"></figcaption><figcaption class="sbscaption" style="width:47.0588235294118%;"><span class="type">Figure</span> <span class="codenumber">1.2.4.</span> \(\vec{v}-\vec{u}\)</figcaption>
+</div>
+</div>
+<p id="p-45">We may also multiply vectors by <dfn class="terminology">scalars</dfn>, which here means a number, like this</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:35.2941176470588%;justify-content:flex-start;"><div class="displaymath" id="p-46">
+\begin{align*}
+5\vec{u}\amp=5\left[ -1,0,5\right]\\
+\amp= \left[ -5,0,25\right]\, .
+\end{align*}
+</div></div>
+<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><img src="images/image-6.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/image-6.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<figcaption class="sbscaption" style="width:35.2941176470588%;"></figcaption><figcaption class="sbscaption" style="width:47.0588235294118%;"><span class="type">Figure</span> <span class="codenumber">1.2.5.</span> \(5\vec{u}\)</figcaption>
+</div>
+</div>
+<p id="p-47">If we do all of this at once like so</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:35.2941176470588%;justify-content:flex-start;"><div class="displaymath" id="p-48">
+\begin{align*}
+-2\vec{v}+5\vec{u}\amp=\left[-4,-6,0\right]+\left[-5,0,25\right]\\
+\amp= \left[-4-5,-6+0,0+25\right]\\
+\amp= \left[ -9,-6,25\right]
+\end{align*}
+</div></div>
+<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><img src="images/image-7.svg" style="width: 100%; height: auto;" alt="" onerror="this.src='images/image-7.png';this.onerror=null;"></div>
+</div>
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<figcaption class="sbscaption" style="width:35.2941176470588%;"></figcaption><figcaption class="sbscaption" style="width:47.0588235294118%;"><span class="type">Figure</span> <span class="codenumber">1.2.6.</span> \(-2\vec{v}+5\vec{u}\)</figcaption>
+</div>
+</div>
+<p id="p-49">we say that we are taking a <dfn class="terminology">linear combination</dfn> of \(\vec{v}\) and \(\vec{u}\text{.}\)</p>
+<p id="p-50">While addition and subtraction of vectors works as expected, there is no single well defined multiplication of vectors.  Instead of a single multiplication we have two, the <dfn class="terminology">dot product</dfn> and the <dfn class="terminology">cross product</dfn>.  While both of these products are important here we will concern ourselves only with the dot product. The dot product of two vectors is calculated by multiplying entries in the vectors together and then adding the results as follows</p>
+<div class="displaymath">
+\begin{align*}
+\vec{v}\cdot\vec{u}\amp=\left[2,3,0\right]\cdot\left[-1,0,5\right]\\
+\amp=2(-1)+3(0)+0(5)\\
+\amp=-2+0+0\\
+\amp=-2.
+\end{align*}
+</div>
+<p>Geometrically, the dot product is equivalent to</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}\cdot\vec{u}=|\vec{v}||\vec{u}|\cos(\theta)\text{,}
+\end{equation*}
+</div>
+<p>where \(\theta\) is the angle between the two vectors.</p>
+<p id="p-51">To practice your linear combinations and dot products click <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">import random
+
+def rand_vector():
+    v1 = random.randint(-5,5)
+    v2 = random.randint(-5,5)
+    return vector(ZZ, [v1,v2])
+
+@interact
+def _(v=('Vector v',input_grid(1,2,default=[2,1],type=int,width=2)),
+        u=('Vector u',input_grid(1,2,default=[3,-1],type=int,width=2)),
+        B=('Coef. a',input_grid(1,1,default=[3],type=int,width=2)),
+        A=('Coef. b',input_grid(1,1,default=[3],type=int,width=2)),
+        action = selector(['Hide Solution','Show Solution'], buttons=True)):
+    V=vector(v[0])
+    U=vector(u[0])
+    a=A[0][0]
+    b=B[0][0]
+    cdot = u"\u00b7"
+    product = "v"+cdot+"u"
+    if b<0:
+        combination = str(a)+"v"+str(b)+"u"
+    else:
+        combination = str(a)+"v+"+str(b)+"u"
+    print "Given the vector v=",V," and u=",U,"\ntry to find the linear combination ",combination,"the \ndot product",product,", and the angle between u and v."
+    if action=='Show Solution':
+        solution1 = a*V+b*U
+        solution2 = V.inner_product(U)
+        print "\nThe linear combination",combination,"=",solution1
+        print "and the dot product is ",solution2," and finally"
+        try:
+            solution3 = arccos(solution2*1/V.norm()*1/U.norm())
+            print "the angle between the vectors is",float(solution3*180/pi),"degrees"
+        except:
+            print "Error, likely division by zero."
+        zero=vector([0,0])
+        plotv=arrow(zero,V,color="blue")
+        plotu=arrow(zero,U,color="green")
+        plots=arrow(zero,solution1,color="red")
+        final_plot=plotv+plotu+plots
+        final_plot.show(aspect_ratio=1)
+    print "\nOnce, you answer that one enter these new \nvectors and coefficients and try again."
+    print "v =",rand_vector(),", u =",rand_vector(),", a =",random.randint(-5,5),", and b =",random.randint(-5,5)
+</script></div>
+<p id="p-52">As a final note drawing to connect this subsection with the last note that</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}\cdot\vec{v}=|\vec{v}|^2
+\end{equation*}
+</div>
+<p>so that the unit vector in the direction of \(\vec{v}\) is equal to</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\vec{v}}{|\vec{v}|}=\frac{\vec{v}}{\sqrt{\vec{v}\cdot\vec{v}}}.
+\end{equation*}
+</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Vector Equations</span>
+</h3>
+<p id="p-53"> Linear combinations of vectors are important because they will let us relate vectors to systems of equations.  Consider the following system of equations:</p>
+<div class="displaymath">
+\begin{align*}
+7x+3y-9z\amp=2\\
+-x+2y+5z\amp=13\\
+2x- y\amp=0
+\end{align*}
+</div>
+<p>looking at the first column it looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+7x \\
+-x \\
+2x
+\end{array}
+\right]
+=x
+\left[
+\begin{array}{r}
+7 \\
+-1 \\
+2
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>that is an unknown scalar \(x\) times a vector \(\left[7, -1, 2\right]\text{.}\)  Similarly, the second column is</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+3y \\
+2y \\
+-y
+\end{array}
+\right]
+=y
+\left[
+\begin{array}{r}
+3 \\
+2 \\
+-1
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>and the third is</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+-9z \\
+5z \\
+0
+\end{array}
+\right]
+=z
+\left[
+\begin{array}{r}
+-9 \\
+5 \\
+0
+\end{array}
+\right] .
+\end{equation*}
+</div>
+<p>Thus the original system of equations can be rewritten into a single <dfn class="terminology">vector equation</dfn> like so</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{r}
+7 \\
+-1 \\
+2
+\end{array}
+\right] x
++
+\left[
+\begin{array}{r}
+3 \\
+2 \\
+-1
+\end{array}
+\right] y
++
+\left[
+\begin{array}{r}
+-9 \\
+5 \\
+0
+\end{array}
+\right] z
+=
+\left[
+\begin{array}{r}
+2 \\
+13 \\
+0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>This is the sort of relationship we will explore in the next section.</p></section><section class="conclusion" id="conclusion-2"><h6 class="heading">Section Vocabulary.<span></span>
+</h6>
+<p id="p-54">Vector, Elementary Vectors, Unit Vectors, Magnitude, Scalar, Dot Product, Linear Combination, Vector Equation</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

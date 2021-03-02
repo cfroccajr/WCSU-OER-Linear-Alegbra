@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that if \(\mathcal{B}\) is one basis for a vector space and \(\mathcal{D}\) is another, then the transformations \(Rep_{\mathcal{B}\mathcal{D}}\) and \(Rep_{\mathcal{D}\mathcal{B}}\) change coordinates back and forth between them, and that \((Rep_{\mathcal{D}\mathcal{B}})^{-1}=Rep_{\mathcal{B}\mathcal{D}}\text{.}\) (See also <a data-knowl="./knowl/bases_change.html" title="Figure 3.4.5">Figure 3.4.5</a> and <a data-knowl="./knowl/bases_transform_change.html" title="Figure 3.4.6">Figure 3.4.6</a>.) <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p>If \(T\) is a transformation of the vector space in terms of the basis \(\mathcal{B}\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+\widehat{T}\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ Rep_{\mathcal{B}\mathcal{D}}\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1},
+\end{align*}
+</div>
+<p>is the same transformation except in terms of \(\mathcal{D}\text{.}\) <a data-knowl="./knowl/fn-6-hidden.html" title="Footnote 4.2.1"><sup> 1 </sup></a> When this situation exists we say that the transformations \(T\) and \(\widehat{T}\) are <dfn class="terminology">similar</dfn> (or in some settings we say they are <dfn class="terminology">conjugate</dfn>).</p>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/basis_commuting_diagram.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">4.2.1.</span> Transformations Between and Within Bases</figcaption>
+</div>
+</div> In your text (<a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=269" target="_blank">map representations, p.259</a> and <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=398" target="_blank">similarity, p.388</a>) you will see this written something like:</p>
+<div class="displaymath">
+\begin{equation*}
+T=Rep_{\mathcal{B}\mathcal{B}}\left(T\right)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+\widehat{T}\amp=Rep_{\mathcal{D}\mathcal{D}}\left(T\right)\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ T\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1}\\
+\amp=Rep_{\mathcal{D}\mathcal{B}}\circ Rep_{\mathcal{B}\mathcal{B}}\left(T\right)\circ (Rep_{\mathcal{D}\mathcal{B}})^{-1}.
+\end{align*}
+</div>
+<span class="incontext"><a href="section_similarity.html#p-278">in-context</a></span>
+</body>
+</html>

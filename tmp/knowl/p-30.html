@@ -1,0 +1,62 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:04-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Consider the system of equations:</p>
+<div class="displaymath">
+\begin{align*}
+t-4s+r \amp =0\\
+s-2r \amp =0
+\end{align*}
+</div>
+<p>this system is called <dfn class="terminology">underdetermined</dfn> because there are more variables than equations.  However, we can still use the same strategies to try and solve it.  First we form an augmented matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp -4 \amp 1 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>then we can try to simplify this as before:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rrr|r}
+1 \amp -4 \amp 1 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right]
+\stackrel{R_1+4R_2}{\Huge \leadsto}
+\left[
+\begin{array}{rrr|r}
+1 \amp 0 \amp -7 \amp 0\\
+0 \amp 1 \amp -2 \amp 0
+\end{array}
+\right].
+\end{equation*}
+</div>
+<p>But, we can't go any further than this because there are only two equations for our three unknowns.  Consequently the solution we get is that \(t=7r\text{,}\) \(s=2r\text{,}\) and \(r\) may be any this we like.  For example if \(r=7\) then \(t=49\) and \(s=14\text{,}\) which we can see satisfies the original equation:</p>
+<div class="displaymath">
+\begin{align*}
+49-4(14)+7 \amp =0\\
+14-2(7) \amp =0
+\end{align*}
+</div>
+<p>However we could also let \(r=1\) so that \(t=7\) and \(s=2\text{,}\) or let \(r=-2\) so that \(t=-14\) and \(s=4\text{.}\)  In fact we have infinitely many solutions since there are no restrictions on \(r\text{.}\)  In this situation we say that \(r\) is a <dfn class="terminology">free variable</dfn>.  Also, note that all the equations were set equal to zero, we call this a <dfn class="terminology">homogeneous</dfn> system and these will come to play a special roll in finding general solutions to systems of equations.</p>
+<span class="incontext"><a href="section_basic_systems.html#p-30">in-context</a></span>
+</body>
+</html>

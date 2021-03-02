@@ -1,0 +1,839 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:00-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Matrix Operations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_morphisams.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-14.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_morphisams.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-14.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations" class="active">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_matrix_operations"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Matrix Operations</span>
+</h2>
+<a href="section_matrix_operations.html" class="permalink">¶</a><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Basic Matrix Arithmetic</span>
+</h3>
+<article class="project-like" id="investigation-9"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.1</span>. <span class="title">Addition.</span>
+</h6>
+<p id="p-173">Matrix addition is done term by term.</p>
+<div class="displaymath" id="p-174">
+\begin{align*}
+\left(
+\begin{array}{rrr}
+2\amp 0 \amp 5\\
+-1\amp 3 \amp 4
+\end{array}
+\right)+
+\left(
+\begin{array}{rrr}
+0\amp 5 \amp 1\\
+1\amp 7 \amp -2
+\end{array}
+\right)\amp =
+\left(
+\begin{array}{rrr}
+2+0\amp 0+5 \amp 5+1\\
+-1+1\amp 3+7 \amp 4+(-2)
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rrr}
+2\amp 5 \amp 6\\
+0\amp 10 \amp 2
+\end{array}
+\right)
+\end{align*}
+</div></article><article class="project-like" id="investigation-10"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.2</span>. <span class="title">Scalar Multiplication.</span>
+</h6>
+<p id="p-175">Scalar multiplication is likewise done term by term.</p>
+<div class="displaymath" id="p-176">
+\begin{align*}
+5
+\left(
+\begin{array}{rrr}
+2\amp 0 \amp 5\\
+-1\amp 3 \amp 4
+\end{array}
+\right)\amp =
+\left(
+\begin{array}{rrr}
+5(2)\amp 5(0) \amp 5(5)\\
+5(-1)\amp 5(3) \amp 5(4)
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rrr}
+10\amp 0 \amp 25\\
+-5\amp 15 \amp 20
+\end{array}
+\right)
+\end{align*}
+</div></article><article class="project-like" id="investigation-11"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.3</span>. <span class="title">Matrix Multiplication.</span>
+</h6>
+<p id="p-177">Multiply the rows of the first matrix by the columns of the second, multiplication is taking the dot product of rows with columns.</p>
+<div class="displaymath" id="p-178">
+\begin{align*}
+\left(
+\begin{array}{rrr}
+2\amp 0 \amp 5\\
+-1\amp 3 \amp 4
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+0\amp 5 \\
+1\amp 7 \\
+0\amp 1 
+\end{array}
+\right)\amp =
+\left(
+\begin{array}{rr}
+2(0)+0(1)+5(0) \amp 2(5)+0(7)+5(1) \\
+-1(0)+3(1)+4(0) \amp -1(5)+3(7)+4(1)
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rr}
+0\amp 15 \\
+3\amp 20
+\end{array}
+\right)
+\end{align*}
+</div></article><article class="project-like" id="investigation-12"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.4</span>. <span class="title">Putting it All Together:.</span>
+</h6>
+<div class="displaymath" id="p-179">
+\begin{align*}
+2
+\left(
+\begin{array}{rr}
+1\amp -7 \\
+3\amp 2
+\end{array}
+\right)+
+\left(
+\begin{array}{rrr}
+2\amp 0 \amp 5\\
+-1\amp 3 \amp 4
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+0\amp 5 \\
+1\amp 7 \\
+0\amp 1 
+\end{array}
+\right)\amp =
+\left(
+\begin{array}{rr}
+2(1)\amp 2(-7) \\
+2(3)\amp 2(2)
+\end{array}
+\right)+
+\left(
+\begin{array}{rr}
+2(0)+0(1)+5(0) \amp 2(5)+0(7)+5(1) \\
+-1(0)+3(1)+4(0) \amp -1(5)+3(7)+4(1)
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rr}
+2\amp -14 \\
+6\amp 4
+\end{array}
+\right)+
+\left(
+\begin{array}{rr}
+0 \amp 15 \\
+3 \amp 20
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rr}
+2+0 \amp -14+15 \\
+6+3 \amp 4+20
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rr}
+2 \amp 1 \\
+9 \amp 24
+\end{array}
+\right)
+\end{align*}
+</div></article></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Invertible Matrices</span>
+</h3>
+<article class="definition-like" id="definition-8"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.1</span>.</h6>
+<p id="p-180">A matrix \(A\) is <dfn class="terminology">invertible</dfn> is there exists a matrix \(A^{-1}\) such that \(A\, A^{-1}=A^{-1}\, A=I\) where \(I\) is the identity matrix.  If there exists \(B\) such that only \(A\, B=I\) and \(B\, A\neq I\text{,}\) then \(B\) is the <dfn class="terminology">right inverse</dfn> of \(A\) and \(A\) is the <dfn class="terminology">left inverse</dfn> of \(B\text{.}\)</p></article><article class="project-like" id="investigation-13"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.5</span>. <span class="title">\(2\times 2\) - Matrix Version 1.</span>
+</h6>
+<p id="p-181">Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We want to find</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+A\, A^{-1}=
+\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Multiplyting as above this reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr}
+2a+5c \amp 2b+5d \\
+3a+8c \amp 3b+8d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{gather*}
+2a+5c=1\\
+3a+8c=0
+\end{gather*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{gather*}
+2b+5d=0\\
+3b+8d=1.
+\end{gather*}
+</div>
+<p>We get two sets of two equations each with two variables.  Writing each of these as augmented matrices we get</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|r}
+2 \amp 5 \amp 1\\
+3 \amp 8 \amp 0
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|r}
+2 \amp 5 \amp 0\\
+3 \amp 8 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Solving each of these we would get \(a=8\text{,}\) \(b=-5\text{,}\) \(c=-3\text{,}\) and \(d=2\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+8 \amp -5 \\
+-3 \amp 2
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>But, notice that the coefficient matrices are the same for both systems of equations, they are both \(A\text{,}\) so that when we reduce them we follow the same steps each time, this gives us a better way to approach this.</p></article><article class="project-like" id="investigation-14"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.6</span>. <span class="title">\(2\times 2\) - Matrix Version 2.</span>
+</h6>
+<p id="p-182">Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We want to find</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+A\, A^{-1}=
+\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>From above we want a coefficient matrix that matches \(A\) and then two vectors on the right which together match the identity matrix, so it looks like this</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|rr}
+2 \amp 5 \amp 1\amp 0\\
+3 \amp 8 \amp 0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Let's see what we get when we row reduce the left hand side:</p>
+<div class="displaymath">
+\begin{align*}
+\left(
+\begin{array}{rr|rr}
+2 \amp 5 \amp 1\amp 0\\
+3 \amp 8 \amp 0 \amp 1
+\end{array}
+\right)\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+3 \amp 8 \amp 0\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+3 \amp 8 \amp 0\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+0 \amp -1 \amp 3 \amp -2
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+0 \amp 1 \amp -3 \amp 2
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 0 \amp 8\amp -5\\
+0 \amp 1 \amp -3 \amp 2
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>What we got on the right is exactly the inverse we wanted</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+8 \amp -5 \\
+-3 \amp 2
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>This is really the same thing we did before, but we did it all at once to save time.</p>
+<p id="two_by_two_inverse">As a final note on \(2\times 2\) matrices if</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>then it turns out</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\frac{1}{ad-bc}\left(
+\begin{array}{rr}
+d \amp -b \\
+-c \amp a
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>provided \(ad-bc\neq 0\text{;}\) if \(ad-bc=0\) then \(A\) doesn't have an inverse.  Unfortunately, there is not such a simple formula for larger matrices.</p></article><article class="project-like" id="investigation-15"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.7</span>. <span class="title">Inverse of a \(3\times 3\) Matrix.</span>
+</h6>
+<p id="p-184">Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rrr}
+1 \amp 0 \amp -1 \\
+3 \amp 8 \amp 0 \\
+0 \amp 4 \amp 2 \\
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>As before we set up an augmented matrix with \(A\) as the coefficients on the left and vectors on the right that when taken together look like the identity matrix, then we row reduce.</p>
+<div class="displaymath">
+\begin{align*}
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0 \\
+3 \amp 8 \amp 0 \amp 0 \amp 1 \amp 0 \\
+0 \amp 4 \amp 2 \amp 0 \amp 0 \amp 1\\
+\end{array}
+\right)
+\amp\leadsto
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0 \\
+0 \amp 8 \amp 3 \amp -3 \amp 1 \amp 0 \\
+0 \amp 8 \amp 4 \amp 0 \amp 0 \amp 2\\
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0 \\
+0 \amp 8 \amp 3 \amp -3 \amp 1 \amp 0 \\
+0 \amp 0 \amp 1 \amp 3 \amp -1 \amp 2\\
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp 0 \amp 4 \amp -1 \amp 2 \\
+0 \amp 8 \amp 0 \amp -12 \amp 4 \amp -6 \\
+0 \amp 0 \amp 1 \amp 3 \amp -1 \amp 2\\
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp 0 \amp 4 \amp -1 \amp 2 \\
+0 \amp 1 \amp 0 \amp -\frac{3}{2} \amp \frac{1}{2} \amp -\frac{3}{4} \\
+0 \amp 0 \amp 1 \amp 3 \amp -1 \amp 2\\
+\end{array}
+\right)
+\end{align*}
+</div>
+<p>So that we get</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=
+\left(
+\begin{array}{rrr}
+4 \amp -1 \amp 2 \\
+-\frac{3}{2} \amp \frac{1}{2} \amp -\frac{3}{4} \\
+3 \amp -1 \amp 2\\
+\end{array}
+\right).
+\end{equation*}
+</div></article><article class="project-like" id="investigation-16"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.8</span>. <span class="title">Inverse of a \(4\times 4\) Matrix.</span>
+</h6>
+<p id="p-185">Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rrrr}
+1 \amp 0 \amp 1 \amp 5 \\
+3 \amp 1 \amp 0 \amp 15\\
+0 \amp 1 \amp -2 \amp 0\\
+7 \amp 5 \amp 8 \amp 36
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>As before we set up an augmented matrix with \(A\) as the coefficients on the left and vectors on the right that when taken together look like the identity matrix, then we row reduce.</p>
+<div class="displaymath">
+\begin{align*}
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5 \amp 1 \amp 0 \amp 0 \amp 0\\
+3 \amp 1 \amp 0 \amp 15 \amp 0 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+2 \amp 3 \amp -7 \amp 11 \amp 0 \amp 0 \amp 0 \amp 1
+\end{array}
+\right)
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5  \amp 1 \amp 0 \amp 0 \amp 0\\
+0 \amp 1 \amp -3 \amp 0 \amp -3 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp -2 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0\\
+0 \amp 3 \amp -9 \amp 1  \amp -2 \amp 0 \amp 0 \amp 1
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 1 \amp 5  \amp 1 \amp 0 \amp 0 \amp 0\\
+0 \amp 1 \amp -3 \amp 0 \amp -3 \amp 1 \amp 0 \amp 0\\
+0 \amp 0 \amp 1 \amp 0 \amp 3 \amp -1 \amp 1 \amp 0\\
+0 \amp 0 \amp 0 \amp 1  \amp 7 \amp -3 \amp 0 \amp 1
+\end{array}
+\right)\\
+\amp\leadsto
+\left(
+\begin{array}{rrrr|rrrr}
+1 \amp 0 \amp 0 \amp 0  \amp -37 \amp 16 \amp -1 \amp -5\\
+0 \amp 1 \amp 0 \amp 0 \amp 6 \amp -2 \amp 3 \amp 0\\
+0 \amp 0 \amp 1 \amp 0 \amp 3 \amp -1 \amp 1 \amp 0\\
+0 \amp 0 \amp 0 \amp 1  \amp 7 \amp -3 \amp 0 \amp 1
+\end{array}
+\right)
+\end{align*}
+</div>
+<p>So that we get</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=
+\left(
+\begin{array}{rrrr}
+-37 \amp 16 \amp -1 \amp -5\\
+6 \amp -2 \amp 3 \amp 0\\
+3 \amp -1 \amp 1 \amp 0\\
+7 \amp -3 \amp 0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div></article><article class="project-like" id="investigation-17"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.9</span>. <span class="title">A Couple Non-Examples.</span>
+</h6>
+<p id="p-186">Suppose that we were given</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp 3 \\
+4 \amp 6\\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and we were asked to find the inverse, could we do it? From what we mentioned above (<a data-knowl="./knowl/two_by_two_inverse.html" title="Paragraph">Paragraph </a>) we know the answer is no because \(2(6)-3(4)=0\text{.}\)  But, what woudl happen if we ignored this and tried any ways:</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|rr}
+2 \amp 3 \amp 1 \amp 0\\
+4 \amp 6 \amp 0 \amp 1\\
+\end{array}
+\right)
+\leadsto
+\left(
+\begin{array}{rr|rr}
+2 \amp 3 \amp 1 \amp 0\\
+0 \amp 0 \amp -2 \amp 1\\
+\end{array}
+\right),
+\end{equation*}
+</div>
+<p>which is an inconsistent system.  This happens because the row space of \(A\) is one dimensional, it is a single line in the direction of \(\left(2,3\right)\text{,}\) but it exists in two dimensions.</p>
+<figure class="figure-like" id="one_d_row_space"><div style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/row_space_oneD.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">3.2.2.</span> One Dimensional Row Space for a \(2\times 2\) matrix</figcaption></figure><p id="p-187">Now for a larger example, if we try to get an inverse for</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rrr}
+1 \amp 0 \amp -1\\
+0 \amp 1 \amp 0\\
+0 \amp 1 \amp 0\\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>we get</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0\\
+0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1\\
+\end{array}
+\right)
+\leadsto
+\left(
+\begin{array}{rrr|rrr}
+1 \amp 0 \amp -1 \amp 1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp -1 \amp 1\\
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We can't row reduce \(A\) so we don't get an inverse.  This is happening because the rows of \(A\) are not linearly independent, the row space for \(A\) is</p>
+<div class="displaymath">
+\begin{align*}
+Row\ A\amp=\left\{\left( 1,0,-1\right), \left( 0,1,0\right) \right\}
+\end{align*}
+</div>
+<p>which is only two dimensional.  That is, a matrix which in a sense has a two dimensional span but exists in three dimensions doesn't have an inverse.</p>
+<figure class="figure-like" id="two_d_row_space"><div style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/row_space_twoD.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">3.2.3.</span> Two Dimensional Row Space for a \(3\times 3\) matrix</figcaption></figure><p id="p-188">Note that while \(A\) doesn't have an inverse</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rrr}
+1 \amp 0 \amp -1\\
+0 \amp 1 \amp 0\\
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1 \\
+0 \amp 0 \\
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1 \\
+\end{array}
+\right),
+\end{equation*}
+</div> so that a matrix with the same row space has a <em class="emphasis">right inverse</em>.<a data-knowl="" class="id-ref" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a><span id="hk-fn-3" class="hidden-content tex2jax_ignore"><span class="footnote">You should convince yourself that it doesn't have a left inverse.</span></span></article></section><section class="conclusion" id="conclusion-8"><h6 class="heading">Concluding Remarks.<span></span>
+</h6>
+<p id="p-189">Using row reduction to get inverses is the standard introductory way to find them.  It does take patience and precision, both of which can be bad at.  Computers can do this very well though.  Use the code below to help you check your work while practicing.  You should also learn to use the computer to help you check your other calculations.  (Make use of the <a class="external" href="quickref-linalg.pdf" target="_blank">Linear Algebra Quick Reference</a> and you can use the box below or go to the <a class="external" href="https://sagecell.sagemath.org/" target="_blank">SageMathCell</a> main page.)</p>
+<div class="sagecell-sage" id="sage-12"><script type="text/x-sage">                    # Matrices
+A=matrix([[1,0,1,5],
+          [3,1,0,15],
+          [0,1,-2,0],
+          [2,3,-7,11]])
+
+II=identity_matrix(4)
+
+# Augment A
+B=A.augment(II, subdivide=True)
+
+
+# Display
+pretty_print("Let A=",A)
+pretty_print("Then, augment with\nthe identity to get:",B)
+pretty_print("Row reduce this\nand get:\t",B.rref())
+pretty_print("Thus we have\t",LatexExpr("A^{-1}="),A^-1)
+</script></div></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:06-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="project-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.2.6</span>. <span class="title">\(2\times 2\) - Matrix Version 2.</span>
+</h6>
+<p>Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We want to find</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+A\, A^{-1}=
+\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>From above we want a coefficient matrix that matches \(A\) and then two vectors on the right which together match the identity matrix, so it looks like this</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|rr}
+2 \amp 5 \amp 1\amp 0\\
+3 \amp 8 \amp 0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Let's see what we get when we row reduce the left hand side:</p>
+<div class="displaymath">
+\begin{align*}
+\left(
+\begin{array}{rr|rr}
+2 \amp 5 \amp 1\amp 0\\
+3 \amp 8 \amp 0 \amp 1
+\end{array}
+\right)\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+3 \amp 8 \amp 0\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+3 \amp 8 \amp 0\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+2 \amp 5 \amp 1 \amp 0
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+0 \amp -1 \amp 3 \amp -2
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 3 \amp -1\amp 1\\
+0 \amp 1 \amp -3 \amp 2
+\end{array}
+\right)\\
+\amp \leadsto 
+\left(
+\begin{array}{rr|rr}
+1 \amp 0 \amp 8\amp -5\\
+0 \amp 1 \amp -3 \amp 2
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>What we got on the right is exactly the inverse we wanted</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+8 \amp -5 \\
+-3 \amp 2
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>This is really the same thing we did before, but we did it all at once to save time.</p>
+<p>As a final note on \(2\times 2\) matrices if</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>then it turns out</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\frac{1}{ad-bc}\left(
+\begin{array}{rr}
+d \amp -b \\
+-c \amp a
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>provided \(ad-bc\neq 0\text{;}\) if \(ad-bc=0\) then \(A\) doesn't have an inverse.  Unfortunately, there is not such a simple formula for larger matrices.</p></article><span class="incontext"><a href="section_matrix_operations.html#investigation-14">in-context</a></span>
+</body>
+</html>

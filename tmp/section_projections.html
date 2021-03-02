@@ -1,0 +1,329 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Orthogonal Projections and Curve Fitting</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_coordinates.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_CAS_maps.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_coordinates.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_CAS_maps.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections" class="active">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_projections"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Orthogonal Projections and Curve Fitting</span>
+</h2>
+<a href="section_projections.html" class="permalink">¶</a><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Orthogonal and Orthonormal Bases</span>
+</h3>
+<article class="definition-like" id="definition-10"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.5.1</span>.</h6>
+<p id="p-217">A basis \(\mathcal{B}\) is said to be an <dfn class="terminology">orthogonal basis</dfn> if each pair of vectors in \(\mathcal{B}\text{,}\) \(\vec{\beta}_i\) and \(\vec{\beta}_j\text{,}\) are orthogonal<a data-knowl="" class="id-ref" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a><span id="hk-fn-5" class="hidden-content tex2jax_ignore"><span class="footnote">perpendicular</span></span>.  If in addition \(||\vec{\beta}_i||=1\) for all \(i\) then we say that the basis is <dfn class="terminology">orthonormal</dfn>.</p></article><article class="project-like" id="investigation-25"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.5.1</span>. <span class="title">Orthogonal and Non-Orthogonal Bases.</span>
+</h6>
+<p id="p-218">Consider the bases <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><div class="displaymath" id="p-219">
+\begin{equation*}
+\mathcal{B}=
+\left\{
+\left[
+\begin{array}{r}
+2 \\ 0 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+-1 \\ 0 \\ 2
+\end{array}
+\right]
+\right\}
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/ortho_basis.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">3.5.2.</span> Orthogonal Basis</figcaption>
+</div>
+</div> and <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><div class="displaymath" id="p-220">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 1
+\end{array}
+\right]
+\right\}.
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/non_ortho_basis.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">3.5.3.</span> Non-Orthogonal Basis</figcaption>
+</div>
+</div> Both of the above sets are bases for \(\mathbb{R}^3\) but only \(\mathcal{B}\) is an orthogonal basis.  We can see this because</p>
+<div class="displaymath">
+\begin{align*}
+\left\lt2,0,1\right\gt\cdot\left\lt0,1,0\right\gt\amp=0\\
+\left\lt2,0,1\right\gt\cdot\left\lt-1,0,2\right\gt\amp=0,\ \mbox{ and}\\
+\left\lt-1,0,2\right\gt\cdot\left\lt0,1,0\right\gt\amp=0.
+\end{align*}
+</div>
+<p>However, \(\mathcal{D}\) is not since</p>
+<div class="displaymath">
+\begin{equation*}
+\left\lt1,1,1\right\gt\cdot\left\lt0,1,1\right\gt=2,
+\end{equation*}
+</div>
+<p>so there is at least one pair of vectors which are not orthogonal.</p>
+<p id="p-221">Further if we replace \(\mathcal{B}\) with <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><div class="displaymath" id="p-222">
+\begin{equation*}
+\mathcal{B'}=
+\left\{
+\left[
+\begin{array}{r}
+\frac{2}{\sqrt{3}} \\ 0 \\ \frac{1}{\sqrt{3}}
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 0
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+-\frac{1}{\sqrt{3}} \\ 0 \\ \frac{2}{\sqrt{3}}
+\end{array}
+\right]
+\right\}
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/ortho_normal_basis.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">3.5.4.</span> Orthonormal Basis</figcaption>
+</div>
+</div> we have an orthonormal basis since all the vectors now have length one and are perpendicular.  Moreover, since all of these vectors point in the same direction as the vectors of \(\mathcal{B}\) we can call this the normalization of \(\mathcal{B}\text{.}\)</p></article><article class="project-like" id="investigation-26"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.5.2</span>. <span class="title">Orthogonalization.</span>
+</h6>
+<p id="p-223">Consider again</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\left[
+\begin{array}{r}
+1 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 1 \\ 1
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+0 \\ 0 \\ 1
+\end{array}
+\right]
+\right\}.
+\end{equation*}
+</div>
+<p>and suppose that we want to develop an orthonormal basis from this.  We will do this a step at a time using the <dfn class="terminology">Gram-Schmidt Orthogonalization</dfn> process.</p>
+<p id="p-224">The process is based on the vector projections we studied before.  If \(\vec{v}=\left\lt1,1\right\gt\) and \(\vec{w}=\left\lt0,1\right\gt\text{,}\) then</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:42.1052631578947%;justify-content:flex-start;">
+<div class="displaymath" id="p-225">
+\begin{equation*}
+proj_{\vec{v}}\vec{w}=\frac{\vec{v}\cdot\vec{w}}{\vec{v}\cdot\vec{v}}\vec{v}=\left\lt\frac{1}{2},\frac{1}{2}\right\gt.
+\end{equation*}
+</div>
+<p>The vector</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{w}-proj_{\vec{v}}\vec{w}=\left\lt-\frac{1}{2},\frac{1}{2}\right\gt.
+\end{equation*}
+</div>
+<p>is an orthogonal complement of the projection; it is orthogonal to \(\vec{v}\) and we can use it to replace \(\vec{w}\text{.}\)</p>
+</div>
+<div class="sbspanel" style="width:52.6315789473684%;justify-content:flex-start;"><img src="images/vector_projection.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<figcaption class="sbscaption" style="width:42.1052631578947%;"></figcaption><figcaption class="sbscaption" style="width:52.6315789473684%;"><span class="type">Figure</span> <span class="codenumber">3.5.5.</span> </figcaption>
+</div>
+</div>
+<p id="p-226">Consider</p>
+<div class="displaymath">
+\begin{align*}
+a\vec{v}+b\vec{w}\amp = a\vec{v}+b\vec{w}\\
+\amp = a\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}+proj_{\vec{v}}\vec{w}\right)\\
+\amp = a\vec{v}+b\, proj_{\vec{v}}\vec{w}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right)\\
+\amp = a\vec{v}+\frac{b}{2}\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right),\\
+\amp = \left(a+\frac{b}{2}\right)\vec{v}+b\, \left(\vec{w}-proj_{\vec{v}}\vec{w}\right),
+\end{align*}
+</div>
+<p>so we can systematically replace any linear combination of \(\vec{v}\) and \(\vec{w}\) with a combination of \(\vec{v}\) and \(\vec{w}-proj_{\vec{v}}\vec{w}\text{.}\)  This is the Gram-Schmidt Orthogonalization process.</p></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Orthogonal Complements</span>
+</h3>
+<p id="p-227">Some Content!!!</p></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Subspace Projections</span>
+</h3>
+<p id="p-228">Some Content!!!</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.4</span> <span class="title">Curve Fitting</span>
+</h3>
+<p id="p-229">Some Content!!!</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+\documentclass{report}
+
+
+\usepackage{tikz}
+
+
+\begin{document}
+
+\tikz{
+	
+	\draw[->,ultra thick,color=red] (0,0)--(3,1) node[anchor=north west] {\Large$\vec{v}$};
+	\draw[->,ultra thick,color=red] (0,0)--(1,2) node[anchor=south east] {\Large$\vec{w}$};
+	\draw[ultra thick, dashed] (3,1)--(4,3);
+	\draw[ultra thick, dashed] (1,2)--(4,3);
+	\draw[->,ultra thick,color=blue, dashed] (1.5,0.5)--(1,1.8);
+	\draw[->,ultra thick,color=blue, dashed] (0,0) -- (1.5,0.5);
+	% \draw[->,thick] (-1,0) -- (5,0);
+	% \draw[->,thick] (0,-1) -- (0,3);
+	
+}
+
+\vspace*{1in}
+
+\tikz{
+	
+	\draw[->,ultra thick,color=blue] (0,0) -- (4,0) node[anchor=west] {\Large$\vec{v}$};
+	\draw[->,ultra thick, dashed,color=blue] (0,0) -- (1,1.7) node[anchor=west] at (0.5,0.85) {\Large$\vec{w}$};
+	\draw[->, ultra thick, color=red] (0,0) -- (0.5,2) node[anchor=east] at (0.25,1) {\Large$\vec{u}$};
+
+	\draw[ultra thick,dashed] (0.5,2) -- (4.5,2);
+	\draw[ultra thick,dashed] (0.5,2) -- (1.5,3.7);
+	\draw[ultra thick,dashed] (4.5,2) -- (5.5,3.7);
+	\draw[ultra thick,dashed] (1.5,3.7) -- (5.5,3.7);
+	\draw[ultra thick,dashed] (4,0) -- (5,1.7);
+	\draw[ultra thick,dashed] (1,1.7) -- (5,1.7);
+	\draw[thick,dashed] (5,1.7) -- (5.5,3.7);
+	\draw[thick,dashed] (4,0) -- (4.5,2);
+	\draw[thick,dashed] (1,1.7) -- (1.5,3.7);
+	\draw[thick] (0.5,0) -- (0.75,0.425) -- (0.25,0.425);
+
+}
+
+\end{document}

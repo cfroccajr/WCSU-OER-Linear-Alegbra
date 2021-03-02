@@ -1,0 +1,344 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Practice Exam on Linear Transformations and Projections</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_exercises_maps.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="determinants.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_exercises_maps.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="determinants.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4" class="active">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="exercises" id="exercises-4"><h2 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.9</span> <span class="title">Practice Exam on Linear Transformations and Projections</span>
+</h2>
+<section class="introduction" id="introduction-10"><p id="p-251"><em class="alert">Practice Exercises:</em></p>
+<p id="p-252">Here are some exercises from <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf" target="_blank">Hefferon's text</a> which you should try while studying for the exam, the answers to all of these can be found in the <a class="external" href="http://joshua.smcvt.edu/linearalgebra/jhanswer.pdf" target="_blank"><em class="emphasis">Answers to Exercises</em></a> supplement for Hefferon's text.  You do not need to hand in these exercises.</p>
+<ul class="disc">
+<li id="li-82">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=182" target="_blank">Definition and Examples of Isomorphisms (p.172): 13, 17ac</a>
+</li>
+<li id="li-83">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=191" target="_blank">Dimension and Isomorphisms (p.181): 10, 12</a>
+</li>
+<li id="li-84">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=198" target="_blank">Definition of Homomorphism (p.188): 18, 19, 22, 25a</a>
+</li>
+<li id="li-85">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210" target="_blank">Range Space and Null Space (p.200): 22, 23, 29</a>
+</li>
+<li id="li-86">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=221" target="_blank">Linear Maps and Matrices (p.211): 12, 13, 14, 15, 18</a>
+</li>
+<li id="li-87">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230" target="_blank">Matrices and Linear Maps (p.220): 12, 13, 15, 17</a>
+</li>
+<li id="li-88">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=236" target="_blank">Sums and Scalar Products (p.226): 8,9</a>
+</li>
+<li id="li-89">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=243" target="_blank">Matrix Multiplication (p.233): 14-17</a>
+</li>
+<li id="li-90">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=253" target="_blank">Mechanics of Matrix Multiplication (p.243): 24-27, 31</a>
+</li>
+<li id="li-91">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262" target="_blank">Inverses (p.252): 13-19</a>
+</li>
+<li id="li-92">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267" target="_blank">Representations of Vectors (p.257): 7-14</a>
+</li>
+<li id="li-93">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=280" target="_blank">Orthogonal Projections into a Line (p.270): 6-9</a>
+</li>
+<li id="li-94">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285" target="_blank">Gram-Schmidt (p.275): 10-14</a>
+</li>
+<li id="li-95">\(\S\) - <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293" target="_blank">Projections into a Subspace (p.283): 10, 11, 12</a>
+</li>
+</ul>
+<p>Additionally, be sure you can define the following: Linear Transformations, Matrix of a Transformation, One-to-One, Onto, Kernel, Zero Divisor, Transpose, Inverse Matrix, Null Space, Projection, Orthogonal Vectors, Orthogonal Complement, Projection of a vector onto a subspace, Orthonormal Basis, Change of Basis Matrix (also called change of coordinate matrix)</p>
+<p id="p-253"><em class="alert">Practice Exam:</em></p>
+<p id="p-254">In addition to the practice problems above below are the questions for your practice exam, these must be turned in when you come in for the exam.  The practice exam counts for 5% of your exam grade and can earn you back 15% of any points you loose on the in-class portion of the exam.</p></section><article class="exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-255">Define <dfn class="terminology">linear transformation</dfn>.</p></article><article class="exercise-like" id="exercise-35"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-256">Define <dfn class="terminology">inverse matrix</dfn>.</p></article><article class="exercise-like" id="exercise-36"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-257">Define <dfn class="terminology">one-to-one function</dfn>.</p></article><article class="exercise-like" id="exercise-37"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-258">Define <dfn class="terminology">kernel of a transformation</dfn>.</p></article><article class="exercise-like" id="exercise-38"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-259">Define <dfn class="terminology">orthogonal complement</dfn>.</p></article><article class="exercise-like" id="exercise-39"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-260">Find the inverse of the given matrix: (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=262" target="_blank">p.252</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr}
+1 \amp 2 \amp 4\\
+-1 \amp 0 \amp 2\\
+0 \amp 3 \amp 10
+\end{array}
+\right]
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-261">Find the kernel (i.e. null space) for the transformation defined by multiplication by: (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210" target="_blank">p.200</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rrr}
+3 \amp 2 \amp 5\\
+-1 \amp 0 \amp 2
+\end{array}
+\right]
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-262">Is the transformation defined by the given matrix one-to-one?  Is it onto? (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=282" target="_blank">p.272</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+B=\left[
+\begin{array}{rr}
+1 \amp 2 \\
+-3 \amp -5\\
+4 \amp 7\\
+\end{array}
+\right]
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-42"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-263">Find the domain, codomain, and range for the transformation defined by the matrix. (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=230" target="_blank">p.220</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+C=\left[
+\begin{array}{rrrr}
+1 \amp 0 \amp 3 \amp 0\\
+-3 \amp 1\amp -5\amp 1\\
+2 \amp 1\amp 2\amp 2\\
+\end{array}
+\right]
+\end{equation*}
+</div></article><article class="exercise-like" id="first_basis_question"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-264">Find the transformation, \(Rep_{\mathcal{E}_3,\mathcal{B}}\text{,}\) from the standard basis, \(\mathcal{E}_3\text{,}\) to the basis \(\mathcal{B}\text{.}\) (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=210" target="_blank">p.200</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}_3=
+\left\{
+\left(
+\begin{array}{r}
+1 \\ 0 \\0
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 1 \\0
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 0 \\1
+\end{array}
+\right)
+\right\},\ 
+\mathcal{B}=
+\left\{
+\left(
+\begin{array}{r}
+1 \\ 0 \\-1
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 1 \\1
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+1 \\ 1 \\2
+\end{array}
+\right)
+\right\}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-44"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="p-265">Use your answer from <a data-knowl="./knowl/first_basis_question.html" title="Exercise 3.9.10">Exercise 3.9.10</a> to find the transformation from \(\mathcal{C}\) to \(\mathcal{B}\text{,}\) \(Rep_{\mathcal{C}, \mathcal{B}}\text{.}\) (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=267" target="_blank">p.257</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{C}=
+\left\{
+\left(
+\begin{array}{r}
+1 \\ 0 \\ 0
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+1 \\ 1 \\0
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+1 \\ 1 \\1
+\end{array}
+\right)
+\right\}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<p id="p-266">Find the orthogonal compliment of the subspace defined by the set of vectors: (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293" target="_blank">p.283</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\left(
+\begin{array}{r}
+1 \\ 0 \\ 0 \\ 1
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 0 \\ 2 \\ -1
+\end{array}
+\right)
+\right\}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<p id="p-267">Use the Gram-Schmidt process to create and orthogonal basis to replace \(\mathcal{D}\text{.}\) (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=285" target="_blank">p.275</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\left(
+\begin{array}{r}
+1 \\ 1 \\1
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 2 \\0
+\end{array}
+\right),
+\left(
+\begin{array}{r}
+0 \\ 1 \\1
+\end{array}
+\right)
+\right\}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">14.</span></h6>
+<p id="p-268">Use linear algebra to find the line of best fit for the points \((1,5)\text{,}\) \((3,3)\text{,}\) and \((4,0)\text{.}\) (compare to <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=300" target="_blank">p.290</a> and <a class="external" href="http://joshua.smcvt.edu/linearalgebra/book.pdf#page=293" target="_blank">p.283</a>)</p>
+<figure class="figure-like" id="figure-35"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-29.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">3.9.1.</span> Least Squares Problem</figcaption></figure></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

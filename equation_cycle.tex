@@ -1,0 +1,122 @@
+\documentclass{report}
+
+\usepackage{tikz,lscape}
+\pagestyle{empty}
+
+\newcommand\diagram{
+\tikz{
+	
+	\draw[->,ultra thick] (0,-2) -- +(0,7);
+	\draw[->,ultra thick] (-2,0) -- +(7,0);
+
+	\draw[->,thick] (0,0) -- +(2,5);
+	\draw[->,thick,dashed] (0,0) -- ++(4/3,10/3) -- ++(8/3,-4/3);
+
+	\draw[->,thick] (0,0) -- +(2,-1);
+	\draw[->,thick,dashed] (0,0) -- ++(8/3,-4/3) -- ++(4/3,10/3);
+
+	\draw[->,thick] (0,0) -- +(4,2);
+
+}}
+
+\begin{document}
+
+\begin{landscape}
+\scalebox{1.5}{
+\noindent
+\tikz{
+	
+	\node at (-2.375,0.5) {
+		$
+			\left(
+				\begin{array}{rr|r}
+					2 & 2 & 4\\
+					5 & -1 & 2
+				\end{array}
+			\right)
+		$
+	};
+
+	\node at (-2.375,-0.25) {Augmented Matrix};
+
+	\draw[anchor = west, ultra thick, <->] (0,0.5) to[out=0, in=90] +(2,-2);
+
+	\node[anchor=north] at (2,-1.6) {
+		$
+				\begin{array}{rcrcr}
+					2x&+ & 2y&= & 4\\
+					5x&- & y&= & 2
+				\end{array}
+		$
+	};
+
+	\node at (2,-3) {System of Equations};
+
+
+	\draw[anchor = north, ultra thick, <->] (2,-3.5) to[out=-90, in=0] +(-2,-2);	
+
+	\node at (-2.375,-5.5) {
+		$
+			\left(
+				\begin{array}{r}
+					2 \\
+					5
+				\end{array}
+			\right)x+
+			\left(
+				\begin{array}{r}
+					2\\
+					-1
+				\end{array}
+			\right)y=
+			\left(
+				\begin{array}{r}
+					4\\
+					2
+				\end{array}
+			\right)
+		$
+	};
+
+	\node at (-2.375,-6.25) {Vector Equation};
+
+
+	\draw[anchor = east, ultra thick, <->] (-4.75,-5.5) to[out=180, in=-90] +(-2,2);	
+
+	\node[anchor=south] at (-6.75,-2.6) {
+		$
+			\left(
+				\begin{array}{rr}
+					2 & 2 \\
+					5 & -1 
+				\end{array}
+			\right)
+			\left(
+				\begin{array}{r}
+					x\\
+					y
+				\end{array}
+			\right)=
+			\left(
+				\begin{array}{r}
+					4\\
+					2
+				\end{array}
+			\right)
+		$
+	};
+
+	\node at (-6.75,-3) {Matrix Equation};
+
+
+	\draw[anchor = south, ultra thick, <->] (-6.75,-1.5) to[out=90, in=180] +(2,2);	
+
+	\node at (-2.375,-2.8) {\scalebox{0.6}{\diagram}};
+
+
+
+}}
+
+\end{landscape}
+
+\end{document}

@@ -1,0 +1,435 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-12-04T12:13:45-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diagonalizable Matrices, Eigenvalues, and Eigenvectors</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section_similarity.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_CAS_eigen.html" title="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section_similarity.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="determinants.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_CAS_eigen.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+<h2 class="link"><a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a></h2>
+<ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+<h2 class="link"><a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a></h2>
+<ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+<h2 class="link"><a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a></h2>
+<ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+<h2 class="link"><a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a></h2>
+<ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="section-21.html" data-scroll="section-21" class="active">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework Exercises on Determinants</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></h2>
+<h2 class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></h2>
+<h2 class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></h2>
+<h2 class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-21"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</span>
+</h2>
+<section class="subsection" id="section_diagonal"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">Diagonalizable Matrices</span>
+</h3>
+<article class="definition-like" id="def_diagonalizable"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">4.3.1</span> <span class="title">Diagonalizable</span>
+</h6>
+<p id="p-284">We say that an \(n\times n\) matrix \(A\) is <dfn class="terminology">diagonalizable</dfn> if it is similar (<a knowl="./knowl/def_similar.html" title="Definition 4.2.2: Similar Matrices">Definition 4.2.2</a>) to a diagonal matrix \(D\text{.}\)  That is if there exists an invertible matrix \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A=PDP^{-1}.
+\end{equation*}
+</div></article><article class="example-like" id="diagonal_investigation"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.3.1</span> <span class="title">A First Basic Example</span>
+</h6>
+<p id="p-285">Consider the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rr}
+4 \amp -2 \\
+1 \amp 1
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>and let's try to find \(D\) and \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A=PDP^{-1}.
+\end{equation*}
+</div>
+<p>Note, this is the same as</p>
+<div class="displaymath">
+\begin{equation*}
+AP=PD,
+\end{equation*}
+</div>
+<p>so letting</p>
+<div class="displaymath">
+\begin{equation*}
+P=\left[
+\begin{array}{rr}
+p_1 \amp p_2 \\
+p_3 \amp p_4
+\end{array}
+\right]\ \mbox{and}\ 
+D=\left[
+\begin{array}{rr}
+\lambda_1 \amp 0 \\
+0 \amp \lambda_2
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>then we get the system of equations</p>
+<div class="displaymath">
+\begin{align*}
+4p_1-2p_3\amp =\lambda_1 p_1\\
+p_1+p_3\amp =\lambda_1 p_3\\
+4p_2-2p_4\amp =\lambda_2 p_2\\
+p_2+p_4\amp =\lambda_2 p_4.
+\end{align*}
+</div>
+<p>Since the second two equations are the same as the first two we really just need to solve one pair.  If we set up an augmented matrix and solve we get:</p>
+<div class="displaymath">
+\begin{align*}
+\left[
+\begin{array}{cc|c}
+(4-\lambda) \amp -2 \amp 0\\
+1 \amp (1-\lambda) \amp 0
+\end{array}
+\right]\amp \leadsto
+\left[
+\begin{array}{cc|c}
+1 \amp (1-\lambda) \amp 0\\
+0 \amp -2-(1-\lambda)(4-\lambda) \amp 0
+\end{array}
+\right]\\
+\amp \leadsto
+\left[
+\begin{array}{cc|c}
+1 \amp (1-\lambda) \amp 0\\
+0 \amp -1(\lambda^2-5\lambda+6) \amp 0
+\end{array}
+\right].
+\end{align*}
+</div>
+<p>So, if \(p_3\neq0\text{,}\) then we get \(\lambda = 2\) or \(3\) and \(p_1=p_3\) or \(2\, p_3\text{.}\)  Therefore, we get two vectors and two values for \(\lambda\text{,}\) if \(\lambda=2\) then the vector we want looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+1\\
+1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and if \(\lambda=3\) then the vector we want looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+2\\
+1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Finally, this is what we need because</p>
+<div class="displaymath">
+\begin{align*}
+A\left[
+\begin{array}{rr}
+1 \amp 2\\
+1 \amp 1
+\end{array}
+\right]\amp= \left[
+\begin{array}{rr}
+2 \amp 6\\
+2 \amp 3
+\end{array}
+\right]\\
+\amp=\left[
+\begin{array}{rr}
+1 \amp 2\\
+1 \amp 1
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+2 \amp 0\\
+0 \amp 3
+\end{array}
+\right].
+\end{align*}
+</div>
+<p>Thus, with</p>
+<div class="displaymath">
+\begin{equation*}
+P=\left[
+\begin{array}{rr}
+1 \amp 2 \\
+1 \amp 1
+\end{array}
+\right]\ \mbox{and}\ 
+D=\left[
+\begin{array}{rr}
+2 \amp 0 \\
+0 \amp 3
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>we finally have \(A=PDP^{-1}\text{.}\)</p>
+<p id="p-286">The vectors we found along the way and the values for \(\lambda\) both play a special roll in linear algebra, they are called <dfn class="terminology">eigenvectors</dfn> and <dfn class="terminology">eigenvalues</dfn>; they are the topic of the next section (<a href="section-21.html#section_eigen" class="xref" title="Subsection 4.3.2: Eigenvalues and Eigenvectors">Subsection 4.3.2</a>).</p></article><article class="example-like" id="investigation-34"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.3.2</span> <span class="title">A Non-Example</span>
+</h6>
+<p id="p-287">Insert example of a matrix that can't be diagonalized.</p></article></section><section class="subsection" id="section_eigen"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Eigenvalues and Eigenvectors</span>
+</h3>
+<article class="definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">4.3.2</span> <span class="title">Eigenvalues and Eigenvectors  </span>
+</h6>
+<p id="p-288">An <dfn class="terminology">eigenvector</dfn> of a matrix \(A\) is a non-zero vector \(\vec{x}\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A\vec{x}=\lambda \vec{x}
+\end{equation*}
+</div>
+<p>for some constant \(\lambda\) which is called the corresponding <dfn class="terminology">eigenvalue</dfn>.</p></article><article class="example-like" id="investigation-35"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.3.3</span>
+</h6>
+<p id="p-289">Let's revisit <a knowl="./knowl/diagonal_investigation.html" title="Investigation 4.3.1: A First Basic Example">Investigation 4.3.1</a> since we already know the answers we should get we can focus on how we might get them.  We are looking at</p>
+<div class="displaymath">
+\begin{equation*}
+A\vec{x}=\lambda \vec{x}
+\end{equation*}
+</div>
+<p>which is the same as</p>
+<div class="displaymath">
+\begin{equation*}
+A\vec{x}-\lambda \vec{x}=\vec{0}\ \mbox{or}\ (A-\lambda I)\, \vec{x}=\vec{0}.
+\end{equation*}
+</div>
+<p>If \(\vec{x}\neq \vec{0}\text{,}\) then \((A-\lambda I)\) must be singular (a.k.a. non-invertible or a zero divisor) or zero, either way \(det(A-\lambda I)=0\text{.}\)  That is,</p>
+<div class="displaymath">
+\begin{align*}
+|det(A-\lambda I)|\amp = 
+\left|
+\left[
+\begin{array}{cc}
+4-\lambda \amp -2\\
+1 \amp 1-\lambda
+\end{array}
+\right]
+\right|\\
+\amp = |(4-\lambda)(1-\lambda)+2|\\
+\amp = |\lambda^2-5\lambda+6|\\
+\amp = 0.
+\end{align*}
+</div>
+<p>Solving for \(\lambda\) we get \(\lambda = 2\) or \(3\text{,}\) as before.</p>
+<p id="p-290">If we now take our values for \(\lambda\) and substitute them back into our original equation we can find our values for \(\vec{x}\text{.}\)  Let \(\lambda=2\) so that we are solving</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rr}
+2 \amp -2 \\
+1 \amp -1
+\end{array}
+\right]\vec{x}=\vec{0}.
+\end{equation*}
+</div>
+<p>Row reducing the matrix we quickly get one free variable and all the possible solutions look like</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+1\\
+1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Similarly, if we let \(\lambda=3\) we need to solve</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{rr}
+1 \amp -2 \\
+1 \amp -2
+\end{array}
+\right]\vec{x}=\vec{0},
+\end{equation*}
+</div>
+<p>which yields solutions of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+2\\
+1
+\end{array}
+\right).
+\end{equation*}
+</div></article></section><section class="conclusion" id="conclusion-11"><h6 class="heading">Final Remarks:<span></span>
+</h6>
+<article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">4.3.3</span>
+</h6>
+<p id="p-291">If an \(n\times n\) matrix \(A\) has \(n\) distinct eigenvector, \(\lambda_1,\ldots,\lambda_n\text{,}\) and corresponding eigenvectors, \(\vec{x}_1,\ldots,\vec{x}_n\text{,}\) then \(A\) is diagonalizable and in particular</p>
+<div class="displaymath">
+\begin{equation*}
+A=PDP^{-1}
+\end{equation*}
+</div>
+<p>where the columns of \(P\) are the eigenvectors,</p>
+<div class="displaymath">
+\begin{equation*}
+P=
+\left[
+\vec{x}_1\, \vec{x}_2\, \cdots\, \vec{x}_n 
+\right],
+\end{equation*}
+</div>
+<p>and \(D\) is a diagonal matrix with the eigenvalues on the diagonal,</p>
+<div class="displaymath">
+\begin{equation*}
+D=
+\left[
+\begin{array}{ccccc}
+\lambda_1 \amp 0 \amp 0 \amp \cdots \amp 0\\
+0 \amp \lambda_2 \amp 0 \amp \cdots \amp 0\\
+\amp \amp \ddots \amp \amp \\
+\amp \amp \amp \ddots  \amp \\
+0 \amp 0 \amp 0 \amp \cdots \amp \lambda_n\\
+\end{array}
+\right].
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">4.3.4</span>
+</h6>
+<p id="p-292">If \(A\) is a diagonalizable matrix so that</p>
+<div class="displaymath">
+\begin{equation*}
+A=PDP^{-1}
+\end{equation*}
+</div>
+<p>for some diagonal matrix \(D\text{,}\) then:</p>
+<ul class="disc">
+<li id="li-116">the entries in \(D\) are the eigenvalues of \(A\)</li>
+<li id="li-117">the columns of \(P\) are eigenvectors of \(A\)</li>
+<li id="li-118">\(A^{-1}=PD^{-1}P^{-1}\text{,}\) if \(A\) is invertible</li>
+<li id="li-119">\(A^n=PD^nP^{-1}\)</li>
+</ul></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

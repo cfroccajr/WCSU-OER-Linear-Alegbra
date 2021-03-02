@@ -1,0 +1,159 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Consider the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left[
+\begin{array}{rr}
+4 \amp -2 \\
+1 \amp 1
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>and let's try to find \(D\) and \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A=PDP^{-1}.
+\end{equation*}
+</div>
+<p>Note, this is the same as</p>
+<div class="displaymath">
+\begin{equation*}
+AP=PD,
+\end{equation*}
+</div>
+<p>so letting</p>
+<div class="displaymath">
+\begin{equation*}
+P=\left[
+\begin{array}{rr}
+p_1 \amp p_2 \\
+p_3 \amp p_4
+\end{array}
+\right]\ \mbox{and}\ 
+D=\left[
+\begin{array}{rr}
+\lambda_1 \amp 0 \\
+0 \amp \lambda_2
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>then we get the system of equations</p>
+<div class="displaymath">
+\begin{align*}
+4p_1-2p_3\amp =\lambda_1 p_1\\
+p_1+p_3\amp =\lambda_1 p_3\\
+4p_2-2p_4\amp =\lambda_2 p_2\\
+p_2+p_4\amp =\lambda_2 p_4.
+\end{align*}
+</div>
+<p>Since the second two equations are the same as the first two we really just need to solve one pair.  If we set up an augmented matrix and solve we get:</p>
+<div class="displaymath">
+\begin{align*}
+\left[
+\begin{array}{cc|c}
+(4-\lambda) \amp -2 \amp 0\\
+1 \amp (1-\lambda) \amp 0
+\end{array}
+\right]\amp \leadsto
+\left[
+\begin{array}{cc|c}
+1 \amp (1-\lambda) \amp 0\\
+0 \amp -2-(1-\lambda)(4-\lambda) \amp 0
+\end{array}
+\right]\\
+\amp \leadsto
+\left[
+\begin{array}{cc|c}
+1 \amp (1-\lambda) \amp 0\\
+0 \amp -1(\lambda^2-5\lambda+6) \amp 0
+\end{array}
+\right].
+\end{align*}
+</div>
+<p>So, if \(p_3\neq0\text{,}\) then we get \(\lambda = 2\) or \(3\) and \(p_1=p_3\) or \(2\, p_3\text{.}\)  Therefore, we get two vectors and two values for \(\lambda\text{,}\) if \(\lambda=2\) then the vector we want looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+1\\
+1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and if \(\lambda=3\) then the vector we want looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{x}=k\, \left(
+\begin{array}{r}
+2\\
+1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Finally, this is what we need because</p>
+<div class="displaymath">
+\begin{align*}
+A\left[
+\begin{array}{rr}
+1 \amp 2\\
+1 \amp 1
+\end{array}
+\right]\amp= \left[
+\begin{array}{rr}
+2 \amp 6\\
+2 \amp 3
+\end{array}
+\right]\\
+\amp=\left[
+\begin{array}{rr}
+1 \amp 2\\
+1 \amp 1
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+2 \amp 0\\
+0 \amp 3
+\end{array}
+\right].
+\end{align*}
+</div>
+<p>Thus, with</p>
+<div class="displaymath">
+\begin{equation*}
+P=\left[
+\begin{array}{rr}
+1 \amp 2 \\
+1 \amp 1
+\end{array}
+\right]\ \mbox{and}\ 
+D=\left[
+\begin{array}{rr}
+2 \amp 0 \\
+0 \amp 3
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p>we finally have \(A=PDP^{-1}\text{.}\)</p>
+<span class="incontext"><a href="diagonal_matrices_section.html#p-285">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="project-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.2.1</span>. <span class="title">A Basic Example.</span>
+</h6>
+<p>Suppose we have two matrices</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rr}
+1\amp 3 \\ -1 \amp-2\\
+\end{array}
+\right),\ \mbox{and}\ 
+B=
+\left(
+\begin{array}{rr}
+-10 \amp 7 \\
+-13 \amp 9
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and we want to see if they are similar.  By <em class="alert">definition</em> this means we need to find \(P\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+A=P\, B\, P^-1
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+A\, P=P\, B.
+\end{equation*}
+</div>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+P=
+\left(
+\begin{array}{rr}
+p_1 \amp p_2\\
+p_3 \amp p_4
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that the equation above becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr}
+p_1+3p_3\amp p_2+3p_4 \\ 
+-p_1-2p_3 \amp -p_2-2p_4\\
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+-10p_1-13p_2\amp 7p_1+9p_2 \\
+-10p_3-13p_4\amp 7p_3+9p_4 \\
+\end{array}
+\right)                                                
+\end{equation*}
+</div>
+<p>leaving us with four equations and four unknowns. Here we write it as a homogeneous system:</p>
+<div class="displaymath">
+\begin{align*}
+11p_1+13p_2+3p_3\amp = 0\\
+7p_1+8p_2-3p_4\amp = 0\\
+p_1-8p_3-13p_4\amp = 0\\
+p_2+7p_3+11p_4\amp = 0
+\end{align*}
+</div>
+<p>or as a matrix equation</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rrrr|r}
+11 \amp 13 \amp 3 \amp 0 \amp 0\\
+7 \amp 8 \amp 0 \amp -3 \amp 0\\
+1 \amp 0 \amp -8 \amp -13 \amp 0\\
+0 \amp 1 \amp 7 \amp 11 \amp 0\\
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>With a little work this reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\begin{array}{rrrr|r}
+1 \amp 0 \amp -8 \amp -13 \amp 0\\
+0 \amp 1 \amp 7 \amp 11 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0
+\end{array}\right).
+\end{equation*}
+</div>
+<p>So if we let \(p_3=-1\) and \(p_4=1\) we get \(p_1=5\) and \(p_2=-4\text{,}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+P=
+\left(
+\begin{array}{rr}
+5 \amp -4\\
+1 \amp -1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Note that since \(p_3\) and \(p_4\) are free variables there are in fact infinitely many solutions. Finally, we will see in <a href="diagonal_matrices_section.html#section_diagonal" class="internal" title="Subsection 4.3.1: Diagonalizable Matrices">Subsection 4.3.1</a> that there is an easier way.</p></article><span class="incontext"><a href="section_similarity.html#investigation-32">in-context</a></span>
+</body>
+</html>

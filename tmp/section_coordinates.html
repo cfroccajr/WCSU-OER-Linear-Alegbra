@@ -1,0 +1,841 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Change of Bases/Coordinates</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_orange_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OER_Linear_Alg.html"><span class="title">OER - Western CT Linear Algebra</span></a></h1>
+<p class="byline">Charles F. Rocca Jr.</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-14.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section_projections.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-14.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section_projections.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Intro.html" data-scroll="Intro">Introduction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems.html" data-scroll="systems"><span class="codenumber">1</span> <span class="title">Linear Systems</span></a><ul>
+<li><a href="section_basic_systems.html" data-scroll="section_basic_systems">Solving Linear Systems</a></li>
+<li><a href="section_intro_vectors.html" data-scroll="section_intro_vectors">An Introduction to Vectors</a></li>
+<li><a href="section_vectors_equations.html" data-scroll="section_vectors_equations">Another Look at Systems</a></li>
+<li><a href="section_CAS_systems.html" data-scroll="section_CAS_systems">CAS - Systems of Equations</a></li>
+<li><a href="section_supplement_systems.html" data-scroll="section_supplement_systems">Supplementary Material</a></li>
+<li><a href="section_exercises_systems.html" data-scroll="section_exercises_systems">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="spaces.html" data-scroll="spaces"><span class="codenumber">2</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section_space_definitions.html" data-scroll="section_space_definitions">What is a Vector Space</a></li>
+<li><a href="section_bases.html" data-scroll="section_bases">Linear Independence and Bases</a></li>
+<li><a href="section_matrices_spaces.html" data-scroll="section_matrices_spaces">Spaces, Systems, Matrices</a></li>
+<li><a href="section_CAS_spaces.html" data-scroll="section_CAS_spaces">*CAS - Visualizing Subspaces</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_supplement_structures.html" data-scroll="section_supplement_structures">*Preview of Algebraic Structures</a></li>
+<li><a href="section_exercises_spaces.html" data-scroll="section_exercises_spaces">Exercises and Practice Exam on Systems of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="transformations.html" data-scroll="transformations"><span class="codenumber">3</span> <span class="title">Linear Transformations</span></a><ul>
+<li><a href="section_morphisams.html" data-scroll="section_morphisams">Isomorphisms and Homomorphisms of Vector Spaces</a></li>
+<li><a href="section_matrix_operations.html" data-scroll="section_matrix_operations">Matrix Operations</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Linear Maps and Matrices</a></li>
+<li><a href="section_coordinates.html" data-scroll="section_coordinates" class="active">Change of Bases/Coordinates</a></li>
+<li><a href="section_projections.html" data-scroll="section_projections">Orthogonal Projections and Curve Fitting</a></li>
+<li><a href="section_CAS_maps.html" data-scroll="section_CAS_maps">*CAS - Fitting Data</a></li>
+<li><a href="section_supplement_spaces.html" data-scroll="section_supplement_spaces">*Supplementary Material</a></li>
+<li><a href="section_exercises_maps.html" data-scroll="section_exercises_maps">Homework Exercises on Linear Transformations and Projections</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Practice Exam on Linear Transformations and Projections</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="determinants.html" data-scroll="determinants"><span class="codenumber">4</span> <span class="title">Determinants, Eigenvalues, and Eigenvectors</span></a><ul>
+<li><a href="section_determinants.html" data-scroll="section_determinants">Determinants and their Geometry</a></li>
+<li><a href="section_similarity.html" data-scroll="section_similarity">Matrix Equivalence and Similarity</a></li>
+<li><a href="diagonal_matrices_section.html" data-scroll="diagonal_matrices_section">Diagonalizable Matrices, Eigenvalues, and Eigenvectors</a></li>
+<li><a href="section_CAS_eigen.html" data-scroll="section_CAS_eigen">*CAS - Visualizing Eigenvectors</a></li>
+<li><a href="section_CAS_models.html" data-scroll="section_CAS_models">*CAS - Modeling with Matrices</a></li>
+<li><a href="section_supplement_determinants.html" data-scroll="section_supplement_determinants">*Supplementary Material</a></li>
+<li><a href="section_exercises_determinants.html" data-scroll="section_exercises_determinants">Homework</a></li>
+<li><a href="section_practice_exam_determinants.html" data-scroll="section_practice_exam_determinants">Practice Exam on Determinants and Such</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="perspectives.html" data-scroll="perspectives"><span class="codenumber">B</span> <span class="title">Perspectives</span></a></li>
+<li class="link"><a href="glossary.html" data-scroll="glossary"><span class="codenumber">C</span> <span class="title">A Not So Formal Glossary of Essential Terms</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_coordinates"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Change of Bases/Coordinates</span>
+</h2>
+<a href="section_coordinates.html" class="permalink">¶</a><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Coordinate Systems</span>
+</h3>
+<p id="p-198">Suppose that we want to walk to the point \((2,3)\) from the origin, how might we get there?</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:8.25%;margin-right:8.25%;">
+<div class="sbspanel" style="width:35.9281437125749%;justify-content:flex-start;">
+<p id="p-199">We can get from the origin to the point \((2,3)\) by walking east 2 blocks and north 3.</p>
+<div class="displaymath">
+\begin{equation*}
+2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
++3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:44.311377245509%;justify-content:flex-start;"><img src="images/basis_e.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:8.25%;margin-right:8.25%;">
+<figcaption class="sbscaption" style="width:35.9281437125749%;"></figcaption><figcaption class="sbscaption" style="width:44.311377245509%;"><span class="type">Figure</span> <span class="codenumber">3.4.1.</span> Path one with the elementary basis \(\mathcal{E}_2\text{.}\)</figcaption>
+</div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:35.2941176470588%;justify-content:flex-start;">
+<p id="p-200">We can get there by walking northeast(ish) 3 blocks and northwest(ish) 1.</p>
+<div class="displaymath">
+\begin{equation*}
+3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
++\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><img src="images/basis_b.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<figcaption class="sbscaption" style="width:35.2941176470588%;"></figcaption><figcaption class="sbscaption" style="width:47.0588235294118%;"><span class="type">Figure</span> <span class="codenumber">3.4.2.</span> Path two with some basis \(\mathcal{B}\text{.}\)</figcaption>
+</div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:5.5%;margin-right:5.5%;">
+<div class="sbspanel" style="width:33.7078651685393%;justify-content:flex-start;">
+<p id="p-201">We can get there by walking northwest(ish) 2 blocks and northeast(ish) 4.</p>
+<div class="displaymath">
+\begin{equation*}
+2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
++4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:53.9325842696629%;justify-content:flex-start;"><img src="images/basis_d.png" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:5.5%;margin-right:5.5%;">
+<figcaption class="sbscaption" style="width:33.7078651685393%;"></figcaption><figcaption class="sbscaption" style="width:53.9325842696629%;"><span class="type">Figure</span> <span class="codenumber">3.4.3.</span> Path three with some basis \(\mathcal{D}\text{.}\)</figcaption>
+</div>
+</div>
+<p id="p-202">In each case you get to the same place but using different paths.  That is because in each case we are using different bases or coordinate systems.</p>
+<p id="p-203">In <a data-knowl="./knowl/basis_e.html" title="Figure 3.4.1">Figure 3.4.1</a> we follow the vectors in the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}_2=
+\left\{
+\vec{e}_1=\left(\begin{array}{r}1 \\ 0 \end{array}\right),
+\vec{e}_2=\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>We say that the \(\mathcal{E}_2\)-coordinates for \((2,3)\) are</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>because</p>
+<div class="displaymath">
+\begin{equation*}
+2\left(\begin{array}{r}1 \\ 0 \end{array}\right)
++3\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+\end{equation*}
+</div>
+<p id="p-204">In <a data-knowl="./knowl/basis_b.html" title="Figure 3.4.2">Figure 3.4.2</a> we follow the vectors in the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=
+\left\{
+\vec{\beta}_1=\left(\begin{array}{r}1 \\ 1/2 \end{array}\right),
+\vec{\beta}_2=\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>We say that the \(\mathcal{B}\)-coordinates for \((2,3)\) are</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B}}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+3 \\ 1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>because</p>
+<div class="displaymath">
+\begin{equation*}
+3\left(\begin{array}{r}1 \\ 1/2 \end{array}\right)
++1\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+\end{equation*}
+</div>
+<p id="p-205">In <a data-knowl="./knowl/basis_d.html" title="Figure 3.4.3">Figure 3.4.3</a> we follow the vectors in the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+\vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>We say that the \(\mathcal{D}\)-coordinates for \((2,3)\) are</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{D}}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+2 \\ 4
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>because</p>
+<div class="displaymath">
+\begin{equation*}
+2\left(\begin{array}{r}-1 \\ 1 \end{array}\right)
++4\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+=\left(\begin{array}{r}2 \\ 3 \end{array}\right).
+\end{equation*}
+</div>
+<p id="p-206">In each case the coordinates for the point \((2,3)\) are the coefficients for a linear combination of basis vectors.</p>
+<article class="definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.4.4</span>. <span class="title">\(\mathcal{B}\)-Coordinates.</span>
+</h6>
+<p id="p-207">Given a basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}
+\end{equation*}
+</div>
+<p>the <dfn class="terminology">\(\mathcal{B}\)-coordinates</dfn> for a point or vector \(\vec{p}\) are the coefficients \(b_1,\, b_2,\, \ldots,\, b_k\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{p}=b_1\vec{\beta}_1+b_2\vec{\beta}_2+\cdots+b_k\vec{\beta}_k
+\end{equation*}
+</div>
+<p>and we write</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B}}(\vec{p})=
+\left[
+\begin{array}{l}
+b_1\\ b_2\\ \vdots\\ b_k
+\end{array}
+\right].
+\end{equation*}
+</div></article><p id="p-208">Finally, we can connect this to matrices by observing that if the columns of a matrix are the basis vectors then when we multiply that by a representation we get our point, for example</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\vec{\beta}_1\ \vec{\beta}_2\right)Rep_{\mathcal{B}}
+\left(\begin{array}{r}2 \\ 3 \end{array}\right)
+=
+\left(
+\begin{array}{rr}
+1 \amp -1\\
+1/2 \amp 3/2
+\end{array}
+\right)
+\left(\begin{array}{r}3 \\ 1 \end{array}\right)
+=
+\left(\begin{array}{r}2 \\ 3 \end{array}\right).                   
+\end{equation*}
+</div></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Changing Bases</span>
+</h3>
+<article class="project-like" id="investigation-20"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.4.1</span>. <span class="title">\(\mathcal{B}\) to \(\mathcal{E}_2\).</span>
+</h6>
+<p id="p-209">The elementary or standard basis is</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}_2=
+\left\{
+\vec{e}_1=\left(\begin{array}{r}1 \\ 0 \end{array}\right),
+\vec{e}_2=\left(\begin{array}{r}0 \\ 1 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>Let \(\mathcal{B}\) be the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=
+\left\{
+\vec{\beta}_1=\left(\begin{array}{r}1 \\ 1/2 \end{array}\right),
+\vec{\beta}_2=\left(\begin{array}{r}-1 \\ 3/2 \end{array}\right)
+\right\}
+\end{equation*}
+</div>
+<p>as above.  If we have a vector written in terms of \(\mathcal{B}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B}}\left(\vec{v}\right)=
+\left(
+\begin{array}{r}
+-1 \\ 3
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and we want \(Rep_{\mathcal{E}_2}(\vec{v})\) then we multiply by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B},\mathcal{E}_2}=
+\left(
+\begin{array}{rr}
+1 \amp -1 \\ 
+1/2\amp 3/2 
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>So we get,</p>
+<div class="displaymath">
+\begin{align*}
+Rep_{\mathcal{E}_2}(\vec{v})\amp = Rep_{\mathcal{B},\mathcal{E}_2}\, Rep_{\mathcal{B}}\left(\vec{v}\right)\\
+\amp = 
+\left(
+\begin{array}{rr}
+1 \amp -1 \\ 
+1/2\amp 3/2 
+\end{array}
+\right)\,
+\left(
+\begin{array}{r}
+-1 \\ 3
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{r}
+-4 \\ 4
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>To change from any basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}
+\end{equation*}
+</div>
+<p>to \(\mathcal{E}_k\) multiply by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B},\mathcal{E}_k}=\left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right)
+\end{equation*}
+</div>
+<p>each of whose columns is an element of \(\mathcal{B}\text{.}\)</p></article><article class="project-like" id="investigation-21"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.4.2</span>. <span class="title">\(\mathcal{E}_2\) to \(\mathcal{B}\).</span>
+</h6>
+<p id="p-210">Let \(\mathcal{E}_2\) and \(\mathcal{B}\) be the same as before and suppose</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2}(\vec{w})=
+\left(
+\begin{array}{r}
+7\\-2
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>to change from \(\mathcal{E}_2\) to \(\mathcal{B}\) multiply by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2,\mathcal{B}}=
+\left(
+\begin{array}{rr}
+1 \amp -1 \\ 
+1/2\amp 3/2 
+\end{array}
+\right)^{-1}=
+\left(
+\begin{array}{rr}
+3/4 \amp 1/2 \\ 
+-1/4\amp 1/2 
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>So we get,</p>
+<div class="displaymath">
+\begin{align*}
+Rep_{\mathcal{B}}(\vec{w})\amp = Rep_{\mathcal{E}_2,\mathcal{B}}\, Rep_{\mathcal{E}_2}\left(\vec{w}\right)\\
+\amp = 
+\left(
+\begin{array}{rr}
+3/4 \amp 1/2 \\ 
+-1/4\amp 1/2 
+\end{array}
+\right)\,
+\left(
+\begin{array}{r}
+7 \\ -2
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{r}
+17/4 \\ -11/4
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>To change from \(\mathcal{E}_k\) to any basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}
+\end{equation*}
+</div>
+<p>multiply by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_k,\mathcal{B}}=(Rep_{\mathcal{B},\mathcal{E}_k})^{-1}=\left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right)^{-1}.
+\end{equation*}
+</div></article><article class="project-like" id="investigation-22"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.4.3</span>. <span class="title">\(\mathcal{B}\) to \(\mathcal{D}\).</span>
+</h6>
+<p id="p-211">Finally, let</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+\vec{\delta}_2=\left(\begin{array}{r}1 \\ 1/4 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>and let \(\mathcal{B}\) and \(\mathcal{E}_2\) be as before.  Suppose also that</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{B}}\left(\vec{v}\right)=
+\left(
+\begin{array}{r}
+-1 \\ 3
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>if we want to find \(Rep_{\mathcal{D}}(\vec{v})\) then multiply by the matrix</p>
+<div class="displaymath">
+\begin{align*}
+Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}\\
+\amp=
+\left(
+\begin{array}{rr}
+-1 \amp 1 \\ 
+1\amp 1/4 
+\end{array}
+\right)^{-1}
+\left(
+\begin{array}{rr}
+1 \amp -1 \\ 
+1/2\amp 3/2 
+\end{array}
+\right)\\
+\amp=
+\left(
+\begin{array}{rr}
+-1/5 \amp 4/5 \\ 
+4/5\amp 4/5 
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+1 \amp -1 \\ 
+1/2\amp 3/2 
+\end{array}
+\right)\\
+\amp=
+\left(
+\begin{array}{rr}
+1/5 \amp 7/5 \\ 
+6/5\amp 2/5 
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>So that we get</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{D}}(\vec{v})=Rep_{\mathcal{B},\mathcal{D}}Rep_{\mathcal{B}}(\vec{v})=
+\left(
+\begin{array}{rr}
+1/5 \amp 7/5 \\ 
+6/5\amp 2/5 
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+-1 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+4 \\ 0
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We can verify that this is correct because</p>
+<div class="displaymath">
+\begin{equation*}
+-1\vec{\beta}_1+3\vec{\beta}_2=
+\left(
+\begin{array}{r}
+-4 \\ 4
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+4\vec{\delta}_1+0\vec{\delta}_2=
+\left(
+\begin{array}{r}
+-4 \\ 4
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>In general if</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=\left\{\vec{\beta}_1,\, \vec{\beta}_2,\, \ldots,\, \vec{\beta}_k\right\}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=\left\{\vec{\delta}_1,\, \vec{\delta}_2,\, \ldots,\, \vec{\delta}_k\right\}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{align*}
+Rep_{\mathcal{B},\mathcal{D}}\amp=Rep_{\mathcal{E}_2,\mathcal{D}}Rep_{\mathcal{B},\mathcal{E}_2}\\
+\amp=(Rep_{\mathcal{D},\mathcal{E}_2})^{-1}Rep_{\mathcal{B},\mathcal{E}_2}\\
+\amp=\left(\vec{\delta}_1\ \vec{\delta}_2\ \cdots\ \vec{\delta}_k\right)^{-1}
+\left(\vec{\beta}_1\ \vec{\beta}_2\ \cdots\ \vec{\beta}_k\right).
+\end{align*}
+</div></article><article class="project-like" id="investigation-23"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.4.4</span>. <span class="title">Back to the Beginning.</span>
+</h6>
+<p id="p-212">We started above with</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right),\ 
+Rep_{\mathcal{B}}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+3 \\ 1
+\end{array}
+\right),\ \mbox{ and }
+Rep_{\mathcal{D}}
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)=
+\left(
+\begin{array}{r}
+2 \\ 4
+\end{array}
+\right).                    
+\end{equation*}
+</div>
+<p>Now, we know that if we multiply the first one,</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2}\left(\begin{array}{r}2\\3\end{array}\right)=
+\left(
+\begin{array}{r}
+2 \\ 3
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>by</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2,\mathcal{B}}=
+\left(
+\begin{array}{rr}
+3/4 \amp 1/2 \\ 
+-1/4\amp 1/2 
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+Rep_{\mathcal{E}_2,\mathcal{D}}=
+\left(
+\begin{array}{rr}
+-1/5 \amp 4/5 \\ 
+4/5\amp 4/5 
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>we get the other two.  That is we have a reliable, algorithmic way to change from one basis to another in the same dimension.</p></article><p id="p-213"><em class="alert">Summary Diagram for Bases Changes:</em></p>
+<figure class="figure-like" id="bases_change"><div style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/basis_cycle.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">3.4.5.</span> Changing from \(\mathcal{B}\) to other bases.</figcaption></figure></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">Changing Morphisms</span>
+</h3>
+<article class="project-like" id="investigation-24"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">3.4.5</span>. <span class="title">Change a transformation of \(\mathcal{E}_2\) to one from \(\mathcal{B}\) to \(\mathcal{D}\).</span>
+</h6>
+<p id="p-214">Let \(\mathcal{E}_2\) be as bove and let</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}_3=
+\left\{
+\vec{e}_1=
+\left(
+\begin{array}{r}
+1 \\ 0 \\0
+\end{array}
+\right),\, \vec{e}_2=
+\left(
+\begin{array}{r}
+0 \\ 1 \\0
+\end{array}
+\right),\, \vec{e}_3=
+\left(
+\begin{array}{r}
+0 \\ 0 \\1
+\end{array}
+\right)
+\right\}
+\end{equation*}
+</div>
+<p>Define a transformation \(P\) from \(\mathbb{R}^3\) to \(\mathbb{R}^2\) by</p>
+<div class="displaymath">
+\begin{equation*}
+P(\vec{v})=(x,y).
+\end{equation*}
+</div>
+<p>From before the matrix for \(P\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\left(
+\begin{array}{rrr}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and it maps \(\mathcal{E}_3\) to \(\mathcal{E}_2\text{.}\)</p>
+<p id="p-215">Now suppose that we want the transformation to change vectors with coordinates in the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{B}=
+\left\{
+\vec{\beta}_1=\left(\begin{array}{r}1 \\ -2 \\ 0\end{array}\right),
+\vec{\beta}_2=\left(\begin{array}{r}0 \\ 3 \\ 1 \end{array}\right)
+\vec{\beta}_3=\left(\begin{array}{r}1 \\ 0 \\ 1 \end{array}\right)
+\right\}
+\end{equation*}
+</div>
+<p>to vectors in terms of the basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{D}=
+\left\{
+\vec{\delta}_1=\left(\begin{array}{r}-1 \\ 1 \end{array}\right),
+\vec{\delta}_2=\left(\begin{array}{r}-3 \\ 4 \end{array}\right)
+\right\}.
+\end{equation*}
+</div>
+<p>Do this by going from \(\mathcal{B}\) to \(\mathcal{E}_3\) to \(\mathcal{E}_2\) to \(\mathcal{D}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+(Rep_{\mathcal{D},\mathcal{E}_2})^{-1}\, A\, Rep_{\mathcal{B},\mathcal{E}_3} \amp =
+\left(
+\begin{array}{rr}
+-4 \amp -3 \\
+1 \amp 1\\
+\end{array}
+\right)
+\left(
+\begin{array}{rrr}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 
+\end{array}
+\right)
+\left(
+\begin{array}{rrr}
+1 \amp 0 \amp 1 \\
+-2 \amp 3 \amp 0\\
+0 \amp 1 \amp 1
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rr}
+-4 \amp -3 \\
+1 \amp 1\\
+\end{array}
+\right)
+\left(
+\begin{array}{rrr}
+1 \amp 0 \amp 1 \\
+-2 \amp 3 \amp 0
+\end{array}
+\right)\\
+\amp =
+\left(
+\begin{array}{rrr}
+2 \amp -9 \amp -4 \\
+-1 \amp 3 \amp 1
+\end{array}
+\right).
+\end{align*}
+</div>
+<p>Using this we get</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{r}
+x \\ y \\ z
+\end{array}
+\right)\longmapsto
+\left(
+\begin{array}{r}
+2x-9y-4z \\ -x+3y+z
+\end{array}
+\right).
+\end{equation*}
+</div></article><p id="p-216"><em class="alert">Summary Diagram for Transformation Changes:</em></p>
+<figure class="figure-like" id="bases_transform_change"><div style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/basis_transform_cycle.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">3.4.6.</span> Changing transformations to new bases.</figcaption></figure></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

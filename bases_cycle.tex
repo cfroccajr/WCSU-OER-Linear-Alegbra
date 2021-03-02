@@ -1,0 +1,25 @@
+\documentclass{report}
+
+
+\usepackage{tikz}
+
+
+\begin{document}
+
+\tikz{
+	
+	% \node[anchor=north] at (0,0) {\Large $Rep_{\mathcal{E}_k}$};
+	% \node[anchor=south east] at (-3,3) {\Large$Rep_{\mathcal{B}}$};
+	% \node[anchor=south west] at (3,3) {\Large $Rep_{\mathcal{D}}$};
+
+	\draw[<-] (-0,0) to[out=180, in=270] (-2,3.4);
+	\draw[<-] (0,0) to[out=0, in=270] (2,3.4);	
+	\draw[->] (-3,3) to[out=90, in=90] (3,3);
+
+	% \node[anchor=east] at (-2.5,1.5) {\Large $Rep_{\mathcal{B},\mathcal{E}_k}$};
+	% \node[anchor=west] at (2.5,1.5) {\Large $Rep_{\mathcal{D},\mathcal{E}_k}$};
+	% \node[anchor=south] at (0,4) {\Large $Rep_{\mathcal{B},\mathcal{D}}$};
+
+}
+
+\end{document}

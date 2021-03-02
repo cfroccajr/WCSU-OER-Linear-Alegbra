@@ -1,0 +1,64 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:07-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="project-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">4.1.2</span>. <span class="title">Distorted Volume.</span>
+</h6>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p>Suppose we have a parallelepiped as in the figure, for simplicity assume the base is a rectangle.  The the volume will be area of the base times the height.  The area of the base is easy, \(Area=||\vec{v}||\, ||\vec{w}||\text{.}\)  To get the height we need to use projections, in particular:</p>
+<div class="displaymath">
+\begin{equation*}
+||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/vector_parallelpiped.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">4.1.2.</span> Volume of a Parallelepiped</figcaption>
+</div>
+</div>
+<div class="displaymath">
+\begin{align*}
+||\vec{u}-proj_{\vec{v}}\vec{u}-proj_{\vec{w}}\vec{u}||\amp=\left|\left|\vec{u}-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\vec{v}-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\vec{v}\right|\right|\\
+\amp=\left|\left|\left\lt u_1,u_2,u_3\right\gt-\frac{u_1v_1+u_2v_2+u_3v_3}{||\vec{v}||^2}\left\lt v_1,v_2,v_3\right\gt-\frac{u_1w_1+u_2w_2+u_3w_3}{||\vec{w}||^2}\left\lt w_1,w_2,w_3\right\gt\right|\right|\\
+\amp \vdots\\
+\mbox{Then A}\ \amp \mbox{Miracle Occurs}\\
+\amp \vdots\\
+\amp = \frac{|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|}{||\vec{v}||\, ||\vec{w}||}
+\end{align*}
+</div>
+<p>So, that the magnitude will be</p>
+<div class="displaymath">
+\begin{equation*}
+|v_1(u_2w_3-w_2u_3)-v_2(u_1w_3-w_1u_3)+v_3(u_1w_2-w_1u_2)|,
+\end{equation*}
+</div>
+<p>the expression inside the absolute value is the determinant of the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{lll}
+v_1 \amp u_1 \amp w_1\\
+v_2 \amp u_2 \amp w_2\\
+v_3 \amp u_3 \amp w_3\\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>which transforms the vectors of the standard basis into the vectors \(\vec{v}\text{,}\) \(\vec{w}\text{,}\) and \(\vec{u}\text{.}\)</p></article><span class="incontext"><a href="section_determinants.html#investigation-28">in-context</a></span>
+</body>
+</html>

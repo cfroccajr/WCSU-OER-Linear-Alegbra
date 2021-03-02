@@ -1,0 +1,129 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-30T14:55:06-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+A=\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>We want to find</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+A\, A^{-1}=
+\left(
+\begin{array}{rr}
+2 \amp 5 \\
+3 \amp 8
+\end{array}
+\right)
+\left(
+\begin{array}{rr}
+a \amp b \\
+c \amp d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Multiplyting as above this reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr}
+2a+5c \amp 2b+5d \\
+3a+8c \amp 3b+8d
+\end{array}
+\right)=
+\left(
+\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{gather*}
+2a+5c=1\\
+3a+8c=0
+\end{gather*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{gather*}
+2b+5d=0\\
+3b+8d=1.
+\end{gather*}
+</div>
+<p>We get two sets of two equations each with two variables.  Writing each of these as augmented matrices we get</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|r}
+2 \amp 5 \amp 1\\
+3 \amp 8 \amp 0
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\left(
+\begin{array}{rr|r}
+2 \amp 5 \amp 0\\
+3 \amp 8 \amp 1
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>Solving each of these we would get \(a=8\text{,}\) \(b=-5\text{,}\) \(c=-3\text{,}\) and \(d=2\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1}=\left(
+\begin{array}{rr}
+8 \amp -5 \\
+-3 \amp 2
+\end{array}
+\right).
+\end{equation*}
+</div>
+<p>But, notice that the coefficient matrices are the same for both systems of equations, they are both \(A\text{,}\) so that when we reduce them we follow the same steps each time, this gives us a better way to approach this.</p>
+<span class="incontext"><a href="section_matrix_operations.html#p-181">in-context</a></span>
+</body>
+</html>

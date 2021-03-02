@@ -1,0 +1,79 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-08-30T14:55:13-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">2.1.1</span> <span class="title">Something Old, Something New</span>
+</h6>
+<p>Long ago an far away you learned to plot points in two dimensions with \(x\) and \(y\) coordinates:</p>
+<figure class="figure-like"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-11.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.1.1</span> A Few Points</figcaption></figure><p>But, how can we understand this in terms of vectors and how can we most efficiently describe infinitely many points and vectors?</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:60%;justify-content:flex-start;">
+<p>The simplest thing to do would be to have a single vector like \(\vec{v}=\left[ 2,3\right]\text{,}\) but with infinitely many points to choose from this isn't very efficient.  A little better is to recognize that that can be written as a sum of two vectors like so</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=\left[ 2,3\right]=\left[ 2,0\right]+\left[ 0,3\right].
+\end{equation*}
+</div>
+<p>Best of all is to realize that this is a linear combination of our elementary vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v}=\left[ 2,3\right]=2\vec{e}_1+3\vec{e}_2.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:60%;"></figcaption><figcaption class="sbscaption" style="width:40%;"><span class="type">Figure</span> <span class="codenumber">2.1.2</span> A Few Vectors</figcaption>
+</div>
+</div>
+<p>Use what you learned in <a href="section_CAS_systems.html" class="xref" title="Section 1.4: CAS - Systems of Equations">Section 1.4</a> to recreate the image above in the Sage Cell below.  Then adjust the Sage code in the cell to create similar pictures for the points \((1,3)\text{,}\) \((-2,1)\text{,}\) and \((-3,-2)\text{.}\)  Are you convinced that you can always make this sort of picture?  Can you tell that this mens you can always write any vector as a combination of copies of the elementary vectors?</p>
+<div class="sagecell-sage" id="sage-8"><script type="text/x-sage"># Variables:
+var("x,y")
+
+# Zero and Elementary Vectors:
+zero=vector([0,0])
+e1=vector([1,0])
+e2=vector([0,1])
+
+# Data to Enter:
+v=vector([2,3])
+
+# Generate plot objects
+e1_plot=arrow(zero,e1,width=3,color="red")
+e2_plot=arrow(zero,e2,width=3,color="blue")
+v_plot=arrow(zero,v,width=3,color="purple")
+
+# Plot objects
+v_plot+e1_plot+e2_plot
+</script></div>
+<p>Because we can always write any vector (or describe steps to any point) using copies of elementary vectors \(\vec{e}_1=[1,0]\) and \(\vec{e}_1=[1,0]\) we say that they form a <dfn class="terminology">basis</dfn>, which we will explore in detail in the next section.  For now what this tells us is that we can describe all the points in \(\mathbb{R}^2\) as the set</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{R}^2=\left\{a\, \vec{e}_1+b\, \vec{e}_2:a,b\in\mathbb{R}\right\}
+\end{equation*}
+</div></article><span class="incontext"><a href="section_space_definitions.html#xy-coordinates">in-context</a></span>
+</body>
+</html>
